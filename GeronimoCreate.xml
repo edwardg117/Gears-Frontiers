@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
-	<Server id="Gears-And-Frontiers" abstract="false" name="Gears &amp; Frontiers" newsUrl="http://localhost:3000/" version="1.21.1" serverAddress="geronimo.apexmc.co" generateList="true" autoConnect="false" revision="1" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+	<Server id="Gears-And-Frontiers" abstract="false" name="Gears &amp; Frontiers" newsUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/banner.png?raw=true" iconUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/icon.png?raw=true" version="1.21.1" serverAddress="geronimo.apexmc.co" generateList="true" autoConnect="false" revision="1" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/base.xml">base</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/config.xml">config</Import>
 		<Loader type="NeoForge" version="21.1.138" loadOrder="0"/>
