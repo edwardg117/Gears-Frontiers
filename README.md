@@ -15,10 +15,7 @@ Gears & Frontiers combines technology and exploration mods to create an immersiv
 
 ## Installation
 
-1. Use the MCUpdater launcher with the following server address:
-   - Server: geronimo.apexmc.co
-   - Version: 1.21.1
-   - NeoForge: 21.1.138
+Use the MCUpdater launcher and add the following as a new isnstance `https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/GearsAndFrontiers.xml`
 
 ## Mod List
 
