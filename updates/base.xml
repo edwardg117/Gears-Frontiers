@@ -582,7 +582,7 @@ It will spawn upon your death containing all items that you had in your inventor
 			<ModType>Regular</ModType>
 			<MD5>429c693999fad17d6fe35f2aeea92b18</MD5>
 		</Module>
-	<Module name="Magnum Torch" id="magnumtorch" depends="" side="BOTH">
+		<Module name="Magnum Torch" id="magnumtorch" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/jorDmSKv/versions/wuc5gqR2/MagnumTorch-v21.1.0-1.21.1-NeoForge.jar</URL>
 			<Size>87930</Size>
 			<Required>true</Required>
@@ -716,7 +716,7 @@ It will spawn upon your death containing all items that you had in your inventor
 		<Module name="Simple Voice Chat" id="simplevoicechat" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/XIkkFeGA/voicechat-neoforge-1.21.1-2.5.29.jar</URL>
 			<Size>6144400</Size>
-			<Required>false</Required>
+			<Required>true</Required>
 			<ModType>Regular</ModType>
 			<MD5>7465d31f0f06d696f6e901df0c1daa39</MD5>
 		</Module>
@@ -873,5 +873,5 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Zephyrusjz, Aureljz</authors>
 			</Meta>
 		</Module>
-		</Server>
+	</Server>
 </ServerPack>

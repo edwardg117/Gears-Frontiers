@@ -3,7 +3,7 @@
 	<Server id="config" abstract="false" name="config" newsUrl="about:blank" version="1.21.1" generateList="false" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Module name="Expanded Ecosphere" id="expanded_ecosphere" depends="" side="BOTH">
 			<Size>0</Size>
-			<Required>false</Required>
+			<Required>true</Required>
 			<ModType>Override</ModType>
 			<ConfigFile>
 				<URL priority="0">https://raw.githubusercontent.com/edwardg117/Geronimos-Create/refs/heads/main/configs/expanded_ecosphere/config.json5</URL>
