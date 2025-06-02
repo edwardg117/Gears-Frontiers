@@ -47,6 +47,13 @@
 			<ModType>Regular</ModType>
 			<MD5>7a45a948b525c031ca85d221dfdbed85</MD5>
 		</Module>
+		<Module name="Armor Poser" id="armorposer" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/PFwYNrHb/versions/WAivGEkl/ArmorPoser-neoforge-1.21.1-6.2.1.jar</URL>
+			<Size>126277</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>03d5d7b8ebfe1ec46560d29b7a8e88cf</MD5>
+		</Module>
 		<Module name="Balm" id="balm" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/MNDed3BG/balm-neoforge-1.21.1-21.0.33.jar</URL>
 			<Size>459220</Size>
@@ -81,6 +88,13 @@
 			<ModType>Regular</ModType>
 			<MD5>58ae6fc192006483bb05547ac1fda618</MD5>
 		</Module>
+		<Module name="Builder&apos;s Jetpack" id="buildersjetpack" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/5916/556/buildersjetpackmod-3.1-1.21.1.jar</URL>
+			<Size>255338</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a34c56ae5107e1978e6ed6d167f1194e</MD5>
+		</Module>
 		<Module name="Butcher" id="butcher" depends="geckolib patchouli" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/he7DtkG1/butcher-3.3.1-neoforge-1.21.1.jar</URL>
 			<Size>27936550</Size>
@@ -93,6 +107,20 @@
 				<version>3.3</version>
 				<authors>Jmods</authors>
 			</Meta>
+		</Module>
+		<Module name="Camera Mod" id="cameramod" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6480/232/camera-neoforge-1.21.1-1.0.20.jar</URL>
+			<Size>303069</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>36f7339fe2ae330d03e01f8b5cb93365</MD5>
+		</Module>
+		<Module name="Carry On" id="carryon" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/5649/344/carryon-neoforge-1.21.1-2.2.2.11.jar</URL>
+			<Size>347647</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f8438716763fe3865a833f8a9dcceb9e</MD5>
 		</Module>
 		<Module name="Chunk Loaders" id="chunkloaders" depends="supermartijn642corelib supermartijn642configlib" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/t1VgucWo/versions/xC7Vc2qa/chunkloaders-1.2.8-neoforge-mc1.21.jar</URL>
@@ -199,6 +227,13 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Max Henkel</authors>
 			</Meta>
 		</Module>
+		<Module name="Corpse x Curios API Compat" id="corpsexcuriossapicompat" depends="corpse curiosapi" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/pJGcKPh1/versions/dMckkU0h/corpsecurioscompat-1.21.1-NeoForge-2.2.2.jar</URL>
+			<Size>8276</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>389ee0d6cf1e3f8e8b029a251b341837</MD5>
+		</Module>
 		<Module name="CraftingTweaks" id="craftingtweaks" depends="balm" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/DMu0oBKf/versions/uFQrAvJM/craftingtweaks-neoforge-1.21.1-21.1.5.jar</URL>
 			<Size>248981</Size>
@@ -226,7 +261,7 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>simibubi</authors>
 			</Meta>
 		</Module>
-		<Module name="Create: Bells &amp; Whistles" id="bellsandwhistles" depends="create" side="BOTH">
+		<Module name="Create: Bells &amp; Whistles" id="create_bellsandwhistles" depends="create" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/gJ5afkVv/versions/w0mifib8/bellsandwhistles-0.4.7-1.21.1.jar</URL>
 			<Size>193619</Size>
 			<Required>true</Required>
@@ -238,6 +273,27 @@ It will spawn upon your death containing all items that you had in your inventor
 				<version>0.4.3-1.20.x</version>
 				<authors>Alexander Weimer</authors>
 			</Meta>
+		</Module>
+		<Module name="Create: Dragons Plus" id="create_dragonsplus" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/dzb1a5WV/versions/MF0S2f6O/create-dragons-plus-1.5.2.jar</URL>
+			<Size>638043</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b9102c1a4aef93670b5fe5e1c099797e</MD5>
+		</Module>
+		<Module name="Create: Enchantment Industry" id="create_enchantment_industry" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/JWGBpFUP/versions/hA7oxhH2/create-enchantment-industry-2.1.5.jar</URL>
+			<Size>645133</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>544e7a50c94e0f686905a0ea2b17a2a7</MD5>
+		</Module>
+		<Module name="Create: Oxidized" id="create_oxidized" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/X9kjRZeX/versions/z8PFRVBs/create_oxidized-0.1.3.jar</URL>
+			<Size>121297</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>63882f71dc6a1dc47338219a4ab81a06</MD5>
 		</Module>
 		<Module name="CreativeCore" id="creativecore" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/41kLE0hQ/CreativeCore_NEOFORGE_v2.12.32_mc1.21.1.jar</URL>
@@ -265,13 +321,6 @@ It will spawn upon your death containing all items that you had in your inventor
 				<version>1.1.6</version>
 				<authors>Cristelknight999</authors>
 			</Meta>
-		</Module>
-		<Module name="Curios API" id="curiosapi" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/vvuO3ImH/versions/aOzmr3vR/curios-neoforge-9.4.0%2B1.21.1.jar</URL>
-			<Size>399005</Size>
-			<Required>true</Required>
-			<ModType>Regular</ModType>
-			<MD5>3b8dd3bd23479ab8acf1126b37303197</MD5>
 		</Module>
 		<Module name="Curios API" id="curiosapi" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/vvuO3ImH/versions/6PllU1Iq/curios-neoforge-9.4.2%2B1.21.1.jar</URL>
@@ -485,6 +534,13 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Starmute, catter1, TheKingWhale, rx97, Rei_the_Goat</authors>
 			</Meta>
 		</Module>
+		<Module name="Inventory Sorter" id="inventorysorter" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6235/889/inventorysorter-1.21-24.0.20.jar</URL>
+			<Size>51199</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d7437061d1d338d849e54e65a2766d7b</MD5>
+		</Module>
 		<Module name="Iris Shaders" id="iris" depends="sodium" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/YL57xq9U/versions/oXIoDcGE/iris-neoforge-1.8.8%2Bmc1.21.1.jar</URL>
 			<Size>2437216</Size>
@@ -692,6 +748,21 @@ It will spawn upon your death containing all items that you had in your inventor
 			<ModType>Regular</ModType>
 			<MD5>f3a0d7f31993d6f34e90f816f82cbcaf</MD5>
 		</Module>
+		<Module name="ReForgedPlay Mod" id="reforgedplaymod" depends="" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/6137/859/reforgedplaymod-1.21.1-0.3.jar</URL>
+			<Size>17406830</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>fe20ecdd0c39b400fb48f6dcf69cea0a</MD5>
+			<Meta>
+				<license>GPL-3.0-or-later</license>
+				<credits></credits>
+				<description>A Mod which allows you to record, replay and share your Minecraft experience.</description>
+				<version>${version}</version>
+				<url></url>
+				<authors>CrushedPixel, johni0702, Ferri_Arnus</authors>
+			</Meta>
+		</Module>
 		<Module name="Resourcify" id="resourcify" depends="" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/RLzHAoZe/versions/MbiJIOrq/Resourcify%20%281.21.1-neoforge%29-1.7.1.jar</URL>
 			<Size>2364819</Size>
@@ -754,7 +825,14 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Sonic Ether, vlad2305m, Max Henkel, Saint</authors>
 			</Meta>
 		</Module>
-		<Module name="SuperMartijn642&apos;s Config Library" id="supermartijn642configlib" depends="" side="BOTH">
+		<Module name="Straw Statues" id="strawstatues" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/5732/771/StrawStatues-v21.1.0-1.21.1-NeoForge.jar</URL>
+			<Size>313043</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1e09f8ed1817dc3a099e01a975146a66</MD5>
+		</Module>
+	<Module name="SuperMartijn642&apos;s Config Library" id="supermartijn642configlib" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/LN9BxssP/versions/qKL9jM75/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar</URL>
 			<Size>207514</Size>
 			<Required>true</Required>
@@ -873,5 +951,5 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Zephyrusjz, Aureljz</authors>
 			</Meta>
 		</Module>
-	</Server>
+		</Server>
 </ServerPack>
