@@ -6,7 +6,7 @@
 			<Required>true</Required>
 			<ModType>Override</ModType>
 			<ConfigFile>
-				<URL priority="0">https://raw.githubusercontent.com/edwardg117/Geronimos-Create/refs/heads/main/configs/expanded_ecosphere/config.json5</URL>
+				<URL priority="0">https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/configs/expanded_ecosphere/config.json5</URL>
 				<Path>config/expanded_ecosphere/config.json5</Path>
 				<NoOverwrite>true</NoOverwrite>
 				<MD5>4714db335683d0ba8804afbceb9e903b</MD5>
