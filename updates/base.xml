@@ -598,13 +598,6 @@ It will spawn upon your death containing all items that you had in your inventor
 			<MD5>f25de0ac06c14288a1d748c91a00c99a</MD5>
 		</Module>
 		<Module name="L_Ender&apos;s Cataclysm" id="l_enders_cataclysm" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/46KJle7n/versions/uWtRXlbj/L_Ender%27s%20Cataclysm-2.63-1.21.1.jar</URL>
-			<Size>72187699</Size>
-			<Required>true</Required>
-			<ModType>Regular</ModType>
-			<MD5>ead63f6aa6316c413e0b2ae4fb93d19c</MD5>
-		</Module>
-		<Module name="L_Ender&apos;s Cataclysm" id="l_enders_cataclysm" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/46KJle7n/versions/F7PnB5dO/L_Ender%27s%20Cataclysm-2.65-1.21.1.jar</URL>
 			<Size>72189791</Size>
 			<Required>true</Required>
@@ -832,7 +825,7 @@ It will spawn upon your death containing all items that you had in your inventor
 			<ModType>Regular</ModType>
 			<MD5>1e09f8ed1817dc3a099e01a975146a66</MD5>
 		</Module>
-	<Module name="SuperMartijn642&apos;s Config Library" id="supermartijn642configlib" depends="" side="BOTH">
+		<Module name="SuperMartijn642&apos;s Config Library" id="supermartijn642configlib" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/LN9BxssP/versions/qKL9jM75/supermartijn642configlib-1.1.8-neoforge-mc1.21.jar</URL>
 			<Size>207514</Size>
 			<Required>true</Required>
@@ -951,5 +944,5 @@ It will spawn upon your death containing all items that you had in your inventor
 				<authors>Zephyrusjz, Aureljz</authors>
 			</Meta>
 		</Module>
-		</Server>
+	</Server>
 </ServerPack>

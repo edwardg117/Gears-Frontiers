@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="pre-release-1" abstract="false" name="pre release update" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="net.minecraft.launchwrapper.Launch" launcherType="Vanilla">
+		<Module name="AmbientSounds" id="ambientsounds" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/fM515JnW/versions/tzIvWYuv/AmbientSounds_NEOFORGE_v6.1.11_mc1.21.1.jar</URL>
+			<Size>61695220</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>00b70edafba930c88efa549e89272bb2</MD5>
+			<Meta>
+				<license>LGPL-3.0-only</license>
+				<description>Expands minecraft&apos;s ambient sounds.</description>
+				<version>6.1.10</version>
+				<authors>CreativeMD, AriaFreeze</authors>
+			</Meta>
+		</Module>
+		<Module name="Apple Skin" id="appleskin" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/EsAfCjCV/versions/kztxpjAA/appleskin-neoforge-mc1.21-3.0.7.jar</URL>
+			<Size>74100</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9b6a8681aa9c871a8816a39d614034c6</MD5>
+		</Module>
+		<Module name="Balm" id="balm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/YgPFqhlP/balm-neoforge-1.21.1-21.0.46.jar</URL>
+			<Size>584593</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>92e628426c2aa33554e580b06312aba9</MD5>
+		</Module>
+		<Module name="Butcher" id="butcher" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/BaOUyJjs/butcher-3.5.5-neoforge-1.21.1.jar</URL>
+			<Size>33618208</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a5b5fc6e28dc0dcb1d13e5f1cc2caae2</MD5>
+			<Meta>
+				<license>All Rights Reserved</license>
+				<description>An immersive way of harvesting mobs</description>
+				<version>3.5.5</version>
+				<authors>Jmods</authors>
+			</Meta>
+		</Module>
+		<Module name="Comforts" id="comforts" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/SaCpeal4/versions/f0FgfKAZ/comforts-neoforge-9.0.4%2B1.21.1.jar</URL>
+			<Size>422519</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b8352fcc4f2479a60c83f0c21e706b83</MD5>
+		</Module>
+		<Module name="Concurrent Chunk Management Engine" id="c2me" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/COlSi5iR/versions/rKU60Imo/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.70.jar</URL>
+			<Size>4497849</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7c5781df6134c1acbb4332f1d1156c3f</MD5>
+		</Module>
+		<Module name="Corpse" id="corpse" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/WrpuIfhw/versions/DAlmCxsg/corpse-neoforge-1.21.1-1.1.7.jar</URL>
+			<Size>247000</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1231ec480875bf2bcd883eca545c8d2a</MD5>
+		</Module>
+		<Module name="Create" id="create" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/LNytGWDc/versions/tS7ygzAE/create-1.21.1-6.0.6.jar</URL>
+			<Size>18599196</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>39db2efac7c0482c2c1bfdbaaab317b3</MD5>
+		</Module>
+		<Module name="Create: Dragons Plus" id="create_dragonsplus" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/dzb1a5WV/versions/JATjSaVs/create-dragons-plus-1.6.0.jar</URL>
+			<Size>619603</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8795488526e122f8882525208398079b</MD5>
+		</Module>
+		<Module name="Create: Enchantment Industry" id="create_enchantment_industry" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/JWGBpFUP/versions/p8KnWGu6/create-enchantment-industry-2.1.6.jar</URL>
+			<Size>646081</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1b16ced313732540ede1a24163050022</MD5>
+		</Module>
+		<Module name="Create: Stam1o Tweaks" id="create_stam1o_tweaks" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/46RgF8H2/versions/IALX3IHG/Stam1oCreateTweaks-1.0.7%2B1.21.1-Neo.jar</URL>
+			<Size>177865</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fc37688caba3be2c4c403bb58fbdeca0</MD5>
+		</Module>
+		<Module name="Cyclops Core" id="cyclopscore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Z9DM0LJ4/versions/HCxzQtFB/cyclopscore-1.21.1-neoforge-1.26.1.jar</URL>
+			<Size>1139897</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>87960e7da79bf265281802d8e3f6da25</MD5>
+		</Module>
+		<Module name="FallingTree" id="fallingtree" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Fb4jn8m6/versions/pLoQCXwM/FallingTree-1.21.1-1.21.1.8.jar</URL>
+			<Size>477670</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bee27ed42bcb37e3ec7462f7ec2ae058</MD5>
+			<Meta>
+				<license>LGPL-3.0</license>
+				<description>Change the way you cut trees.</description>
+				<version>1.21.1.8</version>
+				<authors>Rakambda</authors>
+			</Meta>
+		</Module>
+		<Module name="Farmer&apos;s Delight" id="farmersdelight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/R2OftAxM/versions/yCkges3O/FarmersDelight-1.21.1-1.2.8.jar</URL>
+			<Size>2949275</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9bd8cdae46147e5b6873a6efc6e0bc63</MD5>
+		</Module>
+		<Module name="Faster Paths" id="mr_faster_paths" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/dDo4Wd28/versions/C4dM1Mur/faster-paths-2.3.jar</URL>
+			<Size>13533</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0d8b0603b359a2c5149c2b86f7ecadd6</MD5>
+			<Meta>
+				<license>MIT</license>
+				<description>This Mod/Datapack gives you speed 2 on path blocks</description>
+				<version>2.3</version>
+				<authors>JacobA0225, Bumstronaut</authors>
+			</Meta>
+		</Module>
+		<Module name="Horseman" id="horseman" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/qIv5FhAA/versions/ohrNsjJ1/horseman-neoforge-1.21.1-1.4.5.jar</URL>
+			<Size>388171</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ab13f30ca07ab4081a861206760ed43b</MD5>
+		</Module>
+		<Module name="ImmediatelyFast" id="immediatelyfast" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/5ZwdcRci/versions/paIuk6sO/ImmediatelyFast-NeoForge-1.6.5%2B1.21.1.jar</URL>
+			<Size>256473</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>47b011e9e4818003e0a097534e4aa448</MD5>
+		</Module>
+		<Module name="Immersive Aircraft" id="immersiveaircraft" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/x3HZvrj6/versions/QTNxJxXa/immersive_aircraft-1.2.4%2B1.21.1-neoforge.jar</URL>
+			<Size>2187653</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>57d366ff561c833b7c4e72ad16304edd</MD5>
+		</Module>
+		<Module name="Immersive Engineering" id="immersiveengineering" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/tIm2nV03/versions/j51zY43a/ImmersiveEngineering-1.21.1-12.3.1-189.jar</URL>
+			<Size>13318035</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>da8c1f8518f3029d76c7d01bebfaf5d5</MD5>
+		</Module>
+		<Module name="Just Enough Items" id="jei" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/u6dRKJwZ/versions/zRGLFYRx/jei-1.21.1-neoforge-19.21.2.313.jar</URL>
+			<Size>1450209</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f5bbaf5e7cff7464d71032be534dd0af</MD5>
+		</Module>
+		<Module name="Just Enough Resources" id="jeresources" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/uEfK2CXF/versions/TgNFki8j/JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar</URL>
+			<Size>292088</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3e18cab0cb7ee834573e6b20dcb5543f</MD5>
+		</Module>
+		<Module name="Kotlin for Forge" id="kotlinforforge" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ordsPcFz/versions/NOhXtkYk/kotlinforforge-5.8.0-all.jar</URL>
+			<Size>6449666</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>046def10d62e5fbeb0ff5bb95828355a</MD5>
+		</Module>
+		<Module name="L_Ender &apos;s Cataclysm Delight" id="l_ender s_cataclysm_delight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/a48R8AGk/versions/rJlDJv0I/lendersdelight-1.0.7-1.21.1.jar</URL>
+			<Size>104815</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c2f585ec9e4d5fdcbd54bd63ee569be8</MD5>
+		</Module>
+		<Module name="L_Ender&apos;s Cataclysm" id="l_enders_cataclysm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/46KJle7n/versions/5Jdv2V6q/L_Ender%27s%20Cataclysm-2.66-1.21.1.jar</URL>
+			<Size>72189421</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0f4f98a42a9ed9af1397e265b368ba96</MD5>
+		</Module>
+		<Module name="ModernFix" id="modernfix" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nmDcB62a/versions/gADERDwI/modernfix-neoforge-5.23.1%2Bmc1.21.1.jar</URL>
+			<Size>546880</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1082aa35b29bd3ce027555efd5f17521</MD5>
+		</Module>
+		<Module name="MonoLib" id="monolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9leXt4A5/versions/mdyJwxhY/monolib-neoforge-1.21.1-2.1.0.jar</URL>
+			<Size>179499</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>51e1648262195d12c1f45a9fc4e50c57</MD5>
+		</Module>
+		<Module name="Puzzles Lib" id="puzzleslib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/QAGBst4M/versions/AcwAgaYA/PuzzlesLib-v21.1.36-1.21.1-NeoForge.jar</URL>
+			<Size>1076281</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6bea7d7cd84691a4e0aebfada2642755</MD5>
+		</Module>
+		<Module name="Resourcify" id="resourcify" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/RLzHAoZe/versions/ejlk05lQ/Resourcify%20%281.21.1-neoforge%29-1.7.2.jar</URL>
+			<Size>2541338</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f8c4202b499feeab34c6d1557748916a</MD5>
+			<Meta>
+				<license></license>
+				<description></description>
+				<version>DIAMOND-11</version>
+				<authors></authors>
+			</Meta>
+		</Module>
+		<Module name="Simple Voice Chat" id="simplevoicechat" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/meUMv02j/voicechat-neoforge-1.21.1-2.5.30.jar</URL>
+			<Size>6147622</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2cc2a088672ce3421bc1ebc23afb8d85</MD5>
+		</Module>
+		<Module name="Tom&apos;s Simple Storage Mod" id="tomssimplestoragemod" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/XZNI4Cpy/versions/38X6wMDM/toms_storage-1.21-2.2.0.jar</URL>
+			<Size>829300</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>19169abb0ea41e0aa0cfe0ca8ef3dbbe</MD5>
+		</Module>
+		<Module name="Traveler&apos;s Backpack" id="travelersbackpack" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rlloIFEV/versions/9nwiWyA3/travelersbackpack-neoforge-1.21.1-10.1.21.jar</URL>
+			<Size>1158395</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1a64abd118d063d16457458e40f21556</MD5>
+		</Module>
+		<Module name="Xaero&apos;s Minimap" id="xaerosminimap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/1bokaNcj/versions/jSwPt0Wh/Xaeros_Minimap_25.2.6_NeoForge_1.21.jar</URL>
+			<Size>1690154</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>72295875bc49ec129ff075953920ece6</MD5>
+		</Module>
+		<Module name="Xaero&apos;s World Map" id="xaerosworldmap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/NcUtCpym/versions/Lt2vbZZU/XaerosWorldMap_1.39.9_NeoForge_1.21.jar</URL>
+			<Size>943785</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5bac9db90a71cccfeeca771f6282312f</MD5>
+		</Module>
+		<Module name="CreativeCore" id="creativecore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/esnJjmBr/CreativeCore_NEOFORGE_v2.13.5_mc1.21.1.jar</URL>
+			<Size>1198261</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>13c001c49159c3acfe92a04fce930bdb</MD5>
+		</Module>
+	</Server>
+</ServerPack>
