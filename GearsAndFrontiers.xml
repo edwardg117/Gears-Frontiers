@@ -3,7 +3,7 @@
 	<Server id="Gears-And-Frontiers" abstract="false" name="Gears &amp; Frontiers TEST" newsUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/banner.png?raw=true" iconUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/icon.png?raw=true" version="1.21.1" serverAddress="geronimo.apexmc.co" generateList="true" autoConnect="false" revision="1" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/base.xml">base</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/config.xml">config</Import>
-		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/updates/2015-06-13.xml">null</Import>
+		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2015-06-13.xml">null</Import>
 		<Loader type="NeoForge" version="21.1.179" loadOrder="0"/>
 	</Server>
 </ServerPack>
