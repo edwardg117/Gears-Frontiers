@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="pre-release-2" abstract="false" name="pre release update 2" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="true" revision="" mainClass="net.minecraft.launchwrapper.Launch" launcherType="Vanilla">
+		<Module name="Create: Copycats+" id="create_copycats_plus" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/UT2M39wf/versions/wj2p9GZw/copycats-3.0.2%2Bmc.1.21.1-neoforge.jar</URL>
+			<Size>1790416</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>cde8b4432b19fde830c50ce07a2b89b9</MD5>
+		</Module>
+		<Module name="Create: Power Loader" id="create_power_loader" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/wPQ6GgFE/versions/ydVSjzJR/create_power_loader-2.0.3-mc1.21.1.jar</URL>
+			<Size>404692</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7880bbdd1ab3cd2ce24503311112ae2f</MD5>
+		</Module>
+		<Module name="Polymorph" id="polymorph" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6451/024/polymorph-neoforge-1.0.10+1.21.1.jar</URL>
+			<Size>174468</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2a5430d2fa5ab7ea80b4f7a3c68591b3</MD5>
+		</Module>
+		<Module name="Cupboard" id="cupboard" depends="" side="SERVER">
+			<URL priority="1">https://edge.forgecdn.net/files/6078/150/cupboard-1.21-2.9.jar</URL>
+			<Size>23509</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9cc5caf701898ba7236ca1e841d9049b</MD5>
+		</Module>
+		<Module name="Chunk Sending" id="chunk_sending" depends="" side="SERVER">
+			<URL priority="1">https://edge.forgecdn.net/files/5540/768/chunksending-1.21-2.8.jar</URL>
+			<Size>11753</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>26ab7a25a7796c562b743cd19ad12ad0</MD5>
+		</Module>
+	</Server>
+</ServerPack>
