@@ -2,9 +2,17 @@
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
 	<Server id="update-1" abstract="false" name="Update 1" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="true" revision="" mainClass="net.minecraft.launchwrapper.Launch" launcherType="Vanilla">
 		<Module name="Lifted Horizons" id="lifted_horizons" depends="" side="BOTH">
-			<Size>100000</Size>
+			<URL priority="0">https://cdn.modrinth.com/data/Nlt0548K/versions/4Yelzs1n/lifted_horizons-1.2.0-neoforge-1.21.1.jar</URL>
+			<Size>2843748</Size>
 			<Required>false</Required>
 			<ModType>Removal</ModType>
+			<MD5>a735cbeaf81735a8cfcf7be97d9f0cac</MD5>
+			<Meta>
+				<license>Not specified</license>
+				<description></description>
+				<version>1.0.0</version>
+				<authors>Kster, MCreator</authors>
+			</Meta>
 		</Module>
 	</Server>
 </ServerPack>
