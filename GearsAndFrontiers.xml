@@ -5,6 +5,7 @@
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/config.xml">config</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2015-06-13.xml">null</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2025-06-19.xml">null</Import>
+		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2025-06-21.xml">null</Import>
 		<Loader type="NeoForge" version="21.1.179" loadOrder="0"/>
 	</Server>
 </ServerPack>
