@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
-	<Server id="Gears-And-Frontiers" abstract="false" name="Gears &amp; Frontiers" newsUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/banner.png?raw=true" iconUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/icon.png?raw=true" version="1.21.1" serverAddress="geronimo.apexmc.co" generateList="true" autoConnect="false" revision="1" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+	<Server id="Gears-And-Frontiers" abstract="false" name="Gears &amp; Frontiers TEST" newsUrl="https://htmlpreview.github.io/?https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/master/index.html" iconUrl="https://github.com/edwardg117/Gears-Frontiers/blob/main/Assets/icon.png?raw=true" version="1.21.1" serverAddress="geronimo.apexmc.co" generateList="true" autoConnect="false" revision="2" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/base.xml">base</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/config.xml">config</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2015-06-13.xml">null</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2025-06-19.xml">null</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2025-06-21.xml">null</Import>
-		<Loader type="NeoForge" version="21.1.179" loadOrder="0"/>
+		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/updates-2025-07-25.xml">null</Import>
+		<Loader type="NeoForge" version="21.1.194" loadOrder="0"/>
 	</Server>
 </ServerPack>

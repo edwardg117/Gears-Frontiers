@@ -1,0 +1,243 @@
+# Gears & Frontiers - Minecraft Modpack Management
+# .gitignore file for Python-based modpack automation tools
+# 
+# This file excludes temporary files, build artifacts, logs, and sensitive configuration
+# from version control to maintain a clean repository and protect sensitive data.
+
+# =============================================================================
+# SENSITIVE CONFIGURATION FILES
+# =============================================================================
+# Configuration files containing API keys and sensitive data
+# Keep the .example files for documentation but exclude actual config files
+mod_update_config.ini
+*.ini
+!*.ini.example
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+secrets.json
+config.json
+!config.json.example
+
+# =============================================================================
+# PYTHON BYTECODE AND CACHE
+# =============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# =============================================================================
+# PYTHON DISTRIBUTION AND PACKAGING
+# =============================================================================
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =============================================================================
+# PYTHON VIRTUAL ENVIRONMENTS
+# =============================================================================
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# =============================================================================
+# TESTING AND COVERAGE
+# =============================================================================
+# Testing
+.tox/
+.coverage
+.pytest_cache/
+htmlcov/
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# =============================================================================
+# PROJECT-SPECIFIC LOG FILES
+# =============================================================================
+# Mod update automation log files (timestamped)
+mod_update_log_*.txt
+mod_update_log_*.log
+
+# General log files
+*.log
+*.pid
+*.seed
+
+# =============================================================================
+# TEMPORARY AND BACKUP FILES
+# =============================================================================
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+*~
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm / IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# =============================================================================
+# OPERATING SYSTEM FILES
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# PROJECT-SPECIFIC PATTERNS
+# =============================================================================
+# Minecraft modpack specific temporary files
+*.jar.tmp
+*.zip.tmp
+
+# Generated documentation
+docs/_build/
+site/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Archive files (unless specifically needed)
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+!required_*.jar
+!required_*.zip
+
+# =============================================================================
+# DEVELOPMENT AND DEBUGGING
+# =============================================================================
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
