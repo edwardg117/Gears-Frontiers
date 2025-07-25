@@ -1,0 +1,63 @@
+# Mod Update Automation Configuration File
+# Copy this file to mod_update_config.ini and customize as needed
+
+[API]
+# Modrinth API key (optional - public API access available without key)
+modrinth_api_key = 
+
+# CurseForge API key (required for CurseForge mod updates)
+# Get your key from: https://console.curseforge.com/
+curseforge_api_key = 
+
+# Rate limiting (requests per minute)
+rate_limit_per_minute = 60
+
+# Request timeout in seconds
+request_timeout = 30
+
+[MODPACK]
+# Target Minecraft version for compatibility checking
+target_minecraft_version = 1.21.1
+
+# Target mod loader (forge, neoforge, fabric, quilt)
+target_loader = neoforge
+
+# Comma-separated list of mod IDs to exclude from updates
+excluded_mods = 
+
+# Comma-separated list of mod IDs with pinned versions (format: mod_id:version)
+# Example: create:6.0.4,jei:19.21.0.247
+pinned_versions = 
+
+[UPDATE_POLICY]
+# Allow different types of updates
+allow_major_updates = true
+allow_minor_updates = true
+allow_patch_updates = true
+
+# Check for dependency conflicts
+check_dependencies = true
+
+# Verify file hashes for integrity
+verify_file_hashes = true
+
+[OUTPUT]
+# Output directory for generated files
+output_directory = updates
+
+# Generate XML update file compatible with MCUpdater
+generate_xml = true
+
+# Generate markdown changelog documentation
+generate_changelog = true
+
+# Generate detailed execution log
+generate_log = true
+
+# Include rollback information in outputs
+include_rollback_info = true
+
+[SCANNING]
+# Comma-separated list of directories to ignore when scanning for XML files
+# These directories will be skipped during the XML parsing phase
+ignored_directories = test_output,output,generated,build,dist,temp,tmp
