@@ -1,0 +1,218 @@
+Mod Update Automation Execution Log
+Generated: 2025-09-09 17:29:00
+Session ID: 2025-09-09
+==================================================
+
+SUMMARY STATISTICS
+--------------------
+Total mods scanned: 98
+Updates found: 25
+Update rate: 25.5%
+
+PLATFORM BREAKDOWN
+--------------------
+Modrinth: 89 mods
+Curseforge: 9 mods
+
+UPDATE DETAILS
+--------------------
+Mod: AmbientSounds (ambientsounds)
+  Platform: modrinth
+  Version: 6.1.12 -> 6.2.1
+  Severity: minor
+  File Size: 83830944 bytes
+  Download URL: https://cdn.modrinth.com/data/fM515JnW/versions/hkhyPcir/AmbientSounds_NEOFORGE_v6.2.1_mc1.21.1.jar
+  File Hash: 1eb9b04957160dce3b0240c55d8c27cc3dc3fc26
+
+Mod: Corpse x Curios API Compat (corpsexcuriossapicompat)
+  Platform: modrinth
+  Version: 3.0.2 -> 3.1.2
+  Severity: minor
+  File Size: 26059 bytes
+  Download URL: https://cdn.modrinth.com/data/pJGcKPh1/versions/MggwWPUK/corpsecurioscompat-1.21.1-NeoForge-3.1.2.jar
+  File Hash: b5b913ed0452e132b4bb6a7a73348cb0fcf3851b
+
+Mod: Create: Dragons Plus (create_dragonsplus)
+  Platform: modrinth
+  Version: 1.6.1 -> 1.8.0
+  Severity: minor
+  File Size: 641430 bytes
+  Download URL: https://cdn.modrinth.com/data/dzb1a5WV/versions/aKSU3f9Y/create-dragons-plus-1.8.0.jar
+  File Hash: 9236a201f632cc633a3b7814fd4bd1c8111f12a4
+
+Mod: Create: Enchantment Industry (create_enchantment_industry)
+  Platform: modrinth
+  Version: 2.1.7 -> 2.2.2
+  Severity: minor
+  File Size: 670953 bytes
+  Download URL: https://cdn.modrinth.com/data/JWGBpFUP/versions/fq6vaJiG/create-enchantment-industry-2.2.2.jar
+  File Hash: feaae8096f7eac23d041186a917612e7ece37b7c
+
+Mod: Immersive Aircraft (immersiveaircraft)
+  Platform: modrinth
+  Version: 1.3.3+1.21.1 -> 1.4.0+1.21.1
+  Severity: minor
+  File Size: 2435169 bytes
+  Download URL: https://cdn.modrinth.com/data/x3HZvrj6/versions/hsww7u3q/immersive_aircraft-1.4.0%2B1.21.1-neoforge.jar
+  File Hash: 04fa93fa06c038a77e8a872cb2f160373b07523f
+
+Mod: L_Ender's Cataclysm (l_enders_cataclysm)
+  Platform: modrinth
+  Version: 3.09 -> 3.16
+  Severity: minor
+  File Size: 138071302 bytes
+  Download URL: https://cdn.modrinth.com/data/46KJle7n/versions/FSm3cpWc/L_Ender%27s%20Cataclysm%201.21.1-3.16.jar
+  File Hash: 33dabb2e3ee9dd2490559e53893d1f1451194160
+
+Mod: Balm (balm)
+  Platform: modrinth
+  Version: 21.0.48+neoforge-1.21.1 -> 21.0.51+neoforge-1.21.1
+  Severity: patch
+  File Size: 587874 bytes
+  Download URL: https://cdn.modrinth.com/data/MBAkmtvl/versions/KSt3hDez/balm-neoforge-1.21.1-21.0.51.jar
+  File Hash: ceadd9513dce387880c46ada83b1de98bf0be4d0
+
+Mod: Create: Stam1o Tweaks (create_stam1o_tweaks)
+  Platform: modrinth
+  Version: 1.0.7+1.21.1-neo -> 1.0.8+1.21.1-neo
+  Severity: patch
+  File Size: 177861 bytes
+  Download URL: https://cdn.modrinth.com/data/46RgF8H2/versions/QxBHdxaK/Stam1oCreateTweaks-1.0.8%2B1.21.1-Neo.jar
+  File Hash: b53cf39b5f0e1e5352e632dd84e89b846ee72d3c
+
+Mod: CreativeCore (creativecore)
+  Platform: modrinth
+  Version: 2.13.7 -> 2.13.11
+  Severity: patch
+  File Size: 1198832 bytes
+  Download URL: https://cdn.modrinth.com/data/OsZiaDHq/versions/fqPlmIeP/CreativeCore_NEOFORGE_v2.13.11_mc1.21.1.jar
+  File Hash: ef1b7a6318e1073a847efadcc30ced8a7190cdd3
+
+Mod: Geckolib (geckolib)
+  Platform: modrinth
+  Version: 4.7.6 -> 4.7.7
+  Severity: patch
+  File Size: 593507 bytes
+  Download URL: https://cdn.modrinth.com/data/8BmcQJ2H/versions/18qeSgOb/geckolib-neoforge-1.21.1-4.7.7.jar
+  File Hash: 36883f8ea9117932bb5f2643a29578c6506e2339
+
+Mod: Horseman (horseman)
+  Platform: modrinth
+  Version: 1.5.0 -> 1.5.4
+  Severity: patch
+  File Size: 433987 bytes
+  Download URL: https://cdn.modrinth.com/data/qIv5FhAA/versions/YJ5YnKqj/horseman-neoforge-1.21.1-1.5.4.jar
+  File Hash: 4c3f15a6c4407dd4f880675e148a12f1f1fd7448
+
+Mod: Just Enough Items (jei)
+  Platform: modrinth
+  Version: 19.22.0.315 -> 19.22.1.316
+  Severity: patch
+  File Size: 1474239 bytes
+  Download URL: https://cdn.modrinth.com/data/u6dRKJwZ/versions/oghFmDkL/jei-1.21.1-neoforge-19.22.1.316.jar
+  File Hash: ad7cd1f890ef4924c62c39534d186396cde66868
+
+Mod: ColossalChests (colossalchests)
+  Platform: modrinth
+  Version: 1.21.1-1.8.12-179 -> 1.21.1-1.8.13
+  Severity: unknown
+  File Size: 265935 bytes
+  Download URL: https://cdn.modrinth.com/data/V8HM9qmm/versions/cfkxHTM8/colossalchests-1.21.1-neoforge-1.8.13.jar
+  File Hash: 848c5525eb1cd94e5a201fc085a0539ae11b39b4
+
+Mod: Concurrent Chunk Management Engine (c2me)
+  Platform: modrinth
+  Version: 0.3.0+alpha.0.72+1.21.1 -> 0.3.0+alpha.0.73+1.21.1
+  Severity: unknown
+  File Size: 4498050 bytes
+  Download URL: https://cdn.modrinth.com/data/COlSi5iR/versions/K1xREata/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.73.jar
+  File Hash: b887003d5d94a266e7ec614da55ab51eddf423c4
+
+Mod: Cyclops Core (cyclopscore)
+  Platform: modrinth
+  Version: 1.21.1-1.26.1-786 -> 1.21.1-1.26.2-808
+  Severity: unknown
+  File Size: 1139900 bytes
+  Download URL: https://cdn.modrinth.com/data/Z9DM0LJ4/versions/MzuREbo4/cyclopscore-1.21.1-neoforge-1.26.2-808.jar
+  File Hash: c543bd5eea528d420e05670a5d5fb7bc590cfd1a
+
+Mod: FallingTree (fallingtree)
+  Platform: modrinth
+  Version: 1.21.1-1.21.1.10 -> 1.21.1-1.21.1.11
+  Severity: unknown
+  File Size: 496356 bytes
+  Download URL: https://cdn.modrinth.com/data/Fb4jn8m6/versions/wxGXaJMA/FallingTree-1.21.1-1.21.1.11.jar
+  File Hash: 7e1b3ee0ba89b556d5a468797bb1b5f4e2b8ccb7
+
+Mod: Farmer's Delight (farmersdelight)
+  Platform: modrinth
+  Version: 1.21.1-1.2.8 -> 1.21.1-1.2.9
+  Severity: unknown
+  File Size: 2964387 bytes
+  Download URL: https://cdn.modrinth.com/data/R2OftAxM/versions/opCbq7uB/FarmersDelight-1.21.1-1.2.9.jar
+  File Hash: 9abe078f48781e4b87288dbc59691c8ba1152d8d
+
+Mod: L_Ender 's Cataclysm Delight (l_ender s_cataclysm_delight)
+  Platform: modrinth
+  Version: unknown -> 1.21.1-1.0.10
+  Severity: unknown
+  File Size: 187358 bytes
+  Download URL: https://cdn.modrinth.com/data/a48R8AGk/versions/Mk8hYics/lendersdelight-1.21.1-1.0.10.jar
+  File Hash: 5a3e06654045a43e76585b743fdb0b1ac966ec36
+
+Mod: MES - Moog's End Structures (mes)
+  Platform: modrinth
+  Version: 1.3.5 -> 1.4.6-1.21
+  Severity: unknown
+  File Size: 1902459 bytes
+  Download URL: https://cdn.modrinth.com/data/r4PuRGfV/versions/cO2Hw6EY/mes-1.4.6-1.21.jar
+  File Hash: 3d49d77db1d1264216c55f476ed1030dc61a1114
+
+Mod: MonoLib (monolib)
+  Platform: modrinth
+  Version: 2.1.0 -> neoforge-1.21.1-2.1.0
+  Severity: unknown
+  File Size: 179499 bytes
+  Download URL: https://cdn.modrinth.com/data/9leXt4A5/versions/mdyJwxhY/monolib-neoforge-1.21.1-2.1.0.jar
+  File Hash: e618e28647fcbf931143f81bcd905d7c9c61f27b
+
+Mod: Patchouli (patchouli)
+  Platform: modrinth
+  Version: 1.21-88-neoforge -> 1.21.1-92-neoforge
+  Severity: unknown
+  File Size: 646486 bytes
+  Download URL: https://cdn.modrinth.com/data/nU0bVIaL/versions/h6hKI2ob/Patchouli-1.21.1-92-NEOFORGE.jar
+  File Hash: 97ae42096ee4a0a242cd8468dde293017f3cc39c
+
+Mod: Puzzles Lib (puzzleslib)
+  Platform: modrinth
+  Version: v21.1.36-1.21.1-NeoForge -> v21.1.38-1.21.1-NeoForge
+  Severity: unknown
+  File Size: 1080651 bytes
+  Download URL: https://cdn.modrinth.com/data/QAGBst4M/versions/wzY6RY3b/PuzzlesLib-v21.1.38-1.21.1-NeoForge.jar
+  File Hash: 76b7d441697514c490b5665e7d1b36537dc7ccc7
+
+Mod: Simple Voice Chat (simplevoicechat)
+  Platform: modrinth
+  Version: neoforge-1.21.1-2.5.35 -> neoforge-1.21.1-2.6.2
+  Severity: unknown
+  File Size: 4862047 bytes
+  Download URL: https://cdn.modrinth.com/data/9eGKb6K1/versions/o3Y9NVDA/voicechat-neoforge-1.21.1-2.6.2.jar
+  File Hash: be7152bfc3804b03dfc72e80bee78a2bb9e1080f
+
+Mod: Tom's Simple Storage Mod (tomssimplestoragemod)
+  Platform: modrinth
+  Version: 1.21-2.2.1 -> 1.21-2.2.2
+  Severity: unknown
+  File Size: 839091 bytes
+  Download URL: https://cdn.modrinth.com/data/XZNI4Cpy/versions/EEFysEme/toms_storage-1.21-2.2.2.jar
+  File Hash: 5eac00b45f56d69e2dd2e9077b97c4631131da0d
+
+Mod: Traveler's Backpack (travelersbackpack)
+  Platform: modrinth
+  Version: 1.21.1-10.1.22 -> 1.21.1-10.1.23
+  Severity: unknown
+  File Size: 1242753 bytes
+  Download URL: https://cdn.modrinth.com/data/rlloIFEV/versions/41RS1Evh/travelersbackpack-neoforge-1.21.1-10.1.23.jar
+  File Hash: 45e3c59a2c93c43c53bc9154f9913da514d14a96
+

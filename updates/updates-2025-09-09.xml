@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="update-20250909" abstract="false" name="Update 2025-09-09" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+		<Module name="AmbientSounds" id="ambientsounds" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/fM515JnW/versions/hkhyPcir/AmbientSounds_NEOFORGE_v6.2.1_mc1.21.1.jar</URL>
+			<Size>83830944</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1eb9b04957160dce3b0240c55d8c27cc3dc3fc26</MD5>
+			<Meta>
+				<changelog>* Added performance improvement for biome tags check
+* Fixed sound after transition playing with full volume for a split second (this bug has occurred in the past and got fixed, but due to the recent changes it reappeared)
+</changelog>
+				<version>6.2.1</version>
+			</Meta>
+		</Module>
+		<Module name="Corpse x Curios API Compat" id="corpsexcuriossapicompat" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/pJGcKPh1/versions/MggwWPUK/corpsecurioscompat-1.21.1-NeoForge-3.1.2.jar</URL>
+			<Size>26059</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b5b913ed0452e132b4bb6a7a73348cb0fcf3851b</MD5>
+			<Meta>
+				<changelog>&lt;p&gt;the mod now differenciates between comestic and regular slots&lt;/p&gt;
+&lt;p&gt;fixed an issue where curios that add extra slots wouldn&apos;t equip the rest correctly (i had to double the mod&apos;s size in code to fix that but whatever :P )&lt;/p&gt;
+&lt;p&gt;added a config option to not equip cursed items (curse of binding for now) enabled by default&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;i hope you guys will enjoy it, it took me a while :D if you got feedback&amp;nbsp; you can leave a comment i read them all&lt;/p&gt;</changelog>
+				<version>3.1.2</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Dragons Plus" id="create_dragonsplus" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/dzb1a5WV/versions/aKSU3f9Y/create-dragons-plus-1.8.0.jar</URL>
+			<Size>641430</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9236a201f632cc633a3b7814fd4bd1c8111f12a4</MD5>
+			<Meta>
+				<changelog>## Create: Dragons Plus 1.8.0
+
+### Update
+Compatible with Create: Dreams &amp; Desire.
+
+`Bulk Sanding`, `Bulk Ending` and `Bulk Freezing` supports all Fan processing recipes of Create: Dreams &amp; Desires automatically.
+
+Industrial Fan is supported.
+</changelog>
+				<version>1.8.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Enchantment Industry" id="create_enchantment_industry" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/JWGBpFUP/versions/fq6vaJiG/create-enchantment-industry-2.2.2.jar</URL>
+			<Size>670953</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>feaae8096f7eac23d041186a917612e7ece37b7c</MD5>
+			<Meta>
+				<changelog>## Create: Enchantment Industry 2.2.2
+
+### Update
+* Add `can be processed by Mechanical Grindstone` Item Attribute
+
+### Fix
+* fix Grindstone Drain does not process recipe containing no exp
+
+### Transaltion
+* Add Brazilian Portuguese Translation by PrincessStellar</changelog>
+				<version>2.2.2</version>
+			</Meta>
+		</Module>
+		<Module name="Immersive Aircraft" id="immersiveaircraft" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/x3HZvrj6/versions/hsww7u3q/immersive_aircraft-1.4.0%2B1.21.1-neoforge.jar</URL>
+			<Size>2435169</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>04fa93fa06c038a77e8a872cb2f160373b07523f</MD5>
+			<Meta>
+				<changelog># 1.4.0
+
+* Added mechanical dials and hud (Thanks donmor!)
+* Fixed keybind related issues
+
+# 1.3.3
+
+* Fixed rudder orientation
+
+# 1.3.2
+
+* Fixed aircraft sinking on Forge
+* Fixed warship position offset
+
+# 1.3.1
+
+* Fixed recipe
+
+# 1.3.0
+
+* Added the Bamboo Hopper
+* Made trails data driven
+* Fixed a crash
+
+# 1.2.4
+
+* Fixed Fabric networking being a bit funky
+
+# 1.2.2
+
+* Updated API-related stuff
+
+# 1.2.1
+
+* Fixed air bubbles and other bars being offset
+
+# 1.2.0
+
+* Fixed some crashes
+* Fixed healt</changelog>
+				<version>1.4.0+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="L_Ender&apos;s Cataclysm" id="l_enders_cataclysm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/46KJle7n/versions/FSm3cpWc/L_Ender%27s%20Cataclysm%201.21.1-3.16.jar</URL>
+			<Size>138071302</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>33dabb2e3ee9dd2490559e53893d1f1451194160</MD5>
+			<Meta>
+				<changelog>Changed Tidal Claw&apos;s Chain Code
+
+Fixed Water spear not despawning</changelog>
+				<version>3.16</version>
+			</Meta>
+		</Module>
+		<Module name="Balm" id="balm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/KSt3hDez/balm-neoforge-1.21.1-21.0.51.jar</URL>
+			<Size>587874</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ceadd9513dce387880c46ada83b1de98bf0be4d0</MD5>
+			<Meta>
+				<changelog>- Fixed config load handlers not firing on NeoForge
+
+
+- Updated Kuma to fix input bug with unbound keys</changelog>
+				<version>21.0.51+neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Stam1o Tweaks" id="create_stam1o_tweaks" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/46RgF8H2/versions/QxBHdxaK/Stam1oCreateTweaks-1.0.8%2B1.21.1-Neo.jar</URL>
+			<Size>177861</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b53cf39b5f0e1e5352e632dd84e89b846ee72d3c</MD5>
+			<Meta>
+				<changelog>## Stam1o Tweaks 1.0.8
+
+#### Added / Fixes
+- Fixed [#3](https://github.com/lieonlion/Stam1oTweaks/issues/3).
+
+***
+
+[**![](https://raw.githubusercontent.com/LieOnLion/LieOnLion/main/images/banners/bisect-banner-spruce-chest.png)**](https://bisect.lieonlion.dev/modrinth/stam1o_tweaks)</changelog>
+				<version>1.0.8+1.21.1-neo</version>
+			</Meta>
+		</Module>
+		<Module name="CreativeCore" id="creativecore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/fqPlmIeP/CreativeCore_NEOFORGE_v2.13.11_mc1.21.1.jar</URL>
+			<Size>1198832</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ef1b7a6318e1073a847efadcc30ced8a7190cdd3</MD5>
+			<Meta>
+				<changelog>* Reverted back to all packets being optional (might cause issues when connecting to server with creativecore installed, but enables connection to paper or spigot)
+</changelog>
+				<version>2.13.11</version>
+			</Meta>
+		</Module>
+		<Module name="Geckolib" id="geckolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/8BmcQJ2H/versions/18qeSgOb/geckolib-neoforge-1.21.1-4.7.7.jar</URL>
+			<Size>593507</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>36883f8ea9117932bb5f2643a29578c6506e2339</MD5>
+			<Meta>
+				<changelog>v4.7.7
+
+- Properly handle exception when attempting to glowmask an animated texture (Pull #758)
+- Changed DefaultedEntityGeoModel to use a nullable bone name input for its head turning instead of a flat boolean (#753)
+- Fixed some specific bedrock-format animations failing to parse if exported on newer versions of Blockbench</changelog>
+				<version>4.7.7</version>
+			</Meta>
+		</Module>
+		<Module name="Horseman" id="horseman" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/qIv5FhAA/versions/YJ5YnKqj/horseman-neoforge-1.21.1-1.5.4.jar</URL>
+			<Size>433987</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4c3f15a6c4407dd4f880675e148a12f1f1fd7448</MD5>
+			<Meta>
+				<changelog>## 1.5.4 - 2025-09-05
+
+- Camels are now summonable with Copper Horn by default (added to `horseman:summonable` tag).
+
+- Fixed Copper Horn binding not working on Camels even if manually added to `horseman:summonable` tag.
+
+- Bumped version to align with version number of the mod on newer MC versions.</changelog>
+				<version>1.5.4</version>
+			</Meta>
+		</Module>
+		<Module name="Just Enough Items" id="jei" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/u6dRKJwZ/versions/oghFmDkL/jei-1.21.1-neoforge-19.22.1.316.jar</URL>
+			<Size>1474239</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ad7cd1f890ef4924c62c39534d186396cde66868</MD5>
+			<Meta>
+				<changelog>  * [Add grindstone category [1.21.1] (#4050)](https://github.com/mezz/JustEnoughItems/commit/5d1ca56c2ee83305899b2918da8346e2015475b7) - Sleepy-Horse
+</changelog>
+				<version>19.22.1.316</version>
+			</Meta>
+		</Module>
+		<Module name="ColossalChests" id="colossalchests" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/V8HM9qmm/versions/cfkxHTM8/colossalchests-1.21.1-neoforge-1.8.13.jar</URL>
+			<Size>265935</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>848c5525eb1cd94e5a201fc085a0539ae11b39b4</MD5>
+			<Meta>
+				<changelog># Changelog for Minecraft 1.21.1
+All notable changes to this project will be documented in this file.
+
+&lt;a name=&quot;1.21.1-1.8.9&quot;&gt;&lt;/a&gt;
+## [1.21.1-1.8.9](https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.8...1.21.1-1.8.9) - 2024-11-19 10:36:01 +0100
+
+
+### Fixed
+* Fix Fabric crash on explosion, Closes #174
+
+&lt;a name=&quot;1.21.1-1.8.8&quot;&gt;&lt;/a&gt;
+## [1.21.1-1.8.8](https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.7...1.21.1-1.8.8) - 2024-10-16 17:51:43 +0200
+
+
+### Fixed
+* Fix crash when </changelog>
+				<version>1.21.1-1.8.13</version>
+			</Meta>
+		</Module>
+		<Module name="Concurrent Chunk Management Engine" id="c2me" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/COlSi5iR/versions/K1xREata/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.73.jar</URL>
+			<Size>4498050</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b887003d5d94a266e7ec614da55ab51eddf423c4</MD5>
+			<Meta>
+				<changelog>This version is uploaded automatically by GitHub Actions.  
+
+Changelog:  
+- [f23efaea](https://github.com/RelativityMC/C2ME-neoforge/commit/f23efaea74403d59d21bf310e24af04695281ce3) fix: avoid markDirty on a removed holder in removeTicket - ishland  
+</changelog>
+				<version>0.3.0+alpha.0.73+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Cyclops Core" id="cyclopscore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Z9DM0LJ4/versions/MzuREbo4/cyclopscore-1.21.1-neoforge-1.26.2-808.jar</URL>
+			<Size>1139900</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c543bd5eea528d420e05670a5d5fb7bc590cfd1a</MD5>
+			<Meta>
+				<changelog>Changes since last release: https://github.com/CyclopsMC/CyclopsCore/compare/1.21.1-1.26.2...1c141e0d4f7ebfcf2c52ad9ea3985f2997ab3abe</changelog>
+				<version>1.21.1-1.26.2-808</version>
+			</Meta>
+		</Module>
+		<Module name="FallingTree" id="fallingtree" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Fb4jn8m6/versions/wxGXaJMA/FallingTree-1.21.1-1.21.1.11.jar</URL>
+			<Size>496356</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7e1b3ee0ba89b556d5a468797bb1b5f4e2b8ccb7</MD5>
+			<Meta>
+				<changelog>[Changelog on GitHub](https://github.com/RakambdaOrg/FallingTree/releases/tag/1.21.1.11)
+
+&lt;!-- Release notes generated using configuration in .github/release.yml at minecraft/1.21.1 --&gt;
+
+## What&apos;s Changed
+### ? Features
+* Add Argentine Spanish localization by @Rakambda in https://github.com/RakambdaOrg/FallingTree/pull/929
+
+
+**Full Changelog**: https://github.com/RakambdaOrg/FallingTree/compare/1.21.1.10...1.21.1.11</changelog>
+				<version>1.21.1-1.21.1.11</version>
+			</Meta>
+		</Module>
+		<Module name="Farmer&apos;s Delight" id="farmersdelight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/R2OftAxM/versions/opCbq7uB/FarmersDelight-1.21.1-1.2.9.jar</URL>
+			<Size>2964387</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9abe078f48781e4b87288dbc59691c8ba1152d8d</MD5>
+			<Meta>
+				<changelog>## 1.2.9
+
+### Updates
+- The `offhand_equipment` tag now includes `forge:tools/shields` by default, extending default compatibility;
+- Rich Soil Farmland can now be hydrated by any fluid type capable of hydration;
+- Wild Cabbage and Sea Beet can now generate on any biome tagged with `minecraft:is_beach` (thanks, lyaneii!);
+
+### Fixes
+- Fixed Wheat Dough&apos;s water-based recipe still displaying in JEI when disabled;
+- Fixed FD&apos;s special recipes existing in the `minecraft` namespace;
+- Temporary fix f</changelog>
+				<version>1.21.1-1.2.9</version>
+			</Meta>
+		</Module>
+		<Module name="L_Ender &apos;s Cataclysm Delight" id="l_ender s_cataclysm_delight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/a48R8AGk/versions/Mk8hYics/lendersdelight-1.21.1-1.0.10.jar</URL>
+			<Size>187358</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5a3e06654045a43e76585b743fdb0b1ac966ec36</MD5>
+			<Meta>
+				<changelog>- Change textures and models (by BF_Meow, thx!)
+- Add Variant Foods: Raw Deepling Meat
+- Add Twist to Foods: Koboleton Pumpkin, Urchinkin Pumpkin, Symbiocto Tentacle, Cindaria Hat, Cooked Amethyst Crab Meat
+- Update Chinese language (By BF_Meow, thx!)
+- Fix recipes: cooked_amethyst_crab_meat_slice, crystallized_coral_roll, lionfish_roll(Thx BF_Meow)</changelog>
+				<version>1.21.1-1.0.10</version>
+			</Meta>
+		</Module>
+		<Module name="MES - Moog&apos;s End Structures" id="mes" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/r4PuRGfV/versions/cO2Hw6EY/mes-1.4.6-1.21.jar</URL>
+			<Size>1902459</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3d49d77db1d1264216c55f476ed1030dc61a1114</MD5>
+			<Meta>
+				<changelog>
+# Changelog
+
+### Added
+- added the following structures:
+- Mega Ship Basic,
+- Mega Ship Crashed
+- Mega Ship Crashed 2
+- Mega Ship Crashed Deepslate
+- Mega Ship Deepslate
+- Mega Ship Deepslate 2
+- Mega Ship Deepslate 3
+
+- Also added Loot tables for those structures
+
+### Changed
+- 
+
+### Fixed
+- 
+</changelog>
+				<version>1.4.6-1.21</version>
+			</Meta>
+		</Module>
+		<Module name="MonoLib" id="monolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9leXt4A5/versions/mdyJwxhY/monolib-neoforge-1.21.1-2.1.0.jar</URL>
+			<Size>179499</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e618e28647fcbf931143f81bcd905d7c9c61f27b</MD5>
+			<Meta>
+				<changelog>- Port from 1.20.1</changelog>
+				<version>neoforge-1.21.1-2.1.0</version>
+			</Meta>
+		</Module>
+		<Module name="Patchouli" id="patchouli" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nU0bVIaL/versions/h6hKI2ob/Patchouli-1.21.1-92-NEOFORGE.jar</URL>
+			<Size>646486</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>97ae42096ee4a0a242cd8468dde293017f3cc39c</MD5>
+			<Meta>
+				<changelog>https://github.com/VazkiiMods/Patchouli/releases/tag/release-1.21.1-92</changelog>
+				<version>1.21.1-92-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Puzzles Lib" id="puzzleslib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/QAGBst4M/versions/wzY6RY3b/PuzzlesLib-v21.1.38-1.21.1-NeoForge.jar</URL>
+			<Size>1080651</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>76b7d441697514c490b5665e7d1b36537dc7ccc7</MD5>
+			<Meta>
+				<changelog># Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [v21.1.38-1.21.1] - 2025-08-11
+### Added
+- Add `PackRepositorySourcesContext::registerBuiltInPack`
+- Support built-in packs in `DataProviderHelper`
+
+## [v21.1.37-1.21.1] - 2025-08-05
+### Fixed
+- Fix `ShieldBlockCallback` being called even when n</changelog>
+				<version>v21.1.38-1.21.1-NeoForge</version>
+			</Meta>
+		</Module>
+		<Module name="Simple Voice Chat" id="simplevoicechat" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/o3Y9NVDA/voicechat-neoforge-1.21.1-2.6.2.jar</URL>
+			<Size>4862047</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>be7152bfc3804b03dfc72e80bee78a2bb9e1080f</MD5>
+			<Meta>
+				<changelog>- Updated Russian translation
+- Fixed groups, player states and audio categories not being cleared when switching servers on a proxy
+</changelog>
+				<version>neoforge-1.21.1-2.6.2</version>
+			</Meta>
+		</Module>
+		<Module name="Tom&apos;s Simple Storage Mod" id="tomssimplestoragemod" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/XZNI4Cpy/versions/EEFysEme/toms_storage-1.21-2.2.2.jar</URL>
+			<Size>839091</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5eac00b45f56d69e2dd2e9077b97c4631131da0d</MD5>
+			<Meta>
+				<changelog>Added configurable hopper cooldown ([#597](https://github.com/tom5454/Toms-Storage/issues/597))  
+Fixed crash with inventory proxy (Closes [#609](https://github.com/tom5454/Toms-Storage/issues/609))  
+Fixed crash with legendary tooltips (Closes [#603](https://github.com/tom5454/Toms-Storage/issues/603))  
+Fixed crash with REI on 1.21.6+ (Closes [#610](https://github.com/tom5454/Toms-Storage/issues/610))</changelog>
+				<version>1.21-2.2.2</version>
+			</Meta>
+		</Module>
+		<Module name="Traveler&apos;s Backpack" id="travelersbackpack" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rlloIFEV/versions/41RS1Evh/travelersbackpack-neoforge-1.21.1-10.1.23.jar</URL>
+			<Size>1242753</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>45e3c59a2c93c43c53bc9154f9913da514d14a96</MD5>
+			<Meta>
+				<changelog>? Added Item Tag support to Pickup Upgrade, Void Upgrade, and Magnet Upgrade  
+? Prevent crash when Package from Create is hit with Bee Backpack ability enabled  
+? Fixed item duplication issue related to the Crafting Upgrade  
+? Fixed occasional crash when using the Hose Item on a Cauldron  
+? Fixed reversed behavior when ignoring/matching item nbt data  
+? Fixed crash with Deep Aether  
+? Updated pt_br, ru_ru, and zh_cn translations
+
+? Want to receive **Supporter Star Badge** for a **lifetime*</changelog>
+				<version>1.21.1-10.1.23</version>
+			</Meta>
+		</Module>
+		<Module name="What Are They Up To" id="WATUT" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/AtB5mHky/versions/uWr2aTW9/watut-neoforge-1.21.0-1.2.7.jar</URL>
+			<Size>432269</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>31cfc24b7997dbf6ed84cd844de37d7d</MD5>
+			<Meta>
+				<version>1.21.0-1.2.7</version>
+			</Meta>
+		</Module>
+		<Module name="Jade" id="jade" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nvQzSEkH/versions/43sRR8f6/Jade-1.21.1-NeoForge-15.10.3.jar</URL>
+			<Size>725736</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4c3891e2160079f270029c004ba3f562</MD5>
+			<Meta>
+				<version>15.10.3+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Jade Addons" id="jade_addons" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/xuDOzCLy/versions/Z9s9lM56/JadeAddons-1.21.1-NeoForge-6.1.0.jar</URL>
+			<Size>74419</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>81f8035bc735c75463add09f923ad372</MD5>
+			<Meta>
+				<version>6.1.0+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Quick Right-Click" id="quickrightclick" depends="collective" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/e8mI328p/versions/adnxLN71/quickrightclick-1.21.1-1.6.jar</URL>
+			<Size>118060</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>40cfaddc53f3592048816219be567b3f</MD5>
+			<Meta>
+				<license>All Right Reserved</license>
+				<description>Adds the functionality to right-click items in the air to access them quickly without placing them. Works for beds, cartography tables, crafting tables, ender chests, grindstones, shulker boxes, smithing tables and stonecutters.</description>
+				<version>1.21.1-1.6-fabric+forge+neo</version>
+				<authors>Rick South</authors>
+			</Meta>
+		</Module>
+		<Module name="Trash Cans" id="trash_cans" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/4QrnfueM/versions/qjxSupgx/trashcans-1.0.18c-neoforge-mc1.21.jar</URL>
+			<Size>159808</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3fee00cce5015899621dff21f5c25aad</MD5>
+			<Meta>
+				<version>1.0.18c-neoforge-mc1.21</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Aquatic Ambitions" id="create_aquatic_ambitions" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9SyaPzp7/versions/hiMMSQE6/create_aquatic_ambitions-1.21.1-2.0.1.jar</URL>
+			<Size>1001913</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5c023bb12278a8ef6142ea30fec98146</MD5>
+			<Meta>
+				<version>1.21.1-2.0.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create Slice &amp; Dice" id="create_slice_and_dice" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/GmjmRQ0A/versions/ZiO4MFZQ/sliceanddice-neoforge-4.0.1.jar</URL>
+			<Size>1004569</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0a30b1e8b62d55caa8d3ac6cefb37dc1</MD5>
+			<Meta>
+				<version>4.0.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Dq3STxps/versions/EJvkRqz0/createrailwaysnavigator-neoforge-1.21.1-beta-0.8.4.jar</URL>
+			<Size>3280785</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>feaddd12b92b25b7f479a82f4a6ef09b</MD5>
+			<Meta>
+				<version>1.21.1-beta-0.8.4</version>
+			</Meta>
+		</Module>
+		<Module name="Animal Pens" id="animal_pens" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/K5CAV4wi/versions/udDzXR5H/animal_pen-neoforge-1.21-1.5.1.jar</URL>
+			<Size>318834</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1be9b45929c9d78888cc71310741b355</MD5>
+			<Meta>
+				<version>1.5.1-1.21</version>
+			</Meta>
+		</Module>
+		<Module name="CustomNPCs" id="customnpcs" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/vFAmwl6B/versions/5gdSEvLv/CustomNPCs-Unofficial-NeoForge-1.21.1.20241226.jar</URL>
+			<Size>10779627</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1548ba2483aa029ddf82d3fd257d9482</MD5>
+			<Meta>
+				<license>CC BY-NC</license>
+				<credits>A lot of people, see the list at the forum</credits>
+				<description>The Custom Npcs mod lets you create your own npcs and lets you customize them how you want</description>
+				<version>NeoForge-1.21.1.20241226</version>
+				<url>http://tinyurl.com/customnpcs</url>
+				<authors>Noppes</authors>
+			</Meta>
+		</Module>
+		<Module name="MineColonies" id="minecolonies" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6975/844/minecolonies-1.1.1116-1.21.1-snapshot.jar</URL>
+			<Size>72071909</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>542807d630c65045179642a53b48f392</MD5>
+		</Module>
+		<Module name="CoroUtil" id="coroutil" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rLLJ1OZM/versions/H2YXCYUY/coroutil-neoforge-1.21.0-1.3.8.jar</URL>
+			<Size>63981</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9d410a84fe0216ce18568993afb4f8e5</MD5>
+			<Meta>
+				<version>1.21.0-1.3.8</version>
+			</Meta>
+		</Module>
+		<Module name="BlockUI" id="blockui" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6866/850/blockui-1.0.204-1.21.1-snapshot.jar</URL>
+			<Size>468062</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ae5bd6f561a5a2bf0d93365f90b02e07</MD5>
+		</Module>
+		<Module name="Domum Ornamentum" id="domum_ornamentum" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6870/762/domum-ornamentum-1.0.221-snapshot-main.jar</URL>
+			<Size>1124304</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d7b4134e1ee9772811b02f4fbc40f9e7</MD5>
+		</Module>
+		<Module name="Multi-Piston" id="multi-piston" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6646/627/multipiston-1.2.57-1.21.1.jar</URL>
+			<Size>33350</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fc369fcce084ab5c1844637d9bc27b96</MD5>
+		</Module>
+		<Module name="Structurize" id="structurize" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6887/055/structurize-1.0.787-1.21.1-snapshot.jar</URL>
+			<Size>1014544</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2b396c00f56cb3c9fd8befff677dc0e6</MD5>
+		</Module>
+		<Module name="TownTalk" id="towntalk" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/5653/504/towntalk-1.2.0.jar</URL>
+			<Size>52301863</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>f9b1214017704f1f6eb0b97521eeeb45</MD5>
+			<Meta>
+				<license>ARR</license>
+				<description>TownTalk is an Expansion for Minecolonies that adds more Voicelines to Minecolonies</description>
+				<version>${modVersion}</version>
+				<authors>LDT Team</authors>
+			</Meta>
+		</Module>
+		<Module name="Infinite Dimensions" id="infinite_dimensions" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/KgKqTqPj/versions/PVHuW0GQ/infinite-dimensions-2.5.2%2B1.21.1.jar</URL>
+			<Size>10473682</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0296e0c3476600917aa9e637338c7cdd</MD5>
+			<Meta>
+				<version>2.5.2+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Dimensional Dungeons" id="dimensional_dungeons" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/6420/838/dimdungeons-202-neoforge-1.21.0.jar</URL>
+			<Size>2852517</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>91e817ddd95e959340b5e74ec538225a</MD5>
+			<Meta>
+				<version>202</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2: Food Core" id="harvestcraft _2_food_core" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Z9OywhE4/versions/IHVdcpYW/pamhc2foodcore-NEOFORGE-1.21.1-1.0.2.jar</URL>
+			<Size>983827</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9254ab78c9f6e8867d56170febdc98f2</MD5>
+			<Meta>
+				<version>1.0.2</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2 - Food Extended" id="harvestcraft_2_food_extended" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/bdPeAbPS/versions/8Jv3MDxv/pamhc2foodextended-NEOFORGE-1.21.1-1.0.0.jar</URL>
+			<Size>1983616</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>03d2aa7191dd29033fb23299c4715759</MD5>
+			<Meta>
+				<version>1.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2: Crops" id="harvestcraft_2_crops" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/5xO6VNlk/versions/zlZevQk0/pamhc2crops-NEOFORGE-1.21.1-1.0.0.jar</URL>
+			<Size>1047144</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f71b6a0d1e58644d07040e8fc34c89d5</MD5>
+			<Meta>
+				<version>1.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2 - Trees" id="harvestcraft_2_trees" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/KDzWXxuG/versions/8AQrMyL9/pamhc2trees-NEOFORGE-1.21.1-1.0.4.jar</URL>
+			<Size>1396943</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ba594c6adc5a5c879f4429dfe49759b4</MD5>
+			<Meta>
+				<version>1.0.4</version>
+			</Meta>
+		</Module>
+		<Module name="Collective" id="collective" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/e0M1UDsY/versions/ao7rZsss/collective-1.21.1-8.3.jar</URL>
+			<Size>934732</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c8175232e3316ff51c6836839c9a714b</MD5>
+			<Meta>
+				<license>All Rights Reserved</license>
+				<description>Collective is a shared library with common code for all of Serilum&apos;s mods.</description>
+				<version>1.21.1-8.3-fabric+forge+neo</version>
+				<authors>Rick South</authors>
+			</Meta>
+		</Module>
+	</Server>
+</ServerPack>
