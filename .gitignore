@@ -186,6 +186,7 @@ $RECYCLE.BIN/
 # Generated documentation
 docs/_build/
 site/
+ignore/
 
 # Database files
 *.db

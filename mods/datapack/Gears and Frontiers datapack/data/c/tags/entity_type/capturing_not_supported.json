@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "astikorcartsredux:plow",
+        "astikorcartsredux:supply_cart",
+        "astikorcartsredux:hand_cart",
+        "astikorcartsredux:reaper",
+        "astikorcartsredux:animal_cart",
+        "astikorcartsredux:seed_drill"
+    ]
+}
