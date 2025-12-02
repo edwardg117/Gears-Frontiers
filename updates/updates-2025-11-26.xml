@@ -1279,5 +1279,52 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>1.0.3-1.21.1</version>
 			</Meta>
 		</Module>
+		<Module name="Create Stock Bridge" id="create_stock_bridge" depends="create applied_energistics_2" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/V7mbOBO4/versions/U2VU3fJ5/createstockbridge-1.21.1-0.1.6.jar</URL>
+			<Size>173051</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>03c52d9555f07fb0c42f3423d15d0378</MD5>
+			<Meta>
+				<version>1.21.1-0.1.6</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Extra Gauges" id="create_extra_gauges" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6YJgomwt/versions/yFv98E4V/extra_gauges-2.0.6.jar</URL>
+			<Size>1027415</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f42faf1a028fafdee89e11f538b8ce44</MD5>
+		</Module>
+		<Module name="Create Extra Casing" id="create_extra_casing" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/yEGVcr59/versions/8w86yown/create_extra_casing-4.0.4.jar</URL>
+			<Size>1484026</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5e83e246177e46bfcc6ccd82a5a8deda</MD5>
+			<Meta>
+				<version>4.0.4</version>
+			</Meta>
+		</Module>
+		<Module name="Create Train Parts" id="create_train_parts" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/h0bu4oDk/versions/AEYnUaMG/create_train_parts-0.3.2-1.21.1-6.0.8.jar</URL>
+			<Size>3517881</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fabe00a749c1415a6606f3e3328a4300</MD5>
+			<Meta>
+				<version>0.3.2</version>
+			</Meta>
+		</Module>
+		<Module name="Create: SpawnerBoxer" id="create_spawnerboxer" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MutgVePM/versions/Sh8W9EM9/CreateSpawnerBoxer-0.1.1%2Bforge-1.21.1-18.jar</URL>
+			<Size>102396</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>03b4a14d1dd8f0d93c5a2ee18427f05e</MD5>
+			<Meta>
+				<version>0.1.1+forge-1.21.1-18</version>
+			</Meta>
+		</Module>
 	</Server>
 </ServerPack>
