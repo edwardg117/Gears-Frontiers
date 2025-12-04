@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "boat",
+  "ingredients": [{"item": "minecraft:barrier"}],
+  "result": {
+    "id": "minecraft:barrier"
+  }
+}

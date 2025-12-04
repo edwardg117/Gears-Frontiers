@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "immersive_aircraft",
+  "ingredients": [{"item": "minecraft:barrier"}],
+  "result": {
+    "id": "minecraft:barrier"
+  }
+}
