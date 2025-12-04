@@ -1326,5 +1326,118 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>0.1.1+forge-1.21.1-18</version>
 			</Meta>
 		</Module>
+		<Module name="Create: Delivery Director" id="create_delivery_director" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/qRL8MwMB/versions/h8uBCjnS/delivery_director-1.0.1.jar</URL>
+			<Size>71664</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2c2c6cdd09eef2330697d5e08e12e1d0</MD5>
+			<Meta>
+				<version>1.0.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Gears n&apos; Kinetics" id="create_gears_n_kinetics" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/gEWECBVL/versions/1SG2AP9A/GnKinetics-1.21.1-1.0l.jar</URL>
+			<Size>505455</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>79a60bdedb458db0594238071bbe6729</MD5>
+			<Meta>
+				<version>1.0l</version>
+			</Meta>
+		</Module>
+		<Module name="Underground Village, Stoneholm" id="underground_village" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/KmyhssPl/versions/UllvTOm1/underground_village-neoforge-1.5.6.jar</URL>
+			<Size>347911</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c4efca6923110a349a2ce940a7e11bdc</MD5>
+			<Meta>
+				<version>1.5.6</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Better Villagers" id="create_better_villagers" depends="create underground_village" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kS90mr4y/versions/TXkrwOJQ/create_better_villagers-1.3.2.jar</URL>
+			<Size>180411</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8f95a54b67d3579afcfd3867b99b9a26</MD5>
+			<Meta>
+				<license>All Rights Reserved</license>
+				<description>Create: Better Villager that adds a host of Create-mod village professions</description>
+				<version>1.3.0</version>
+				<authors>Reggarf aka Anoop Singh</authors>
+			</Meta>
+		</Module>
+		<Module name="Create: Dimension, Steamworks Realm" id="create_dimension_steamworks_realm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/yHADpDIL/versions/2LzO4V0s/create_dimension-1.0.4.jar</URL>
+			<Size>343857</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2c3e2294c4cc1060bc4c7de6fb95ce0a</MD5>
+			<Meta>
+				<version>1.0.4</version>
+			</Meta>
+		</Module>
+		<Module name="Create More: Package Couriers" id="create_more_package_couriers" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/GRqrodjM/versions/7FmIedS3/cmpackagecouriers-1.6.0.jar</URL>
+			<Size>251488</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bcf7a45d42f335ad0aa5c2ee9a807ae4</MD5>
+			<Meta>
+				<version>1.6.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create Bionics" id="create_bionics" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/lCwu0vBo/versions/CQ4S177k/createbionics-1.0.5b.jar</URL>
+			<Size>3103432</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>588607d2f0e951653efcc91f47b29c26</MD5>
+			<Meta>
+				<version>1.0.5b</version>
+			</Meta>
+		</Module>
+		<Module name="CreateBetterFps" id="createbetterfps" depends="sodium iris" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/lMYIHZNH/versions/fXfWOQ16/createbetterfps-1.21.1-1.1.3.jar</URL>
+			<Size>26171</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>dfb12a23ceaf443cb0d10b1f578a19f8</MD5>
+			<Meta>
+				<version>1.1.3</version>
+			</Meta>
+		</Module>
+		<Module name="Xaero Train Map" id="xaero_train_map" depends="create xaerosminimap" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/Ov2r3aVY/versions/mgDpAA4x/xaerotrainmap-1.0.0.jar</URL>
+			<Size>7646</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>722475712e8725945f76fd2375a24417</MD5>
+			<Meta>
+				<version>1.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Ash API" id="ash_api" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Q8xUICr6/versions/3VLPjt5Q/ash_api-neoforge-21.1.1.jar</URL>
+			<Size>30484</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>26efc511c54369008dbbf449e67dbe07</MD5>
+			<Meta>
+				<version>21.1.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Shuffle" id="shuffle" depends="ash_api" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/WUvGZLgB/versions/c2CBLjgR/shuffle-neoforge-21.1.0.jar</URL>
+			<Size>88930</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>24f5f6092ba03366f6c2cfb4a835b660</MD5>
+			<Meta>
+				<version>21.1.0-neoforge</version>
+			</Meta>
+		</Module>
 	</Server>
 </ServerPack>
