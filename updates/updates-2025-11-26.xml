@@ -1340,7 +1340,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<URL priority="1">https://cdn.modrinth.com/data/gEWECBVL/versions/1SG2AP9A/GnKinetics-1.21.1-1.0l.jar</URL>
 			<Size>505455</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>79a60bdedb458db0594238071bbe6729</MD5>
 			<Meta>
 				<version>1.0l</version>
@@ -1350,7 +1350,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<URL priority="1">https://cdn.modrinth.com/data/KmyhssPl/versions/UllvTOm1/underground_village-neoforge-1.5.6.jar</URL>
 			<Size>347911</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>c4efca6923110a349a2ce940a7e11bdc</MD5>
 			<Meta>
 				<version>1.5.6</version>
@@ -1360,7 +1360,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<URL priority="1">https://cdn.modrinth.com/data/kS90mr4y/versions/TXkrwOJQ/create_better_villagers-1.3.2.jar</URL>
 			<Size>180411</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>8f95a54b67d3579afcfd3867b99b9a26</MD5>
 			<Meta>
 				<license>All Rights Reserved</license>
@@ -1373,7 +1373,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<URL priority="1">https://cdn.modrinth.com/data/yHADpDIL/versions/2LzO4V0s/create_dimension-1.0.4.jar</URL>
 			<Size>343857</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>2c3e2294c4cc1060bc4c7de6fb95ce0a</MD5>
 			<Meta>
 				<version>1.0.4</version>
@@ -1393,7 +1393,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<URL priority="1">https://cdn.modrinth.com/data/lCwu0vBo/versions/CQ4S177k/createbionics-1.0.5b.jar</URL>
 			<Size>3103432</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>588607d2f0e951653efcc91f47b29c26</MD5>
 			<Meta>
 				<version>1.0.5b</version>
@@ -1437,6 +1437,119 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<MD5>24f5f6092ba03366f6c2cfb4a835b660</MD5>
 			<Meta>
 				<version>21.1.0-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Pattern Schematics" id="create_pattern_schematics" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/cpqKG67r/versions/VSJhIkG2/create_pattern_schematics-2.0.10.jar</URL>
+			<Size>221764</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ae96b6c00e6a87ffe6d5df48302690fd</MD5>
+			<Meta>
+				<version>2.0.10</version>
+			</Meta>
+		</Module>
+		<Module name="spark" id="spark" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/l6YH9Als/versions/v5qtqRQi/spark-1.10.124-neoforge.jar</URL>
+			<Size>3642581</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a61dd250e618f8fd62fc6b0943831c50</MD5>
+			<Meta>
+				<version>1.10.124-neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Observable" id="observable" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/VYRu7qmG/versions/f8lSH3bs/observable-5.4.4.jar</URL>
+			<Size>388133</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8911bb2e49077b6d4b64d06026b636f3</MD5>
+			<Meta>
+				<version>5.4.4+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Lithosphere" id="mr_lithosphere" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/iv9jp2k9/versions/wqHGyD4G/lithosphere-1.7.jar</URL>
+			<Size>527182</Size>
+			<Required>true</Required>
+			<ModType>Removal</ModType>
+			<MD5>c7c8080aac427bab7432f554dfe3b13b</MD5>
+			<Meta>
+				<license>LicenseRef-All-Rights-Reserved</license>
+				<description>Lithosphere aims to change the overworld worldgen to be more cinematic, polished and beautiful.</description>
+				<version>1.7</version>
+				<authors>Jayzet</authors>
+			</Meta>
+		</Module>
+		<Module name="TerraBlender" id="terrablender" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kkmrDlKT/versions/6e8GCrLb/TerraBlender-neoforge-1.21.1-4.1.0.8.jar</URL>
+			<Size>120365</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>66fc7a85676199608348681d006d8c2e</MD5>
+			<Meta>
+				<version>4.1.0.8</version>
+			</Meta>
+		</Module>
+		<Module name="Nature&apos;s Spirit" id="natures_spirit" depends="terrablender" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/WBvnqHfV/versions/MGjl80vc/natures_spirit-2.2.5-1.21.1.jar</URL>
+			<Size>18614161</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9555bf60e9406fa73c3d62bcb1036661</MD5>
+			<Meta>
+				<version>2.2.5-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create Crafts &amp; Additions" id="create_crafts_and_additions" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kU1G12Nn/versions/hbhImJGs/createaddition-1.5.9.jar</URL>
+			<Size>1595080</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7506c6ecc5c3cddef03b00fcd9def0d8</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.5.9</version>
+			</Meta>
+		</Module>
+		<Module name="Create: New Age" id="create_new_age" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/FTeXqI9v/versions/ZyNyY0OA/create-new-age-1.1.7%2Bneoforge-mc1.21.1.jar</URL>
+			<Size>1588423</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a8e5341694e4904e99a33f5411d9d005</MD5>
+			<Meta>
+				<version>1.1.7+mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Integrated Farming" id="create_integrated_farming" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9k1pAsfR/versions/SCwvgDbO/create-integrated-farming-1.2.0c.jar</URL>
+			<Size>407984</Size>
+			<Required>true</Required>
+			<ModType>Removal</ModType>
+			<MD5>855414075bf75df41cd6f6d46e821a3f</MD5>
+			<Meta>
+				<version>1.2.0c</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Additional Logistics" id="create_additional_logistics" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/CZaz7aje/versions/mbCi448E/createadditionallogistics-1.21.1-1.4.3.jar</URL>
+			<Size>952151</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8f1efb950cb5b4b3ef6fe49ac73a70eb</MD5>
+			<Meta>
+				<version>1.4.3</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Bits &apos;n&apos; Bobs" id="create_bits_n_bobs" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/T8bvmqVZ/versions/C0PfexPx/bits_n_bobs-0.0.29.jar</URL>
+			<Size>1569084</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ccbee5bffa23358e328abe945b5112a2</MD5>
+			<Meta>
+				<version>0.0.29</version>
 			</Meta>
 		</Module>
 	</Server>
