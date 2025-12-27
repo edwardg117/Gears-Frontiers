@@ -1552,5 +1552,45 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>0.0.29</version>
 			</Meta>
 		</Module>
+		<Module name="Create Nuclear" id="create_nuclear" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/z611fdf7/versions/waO2BSHO/createnuclear-1.3.2-beta.3-neoforge.jar</URL>
+			<Size>1842160</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>baae69947ce29825799e565a00bdc842</MD5>
+			<Meta>
+				<version>1.3.2-beta.3</version>
+			</Meta>
+		</Module>
+		<Module name="Rhino" id="rhino" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/sk9knFPE/versions/ZdLtebKH/rhino-2101.2.7-build.81.jar</URL>
+			<Size>882033</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>78fcea6d73ce33f8075fa33f02178b38</MD5>
+			<Meta>
+				<license>MPL-2.0</license>
+				<description>A fork of Mozilla&apos;s Rhino library, modified for use in mods</description>
+				<version>2101.2.7-build.81</version>
+				<authors>latvian.dev, Mozilla</authors>
+			</Meta>
+		</Module>
+		<Module name="KubeJS" id="kubejs" depends="rhino" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/umyGl7zF/versions/8nuqyxbw/kubejs-neoforge-2101.7.2-build.348.jar</URL>
+			<Size>2240610</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c0d5f3c022be32493ebe30ba02d725b4</MD5>
+			<Meta>
+				<version>2101.7.2-build.348</version>
+			</Meta>
+		</Module>
+		<Module name="KubeJS Create" id="kubejs_create" depends="create kubejs" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar</URL>
+			<Size>38629</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>22218f759c604baad4359b849b33b3b6</MD5>
+		</Module>
 	</Server>
 </ServerPack>

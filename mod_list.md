@@ -1,10 +1,10 @@
 # Minecraft Modpack - Mod List
 
+## [STORAGE UPGRADES] Decorative Storage
+
+---
+
 ## AmbientSounds
-
-**Authors:** CreativeMD, AriaFreeze
-
-Expands minecraft&apos;s ambient sounds.
 
 ---
 
@@ -16,11 +16,15 @@ Allows the application of armor trims to dog and horse armor!
 
 ---
 
+## Animal Pens
+
+---
+
 ## AppleSkin
 
-**Authors:** squeek
+---
 
-Adds various food-related HUD improvements
+## Applied Energistics 2 Wireless Terminals
 
 ---
 
@@ -32,24 +36,35 @@ Adds various food-related HUD improvements
 
 ---
 
+## Ash API
+
+---
+
+## AstikorCarts Redux
+
+---
+
+## Athena
+
+---
+
+## BaguetteLib
+
+---
+
 ## Balm
-
-**Authors:** BlayTheNinth
-
-Abstraction Layer (but not really) for Blays multiplatform mods
 
 ---
 
 ## Better Advancements
 
-**Authors:** way2muchnoise
-
-Improvements to the advancements screen.
-
-
 ---
 
 ## Better Horses
+
+---
+
+## BlockUI
 
 ---
 
@@ -58,10 +73,6 @@ Improvements to the advancements screen.
 ---
 
 ## Butcher
-
-**Authors:** Jmods
-
-An immersive way of harvesting mobs
 
 ---
 
@@ -73,38 +84,39 @@ An immersive way of harvesting mobs
 
 ---
 
+## Chipped
+
+---
+
+## Chipped-Express
+
+**Authors:** DevDyna
+
+Chipped mod still a good but cannot be automated , this mod allow autocrafting using other mods like AE2 or Create
+
+---
+
 ## Chunk Loaders
 
-**Authors:** SuperMartijn642
+---
 
-Chunk Loaders allows you to keep chunks loaded with different tiers of chunk loaders!
+## Chunk Sending
 
 ---
 
 ## Cloth Config v10 API
 
-**Authors:** 
-
-An API for config screens.
-
-
 ---
 
 ## Clumps
 
-**Authors:** Jaredlll08
+---
 
-Clumps xp orbs together.
-
+## Collective
 
 ---
 
 ## ColossalChests
-
-**Authors:** 
-
-For when regular chests are too small.
-
 
 ---
 
@@ -122,20 +134,13 @@ For when regular chests are too small.
 
 ## Controlling
 
-**Authors:** Jaredlll08
+---
 
-Adds the ability to search for keybinds using their name in the KeyBinding menu, this allows players to easily find a key binding in the menu.
-
+## CoroUtil
 
 ---
 
 ## Corpse
-
-**Authors:** Max Henkel
-
-This mod brings a corpse into the game.
-It will spawn upon your death containing all items that you had in your inventory.
-
 
 ---
 
@@ -143,28 +148,111 @@ It will spawn upon your death containing all items that you had in your inventor
 
 ---
 
+## Cosmetic Armor Reworked
+
+---
+
 ## CraftingTweaks
-
-**Authors:** BlayTheNinth
-
-Allows you to rotate, balance or clear the crafting matrix by the press of a button, in any (supported) crafting window.
-
 
 ---
 
 ## Create
 
-**Authors:** simibubi
+---
 
-Technology that empowers the player.
+## Create Bionics
+
+---
+
+## Create Cobblestone
+
+---
+
+## Create Crafts &amp; Additions
+
+---
+
+## Create Deco
+
+---
+
+## Create Encased
+
+---
+
+## Create Extra Casing
+
+---
+
+## Create More: Package Couriers
+
+---
+
+## Create Nuclear
+
+---
+
+## Create Railways Navigator
+
+---
+
+## Create Slice &amp; Dice
+
+---
+
+## Create Stock Bridge
+
+---
+
+## Create Train Parts
+
+---
+
+## Create: Additional Logistics
+
+---
+
+## Create: Applied Kinetics
+
+---
+
+## Create: Aquatic Ambitions
 
 ---
 
 ## Create: Bells &amp; Whistles
 
-**Authors:** Alexander Weimer
+---
 
-Create: Bells &amp; Whistles is an add-on for the Create mod that focuses on the player experience, adding various new decorative and utility features.
+## Create: Better Villagers
+
+**Authors:** Reggarf aka Anoop Singh
+
+Create: Better Villager that adds a host of Create-mod village professions
+
+---
+
+## Create: Bits &apos;n&apos; Bobs
+
+---
+
+## Create: Blocks &amp; Bogies
+
+---
+
+## Create: Connected
+
+---
+
+## Create: Copycats+
+
+---
+
+## Create: Delivery Director
+
+---
+
+## Create: Dimension, Steamworks Realm
 
 ---
 
@@ -172,7 +260,39 @@ Create: Bells &amp; Whistles is an add-on for the Create mod that focuses on the
 
 ---
 
+## Create: Enchantable Machinery
+
+---
+
 ## Create: Enchantment Industry
+
+---
+
+## Create: Extra Gauges
+
+---
+
+## Create: Gears n&apos; Kinetics
+
+---
+
+## Create: Hypertubes
+
+---
+
+## Create: Integrated Farming
+
+---
+
+## Create: Jetpack Curios
+
+**Authors:** robinfrt
+
+Use backtanks and jetpacks in your back curios/trinket slot.
+
+---
+
+## Create: New Age
 
 ---
 
@@ -180,20 +300,43 @@ Create: Bells &amp; Whistles is an add-on for the Create mod that focuses on the
 
 ---
 
+## Create: Pattern Schematics
+
+---
+
+## Create: Power Loader
+
+---
+
+## Create: SpawnerBoxer
+
+---
+
+## Create: Stam1o Tweaks
+
+---
+
+## Create: Teleporters
+
+---
+
+## Create: Vibrant Vaults
+
+---
+
+## CreateBetterFps
+
+---
+
 ## CreativeCore
-
-**Authors:** CreativeMD
-
-A simple but powerful coremod.
 
 ---
 
 ## Cristel Lib
 
-**Authors:** Cristelknight999
+---
 
-A Library mod for easy structure config and runtime datapacks.
-
+## Cupboard
 
 ---
 
@@ -201,12 +344,35 @@ A Library mod for easy structure config and runtime datapacks.
 
 ---
 
+## CustomNPCs
+
+**Authors:** Noppes
+
+The Custom Npcs mod lets you create your own npcs and lets you customize them how you want
+
+---
+
 ## Cyclops Core
 
-**Authors:** 
+---
 
-Coremod for Integrated Dynamics, EvilCraft and others.
+## Decorative Core
 
+---
+
+## Decorative paths
+
+---
+
+## Deeper and Darker
+
+---
+
+## Diagonal Fences
+
+---
+
+## Dimensional Dungeons
 
 ---
 
@@ -214,11 +380,11 @@ Coremod for Integrated Dynamics, EvilCraft and others.
 
 ---
 
+## Domum Ornamentum
+
+---
+
 ## Dungeons and Taverns
-
-**Authors:** NovaWostra, Walls
-
-A Structure Datapack adding dungeons, taverns and other structures to find while you explore the world.
 
 ---
 
@@ -228,42 +394,21 @@ A Structure Datapack adding dungeons, taverns and other structures to find while
 
 ## EntityCulling
 
-**Authors:** tr7zw
-
-This mod uses async path-tracing to hide Tiles/Entities that are not visible.
-
-
 ---
 
 ## Explorify
-
-**Authors:** bebebea_loste
-
-A simplistic, vanilla-friendly collection of new structures.
 
 ---
 
 ## FallingTree
 
-**Authors:** Rakambda
-
-Change the way you cut trees.
-
 ---
 
 ## Farmer&apos;s Delight
 
-**Authors:** vectorwing
-
-A cozy farming and cooking expansion for Minecraft!
-
 ---
 
 ## Faster Paths
-
-**Authors:** JacobA0225, Bumstronaut
-
-This basically gives you speed 1 or 2 on path blocks depending on the version
 
 ---
 
@@ -273,10 +418,21 @@ This basically gives you speed 1 or 2 on path blocks depending on the version
 
 ## Ferrite Core
 
-**Authors:** malte0811
+---
 
-Reduces memory usage.
+## FramedBlocks
 
+---
+
+## FTB Library (Forge)
+
+---
+
+## FTB Quests
+
+---
+
+## FTB Teams (NeoForge)
 
 ---
 
@@ -284,11 +440,19 @@ Reduces memory usage.
 
 ---
 
+## GuideME
+
+---
+
+## Hardcore Revival
+
+---
+
+## Horse Breeding Fix
+
+---
+
 ## Horse Expert
-
-**Authors:** Fuzs
-
-You want to know what your horses are truly capable of? Check out their statistics!
 
 ---
 
@@ -298,11 +462,6 @@ You want to know what your horses are truly capable of? Check out their statisti
 
 ## ImmediatelyFast
 
-**Authors:** RK_01
-
-Speed up and optimize immediate mode rendering in Minecraft
-
-
 ---
 
 ## Immersive Aircraft
@@ -311,17 +470,13 @@ Speed up and optimize immediate mode rendering in Minecraft
 
 ## Immersive Engineering
 
-**Authors:** BluSunrize and Damien A.W. Hazard
-
-A tech based mod focused on realism.
-
 ---
 
 ## Incendium
 
-**Authors:** Starmute, catter1, TheKingWhale, rx97, Rei_the_Goat
+---
 
-A nether biome overhaul combined with challenging structures to conquer, unique weapons to obtain, and tricky mobs to defeat.
+## Infinite Dimensions
 
 ---
 
@@ -333,29 +488,39 @@ A nether biome overhaul combined with challenging structures to conquer, unique 
 
 ---
 
+## Jade
+
+---
+
+## Jade Addons
+
+---
+
+## JamLib
+
+---
+
 ## Just Enough Immersive Multiblocks
 
 ---
 
 ## Just Enough Items
 
-**Authors:** mezz
-
-JEI is an item and recipe viewing mod for Minecraft, built from the ground up for stability and performance.
-
-
 ---
 
 ## Just Enough Resources
 
-**Authors:** way2muchnoise
-
-Adds Resources and Mob Drops to JEI
-
-
 ---
 
 ## Kotlin for Forge
+
+---
+
+## KubeJS
+
+---
+
+## KubeJS Create
 
 ---
 
@@ -375,11 +540,67 @@ Adds Resources and Mob Drops to JEI
 
 ---
 
+## Lighty
+
+---
+
 ## Lionfish-API
 
 ---
 
 ## Lithium
+
+---
+
+## Lithosphere
+
+**Authors:** Jayzet
+
+Lithosphere aims to change the overworld worldgen to be more cinematic, polished and beautiful.
+
+---
+
+## Macaw&apos;s Bridges
+
+---
+
+## Macaw&apos;s Doors
+
+---
+
+## Macaw&apos;s Fences and Walls
+
+---
+
+## Macaw&apos;s Furniture
+
+---
+
+## Macaw&apos;s Lights and Lamps
+
+---
+
+## Macaw&apos;s Paintings
+
+---
+
+## Macaw&apos;s Paths and Pavings
+
+---
+
+## Macaw&apos;s Roofs
+
+---
+
+## Macaw&apos;s Stairs
+
+---
+
+## Macaw&apos;s Trapdoors
+
+---
+
+## Macaw&apos;s Windows
 
 ---
 
@@ -395,12 +616,17 @@ Adds Resources and Mob Drops to JEI
 
 ---
 
+## MineColonies
+
+---
+
+## MmmMmmMmmMmm
+
+Target dummy mod
+
+---
+
 ## ModernFix
-
-**Authors:** embeddedt
-
-Egregious, yet effective performance improvements for modern Minecraft
-
 
 ---
 
@@ -408,29 +634,51 @@ Egregious, yet effective performance improvements for modern Minecraft
 
 ---
 
+## Moog&apos;s Structure Lib (moogs_structures)
+
+---
+
+## Moonlight Lib
+
+---
+
 ## Mouse Tweaks
 
-**Authors:** Ivan Molodetskikh (YaLTeR)
+---
 
-A mod that enhances the inventory management by adding various additional functions to the usual mouse buttons.
+## Multi-Piston
 
+---
+
+## Nature&apos;s Spirit
 
 ---
 
 ## Noisium
 
-**Authors:** Steveplays28
-
-Optimises worldgen performance for a better gameplay experience.
-
-
 ---
 
 ## Nullscape
 
-**Authors:** Starmute, catter1
+---
 
-Transforms the boring Vanilla end into an alien dimension with the most surreal terrain imaginable. Topped with a couple of new biomes to add to the experience, whilst keeping the end desolate.
+## Observable
+
+---
+
+## Pam&apos;s HarvestCraft 2 - Food Extended
+
+---
+
+## Pam&apos;s HarvestCraft 2 - Trees
+
+---
+
+## Pam&apos;s HarvestCraft 2: Crops
+
+---
+
+## Pam&apos;s HarvestCraft 2: Food Core
 
 ---
 
@@ -438,11 +686,23 @@ Transforms the boring Vanilla end into an alien dimension with the most surreal 
 
 ---
 
+## Polymorph
+
+---
+
+## Pretty In Pink
+
+---
+
 ## Puzzles Lib
 
-**Authors:** Fuzs
+---
 
-Why&apos;s it called Puzzles you ask? That&apos;s the puzzle!
+## Quick Right-Click
+
+**Authors:** Rick South
+
+Adds the functionality to right-click items in the air to access them quickly without placing them. Works for beds, cartography tables, crafting tables, ender chests, grindstones, shulker boxes, smithing tables and stonecutters.
 
 ---
 
@@ -458,7 +718,23 @@ A Mod which allows you to record, replay and share your Minecraft experience.
 
 ---
 
+## Resourceful Lib
+
+---
+
 ## Resourcify
+
+---
+
+## Rhino
+
+**Authors:** latvian.dev, Mozilla
+
+A fork of Mozilla&apos;s Rhino library, modified for use in mods
+
+---
+
+## RightClickHarvest
 
 ---
 
@@ -468,6 +744,10 @@ A Mod which allows you to record, replay and share your Minecraft experience.
 
 A library mod to facilitate adding search bars with auto complete and search types.
 
+
+---
+
+## Shuffle
 
 ---
 
@@ -487,11 +767,47 @@ A library mod to facilitate adding search bars with auto complete and search typ
 
 ---
 
+## Sophisticated Core
+
+---
+
+## Sophisticated Storage
+
+---
+
+## Sophisticated Storage Create Integration
+
+---
+
 ## Sound Physics Remastered
 
-**Authors:** Sonic Ether, vlad2305m, Max Henkel, Saint
+---
 
-Provides realistic sound attenuation, reverberation, and absorption through blocks.
+## spark
+
+---
+
+## Stellarity
+
+**Authors:** kohara
+
+Extreme rehaul of The End in a unique fantasy style, combined with biome and structure overhauls, new items, weapons and plenty of other content to discover.
+
+---
+
+## Storage Delight
+
+---
+
+## Storage Drawers
+
+---
+
+## Storage Drawers Create compat
+
+**Authors:** mrGnegich
+
+Storage Drawers &quot;smart&quot; items recipes with Create materials.
 
 ---
 
@@ -499,27 +815,23 @@ Provides realistic sound attenuation, reverberation, and absorption through bloc
 
 ---
 
+## Structurize
+
+---
+
 ## SuperMartijn642&apos;s Config Library
-
-**Authors:** SuperMartijn642
-
-Config Lib makes dealing with config files just a bit easier.
 
 ---
 
 ## SuperMartijn642&apos;s Core Lib
 
-**Authors:** SuperMartijn642
+---
 
-SuperMartijn642&apos;s Core Lib adds lots of basic implementations for guis that allow for similar code between Minecraft 1.12, 1.14, 1.15, and 1.16!
+## TerraBlender
 
 ---
 
 ## Tidal Towns
-
-**Authors:** joshieman
-
-Several pieces of driftwood have been gathered to form a village that floats on the waves.
 
 ---
 
@@ -529,17 +841,33 @@ Several pieces of driftwood have been gathered to form a village that floats on 
 
 ## Towns and Towers
 
-**Authors:** Kubek and Biban_Auriu, Cristelknight999
+---
 
-Spice up your world with new villages, pillager outposts, and even new ships!
+## TownTalk
+
+**Authors:** LDT Team
+
+TownTalk is an Expansion for Minecolonies that adds more Voicelines to Minecolonies
+
+---
+
+## Trash Cans
 
 ---
 
 ## Traveler&apos;s Backpack
 
-**Authors:** Tiviacz1337
+---
 
-Unique and upgradeable backpacks with customisation, Curios API integration and more!
+## Underground Village, Stoneholm
+
+---
+
+## Visual Workbench
+
+---
+
+## What Are They Up To
 
 ---
 
@@ -555,6 +883,10 @@ In this mod I seek to re-create the vanilla biomes in a way that makes a more re
 
 ---
 
+## Xaero Train Map
+
+---
+
 ## Xaero&apos;s Minimap
 
 ---
@@ -564,10 +896,6 @@ In this mod I seek to re-create the vanilla biomes in a way that makes a more re
 ---
 
 ## Yeehaw Towns
-
-**Authors:** Zephyrusjz, Aureljz
-
-Generates western-styled illager towns in your worlds
 
 ---
 
