@@ -204,6 +204,7 @@ ignore/
 *.zip
 !required_*.jar
 !required_*.zip
+!kubejs.zip
 
 # =============================================================================
 # DEVELOPMENT AND DEBUGGING
