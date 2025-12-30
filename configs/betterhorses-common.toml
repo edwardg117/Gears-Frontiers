@@ -1,0 +1,9 @@
+[general]
+	#Default setting for whether or not the horses can have chests
+	doHorsesHaveChests = false
+	#Default setting for whether or not the player can sprint when on a horse
+	canSprintWithHorses = true
+	#Default setting for whether or not the player can slow down when on a horse
+	canSlowWithHorses = true
+	#Default setting for whether or not players can dual ride horses
+	canDuoRideHorses = true
