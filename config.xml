@@ -2,14 +2,25 @@
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
 	<Server id="config" abstract="false" name="config" newsUrl="about:blank" version="1.21.1" generateList="false" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Module name="Expanded Ecosphere" id="expanded_ecosphere" depends="" side="BOTH">
-			<Size>0</Size>
+			<Size>1210</Size>
 			<Required>true</Required>
 			<ModType>Override</ModType>
 			<ConfigFile>
 				<URL priority="0">https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/configs/expanded_ecosphere/config.json5</URL>
 				<Path>config/expanded_ecosphere/config.json5</Path>
 				<NoOverwrite>true</NoOverwrite>
-				<MD5>4714db335683d0ba8804afbceb9e903b</MD5>
+				<MD5>c8f0a950a2d75e61dc6d4daf41ea5bd0</MD5>
+			</ConfigFile>
+		</Module>
+		<Module name="Better Horses" id="betterhorses" depends="" side="BOTH">
+			<Size>400</Size>
+			<Required>true</Required>
+			<ModType>Override</ModType>
+			<ConfigFile>
+				<URL priority="0">https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/configs/betterhorses-common.toml</URL>
+				<Path>config/betterhorses-common.toml</Path>
+				<NoOverwrite>false</NoOverwrite>
+				<MD5>1d0fa1d6a1421ed3486591e5de4f421f</MD5>
 			</ConfigFile>
 		</Module>
 	</Server>
