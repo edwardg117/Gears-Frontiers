@@ -2,28 +2,54 @@
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
 	<Server id="update-20251126" abstract="false" name="Update 2025-11-26" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
 		<Module name="AmbientSounds" id="ambientsounds" depends="" side="CLIENT">
-			<URL priority="1">https://cdn.modrinth.com/data/fM515JnW/versions/Tn6XoNdJ/AmbientSounds_NEOFORGE_v6.3.1_mc1.21.1.jar</URL>
-			<Size>83831856</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/fM515JnW/versions/6gGI0nu8/AmbientSounds_NEOFORGE_v6.3.3_mc1.21.1.jar</URL>
+			<Size>84811178</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>10e4fbb2da01933b226be9859898d24418c10ff7</MD5>
+			<MD5>3d88e0e8d987706edf645b2e1617612d3e666358</MD5>
 			<Meta>
-				<changelog>* Added slabs to considered solid list
-</changelog>
-				<version>6.3.1</version>
+				<version>6.3.3</version>
+				<changelog>* Added pale garden ambience
+		</changelog>
 			</Meta>
 		</Module>
 		<Module name="BaguetteLib" id="baguettelib" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/OfKzpbRU/versions/yy346uYn/baguettelib-1.21.1-NeoForge-1.1.3.jar</URL>
-			<Size>64947</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/OfKzpbRU/versions/EhQs2skr/baguettelib-1.21.1-NeoForge-1.1.5.jar</URL>
+			<Size>66286</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>6c28b4fbfea64806a9d97403f4a0b8448efa06d1</MD5>
+			<MD5>f4dc59ccb7767daa4ff22a7e8b59cf937efb9cdd</MD5>
 			<Meta>
-				<changelog>&lt;p&gt;remove logging spam in console&lt;/p&gt;</changelog>
-				<version>1.1.3</version>
+				<version>1.1.5</version>
 			</Meta>
 		</Module>
+		<Module name="Butcher" id="butcher" depends="" side="BOTH">
+      <URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/pJvOt9bJ/butchery-4.5-neoforge-1.21.1.jar</URL>
+      <Size>13774318</Size>
+      <Required>true</Required>
+      <ModType>Regular</ModType>
+      <MD5>350962536395daca8bd222948c7f4bd5773cd494</MD5>
+      <Meta>
+        <version>4.5</version>
+        <changelog>Added:
+- 	Added player corpses
+
+Fixes:
+- 	Fixed chicken carcass duping when broken
+- 	Fixed creeper dropping cooked legs instead of raw
+- 	Fixed horse carcasses not dropping
+- 	Fixed butchers house spawning air around its terrain
+- 	Fixed netherite hacksaw recipe
+- 	Fixed enderman not dropping bones
+- 	Fixed sulfur ore not dropping
+- 	Fixed squid and glow squid carcasses duping when broken
+- 	Fixed sheep skeleton having no legs
+- 	Fixed blood generating infinitely
+
+Changes:
+- 	Changed taxidermy </changelog>
+      </Meta>
+    </Module>
 		<Module name="Create Slice &amp; Dice" id="create_slice_and_dice" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/GmjmRQ0A/versions/DwseRoo3/sliceanddice-forge-4.2.2.jar</URL>
 			<Size>406282</Size>
@@ -36,49 +62,40 @@
 			</Meta>
 		</Module>
 		<Module name="EntityCulling" id="entityculling" depends="" side="CLIENT">
-			<URL priority="1">https://cdn.modrinth.com/data/NNAgCjsB/versions/aymdvJn6/entityculling-neoforge-1.9.3-mc1.21.1.jar</URL>
+			<URL priority="1">https://cdn.modrinth.com/data/NNAgCjsB/versions/DwB2BGbW/entityculling-neoforge-1.9.5-mc1.21.1.jar</URL>
 			<Size>474485</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>dffecdb172ec6fefb27e68ebd7192b2416d56da9</MD5>
+			<MD5>0b4a085c1b79c86d7054342123a0ce8deaa0b174</MD5>
 			<Meta>
-				<changelog>## What&apos;s Changed
+				<version>1.9.5</version>
+        		<changelog>## What's Changed
 
-* Fix rare race condition crash with Mekanism+Sodium in &lt;=1.21.1 #225 
+* Fix nametag inconsistency causing fps loss in later versions
 
-* Fix marker armor stands having a too small culling box #252 
+* Added option to force a culling box on unconfigured display entities. This will increase fps on servers/maps that did not configure their displays, but can cause visual issues for really big displays (Default is off)
 
-* Add the &quot;voidscape:corrupted_pawn&quot; to the default tick whitelist config
-
-* Fixed log lines about ``Couldn&apos;t load ... pack metadata`` in 1.21.9+
-
-* Update uk_ua.json by @StarmanMine142 in https://github.com/tr7zw/EntityCulling/pull/254
+* Add new translations for block entity culling by @Texaliuz in https://github.com/tr7zw/EntityCulling/pull/260
 
 
 
-**Full Changelog**: https://github.com/tr7zw/EntityCulling/compare/1.9.2...1.9.3
-</changelog>
-				<version>1.9.3</version>
+
+
+**Full Changelog**: https://github.com/tr7zw/EntityCulling/compare/1.9.4...1.9.5</changelog>
 			</Meta>
 		</Module>
 		<Module name="Geckolib" id="geckolib" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/8BmcQJ2H/versions/RVIo5f6E/geckolib-neoforge-1.21.1-4.8.2.jar</URL>
-			<Size>621848</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/8BmcQJ2H/versions/lWsXauBN/geckolib-neoforge-1.21.1-4.8.3.jar</URL>
+			<Size>622121</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>b2d84a5ea8b8944be66dbf817f0d4aa3f494db7a</MD5>
+			<MD5>fb0ac6ad63dc5f401c15c66a037c08e9709d1c42</MD5>
 			<Meta>
-				<changelog>v4.8.2
+				<version>4.8.3</version>
+        <changelog>v4.8.3
 
-- Fix a double-space in DynamicGeoBlockRenderer&apos;s javadocs
-- Fix an incorrect link in StatelessAnimatable
-- Clean up an ugly javadoc entry in GeoReplacedEntity
-- Clean up some javadocs in GeoModel
-- Clean up some javadocs in GeoAnimatable
-- Clean up some javadocs in ContextAwareAnimatableManager
-- Clean up some javadocs in AnimatableManager
-- Fixed Singleton Geo animatables not showing a triggered anim when newly created for other players in multiplayer</changelog>
-				<version>4.8.2</version>
+- Added a safety check for mods attempting to render GeckoLib armor without using GeoRenderProvider. (#755, #804, etc)
+- Marked GeckoAnimFix as an incompatible mod since they refuse to stop breaking GeckoLib with their download-farming mod.</changelog>
 			</Meta>
 		</Module>
 		<Module name="Immersive Aircraft" id="immersiveaircraft" depends="" side="BOTH">
@@ -132,26 +149,35 @@
 			</Meta>
 		</Module>
 		<Module name="Just Enough Items" id="jei" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/u6dRKJwZ/versions/exx7mr1K/jei-1.21.1-neoforge-19.25.1.328.jar</URL>
-			<Size>1506595</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/u6dRKJwZ/versions/YAcQ6elZ/jei-1.21.1-neoforge-19.27.0.340.jar</URL>
+			<Size>1529391</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>4f5c85dc4bd1065cad8ff4fb770777e72f67ea6d</MD5>
+			<MD5>27d0d85e7e32e926fc3664ab6815df5cdabb7941</MD5>
 			<Meta>
-				<changelog>  * [Updated Polish translation (#4143)](https://github.com/mezz/JustEnoughItems/commit/39c12007ede0bd4f6f7f64837dda401c16161dea) - Greg-21
-</changelog>
-				<version>19.25.1.328</version>
+				<version>19.27.0.340</version>
+				<changelog>  * [Fix #4227 ensure the recipe gui doesn't crash when the screen is too small](https://github.com/mezz/JustEnoughItems/commit/0ee107ed3b38a899f46f1fcaf28738224338e924) - mezz</changelog>
+			</Meta>
+    	</Module>
+		<Module name="Kotlin for Forge" id="kotlinforforge" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar</URL>
+			<Size>6869790</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4d83e8a8e8cb06b306d2cea1e903680fe513f1f3</MD5>
+			<Meta>
+				<version>5.11.0</version>
+				<changelog>Kotlin for Forge 5.11.0</changelog>
 			</Meta>
 		</Module>
-		<Module name="Kotlin for Forge" id="kotlinforforge" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/ordsPcFz/versions/pp2cY80Q/kotlinforforge-5.10.0-all.jar</URL>
-			<Size>6730190</Size>
+		<Module name="Magnum Torch" id="magnumtorch" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/jorDmSKv/versions/BZAhwo2r/MagnumTorch-v21.1.1-1.21.1-NeoForge.jar</URL>
+			<Size>124523</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>a86a436cb7ffd0509750ba7b078fe88143da1ea6</MD5>
+			<MD5>e507e0c5c0008d541da9f1f64842446c4ecb9d1f</MD5>
 			<Meta>
-				<changelog>Kotlin for Forge 5.10.0</changelog>
-				<version>5.10.0</version>
+				<version>v21.1.1-1.21.1-NeoForge</version>
 			</Meta>
 		</Module>
 		<Module name="ModernFix" id="modernfix" depends="" side="BOTH">
@@ -182,15 +208,18 @@
 			</Meta>
 		</Module>
 		<Module name="Balm" id="balm" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/Yiybaaus/balm-neoforge-1.21.1-21.0.54.jar</URL>
-			<Size>581424</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/Yoii3Xj6/balm-neoforge-1.21.1-21.0.56.jar</URL>
+			<Size>739709</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>21c5a69d59d1dde948426a6bb8afe93640f22694</MD5>
+			<MD5>635e706136bb228e6a72d41d86dec495f812ccb5</MD5>
 			<Meta>
-				<changelog>- Fixed possible race condition crash during config loading on NeoForge
-- Fixed NoSuchFileExceptions in lookupAllModPaths/lookupModPath</changelog>
-				<version>21.0.54+neoforge-1.21.1</version>
+				<version>21.0.56+neoforge-1.21.1</version>
+				<changelog>- Added `BalmVillagerTradeRegistrar` for registering additional trades to villagers
+		- Added `BalmEntityTypeRegistration.withSpawnPlacement` for defining spawn placement on a new entity
+		- Added `BiomeModificationBuilder.addSpawn` and `BiomeModificationBuilder.setSpawnCost` for adding mob spawns to biomes
+		- Added `BalmClientTooltipComponentRegistrar` for registering client tooltip component factories
+		- Fixed various potential concurrency issues in Balm wrappers related to Permissions, Loot Modifie</changelog>
 			</Meta>
 		</Module>
 		<Module name="Corpse x Curios API Compat" id="corpsexcuriossapicompat" depends="" side="BOTH">
@@ -248,16 +277,14 @@
 			</Meta>
 		</Module>
 		<Module name="CreativeCore" id="creativecore" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/TyV1CDvv/CreativeCore_NEOFORGE_v2.13.15_mc1.21.1.jar</URL>
-			<Size>1199314</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/ySdJAVOH/CreativeCore_NEOFORGE_v2.13.25_mc1.21.1.jar</URL>
+			<Size>1204475</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>7a08497685e093d513aaed94b524d82fcd91cbe5</MD5>
+			<MD5>0b3bf72b3695bf3fae63535539b2863526b5d5fa</MD5>
 			<Meta>
-				<changelog>* Fixed edge case of shape intersecting when sharing one common face
-* Increased epsilon of shape calculation to fix several inaccuracies causing minimal intersection to be detected which occur due to rounding errors
-</changelog>
-				<version>2.13.15</version>
+				<version>2.13.25</version>
+				<changelog>* Added play button to sound config</changelog>
 			</Meta>
 		</Module>
 		<Module name="Explorify" id="explorify" depends="" side="BOTH">
@@ -289,16 +316,44 @@
 			</Meta>
 		</Module>
 		<Module name="ImmediatelyFast" id="immediatelyfast" depends="" side="CLIENT">
-			<URL priority="1">https://cdn.modrinth.com/data/5ZwdcRci/versions/VerzLexd/ImmediatelyFast-NeoForge-1.6.7%2B1.21.1.jar</URL>
-			<Size>254163</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/5ZwdcRci/versions/7TFPpGUU/ImmediatelyFast-NeoForge-1.6.9%2B1.21.1.jar</URL>
+			<Size>367790</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>820e7b79c123d2a884410a6ab9882b0ae0e2d1a6</MD5>
+			<MD5>01df8113ce41993ea341b973afc36ef2e1701e00</MD5>
 			<Meta>
-				<changelog>* Fixed crash when rendering outlined entities with a certain combination of mods.
+				<version>1.6.9+1.21.1-neoforge</version>
+        <changelog>* Made ImmediatelyFast compatible with Java 25
+
+* Clear Iris shadow pass outline buffer in case mods render into the wrong buffer (Fixes crash with glowing entities rendered with geckolib)
 
 </changelog>
-				<version>1.6.7+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Jade" id="jade" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nvQzSEkH/versions/VGRMP69T/Jade-1.21.1-NeoForge-15.10.4.jar</URL>
+			<Size>725725</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7d23a1dd515872bd6498b8edd06bb84e61f2c4e7</MD5>
+			<Meta>
+				<version>15.10.4+neoforge</version>
+				<changelog>## 15.10.4
+
+- fix: remove destroySpeed check (close [#689](https://github.com/Snownee/Jade/issues/689))
+- fix: do not show "empty" on jukebox if there is no server data (close [#695](https://github.com/Snownee/Jade/issues/695))
+
+## 15.10.3
+
+- fix: modded bossbar offset ([#645](https://github.com/Snownee/Jade/issues/645))
+
+## 15.10.2
+
+- fix: InvWrapper NPE on trapped chest (close [#633](https://github.com/Snownee/Jade/issues/633))
+
+## 15.10.1
+
+- fix: FluidView#readDefault not working for amounts </changelog>
 			</Meta>
 		</Module>
 		<Module name="Nullscape" id="nullscape" depends="" side="BOTH">
@@ -344,35 +399,30 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			</Meta>
 		</Module>
 		<Module name="William Wythers&apos; Expanded Ecosphere" id="expanded_ecosphere" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/O1XGs7ps/versions/NhLJaUiA/expanded_ecosphere-neoforge-3.4.4.jar</URL>
-			<Size>1818318</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/O1XGs7ps/versions/P6ibGvmF/expanded_ecosphere-neoforge-3.4.5.jar</URL>
+			<Size>1814434</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>26d85c0054a39ff5537de7cd1fa22666d1e6c942</MD5>
+			<MD5>ac2c2f1faa846022a69de374e6fe5d914e068fb6</MD5>
 			<Meta>
-				<changelog>- update to Cristel Lib 3.0.2</changelog>
-				<version>3.4.4</version>
+				<changelog>- fixed server crash
+- added armadillos
+- updated c tags</changelog>
+				<version>3.4.5</version>
 			</Meta>
 		</Module>
 		<Module name="Animal Pens" id="animal_pens" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/K5CAV4wi/versions/knjeiO42/animal_pen-neoforge-1.21-1.6.1.jar</URL>
-			<Size>346949</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/K5CAV4wi/versions/CLLWAim2/animal_pen-neoforge-1.21-2.1.0.jar</URL>
+			<Size>444395</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>e5c9d45ed24fb659a5ce177294ed277698f47241</MD5>
+			<MD5>7d969ab3ff2ad286056f8297e6f10b4ba4b4e010</MD5>
 			<Meta>
-				<changelog># Animal Pens 1.6.1
+				<version>2.1.0-1.21</version>
+        <changelog># Animal Pens 2.1.0
 
 #### Features:
-- Removed option to pick up leashed animals.
-- Removed option to pick up animals with saddle.
-- Removed option to pick up animals with chests.
-- Fixed a bug when passengers were saved with animal.
-- Fixed a bug when picking up animal does not drop equipment.
-- Fixed a bug when released animals dropped equipment.
-- Added mooshroom flower feeding to the information screen.
-- Added config option that allows to toggle if cooldowns should be visible all time</changelog>
-				<version>1.6.1-1.21</version>
+- Fixes an issue with configuration loader.</changelog>
 			</Meta>
 		</Module>
 		<Module name="Collective" id="collective" depends="" side="BOTH">
@@ -387,14 +437,14 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			</Meta>
 		</Module>
 		<Module name="ColossalChests" id="colossalchests" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/V8HM9qmm/versions/1JvkqsHz/colossalchests-1.21.1-neoforge-1.8.14-198.jar</URL>
+			<URL priority="1">https://cdn.modrinth.com/data/V8HM9qmm/versions/uUBbn5va/colossalchests-1.21.1-neoforge-1.8.14-203.jar</URL>
 			<Size>266030</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>dc25017c560242fbd55465a8d11b68d171d94a11</MD5>
+			<MD5>c6e901103f558653cf278cd8f7140453050e913a</MD5>
 			<Meta>
-				<changelog>Changes since last release: https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.14...4b97d9c3a48ed34f24f145f27ad724fa8cf7a0ee</changelog>
-				<version>1.21.1-1.8.14-198</version>
+				<version>1.21.1-1.8.14-203</version>
+        		<changelog>Changes since last release: https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.14...eacef836b7383f2b9a9290f9b20be5cdb4c84655</changelog>
 			</Meta>
 		</Module>
 		<Module name="Common Network" id="commonnetwork" depends="" side="BOTH">
@@ -423,18 +473,18 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			</Meta>
 		</Module>
 		<Module name="Concurrent Chunk Management Engine" id="c2me" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/COlSi5iR/versions/gwtHxuKL/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.88.jar</URL>
-			<Size>4508262</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/COlSi5iR/versions/O0Yop0i3/c2me-neoforge-mc1.21.1-0.3.0%2Balpha.0.89.jar</URL>
+			<Size>4508294</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>b00b795c80c69be602d2245812358fcd01951d63</MD5>
+			<MD5>39300dc4508a0d4f9e1f3867d4b87952cbf7b6e6</MD5>
 			<Meta>
-				<changelog>This version is uploaded automatically by GitHub Actions.  
+				<version>0.3.0+alpha.0.89+1.21.1</version>
+        <changelog>This version is uploaded automatically by GitHub Actions.  
 
 Changelog:  
-- [7b642cfe](https://github.com/RelativityMC/C2ME-neoforge/commit/7b642cfea9d69ed0cd3dc66e6c96c0d3f6392730) fix: check for create superclasses as well - ishland  
+- [5d1a1634](https://github.com/RelativityMC/C2ME-neoforge/commit/5d1a1634c2e17de483978b47a0989e42eeee9dfe) change: mark useEndBiomeCache imcompatible with simplyimprovedterrain - ishland  
 </changelog>
-				<version>0.3.0+alpha.0.88+1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Corpse" id="corpse" depends="" side="BOTH">
@@ -450,24 +500,29 @@ Changelog:
 			</Meta>
 		</Module>
 		<Module name="Create" id="create" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/LNytGWDc/versions/88L641Un/create-1.21.1-6.0.8.jar</URL>
-			<Size>19001557</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/LNytGWDc/versions/n7NADxiG/create-1.21.1-6.0.9.jar</URL>
+			<Size>19019888</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>eee603ac7b083c9cd3a8ded4d4e3ed1a9a836f96</MD5>
+			<MD5>bf08bf8980c080f42d6f644f4f44a725cf7c3be9</MD5>
 			<Meta>
-				<changelog>Create 6.0.8:
+				<version>mc1.21.1-6.0.9</version>
+        <changelog>Create 6.0.9:
 
+
+#### Optimizations
+
+- Slightly improve and optimize GlobalRailwayManager
+- Optimize memory &amp; cpu usage of contraption collision generation
 
 #### Bug Fixes
 
-- Fix StockKeeperRequestScreen focusing search box if the chat key is pressed when typing in the address box
-- Fix signals not reacting to redstone input #9444
-- Fix held-item based menus not working correctly #9433
-- Fix z-fighting between elevators and walls
-- Fix crash with certain mods that add spawn eggs
-- Fix copycat blocks and other blocks depending on ModelData not being rendered correctly on contraptions when using indirect or instanced rendering #9410 (1</changelog>
-				<version>mc1.21.1-6.0.8</version>
+- Fix old clipboard schematics causing issues #9462
+- Fix floating point issues within GantryContraptionEntity #9481
+- Fix deployers not calling SyncedBlockEntity#notifyUpdate
+- Fix schematics sticking around after instant placement #9494
+- Fix block entities calling getChunk throwing UOE on contraptions on the client #9459
+- </changelog>
 			</Meta>
 		</Module>
 		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="" side="BOTH">
@@ -516,42 +571,23 @@ Changelog:
 			</Meta>
 		</Module>
 		<Module name="Cyclops Core" id="cyclopscore" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/Z9DM0LJ4/versions/7ymcIRKX/cyclopscore-1.21.1-neoforge-1.27.2-848.jar</URL>
-			<Size>1142394</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/Z9DM0LJ4/versions/ZleI6ExO/cyclopscore-1.21.1-neoforge-1.28.0.jar</URL>
+			<Size>1147246</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>b4fa2df229e9ff6b5259e0b058a48e7ed6436a80</MD5>
+			<MD5>473d6c1d97ced2b867b77045205da9eb73c6ecd8</MD5>
 			<Meta>
-				<changelog>Changes since last release: https://github.com/CyclopsMC/CyclopsCore/compare/1.21.1-1.27.2...cd2195400e8dd5410b7b3b4e50458581997a886d</changelog>
-				<version>1.21.1-1.27.2-848</version>
+				<version>1.21.1-1.28.0</version>
 			</Meta>
 		</Module>
 		<Module name="Distant Horizons" id="distanthorizons" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/uCdwusMi/versions/uzLZ00HG/DistantHorizons-2.3.6-b-1.21.1-fabric-neoforge.jar</URL>
-			<Size>25477119</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/uCdwusMi/versions/bLPLghy9/DistantHorizons-2.4.5-b-1.21.1-fabric-neoforge.jar</URL>
+			<Size>25493997</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>e8a97b52e89bf96f67af547cda3bc6b15f5ceb73</MD5>
+			<MD5>2a1243b18ccc117dee0fae5e976a494d8234e8be</MD5>
 			<Meta>
-				<changelog>
-## Full Changelog
-
-**Additions:**
-
-- Added MC 1.21.9 support
-	- This version may only be temporarily supported depending on future demand.
-
-&lt;br/&gt;
-
-**Bug Fixes:**
-
-- Fix stuttering when traveling through ungenerated chunks
-- Fixed LOD renderer sometimes breaking when connecting to a server with DH server-support
-- Fix custom biome tint
-- Fix neoforge server startup crash
-- Fix world gen progress button
-  </changelog>
-				<version>2.3.6-b-1.21.1</version>
+				<version>2.4.5-b-1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Just Enough Immersive Multiblocks" id="jeiimmersivemultiblocks" depends="" side="BOTH">
@@ -581,21 +617,18 @@ Make sure to take a backup of your world before using the mod and please report 
 			</Meta>
 		</Module>
 		<Module name="MES - Moog&apos;s End Structures" id="mes" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/r4PuRGfV/versions/NAAW6w2G/MoogsEndStructures-1.21-2.0.0.jar</URL>
-			<Size>2458609</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/r4PuRGfV/versions/66xhbndk/MoogsEndStructures-1.21-2.0.1.jar</URL>
+			<Size>2458587</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>141058406bc15b7304400913688b1649f06ddcf8</MD5>
+			<MD5>e44787b0d977a27a0367b76a09ba680487334671</MD5>
 			<Meta>
-				<changelog>
+				<version>2.0.1</version>
+        <changelog>
+
 # Changelog
-- Switched to a datapack version which is dependent on Moogs Structure Lib (moogs_structures)
-- Added versioned mega ships
-  - Allows for a wider mc range
-- Added min_distance_from_world_origin for mega ships
-  - Prevents the ships from spawning on the main island
-</changelog>
-				<version>2.0.0</version>
+
+- updated for 1.21.11</changelog>
 			</Meta>
 		</Module>
 		<Module name="Puzzles Lib" id="puzzleslib" depends="" side="BOTH">
@@ -625,15 +658,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Simple Voice Chat" id="simplevoicechat" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/xPCSVWfI/voicechat-neoforge-1.21.1-2.6.6.jar</URL>
-			<Size>4870236</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/FgFHypOW/voicechat-neoforge-1.21.1-2.6.11.jar</URL>
+			<Size>4890463</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>4d066b0fa64b0b46e676c22819fa6fa0a97daeaf</MD5>
+			<MD5>4ed9af8cf370de233607f06627c054d87016469b</MD5>
 			<Meta>
-				<changelog>- Fixed filters not working for static audio channels
-</changelog>
-				<version>neoforge-1.21.1-2.6.6</version>
+				<version>neoforge-1.21.1-2.6.11</version>
 			</Meta>
 		</Module>
 		<Module name="Sound Physics Remastered" id="sound_physics_remastered" depends="" side="CLIENT">
@@ -648,22 +679,44 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>neoforge-1.21.1-1.5.1</version>
 			</Meta>
 		</Module>
+		<Module name="SuperMartijn642's Core Lib" id="supermartijn642corelib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rOUBggPv/versions/lhA84Gn9/supermartijn642corelib-1.1.19-neoforge-mc1.21.jar</URL>
+			<Size>519542</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7288a5f11ffedc72495d0afaca64f2e83f9c9c0f</MD5>
+			<Meta>
+				<version>1.1.19-neoforge-mc1.21</version>
+			</Meta>
+		</Module>
 		<Module name="Traveler&apos;s Backpack" id="travelersbackpack" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/rlloIFEV/versions/Mf1VMgxK/travelersbackpack-neoforge-1.21.1-10.1.29.jar</URL>
 			<Size>1278539</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>e41724ae4bbfec11a799d14db6760e0f8721e9e6</MD5>
 			<Meta>
-				<changelog>? Hotfix for compatibility issue with FramedBlocks  
-? Hotfix for crash with chicken backpack  
-? Added drag &amp; drop functionality allowing items to be placed into the backpack by dropping them onto it, without opening it first  
-? Added new sorting methods  
-? Added Upgrades, Inventory and Tools labels to backpack tooltip  
-? Corrected typographical error in lang file  
-? Equip button is now visible when the backpack is opened from inventory  
-? Prevented infinite storage by clearing crafting sl</changelog>
 				<version>1.21.1-10.1.29</version>
+			</Meta>
+		</Module>
+		<Module name="Xaero's Minimap" id="xaerosminimap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/1bokaNcj/versions/puXrtfcK/xaerominimap-neoforge-1.21.1-25.3.5.jar</URL>
+			<Size>2120271</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b662f97a58d88d56780487a89bf65d9d0330869d</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-25.3.5</version>
+			</Meta>
+		</Module>
+		<Module name="Xaero's World Map" id="xaerosworldmap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/NcUtCpym/versions/xUpTkg0V/xaeroworldmap-neoforge-1.21.1-1.40.6.jar</URL>
+			<Size>1378685</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3001fb25d05142b3c35cccf5d6d52e662e303d66</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.40.6</version>
 			</Meta>
 		</Module>
 		<Module name="Stellarity" id="stellarity" depends="" side="BOTH">
@@ -675,7 +728,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Meta>
 				<license>LicenseRef-Custom</license>
 				<description>Extreme rehaul of The End in a unique fantasy style, combined with biome and structure overhauls, new items, weapons and plenty of other content to discover.</description>
-				<version>3.0.6.1</version>
+				<version>3.0.6.1+mod</version>
 				<authors>kohara</authors>
 			</Meta>
 		</Module>
@@ -745,13 +798,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Sophisticated Storage" id="sophisticated_storage" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/hMlaZH8f/versions/h0srxb45/sophisticatedstorage-1.21.1-1.5.15.1361.jar</URL>
-			<Size>1652898</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/hMlaZH8f/versions/dstiyGpG/sophisticatedstorage-1.21.1-1.5.20.1422.jar</URL>
+			<Size>1654683</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>376b1c45bd6f7ba4b51affa9a187d035</MD5>
+			<MD5>f019a2d6d938adae1ce80244fd89d63be79d0bf3</MD5>
 			<Meta>
-				<version>1.21.1-1.5.15.1361</version>
+				<version>1.21.1-1.5.20.1422</version>
 			</Meta>
 		</Module>
 		<Module name="Sophisticated Storage Create Integration" id="sophisticated_storage_create_integration" depends="" side="BOTH">
@@ -765,13 +818,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Sophisticated Core" id="sophisticated_core" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/nmoqTijg/versions/fmCASdlT/sophisticatedcore-1.21.1-1.3.89.1239.jar</URL>
-			<Size>1485310</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/nmoqTijg/versions/DgTFIEt8/sophisticatedcore-1.21.1-1.3.102.1368.jar</URL>
+			<Size>1449478</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>04aec344bbe72de78c508ee471561218</MD5>
+			<MD5>7f7e7407349b82498ab4ae27d2fb5a314fcf51ac</MD5>
 			<Meta>
-				<version>1.21.1-1.3.89.1239</version>
+				<version>1.21.1-1.3.102.1368</version>
 			</Meta>
 		</Module>
 		<Module name="Storage Drawers" id="storage_drawers" depends="" side="BOTH">
@@ -798,13 +851,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Storage Delight" id="storage_delight" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/LTTvOp5L/versions/FMxmvSzX/storagedelight-25.06.24-1.21-neoforge.jar</URL>
-			<Size>472865</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/LTTvOp5L/versions/EqOVv3RL/storagedelight-25.12.09-1.21-neoforge.jar</URL>
+			<Size>649502</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>3e082467f0e570760e15105a7dad0524</MD5>
+			<MD5>b61e8454f99d4e18730ac3e2a2c51c618c4c548a</MD5>
 			<Meta>
-				<version>1.21-1.21.1</version>
+				<version>25.12.09-1.21-neoforge</version>
 			</Meta>
 		</Module>
 		<Module name="[STORAGE UPGRADES] Decorative Storage" id="decorative_storage" depends="" side="BOTH">
@@ -814,17 +867,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<ModType>Regular</ModType>
 			<MD5>c6d8d86f56a5e108b7a285c2c94c1395</MD5>
 			<Meta>
-				<values>3.3709-neoforge-1.21.1</values>
+				<version>3.3709-neoforge-1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Hardcore Revival" id="hardcore_revival" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/HqKoXaXz/versions/y3thm3wI/hardcorerevival-neoforge-1.21.1-21.1.9.jar</URL>
-			<Size>241178</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/HqKoXaXz/versions/U8B5vjqK/hardcorerevival-neoforge-1.21.1-21.1.11.jar</URL>
+			<Size>241334</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>d12f9fc9e42985f4d7e79f70dbf6fbdc</MD5>
+			<MD5>102531463ca607d119bc73612c9667cca1fce1c2</MD5>
 			<Meta>
-				<version>21.1.9+neoforge-1.21.1</version>
+				<version>21.1.11+neoforge-1.21.1</version>
+        		<changelog>- Added stats for Players Revived and Times Revived</changelog>
 			</Meta>
 		</Module>
 		<Module name="Visual Workbench" id="visual_workbench" depends="" side="BOTH">
@@ -879,23 +933,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Fences and Walls" id="macaws_fences_and_walls" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/GmwLse2I/versions/8JOkuC5Y/mcw-fences-1.2.0-1.21.1neoforge.jar</URL>
-			<Size>661246</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/GmwLse2I/versions/jVdb0r4W/mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar</URL>
+			<Size>673871</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>2fd1a787b5ed2a67613543e22ca5bdd0</MD5>
+			<MD5>b5580c3fc521ed8bf4db3e407bd590efc317f74d</MD5>
 			<Meta>
-				<version>1.2.0</version>
+				<version>1.2.1</version>
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Windows" id="macaws_windows" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/C7I0BCni/versions/IbVRByqd/mcw-mcwwindows-2.4.1-mc1.21.1neoforge.jar</URL>
-			<Size>1263264</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/C7I0BCni/versions/rQUE4LCz/mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar</URL>
+			<Size>1261268</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>97bbdf0f35cea155110c06d0057e54a4</MD5>
+			<MD5>eb1d3c118acb450cc2fe14c2ce7ce247a1bca60c</MD5>
 			<Meta>
-				<version>2.4.1</version>
+				<version>2.4.2</version>
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Bridges" id="macaws_bridges" depends="" side="BOTH">
@@ -929,13 +983,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Stairs" id="macaws_stairs" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/iP3wH1ha/versions/KJxX9n2H/mcw-stairs-1.0.1-1.21.1neoforge.jar</URL>
-			<Size>516062</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/iP3wH1ha/versions/4t8L0dGP/mcw-mcwstairs-1.0.2-mc1.21.1neoforge.jar</URL>
+			<Size>529082</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>098ea3f986f31b73534d632d1c452dba</MD5>
+			<MD5>1ee43d693c821efc955a74e551f94372af90a140</MD5>
 			<Meta>
-				<version>1.0.1</version>
+				<version>1.0.2</version>
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Furniture" id="macaws_furniture" depends="" side="BOTH">
@@ -979,13 +1033,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Macaw&apos;s Lights and Lamps" id="macaws_lights_and_lamps" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/w4an97C2/versions/iqA6aZjj/mcw-lights-1.1.2-mc1.21.1neoforge.jar</URL>
-			<Size>517577</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/w4an97C2/versions/5U2kQZIL/mcw-lights-1.1.5-mc1.21.1neoforge.jar</URL>
+			<Size>525744</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>68a68546859685adc090b80f19e7ae50</MD5>
+			<MD5>13c1107caf26b2c60d8626b3658b26cc7f634b38</MD5>
 			<Meta>
-				<version>1.1.2</version>
+				<version>1.1.5</version>
 			</Meta>
 		</Module>
 		<Module name="AstikorCarts Redux" id="astikorcarts_redux" depends="" side="BOTH">
@@ -1057,7 +1111,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Meta>
 				<license>MIT</license>
 				<description>Chipped mod still a good but cannot be automated , this mod allow autocrafting using other mods like AE2 or Create</description>
-				<version>1.3.2</version>
+				<version>1.3.2-21</version>
 				<authors>DevDyna</authors>
 			</Meta>
 		</Module>
@@ -1072,13 +1126,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Create Deco" id="create_deco" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/sMvUb4Rb/versions/XNUfWapE/createdeco-2.1.1-1.21.1-neo.jar</URL>
-			<Size>3316851</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/sMvUb4Rb/versions/k95JcfbJ/createdeco-2.1.2-1.21.1-neo.jar</URL>
+			<Size>3318509</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>311095045910c12f47b68052a2d4aa23</MD5>
+			<MD5>cff4f94238d15db929bf0db48f006da438d345b5</MD5>
 			<Meta>
-				<version>2.1.1</version>
+				<version>2.1.2</version>
 			</Meta>
 		</Module>
 		<Module name="Create: Connected" id="create_connected" depends="create" side="BOTH">
@@ -1092,13 +1146,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Create Encased" id="create_encased" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/hSSqdyU1/versions/KQsWJIIJ/Create%20Encased-1.21.1-1.7.2-fix2.jar</URL>
-			<Size>1974433</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/hSSqdyU1/versions/sjCAxK2s/Create%20Encased-1.21.1-1.8-ht2.jar</URL>
+			<Size>2410332</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>a82278fc89ada80b3bbe31eb69d3042b</MD5>
+			<MD5>957a7ee1741c7a8536bedd401a923d7fb73a7092</MD5>
 			<Meta>
-				<version>1.7.2-fix2</version>
+				<version>1.8-ht2</version>
 			</Meta>
 		</Module>
 		<Module name="Create Cobblestone" id="create_cobblestone" depends="create" side="BOTH">
@@ -1117,13 +1171,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<ModType>Removal</ModType>
 		</Module>
 		<Module name="Create Jetpack" id="create_jetpack" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/UbFnAd4l/versions/B7vWBL40/create_jetpack-forge-5.1.1.jar</URL>
-			<Size>481230</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/UbFnAd4l/versions/4Ndp4d21/create_jetpack-forge-5.1.2.jar</URL>
+			<Size>481239</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>02f1de95830f2e77669aeadd407c79d4</MD5>
+			<MD5>70b9f0f5464abea074416f10ab7745a6e732f9ba</MD5>
 			<Meta>
-				<version>5.1.1</version>
+				<version>5.1.2</version>
 			</Meta>
 		</Module>
 		<Module name="Create: Jetpack Curios" id="create_jetpack_curios" depends="" side="BOTH">
@@ -1146,7 +1200,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<ModType>Regular</ModType>
 			<MD5>b1416c0c6eb930cc65d25a21080afef8</MD5>
 			<Meta>
-				<verion>3.4.3+mc1.21.1-neoforge</verion>
+				<version>3.4.3+mc1.21.1-neoforge</version>
 			</Meta>
 		</Module>
 		<Module name="Create: Hypertubes" id="create_hypertubes" depends="create" side="BOTH">
@@ -1230,13 +1284,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Moonlight Lib" id="moonlight_lib" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/twkfQtEc/versions/1hJdknT4/moonlight-1.21-2.26.8-neoforge.jar</URL>
+			<URL priority="1">https://cdn.modrinth.com/data/twkfQtEc/versions/gBbCg0eN/moonlight-1.21-2.29.10-neoforge.jar</URL>
 			<Size>1419207</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>d66a2d30bf1f0ac3a939ee4dd5c4fe0f</MD5>
+			<MD5>f58d48e56bcf350e819567edb8c983718e2fa231</MD5>
 			<Meta>
-				<version>1.21-2.26.8-neoforge</version>
+				<version>1.21-2.29.10-neoforge</version>
 			</Meta>
 		</Module>
 		<Module name="GuideME" id="guideme" depends="" side="BOTH">
@@ -1260,13 +1314,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Create: Blocks &amp; Bogies" id="create_blocks_and_bogies" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/j4ARnQwY/versions/pYKBpa97/create_bb-1.0.6-1.21.1-neoforge.jar</URL>
-			<Size>2604912</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/j4ARnQwY/versions/rUu97B0K/create_bb-1.0.7-1.21.1-Neoforge.jar</URL>
+			<Size>2613213</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>678859bc83d7eecd5fbcf03a4bb1a7d8</MD5>
+			<MD5>7a6eae4bc851786c6519c8cac956b406cb71a8eb</MD5>
 			<Meta>
-				<version>1.0.6-1.21.1</version>
+				<version>1.0.7-1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Pretty In Pink" id="pretty_in_pink" depends="create" side="BOTH">
@@ -1295,6 +1349,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Required>true</Required>
 			<ModType>Regular</ModType>
 			<MD5>f42faf1a028fafdee89e11f538b8ce44</MD5>
+			<Meta>
+				<version>2.0.6</version>
+			</Meta>
 		</Module>
 		<Module name="Create Extra Casing" id="create_extra_casing" depends="create" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/yEGVcr59/versions/8w86yown/create_extra_casing-4.0.4.jar</URL>
@@ -1513,13 +1570,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Create: New Age" id="create_new_age" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/FTeXqI9v/versions/ZyNyY0OA/create-new-age-1.1.7%2Bneoforge-mc1.21.1.jar</URL>
-			<Size>1588423</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/FTeXqI9v/versions/eQ9rbApE/create-new-age-1.1.7c%2Bneoforge-mc1.21.1.jar</URL>
+			<Size>1590363</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>a8e5341694e4904e99a33f5411d9d005</MD5>
+			<MD5>ee352726afeaf935098471f12102da4b2a6fe18e</MD5>
 			<Meta>
-				<version>1.1.7+mc1.21.1</version>
+				<version>1.1.7c+mc1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Create: Integrated Farming" id="create_integrated_farming" depends="create" side="BOTH">
@@ -1533,23 +1590,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 		</Module>
 		<Module name="Create: Additional Logistics" id="create_additional_logistics" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/CZaz7aje/versions/mbCi448E/createadditionallogistics-1.21.1-1.4.3.jar</URL>
-			<Size>952151</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/CZaz7aje/versions/soesZiME/createadditionallogistics-1.21.1-1.4.5.jar</URL>
+			<Size>953230</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>8f1efb950cb5b4b3ef6fe49ac73a70eb</MD5>
+			<MD5>6acf4d30516b6bf66928aa5d79d6bac6283de44e</MD5>
 			<Meta>
-				<version>1.4.3</version>
+				<version>1.4.5</version>
 			</Meta>
 		</Module>
 		<Module name="Create: Bits &apos;n&apos; Bobs" id="create_bits_n_bobs" depends="create" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/T8bvmqVZ/versions/C0PfexPx/bits_n_bobs-0.0.29.jar</URL>
-			<Size>1569084</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/T8bvmqVZ/versions/T104s701/bits_n_bobs-0.0.41.jar</URL>
+			<Size>1610335</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>ccbee5bffa23358e328abe945b5112a2</MD5>
+			<MD5>01cfef084f2800f51da89470d43c1605821eb2c5</MD5>
 			<Meta>
-				<version>0.0.29</version>
+				<version>0.0.41</version>
 			</Meta>
 		</Module>
 		<Module name="Create Nuclear" id="create_nuclear" depends="create" side="BOTH">
@@ -1571,7 +1628,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Meta>
 				<license>MPL-2.0</license>
 				<description>A fork of Mozilla&apos;s Rhino library, modified for use in mods</description>
-				<version>2101.2.7-build.81</version>
+				<version>2101.2.7-build.81+Rhino-1.21</version>
 				<authors>latvian.dev, Mozilla</authors>
 			</Meta>
 		</Module>
@@ -1598,6 +1655,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Required>true</Required>
 			<ModType>Regular</ModType>
 			<MD5>22218f759c604baad4359b849b33b3b6</MD5>
+			<Meta>
+				<version>2101.3.1-build.18</version>
+			</Meta>
 		</Module>
 	</Server>
 </ServerPack>

@@ -138,6 +138,88 @@ ServerEvents.recipes((event) => {
       ]
     )
     .heated();
+
+  // #region ChunkLoaders
+  event.remove({ output: "chunkloaders:basic_chunk_loader" });
+  event.remove({ output: "chunkloaders:advanced_chunk_loader" });
+  event.remove({ output: "chunkloaders:ultimate_chunk_loader" });
+
+  // New recipe for basic chunk loader
+  event.recipes.createMechanicalCrafting(
+    "chunkloaders:basic_chunk_loader",
+    [
+      //prettier-ignore
+      "T" + "S" + "T",
+      "S" + "C" + "S",
+      "P" + "F" + "P",
+    ],
+    {
+      //   A: {
+      //     item: "create:andesite_alloy",
+      //   },
+      T: {
+        item: "create:electron_tube",
+      },
+      S: {
+        item: "create:sturdy_sheet",
+      },
+      P: {
+        item: "create:precision_mechanism",
+      },
+      F: {
+        item: "minecraft:soul_campfire"
+      },
+      C: {
+        item: "create_power_loader:brass_chunk_loader"
+      }
+    }
+  );
+  // New recipe for advanced chunk loader
+  event.recipes.createMechanicalCrafting(
+    "chunkloaders:advanced_chunk_loader",
+    [
+      //prettier-ignore
+      "E" + "B" + "E",
+      "B" + "C" + "B",
+      "E" + "B" + "E",
+    ],
+    {
+      E: {
+        item: "createaddition:electrum_sheet",
+      },
+      B: {
+        item: "minecraft:blaze_powder",
+      },
+      C: {
+        item: "chunkloaders:basic_chunk_loader",
+      },
+    }
+  );
+  // New recipe for ultimate chunk loader
+  event.recipes.createMechanicalCrafting(
+    "chunkloaders:ultimate_chunk_loader",
+    [
+      //prettier-ignore
+      "D" + "R" + "D",
+      "E" + "C" + "E",
+      "D" + "R" + "D",
+    ],
+    {
+      D: {
+        item: "minecraft:diamond_block",
+      },
+      R: {
+        item: "minecraft:redstone_block",
+      },
+      E: {
+        item: "minecraft:end_rod",
+      },
+      C: {
+        item: "chunkloaders:advanced_chunk_loader",
+      },
+    }
+  );
+  // #endregion
   // #endregion
 
   // #region Vanilla
