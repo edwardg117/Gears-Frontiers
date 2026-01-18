@@ -8,9 +8,9 @@
 			<ModType>Regular</ModType>
 			<MD5>3d88e0e8d987706edf645b2e1617612d3e666358</MD5>
 			<Meta>
-				<version>6.3.3</version>
 				<changelog>* Added pale garden ambience
 		</changelog>
+				<version>6.3.3</version>
 			</Meta>
 		</Module>
 		<Module name="BaguetteLib" id="baguettelib" depends="" side="BOTH">
@@ -24,14 +24,13 @@
 			</Meta>
 		</Module>
 		<Module name="Butcher" id="butcher" depends="" side="BOTH">
-      <URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/pJvOt9bJ/butchery-4.5-neoforge-1.21.1.jar</URL>
-      <Size>13774318</Size>
-      <Required>true</Required>
-      <ModType>Regular</ModType>
-      <MD5>350962536395daca8bd222948c7f4bd5773cd494</MD5>
-      <Meta>
-        <version>4.5</version>
-        <changelog>Added:
+			<URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/pJvOt9bJ/butchery-4.5-neoforge-1.21.1.jar</URL>
+			<Size>13774318</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>350962536395daca8bd222948c7f4bd5773cd494</MD5>
+			<Meta>
+				<changelog>Added:
 - 	Added player corpses
 
 Fixes:
@@ -48,8 +47,9 @@ Fixes:
 
 Changes:
 - 	Changed taxidermy </changelog>
-      </Meta>
-    </Module>
+				<version>4.5</version>
+			</Meta>
+		</Module>
 		<Module name="Create Slice &amp; Dice" id="create_slice_and_dice" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/GmjmRQ0A/versions/DwseRoo3/sliceanddice-forge-4.2.2.jar</URL>
 			<Size>406282</Size>
@@ -68,8 +68,7 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>0b4a085c1b79c86d7054342123a0ce8deaa0b174</MD5>
 			<Meta>
-				<version>1.9.5</version>
-        		<changelog>## What's Changed
+				<changelog>## What&apos;s Changed
 
 * Fix nametag inconsistency causing fps loss in later versions
 
@@ -82,6 +81,7 @@ Changes:
 
 
 **Full Changelog**: https://github.com/tr7zw/EntityCulling/compare/1.9.4...1.9.5</changelog>
+				<version>1.9.5</version>
 			</Meta>
 		</Module>
 		<Module name="Geckolib" id="geckolib" depends="" side="BOTH">
@@ -91,11 +91,11 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>fb0ac6ad63dc5f401c15c66a037c08e9709d1c42</MD5>
 			<Meta>
-				<version>4.8.3</version>
-        <changelog>v4.8.3
+				<changelog>v4.8.3
 
 - Added a safety check for mods attempting to render GeckoLib armor without using GeoRenderProvider. (#755, #804, etc)
 - Marked GeckoAnimFix as an incompatible mod since they refuse to stop breaking GeckoLib with their download-farming mod.</changelog>
+				<version>4.8.3</version>
 			</Meta>
 		</Module>
 		<Module name="Immersive Aircraft" id="immersiveaircraft" depends="" side="BOTH">
@@ -155,10 +155,10 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>27d0d85e7e32e926fc3664ab6815df5cdabb7941</MD5>
 			<Meta>
+				<changelog>  * [Fix #4227 ensure the recipe gui doesn&apos;t crash when the screen is too small](https://github.com/mezz/JustEnoughItems/commit/0ee107ed3b38a899f46f1fcaf28738224338e924) - mezz</changelog>
 				<version>19.27.0.340</version>
-				<changelog>  * [Fix #4227 ensure the recipe gui doesn't crash when the screen is too small](https://github.com/mezz/JustEnoughItems/commit/0ee107ed3b38a899f46f1fcaf28738224338e924) - mezz</changelog>
 			</Meta>
-    	</Module>
+		</Module>
 		<Module name="Kotlin for Forge" id="kotlinforforge" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/ordsPcFz/versions/NrSebcsG/kotlinforforge-5.11.0-all.jar</URL>
 			<Size>6869790</Size>
@@ -166,8 +166,8 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>4d83e8a8e8cb06b306d2cea1e903680fe513f1f3</MD5>
 			<Meta>
-				<version>5.11.0</version>
 				<changelog>Kotlin for Forge 5.11.0</changelog>
+				<version>5.11.0</version>
 			</Meta>
 		</Module>
 		<Module name="Magnum Torch" id="magnumtorch" depends="" side="BOTH">
@@ -214,12 +214,12 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>635e706136bb228e6a72d41d86dec495f812ccb5</MD5>
 			<Meta>
-				<version>21.0.56+neoforge-1.21.1</version>
 				<changelog>- Added `BalmVillagerTradeRegistrar` for registering additional trades to villagers
 		- Added `BalmEntityTypeRegistration.withSpawnPlacement` for defining spawn placement on a new entity
 		- Added `BiomeModificationBuilder.addSpawn` and `BiomeModificationBuilder.setSpawnCost` for adding mob spawns to biomes
 		- Added `BalmClientTooltipComponentRegistrar` for registering client tooltip component factories
 		- Fixed various potential concurrency issues in Balm wrappers related to Permissions, Loot Modifie</changelog>
+				<version>21.0.56+neoforge-1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Corpse x Curios API Compat" id="corpsexcuriossapicompat" depends="" side="BOTH">
@@ -283,8 +283,8 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>0b3bf72b3695bf3fae63535539b2863526b5d5fa</MD5>
 			<Meta>
-				<version>2.13.25</version>
 				<changelog>* Added play button to sound config</changelog>
+				<version>2.13.25</version>
 			</Meta>
 		</Module>
 		<Module name="Explorify" id="explorify" depends="" side="BOTH">
@@ -322,12 +322,12 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>01df8113ce41993ea341b973afc36ef2e1701e00</MD5>
 			<Meta>
-				<version>1.6.9+1.21.1-neoforge</version>
-        <changelog>* Made ImmediatelyFast compatible with Java 25
+				<changelog>* Made ImmediatelyFast compatible with Java 25
 
 * Clear Iris shadow pass outline buffer in case mods render into the wrong buffer (Fixes crash with glowing entities rendered with geckolib)
 
 </changelog>
+				<version>1.6.9+1.21.1-neoforge</version>
 			</Meta>
 		</Module>
 		<Module name="Jade" id="jade" depends="" side="BOTH">
@@ -337,11 +337,10 @@ Changes:
 			<ModType>Regular</ModType>
 			<MD5>7d23a1dd515872bd6498b8edd06bb84e61f2c4e7</MD5>
 			<Meta>
-				<version>15.10.4+neoforge</version>
 				<changelog>## 15.10.4
 
 - fix: remove destroySpeed check (close [#689](https://github.com/Snownee/Jade/issues/689))
-- fix: do not show "empty" on jukebox if there is no server data (close [#695](https://github.com/Snownee/Jade/issues/695))
+- fix: do not show &quot;empty&quot; on jukebox if there is no server data (close [#695](https://github.com/Snownee/Jade/issues/695))
 
 ## 15.10.3
 
@@ -354,6 +353,7 @@ Changes:
 ## 15.10.1
 
 - fix: FluidView#readDefault not working for amounts </changelog>
+				<version>15.10.4+neoforge</version>
 			</Meta>
 		</Module>
 		<Module name="Nullscape" id="nullscape" depends="" side="BOTH">
@@ -418,11 +418,11 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			<ModType>Regular</ModType>
 			<MD5>7d969ab3ff2ad286056f8297e6f10b4ba4b4e010</MD5>
 			<Meta>
-				<version>2.1.0-1.21</version>
-        <changelog># Animal Pens 2.1.0
+				<changelog># Animal Pens 2.1.0
 
 #### Features:
 - Fixes an issue with configuration loader.</changelog>
+				<version>2.1.0-1.21</version>
 			</Meta>
 		</Module>
 		<Module name="Collective" id="collective" depends="" side="BOTH">
@@ -443,8 +443,8 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			<ModType>Regular</ModType>
 			<MD5>c6e901103f558653cf278cd8f7140453050e913a</MD5>
 			<Meta>
+				<changelog>Changes since last release: https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.14...eacef836b7383f2b9a9290f9b20be5cdb4c84655</changelog>
 				<version>1.21.1-1.8.14-203</version>
-        		<changelog>Changes since last release: https://github.com/CyclopsMC/ColossalChests/compare/1.21.1-1.8.14...eacef836b7383f2b9a9290f9b20be5cdb4c84655</changelog>
 			</Meta>
 		</Module>
 		<Module name="Common Network" id="commonnetwork" depends="" side="BOTH">
@@ -479,12 +479,12 @@ the [Discord](https://discord.gg/XtAuqsJWby).
 			<ModType>Regular</ModType>
 			<MD5>39300dc4508a0d4f9e1f3867d4b87952cbf7b6e6</MD5>
 			<Meta>
-				<version>0.3.0+alpha.0.89+1.21.1</version>
-        <changelog>This version is uploaded automatically by GitHub Actions.  
+				<changelog>This version is uploaded automatically by GitHub Actions.  
 
 Changelog:  
 - [5d1a1634](https://github.com/RelativityMC/C2ME-neoforge/commit/5d1a1634c2e17de483978b47a0989e42eeee9dfe) change: mark useEndBiomeCache imcompatible with simplyimprovedterrain - ishland  
 </changelog>
+				<version>0.3.0+alpha.0.89+1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Corpse" id="corpse" depends="" side="BOTH">
@@ -506,8 +506,7 @@ Changelog:
 			<ModType>Regular</ModType>
 			<MD5>bf08bf8980c080f42d6f644f4f44a725cf7c3be9</MD5>
 			<Meta>
-				<version>mc1.21.1-6.0.9</version>
-        <changelog>Create 6.0.9:
+				<changelog>Create 6.0.9:
 
 
 #### Optimizations
@@ -523,6 +522,7 @@ Changelog:
 - Fix schematics sticking around after instant placement #9494
 - Fix block entities calling getChunk throwing UOE on contraptions on the client #9459
 - </changelog>
+				<version>mc1.21.1-6.0.9</version>
 			</Meta>
 		</Module>
 		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="" side="BOTH">
@@ -623,12 +623,12 @@ Make sure to take a backup of your world before using the mod and please report 
 			<ModType>Regular</ModType>
 			<MD5>e44787b0d977a27a0367b76a09ba680487334671</MD5>
 			<Meta>
-				<version>2.0.1</version>
-        <changelog>
+				<changelog>
 
 # Changelog
 
 - updated for 1.21.11</changelog>
+				<version>2.0.1</version>
 			</Meta>
 		</Module>
 		<Module name="Puzzles Lib" id="puzzleslib" depends="" side="BOTH">
@@ -679,7 +679,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>neoforge-1.21.1-1.5.1</version>
 			</Meta>
 		</Module>
-		<Module name="SuperMartijn642's Core Lib" id="supermartijn642corelib" depends="" side="BOTH">
+		<Module name="SuperMartijn642&apos;s Core Lib" id="supermartijn642corelib" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/rOUBggPv/versions/lhA84Gn9/supermartijn642corelib-1.1.19-neoforge-mc1.21.jar</URL>
 			<Size>519542</Size>
 			<Required>true</Required>
@@ -699,7 +699,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>1.21.1-10.1.29</version>
 			</Meta>
 		</Module>
-		<Module name="Xaero's Minimap" id="xaerosminimap" depends="" side="CLIENT">
+		<Module name="Xaero&apos;s Minimap" id="xaerosminimap" depends="" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/1bokaNcj/versions/puXrtfcK/xaerominimap-neoforge-1.21.1-25.3.5.jar</URL>
 			<Size>2120271</Size>
 			<Required>true</Required>
@@ -709,7 +709,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>neoforge-1.21.1-25.3.5</version>
 			</Meta>
 		</Module>
-		<Module name="Xaero's World Map" id="xaerosworldmap" depends="" side="CLIENT">
+		<Module name="Xaero&apos;s World Map" id="xaerosworldmap" depends="" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/NcUtCpym/versions/xUpTkg0V/xaeroworldmap-neoforge-1.21.1-1.40.6.jar</URL>
 			<Size>1378685</Size>
 			<Required>true</Required>
@@ -877,8 +877,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<ModType>Regular</ModType>
 			<MD5>102531463ca607d119bc73612c9667cca1fce1c2</MD5>
 			<Meta>
+				<changelog>- Added stats for Players Revived and Times Revived</changelog>
 				<version>21.1.11+neoforge-1.21.1</version>
-        		<changelog>- Added stats for Players Revived and Times Revived</changelog>
 			</Meta>
 		</Module>
 		<Module name="Visual Workbench" id="visual_workbench" depends="" side="BOTH">
@@ -1643,10 +1643,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			</Meta>
 			<Submodule name="KubeJS files" id="kubejs_files" depends="kubejs" side="BOTH">
 				<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
-				<Size>12042</Size>
+				<Size>16365</Size>
 				<Required>true</Required>
 				<ModType inRoot="true">Extract</ModType>
-				<MD5>612fa1c9ad41fb6b895de628c01fd26e</MD5>
+				<MD5>98b3f62c63ae893074166adc927c687e</MD5>
 			</Submodule>
 		</Module>
 		<Module name="KubeJS Create" id="kubejs_create" depends="create kubejs" side="BOTH">
