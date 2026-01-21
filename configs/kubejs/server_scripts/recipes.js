@@ -63,11 +63,13 @@ ServerEvents.recipes((event) => {
       S: {
         item: "create:shaft",
       },
-    }
+    },
   );
 
+  // #region Immersive Aircraft
   // Remove the biplane recipe so it can bre replaced.
   event.remove({ output: "immersive_aircraft:biplane" });
+  event.remove({ output: "man_of_many_planes:economy_plane" });
 
   // Add biplane recipe using Create
   event.recipes.createMechanicalCrafting(
@@ -100,8 +102,36 @@ ServerEvents.recipes((event) => {
       E: {
         item: "kubejs:hardened_engine",
       },
-    }
+    },
   );
+
+  event.recipes.shaped(
+    "man_of_many_planes:economy_plane",
+    [
+      "PHS", 
+      "GEH", 
+      "PHS"
+    ],
+    {
+      P: {
+        item: "immersive_aircraft:propeller",
+      },
+      G: {
+        item: "immersive_aircraft:industrial_gears",
+      },
+      H: {
+        item: "immersive_aircraft:hull",
+      },
+      S: {
+        item: "immersive_aircraft:sail",
+      },
+      E: {
+        item: "kubejs:hardened_engine",
+      },
+    },
+  );
+
+  // #endregion
 
   // Make ancient debris renewable
   event.recipes
@@ -121,7 +151,7 @@ ServerEvents.recipes((event) => {
         "minecraft:ancient_debris",
         "minecraft:ancient_debris",
         Fluid.of("minecraft:lava", 1000),
-      ]
+      ],
     )
     .superheated();
 
@@ -135,7 +165,7 @@ ServerEvents.recipes((event) => {
         "minecraft:phantom_membrane",
         "minecraft:phantom_membrane",
         "minecraft:chorus_fruit",
-      ]
+      ],
     )
     .heated();
 
@@ -167,12 +197,12 @@ ServerEvents.recipes((event) => {
         item: "create:precision_mechanism",
       },
       F: {
-        item: "minecraft:soul_campfire"
+        item: "minecraft:soul_campfire",
       },
       C: {
-        item: "create_power_loader:brass_chunk_loader"
-      }
-    }
+        item: "create_power_loader:brass_chunk_loader",
+      },
+    },
   );
   // New recipe for advanced chunk loader
   event.recipes.createMechanicalCrafting(
@@ -193,7 +223,7 @@ ServerEvents.recipes((event) => {
       C: {
         item: "chunkloaders:basic_chunk_loader",
       },
-    }
+    },
   );
   // New recipe for ultimate chunk loader
   event.recipes.createMechanicalCrafting(
@@ -217,7 +247,7 @@ ServerEvents.recipes((event) => {
       C: {
         item: "chunkloaders:advanced_chunk_loader",
       },
-    }
+    },
   );
   // #endregion
   // #endregion
@@ -233,7 +263,7 @@ ServerEvents.recipes((event) => {
     {
       L: "minecraft:leather",
       I: "minecraft:iron_ingot", //arg 3: the mapping object
-    }
+    },
   );
   // #endregion
 });

@@ -29,7 +29,7 @@ ServerEvents.tags("block", (event) => {
         "mcwfences:dark_oak_wired_fence",
         "mcwfences:crimson_wired_fence",
         "mcwfences:warped_wired_fence",
-        "mcwfences:bamboo_wired_fence"])
+        "mcwfences:bamboo_wired_fence"]);
 });
 
 // Entity
