@@ -2,6 +2,21 @@ ServerEvents.tags("item", (event) => {
   // Register the hazmat suits from Create Nuclear as as hazmat suits for Create New Age
   event.add("create_new_age:hazmat_suit", "#createnuclear:all_anti_radiation_armors");
 
+  // Flour
+  event.add("gf:food_flour", ["pamhc2foodcore:flouritem", "create:wheat_flour"]);
+  // Salt
+  event.add("c:salt", ["northstar:salt"]);
+  //  Water
+  event.add("c:water", ["minecolonies:large_water_bottle"]);
+  // Cheese
+  event.add("c:cheese", ["minecolonies:cheddar_cheese", "minecolonies:feta_cheese"]);
+
+  // Pork concatenation
+  event.add("c:rawpork", "#c:raw_pork");
+  event.add("c:raw_pork", "#c:rawpork");
+  // Beef concatenation
+  event.add("c:rawbeef", "#butchery:raw_beef");
+  event.add("c:raw_beef", "#c:rawbeef");
 });
 
 // Block tags
@@ -30,6 +45,9 @@ ServerEvents.tags("block", (event) => {
         "mcwfences:crimson_wired_fence",
         "mcwfences:warped_wired_fence",
         "mcwfences:bamboo_wired_fence"]);
+
+  // Prevent pickup by carryon
+  event.add("c:relocation_not_supported", ["sophisticatedbackpacks:backpack",]);
 });
 
 // Entity

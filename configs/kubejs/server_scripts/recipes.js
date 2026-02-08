@@ -107,11 +107,7 @@ ServerEvents.recipes((event) => {
 
   event.recipes.shaped(
     "man_of_many_planes:economy_plane",
-    [
-      "PHS", 
-      "GEH", 
-      "PHS"
-    ],
+    ["PHS", "GEH", "PHS"],
     {
       P: {
         item: "immersive_aircraft:propeller",
@@ -250,6 +246,182 @@ ServerEvents.recipes((event) => {
     },
   );
   // #endregion
+
+  // #region Pam's integration
+  // Custom grinder recipe to use the mechanical grindstone
+  // event.custom({
+  //   type: "create_enchantment_industry:grinding",
+  //   ingredients: [
+  //     {
+  //       tag: "c:flour_plants",
+  //     },
+  //   ],
+  //   sound: "minecraft:block.grindstone.use",
+  //   results: [
+  //     {
+  //       amount: 1,
+  //       id: "pamhc2foodcore:flouritem",
+  //     },
+  //   ],
+  // });
+  // Prevent using auto generated shapless as it will consume the grinder/mixing bowl/skillet
+  event.forEachRecipe(
+    {
+      type: "minecraft:crafting_shapeless",
+      input: [
+        "pamhc2foodcore:grinderitem",
+        "pamhc2foodcore:mixingbowlitem",
+        "pamhc2foodcore:skilletitem",
+        "pamhc2foodcore:bakewareitem",
+        "pamhc2foodcore:potitem",
+        "pamhc2foodcore:rolleritem",
+        "pamhc2foodcore:saucepanitem",
+      ],
+    },
+    (r) => {
+      r.id(r.getOrCreateId() + "_manual_only");
+    },
+  );
+
+  // Add recipes to heated mixer (skillet and bakeware)
+  event.forEachRecipe(
+    {
+      type: "minecraft:crafting_shapeless",
+      input: [
+        "pamhc2foodcore:skilletitem",
+        "pamhc2foodcore:bakewareitem",
+        "pamhc2foodcore:potitem",
+        "pamhc2foodcore:saucepanitem",
+      ],
+    },
+    (r) => {
+      // find and remove utensils from ingredients
+      let newIngredients = [];
+      for (let ingredient of r.originalRecipeIngredients) {
+        let ids = ingredient.getItemIds();
+        if (
+          !ids.contains("pamhc2foodcore:skilletitem") &&
+          !ids.contains("pamhc2foodcore:bakewareitem") &&
+          !ids.contains("pamhc2foodcore:potitem") &&
+          !ids.contains("pamhc2foodcore:saucepanitem")
+        ) {
+          newIngredients.push(ingredient);
+        }
+      }
+
+      event.recipes
+        .createMixing(r.originalRecipeResult, newIngredients)
+        .heated();
+    },
+  );
+
+  // Add recipes to non-heated mixer
+  event.forEachRecipe(
+    {
+      type: "minecraft:crafting_shapeless",
+      input: ["pamhc2foodcore:mixingbowlitem"],
+    },
+    (r) => {
+      // find and remove utensils from ingredients
+      let newIngredients = [];
+      for (let ingredient of r.originalRecipeIngredients) {
+        let ids = ingredient.getItemIds();
+        if (!ids.contains("pamhc2foodcore:mixingbowlitem")) {
+          newIngredients.push(ingredient);
+        }
+      }
+
+      event.recipes.createMixing(r.originalRecipeResult, newIngredients);
+    },
+  );
+
+  // Add grinder recipes to mechanical grindstone and compacting for multiple ingredients
+  event.forEachRecipe(
+    {
+      type: "minecraft:crafting_shapeless",
+      input: ["pamhc2foodcore:grinderitem"],
+    },
+    (r) => {
+      let newIngredients = [];
+      for (let ingredient of r.originalRecipeIngredients) {
+        let ids = ingredient.getItemIds();
+        if (!ids.contains("pamhc2foodcore:grinderitem")) {
+          newIngredients.push(ingredient);
+        }
+      }
+      // If only one ingredient, add to grindstone
+      if (newIngredients.length == 1) {
+        event.custom({
+          type: "create_enchantment_industry:grinding",
+          ingredients: newIngredients,
+          sound: "minecraft:book_page_turn",
+          results: [r.originalRecipeResult],
+        });
+        // If multiple ingredients, add to compacting table (for example, flour + salt)
+      } else if (newIngredients.length > 1) {
+        event.recipes.createCompacting(r.originalRecipeResult, newIngredients);
+      }
+    },
+  );
+
+  // Add recipes to cutting board (roller)
+  event.forEachRecipe(
+    {
+      type: "minecraft:crafting_shapeless",
+      input: ["pamhc2foodcore:rolleritem"],
+    },
+    (r) => {
+      // find and remove skillet from ingredients
+      let newIngredients = [];
+      for (let ingredient of r.originalRecipeIngredients) {
+        let ids = ingredient.getItemIds();
+        if (!ids.contains("pamhc2foodcore:rolleritem")) {
+          newIngredients.push(ingredient);
+        }
+      }
+
+      // event.custom({
+      //   type: 'farmersdelight:cutting',
+      //   ingredients: newIngredients,
+      //   tool: { item: 'pamhc2foodcore:rolleritem' },
+      //   results: [r.originalRecipeResult]
+      // })
+      // if more than one ingredient, add to compacting table
+      if (newIngredients.length > 1) {
+        event.recipes.createCompacting(r.originalRecipeResult, newIngredients);
+      } else if (newIngredients.length == 1) {
+        // If only one ingredient, add to cutting board
+        event.custom({
+          type: "farmersdelight:cutting",
+          ingredients: newIngredients,
+          result: [
+            {
+              item: r.originalRecipeResult,
+            },
+          ],
+          tool: {
+            item: "pamhc2foodcore:rolleritem",
+          },
+        });
+      }
+    },
+  );
+
+  // Replace flour item with tag so all flour types are accepted
+  event.replaceInput(
+    { input: "pamhc2foodcore:flouritem" },
+    "pamhc2foodcore:flouritem",
+    "#gf:food_flour",
+  );
+  // Fix water items being used instead of fluid
+  // TODO FIXME
+  event.replaceInput(
+    { input: "#c:water", type: "create:mixing" },
+    "#c:water",
+    "minecraft:water",
+  );
+  // #endregion
+
   // #endregion
 
   // #region Vanilla
