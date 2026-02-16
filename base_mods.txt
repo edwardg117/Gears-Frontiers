@@ -1,0 +1,91 @@
+AmbientSounds
+Animal Armor Trims
+AppleSkin
+Architectury API
+Armor Poser
+Balm
+Better Advancements
+Better Horses
+Builder&apos;s Jetpack
+Butcher
+Camera Mod
+Carry On
+Chunk Loaders
+Cloth Config v10 API
+Clumps
+ColossalChests
+Comforts
+Common Network
+Concurrent Chunk Management Engine
+Controlling
+Corpse
+Corpse x Curios API Compat
+CraftingTweaks
+Create
+Create: Bells &amp; Whistles
+Create: Dragons Plus
+Create: Enchantment Industry
+Create: Oxidized
+CreativeCore
+Cristel Lib
+Curios API
+Cyclops Core
+Distant Horizons
+Dungeons and Taverns
+End Remastered
+EntityCulling
+Explorify
+FallingTree
+Farmer&apos;s Delight
+Faster Paths
+Feature Recycler
+Ferrite Core
+Geckolib
+Horse Expert
+Horseman
+ImmediatelyFast
+Immersive Aircraft
+Immersive Engineering
+Incendium
+Inventory Sorter
+Iris Shaders
+Just Enough Immersive Multiblocks
+Just Enough Items
+Just Enough Resources
+Kotlin for Forge
+L_Ender &apos;s Cataclysm Delight
+L_Ender&apos;s Cataclysm
+Lifted Horizons
+Lionfish-API
+Lithium
+Magnum Torch
+Man of Many Planes
+MES - Moog&apos;s End Structures
+ModernFix
+MonoLib
+Mouse Tweaks
+Noisium
+Nullscape
+Patchouli
+Puzzles Lib
+Reese&apos;s Sodium Options
+ReForgedPlay Mod
+Resourcify
+Searchables
+Simple Voice Chat
+Small Ships
+Sodium
+Sodium Extra
+Sound Physics Remastered
+Straw Statues
+SuperMartijn642&apos;s Config Library
+SuperMartijn642&apos;s Core Lib
+Tidal Towns
+Tom&apos;s Simple Storage Mod
+Towns and Towers
+Traveler&apos;s Backpack
+William Wythers&apos; Expanded Ecosphere
+William Wythers&apos; Overhauled Overworld
+Xaero&apos;s Minimap
+Xaero&apos;s World Map
+Yeehaw Towns

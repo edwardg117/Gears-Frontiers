@@ -12,11 +12,11 @@ ServerEvents.tags("item", (event) => {
   event.add("c:cheese", ["minecolonies:cheddar_cheese", "minecolonies:feta_cheese"]);
 
   // Pork concatenation
-  event.add("c:rawpork", "#c:raw_pork");
-  event.add("c:raw_pork", "#c:rawpork");
+  event.add("c:rawpork", "#c:foods/raw_pork");
+  // event.add("c:raw_pork", "#c:rawpork");
   // Beef concatenation
-  event.add("c:rawbeef", "#butchery:raw_beef");
-  event.add("c:raw_beef", "#c:rawbeef");
+  event.add("c:rawbeef", "#c:foods/raw_beef");
+  // event.add("c:raw_beef", "#c:rawbeef");
 });
 
 // Block tags
