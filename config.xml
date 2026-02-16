@@ -24,9 +24,9 @@
 			</ConfigFile>
 		</Module>
 		<Module name="KubeJS" id="kubejs" depends="" side="BOTH">
-			<Size>100000</Size>
+			<Size>0</Size>
 			<Required>true</Required>
-			<ModType>Override</ModType>
+			<ModType>Regular</ModType>
 			<Submodule name="KubeJS Files" id="kubejs_files" depends="kubejs" side="BOTH">
 				<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
 				<Size>15042</Size>
