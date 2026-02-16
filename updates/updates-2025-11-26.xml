@@ -1581,13 +1581,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 			<Meta>
 				<version>2101.7.2-build.348</version>
 			</Meta>
-			<Submodule name="KubeJS files" id="kubejs_files" depends="kubejs" side="BOTH">
-				<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
-				<Size>18135</Size>
-				<Required>true</Required>
-				<ModType inRoot="true">Extract</ModType>
-				<MD5>baf2ea3d89ea2b8938739644800951ab</MD5>
-			</Submodule>
 		</Module>
 		<Module name="KubeJS Create" id="kubejs_create" depends="create kubejs" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/T38eAZQC/versions/1qmcLagN/kubejs-create-neoforge-2101.3.1-build.18.jar</URL>
