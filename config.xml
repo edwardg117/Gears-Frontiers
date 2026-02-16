@@ -23,17 +23,12 @@
 				<MD5>1d0fa1d6a1421ed3486591e5de4f421f</MD5>
 			</ConfigFile>
 		</Module>
-		<Module name="KubeJS" id="kubejs" depends="" side="BOTH">
-			<Size>0</Size>
+		<Module name="KubeJS Files" id="kubejs_files" depends="" side="BOTH">
+			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
+			<Size>15042</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
-			<Submodule name="KubeJS Files" id="kubejs_files" depends="kubejs" side="BOTH">
-				<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
-				<Size>15042</Size>
-				<Required>true</Required>
-				<ModType inRoot="true">Extract</ModType>
-				<MD5>d7900e1f3424cf295d4b2988901dbd85</MD5>
-			</Submodule>
+			<ModType inRoot="true">Extract</ModType>
+			<MD5>d7900e1f3424cf295d4b2988901dbd85</MD5>
 		</Module>
 	</Server>
 </ServerPack>
