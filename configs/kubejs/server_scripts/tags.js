@@ -17,6 +17,7 @@ ServerEvents.tags("item", (event) => {
   // Beef concatenation
   event.add("c:rawbeef", "#c:foods/raw_beef");
   // event.add("c:raw_beef", "#c:rawbeef");
+  // testing change
 });
 
 // Block tags
