@@ -1,0 +1,322 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "culinary_arts"
+	group: "27DF0060B7E4C476"
+	icon: {
+		id: "farmersdelight:stove"
+	}
+	id: "50860A3C903491E3"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			id: "100000AF00000000"
+			rewards: [{
+				id: "100000AF00000001"
+				type: "xp"
+				xp: 10
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "100000AF00000002"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000000"]
+			id: "100000AF00000003"
+			rewards: [{
+				count: 4
+				id: "100000AF00000004"
+				item: {
+					count: 1
+					id: "farmersdelight:straw"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000005"
+					item: { count: 1, id: "farmersdelight:flint_knife" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000006"
+					item: { count: 1, id: "farmersdelight:cutting_board" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000003"]
+			id: "100000AF00000040"
+			rewards: [{
+				id: "100000AF00000041"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "100000AF00000042"
+				item: { count: 1, id: "farmersdelight:salmon_slice" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["100000AF00000003"]
+			id: "100000AF00000007"
+			rewards: [{
+				id: "100000AF00000008"
+				item: {
+					count: 1
+					id: "farmersdelight:skillet"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000009"
+					item: { count: 1, id: "farmersdelight:stove" }
+					type: "item"
+				}
+				{
+					id: "100000AF0000000A"
+					item: { count: 1, id: "farmersdelight:cooking_pot" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000007"]
+			id: "100000AF00000043"
+			rewards: [{
+				count: 2
+				id: "100000AF00000044"
+				item: {
+					count: 1
+					id: "farmersdelight:beef_patty"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "100000AF00000045"
+				item: { count: 1, id: "farmersdelight:skillet" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["100000AF00000000"]
+			id: "100000AF0000000B"
+			rewards: [{
+				count: 2
+				id: "100000AF0000000C"
+				item: {
+					count: 1
+					id: "storagedelight:oak_cabinet_with_glass_doors"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "100000AF0000000D"
+				item: { count: 1, id: "farmersdelight:oak_cabinet" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["100000AF0000000B"]
+			id: "100000AF0000000E"
+			rewards: [{
+				count: 4
+				id: "100000AF0000000F"
+				item: {
+					count: 1
+					id: "storagedelight:oak_drawer"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "100000AF00000010"
+				item: { count: 1, id: "storagedelight:oak_drawer" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["100000AF00000000"]
+			id: "100000AF00000011"
+			rewards: [{
+				id: "100000AF00000012"
+				item: {
+					count: 1
+					id: "pamhc2foodcore:bakewareitem"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000013"
+					item: { count: 1, id: "pamhc2foodcore:mixingbowlitem" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000014"
+					item: { count: 1, id: "pamhc2foodcore:rolleritem" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000015"
+					item: { count: 1, id: "pamhc2foodcore:potitem" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000011"]
+			id: "100000AF00000016"
+			rewards: [{
+				count: 16
+				id: "100000AF00000017"
+				item: {
+					count: 1
+					id: "pamhc2foodcore:freshwateritem"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000018"
+					item: { count: 1, id: "pamhc2foodcore:grinderitem" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000019"
+					item: { count: 1, id: "pamhc2foodcore:juiceritem" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000007"]
+			id: "100000AF0000001A"
+			rewards: [{
+				id: "100000AF0000001B"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [
+				{
+					id: "100000AF0000001C"
+					item: { count: 1, id: "farmersdelight:hamburger" }
+					type: "item"
+				}
+				{
+					id: "100000AF0000001D"
+					item: { count: 1, id: "farmersdelight:fried_rice" }
+					type: "item"
+				}
+				{
+					id: "100000AF0000001E"
+					item: { count: 1, id: "farmersdelight:pasta_with_meatballs" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["100000AF00000016"]
+			id: "100000AF0000001F"
+			rewards: [{
+				id: "100000AF00000020"
+				item: {
+					count: 1
+					id: "pamhc2foodcore:epicbaconitem"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "100000AF00000021"
+				item: { count: 1, id: "pamhc2foodcore:epicbaconitem" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["100000AF00000007"]
+			id: "100000AF0000002F"
+			rewards: [{
+				id: "100000AF00000030"
+				item: {
+					count: 1
+					id: "farmersdelight:roast_chicken_block"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000031"
+					item: { count: 1, id: "farmersdelight:shepherds_pie_block" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000032"
+					item: { count: 1, id: "farmersdelight:honey_glazed_ham_block" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000AF00000016"]
+			id: "100000AF00000033"
+			rewards: [{
+				count: 2
+				id: "100000AF00000034"
+				item: {
+					count: 1
+					id: "pamhc2foodcore:cottoncandyitem"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "100000AF00000035"
+					item: { count: 1, id: "pamhc2foodcore:toastitem" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000036"
+					item: { count: 1, id: "pamhc2foodcore:applejellyitem" }
+					type: "item"
+				}
+				{
+					id: "100000AF00000037"
+					item: { count: 1, id: "pamhc2foodextended:peanutbutteritem" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+}

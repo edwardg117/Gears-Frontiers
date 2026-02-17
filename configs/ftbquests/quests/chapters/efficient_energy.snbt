@@ -1,0 +1,174 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "efficient_energy"
+	group: "2DC686AF09EDD0A8"
+	icon: {
+		id: "createaddition:alternator"
+	}
+	id: "3892019384910283"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			id: "0AABE46E00807946"
+			rewards: [{
+				id: "082014E93BCD6F15"
+				type: "xp"
+				xp: 10
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "4A11EC407279C124"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0AABE46E00807946"]
+			id: "6BD20C8EE13213DB"
+			rewards: [{
+				count: 4
+				id: "223B65E4CAF04172"
+				item: {
+					count: 1
+					id: "createaddition:connector"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5C0B34973EDFC2F1"
+				item: { count: 1, id: "createaddition:alternator" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6BD20C8EE13213DB"]
+			id: "6104FF7ED97FA641"
+			rewards: [{
+				id: "7B9EF59F3316827D"
+				item: {
+					count: 1
+					id: "createaddition:copper_wire"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "47B5EB8CBB14CD99"
+				item: { count: 1, id: "createaddition:modular_accumulator" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AABE46E00807946"]
+			id: "332EB67B79E4C64A"
+			rewards: [{
+				count: 2
+				id: "5D270F10B9A4606D"
+				item: {
+					count: 1
+					id: "create_new_age:carbon_brushes"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "42C9071175EF8E3D"
+					item: { count: 1, id: "create_new_age:generator_coil" }
+					type: "item"
+				}
+				{
+					id: "20D897EE9A0B434D"
+					item: { count: 1, id: "create_new_age:carbon_brushes" }
+					type: "item"
+				}
+			]
+			x: 2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["332EB67B79E4C64A"]
+			id: "5505E3EBFD4672C1"
+			rewards: [{
+				id: "3D8232B74D322B73"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "4A78F91A5EDB4E89"
+				item: { count: 1, id: "create_new_age:layered_magnet" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0AABE46E00807946"]
+			id: "0E42C9B15963D250"
+			rewards: [{
+				count: 4
+				id: "2944A8418B80B6A8"
+				item: {
+					count: 1
+					id: "immersiveengineering:connector_hv"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "053641A1DC3E9A0E"
+				item: { count: 1, id: "immersiveengineering:diesel_generator" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0E42C9B15963D250"]
+			id: "483612071C0B755E"
+			rewards: [{
+				id: "6D585A1CAC6DE1AA"
+				item: {
+					count: 1
+					id: "createaddition:bioethanol_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "660DF1550557BDC5"
+					item: { count: 1, id: "createaddition:biomass" }
+					type: "item"
+				}
+				{
+					id: "44A3DC5AD3E4D813"
+					item: { count: 1, id: "createaddition:bioethanol_bucket" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0AABE46E00807946"]
+			id: "61F729428EB1B2B3"
+			rewards: [{
+				id: "222A0BF97A395559"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "77FDAC0E2A82DA76"
+				item: { count: 1, id: "create_new_age:advanced_motor" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+	]
+}

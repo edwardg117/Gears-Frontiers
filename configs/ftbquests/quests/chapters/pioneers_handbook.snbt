@@ -1,0 +1,856 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "pioneers_handbook"
+	group: "27DF0060B7E4C476"
+	id: "0B59EBDDDF8D3AF0"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "369A4E0896DCAD51"
+			rewards: [{
+				count: 16
+				id: "5AF2CDFBFEE5F6D3"
+				item: {
+					count: 1
+					id: "minecraft:torch"
+				}
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				id: "2F38FBA010E5659A"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["369A4E0896DCAD51"]
+			id: "65326FE0C2DBFD14"
+			rewards: [{
+				count: 4
+				id: "7D16D325859061BD"
+				item: {
+					count: 1
+					id: "minecraft:stick"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "78FBC62D3E36207A"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"1000000000000010"
+				"65326FE0C2DBFD14"
+			]
+			id: "23D511DEFB791453"
+			rewards: [{
+				id: "2FC0EECC306070F9"
+				item: {
+					count: 1
+					id: "minecraft:apple"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "03A5B4B150E03A2F"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"1000000000000013"
+				"23D511DEFB791453"
+			]
+			id: "1000000000010001"
+			rewards: [{
+				count: 8
+				id: "1000000000010002"
+				item: {
+					count: 1
+					id: "minecraft:stick"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010003"
+				item: { count: 1, id: "minecraft:crafting_table" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1000000000010001"]
+			id: "2C9602C72816A60A"
+			rewards: [{
+				count: 16
+				id: "12602A789F7CABF1"
+				item: {
+					count: 1
+					id: "minecraft:cobblestone"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6ADEE9A929813117"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:cobblestones)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"1000000000000016"
+				"2C9602C72816A60A"
+			]
+			id: "575A6FF022B9D2D0"
+			rewards: [{
+				count: 8
+				id: "1000000000000020"
+				item: {
+					count: 1
+					id: "minecraft:coal"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000021"
+				item: { count: 1, id: "minecraft:furnace" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"1000000000000019"
+				"575A6FF022B9D2D0"
+			]
+			id: "1000000000000022"
+			rewards: [{
+				count: 2
+				id: "1000000000000023"
+				item: {
+					count: 1
+					id: "minecraft:raw_iron"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000024"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.5d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			id: "1000000000010004"
+			rewards: [{
+				id: "1000000000010005"
+				item: {
+					count: 1
+					id: "minecraft:raw_iron"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010006"
+				item: { count: 1, id: "minecraft:blast_furnace" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			id: "1000000000000025"
+			rewards: [{
+				count: 4
+				id: "1000000000000026"
+				item: {
+					count: 1
+					id: "minecraft:raw_copper"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000027"
+				item: { count: 1, id: "minecraft:copper_ingot" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 9.5d
+		}
+		{
+			dependencies: ["1000000000010001"]
+			id: "1000000000000098"
+			rewards: [{
+				id: "1000000000010007"
+				item: {
+					count: 1
+					id: "minecraft:bone_meal"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "1000000000010008"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:hoes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "1000000000010009"
+					item: { count: 1, id: "minecraft:wheat_seeds" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1000000000000098"]
+			id: "1000000000010010"
+			rewards: [{
+				count: 4
+				id: "1000000000010011"
+				item: {
+					count: 1
+					id: "minecraft:bread"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010012"
+				item: { count: 1, id: "minecraft:wheat" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1000000000010001"]
+			id: "1000000000010013"
+			rewards: [{
+				id: "1000000000010014"
+				item: {
+					count: 1
+					id: "sophisticatedstorage:upgrade_base"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010015"
+				item: { count: 1, id: "sophisticatedstorage:chest" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1000000000010013"]
+			id: "1000000000010016"
+			rewards: [{
+				id: "1000000000010017"
+				item: {
+					count: 1
+					id: "minecraft:leather"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010018"
+				item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			id: "1000000000000041"
+			rewards: [{
+				id: "1000000000000042"
+				item: {
+					count: 1
+					id: "minecraft:milk_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000043"
+				item: { count: 1, id: "minecraft:bucket" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1000000000000041"]
+			id: "1000000000000053"
+			rewards: [{
+				id: "1000000000010019"
+				item: {
+					count: 1
+					id: "minecraft:crying_obsidian"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 10L
+				id: "1000000000000055"
+				item: { count: 1, id: "minecraft:obsidian" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			id: "1000000000010020"
+			rewards: [{
+				id: "1000000000010021"
+				item: {
+					count: 1
+					id: "minecraft:iron_sword"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010022"
+				item: { count: 1, id: "minecraft:shield" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1000000000010020"]
+			id: "1000000000010023"
+			rewards: [{
+				id: "1000000000010024"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [
+				{
+					id: "1000000000010025"
+					item: { count: 1, id: "minecraft:iron_helmet" }
+					type: "item"
+				}
+				{
+					id: "1000000000010026"
+					item: { count: 1, id: "minecraft:iron_chestplate" }
+					type: "item"
+				}
+				{
+					id: "1000000000010027"
+					item: { count: 1, id: "minecraft:iron_leggings" }
+					type: "item"
+				}
+				{
+					id: "1000000000010028"
+					item: { count: 1, id: "minecraft:iron_boots" }
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 11.0d
+		}
+		{
+			dependencies: [
+				"1000000000000019"
+				"575A6FF022B9D2D0"
+			]
+			id: "1000000000010029"
+			rewards: [{
+				count: 4
+				id: "1000000000010030"
+				item: {
+					count: 1
+					id: "minecraft:beef"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010031"
+				item: { count: 1, id: "minecraft:campfire" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1000000000010029"]
+			id: "1000000000010032"
+			rewards: [{
+				count: 4
+				id: "1000000000010033"
+				item: {
+					count: 1
+					id: "minecraft:coal"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010034"
+				item: { count: 1, id: "minecraft:smoker" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"1000000000000016"
+				"2C9602C72816A60A"
+			]
+			id: "1000000000010035"
+			rewards: [{
+				count: 8
+				id: "1000000000010036"
+				item: {
+					count: 1
+					id: "minecraft:stone_bricks"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010037"
+				item: { count: 1, id: "minecraft:stonecutter" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["1000000000010001"]
+			id: "1000000000010038"
+			rewards: [{
+				id: "1000000000010039"
+				item: {
+					count: 1
+					id: "minecraft:emerald"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010040"
+				structure: "minecraft:village"
+				type: "structure"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1000000000010038"]
+			id: "1000000000010041"
+			rewards: [{
+				count: 2
+				id: "1000000000010042"
+				item: {
+					count: 1
+					id: "minecraft:emerald"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010043"
+				item: { count: 1, id: "minecraft:emerald" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1000000000010041"]
+			id: "1000000000010044"
+			rewards: [{
+				id: "1000000000010045"
+				item: {
+					count: 1
+					id: "minecraft:compass"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010046"
+				item: { count: 1, id: "minecraft:map" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1000000000000010"
+				"23D511DEFB791453"
+			]
+			id: "1000000000010047"
+			rewards: [{
+				id: "1000000000010048"
+				item: {
+					count: 1
+					id: "minecraft:egg"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				icon: {
+					id: "minecraft:chicken_spawn_egg"
+				}
+				id: "1000000000010049"
+				observe_type: 5
+				timer: 0L
+				to_observe: "minecraft:chicken"
+				type: "observation"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"1000000000000010"
+				"1000000000010047"
+			]
+			id: "1000000000010050"
+			rewards: [{
+				id: "1000000000010051"
+				item: {
+					count: 1
+					id: "minecraft:white_wool"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				icon: {
+					id: "minecraft:sheep_spawn_egg"
+				}
+				id: "1000000000010052"
+				observe_type: 5
+				timer: 0L
+				to_observe: "minecraft:sheep"
+				type: "observation"
+			}]
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000010050"]
+			id: "1000000000010053"
+			rewards: [{
+				id: "1000000000010054"
+				item: {
+					count: 1
+					id: "minecraft:clock"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010055"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:beds)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000000053"]
+			id: "1000000000000059"
+			rewards: [{
+				id: "1000000000000060"
+				item: {
+					count: 1
+					id: "minecraft:gold_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				id: "1000000000000061"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1000000000000059"]
+			id: "1000000000010056"
+			rewards: [{
+				id: "1000000000010057"
+				item: {
+					count: 1
+					id: "minecraft:raw_gold"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010058"
+				item: { count: 1, id: "minecraft:gold_ingot" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1000000000000059"]
+			id: "1000000000010059"
+			rewards: [{
+				count: 4
+				id: "1000000000010060"
+				item: {
+					count: 1
+					id: "minecraft:quartz"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010061"
+				item: { count: 1, id: "minecraft:quartz" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 14.0d
+		}
+		{
+			dependencies: ["1000000000000059"]
+			id: "1000000000000068"
+			rewards: [{
+				count: 2
+				id: "1000000000000069"
+				item: {
+					count: 1
+					id: "minecraft:blaze_powder"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000070"
+				item: { count: 1, id: "minecraft:blaze_rod" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 15.5d
+		}
+		{
+			dependencies: ["1000000000000068"]
+			id: "1000000000010062"
+			rewards: [{
+				count: 3
+				id: "1000000000010063"
+				item: {
+					count: 1
+					id: "minecraft:glass_bottle"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010064"
+				item: { count: 1, id: "minecraft:brewing_stand" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 15.5d
+		}
+		{
+			dependencies: ["1000000000010062"]
+			id: "1000000000010065"
+			rewards: [{
+				id: "1000000000010066"
+				item: {
+					count: 1
+					id: "minecraft:soul_sand"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010067"
+				item: { count: 1, id: "minecraft:nether_wart" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 15.5d
+		}
+		{
+			dependencies: ["1000000000000041"]
+			id: "1000000000000047"
+			rewards: [{
+				id: "1000000000000048"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000049"
+				item: { count: 1, id: "minecraft:diamond" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1000000000000047"]
+			id: "1000000000000050"
+			rewards: [{
+				id: "1000000000010068"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "1000000000000052"
+				item: { count: 1, id: "minecraft:diamond_pickaxe" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1000000000000050"]
+			id: "1000000000000056"
+			rewards: [{
+				id: "1000000000010069"
+				item: {
+					count: 1
+					id: "minecraft:lapis_lazuli"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000058"
+				item: { count: 1, id: "minecraft:enchanting_table" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 11.0d
+		}
+		{
+			dependencies: ["1000000000000068"]
+			id: "1000000000000071"
+			rewards: [{
+				id: "1000000000010070"
+				type: "xp"
+				xp: 200
+			}]
+			tasks: [{
+				id: "1000000000000073"
+				item: { count: 1, id: "minecraft:ender_pearl" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 17.0d
+		}
+		{
+			dependencies: ["1000000000000071"]
+			id: "1000000000000074"
+			rewards: [{
+				id: "1000000000010071"
+				item: {
+					count: 1
+					id: "minecraft:ender_eye"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000076"
+				item: { count: 1, id: "minecraft:ender_eye" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 18.5d
+		}
+		{
+			dependencies: ["1000000000000074"]
+			id: "1000000000000077"
+			rewards: [{
+				id: "1000000000010072"
+				type: "xp_levels"
+				xp_levels: 10
+			}]
+			shape: "octagon"
+			size: 2.0d
+			tasks: [{
+				advancement: "minecraft:story/follow_ender_eye"
+				criterion: ""
+				id: "1000000000000079"
+				type: "advancement"
+			}]
+			x: 0.0d
+			y: 20.5d
+		}
+		{
+			dependencies: ["1000000000000022"]
+			id: "1000000000010073"
+			rewards: [{
+				count: 4
+				id: "1000000000010074"
+				item: {
+					count: 1
+					id: "minecraft:redstone"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010075"
+				item: { count: 1, id: "minecraft:redstone" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1000000000010073"]
+			id: "1000000000010076"
+			rewards: [{
+				id: "1000000000010077"
+				item: {
+					count: 1
+					id: "minecraft:redstone_torch"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010078"
+				item: { count: 1, id: "minecraft:lever" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["1000000000010076"]
+			id: "1000000000010079"
+			rewards: [{
+				id: "1000000000010080"
+				item: {
+					count: 1
+					id: "minecraft:redstone"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000010081"
+				item: { count: 1, id: "minecraft:repeater" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: 8.0d
+		}
+	]
+}

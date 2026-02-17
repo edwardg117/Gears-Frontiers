@@ -1,0 +1,422 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "end_eyes"
+	group: "36EEB16071C6C897"
+	icon: {
+		id: "endrem:nether_eye"
+	}
+	id: "320A26FC41362EE6"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "420C44B5CD424AEC"
+			rewards: [{
+				id: "72D2DE5382559232"
+				item: {
+					count: 1
+					id: "minecraft:ender_eye"
+				}
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [{
+				id: "5DB0D477F04CEA5E"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "4AB0396B4A7FAAB2"
+			rewards: [{
+				id: "10E8C09D66BF40D8"
+				item: {
+					count: 1
+					id: "endrem:witch_eye"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "05DD0CCEB27FA317"
+				item: { count: 1, id: "endrem:witch_pupil" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "2421D9E88B1C5B58"
+			rewards: [{
+				id: "44F537AF0EE3FB83"
+				item: {
+					count: 1
+					id: "endrem:undead_eye"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "098F1285564DBE62"
+				item: { count: 1, id: "endrem:undead_soul" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "7C7B6B414E7CA9D4"
+			rewards: [{
+				count: 32
+				id: "58022F60C2C08D1D"
+				item: {
+					count: 1
+					id: "minecraft:sand"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2049AA450AA182D0"
+				item: { count: 1, id: "endrem:old_eye" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "1B98C457A823C585"
+			rewards: [{
+				id: "2337BF49E2DCD127"
+				item: {
+					count: 1
+					id: "minecraft:crossbow"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "295717FD00E27F1E"
+				item: { count: 1, id: "endrem:corrupted_eye" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "6B41174603B189EC"
+			rewards: [{
+				count: 8
+				id: "6AABF76AC88797EE"
+				item: {
+					count: 1
+					id: "minecraft:iron_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3BB18D7F5969B80C"
+				item: { count: 1, id: "endrem:lost_eye" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "742EA21C6DB25291"
+			rewards: [{
+				count: 32
+				id: "2D8E7A55623A5D7B"
+				item: {
+					count: 1
+					id: "minecraft:moss_block"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "79F312601984725C"
+				item: { count: 1, id: "endrem:rogue_eye" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "7914F1F9D9E4E42A"
+			rewards: [{
+				count: 16
+				id: "74602059292B95C6"
+				item: {
+					count: 1
+					id: "minecraft:nether_brick"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "51DA8D6068C6F51A"
+				item: { count: 1, id: "endrem:nether_eye" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["420C44B5CD424AEC"]
+			id: "349060F64218C12C"
+			rewards: [{
+				count: 16
+				id: "6E38F6B426A9BEEC"
+				item: {
+					count: 1
+					id: "minecraft:ice"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "78DA4283334BFD84"
+				item: { count: 1, id: "endrem:cold_eye" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7C7B6B414E7CA9D4"]
+			id: "43F5981C8E7B0B1B"
+			rewards: [{
+				id: "24C0937E3A1F414F"
+				item: {
+					count: 1
+					id: "minecraft:totem_of_undying"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5F5B0C3D2D045487"
+				item: { count: 1, id: "endrem:magical_eye" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["43F5981C8E7B0B1B"]
+			id: "2E6468A7B7740BE8"
+			rewards: [{
+				count: 16
+				id: "6A4C9B7789C7481E"
+				item: {
+					count: 1
+					id: "minecraft:emerald"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2EBAA74A23DECDE7"
+				item: { count: 1, id: "endrem:evil_eye" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2E6468A7B7740BE8"]
+			id: "4D49DB740FDB82F5"
+			rewards: [{
+				count: 32
+				id: "067DD412EDF07DA3"
+				item: {
+					count: 1
+					id: "minecraft:lapis_lazuli"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2B5AB5D3B160B056"
+				item: { count: 1, id: "endrem:cryptic_eye" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2421D9E88B1C5B58"]
+			id: "48BDEA7AA0FEC4A2"
+			rewards: [{
+				count: 4
+				id: "63694642A36CF3FB"
+				item: {
+					count: 1
+					id: "endrem:undead_soul"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "55F299E64F9F5D67"
+				item: { count: 1, id: "endrem:undead_eye" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4AB0396B4A7FAAB2"]
+			id: "6C7964C6A4F30674"
+			rewards: [{
+				count: 4
+				id: "3917C7D72E8E3809"
+				item: {
+					count: 1
+					id: "endrem:witch_pupil"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "42AF938C727A13E7"
+				item: { count: 1, id: "endrem:witch_eye" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["349060F64218C12C"]
+			id: "20788815179D5B06"
+			rewards: [{
+				count: 4
+				id: "4C84667C7A357DF8"
+				item: {
+					count: 1
+					id: "minecraft:prismarine_crystals"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "754AA9CEDA3A74A0"
+				item: { count: 1, id: "endrem:exotic_eye" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4D49DB740FDB82F5"]
+			id: "3B4A27774D9844B2"
+			rewards: [{
+				count: 16
+				id: "60E13BA39D3B3921"
+				item: {
+					count: 1
+					id: "minecraft:prismarine_shard"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7E678D3640962DB4"
+				item: { count: 1, id: "endrem:guardian_eye" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["48BDEA7AA0FEC4A2"]
+			id: "1220D1A757633DB8"
+			rewards: [{
+				id: "6078898C50D7AD4B"
+				item: {
+					count: 1
+					id: "minecraft:nether_star"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "0A57BAE76D1B5DFE"
+				item: { count: 1, id: "endrem:wither_eye" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.0d
+		}
+		{
+			id: "375DBF567029A93E"
+			rewards: [{
+				count: 4
+				id: "0925B370FF0F6189"
+				item: {
+					count: 1
+					id: "minecraft:gold_block"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6C3FFCF5F708D066"
+				item: { count: 1, id: "endrem:cursed_eye" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			id: "605C983DD6ED9F6A"
+			rewards: [{
+				id: "43A83281C80F138E"
+				item: {
+					count: 1
+					id: "minecraft:heart_of_the_sea"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "08603F26A2FB45F5"
+				item: { count: 1, id: "endrem:black_eye" }
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"7C7B6B414E7CA9D4"
+				"1B98C457A823C585"
+				"6B41174603B189EC"
+				"742EA21C6DB25291"
+				"7914F1F9D9E4E42A"
+				"349060F64218C12C"
+				"43F5981C8E7B0B1B"
+				"2E6468A7B7740BE8"
+				"4D49DB740FDB82F5"
+				"48BDEA7AA0FEC4A2"
+				"6C7964C6A4F30674"
+				"20788815179D5B06"
+			]
+			id: "3E2C5D29534DCF37"
+			rewards: [{
+				count: 12
+				id: "06CFA7396019E4D6"
+				item: {
+					count: 1
+					id: "endrem:ancient_portal_frame"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				count: 12L
+				id: "3316722A8F999D4B"
+				item: { count: 1, id: "endrem:cryptic_eye" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+	]
+}

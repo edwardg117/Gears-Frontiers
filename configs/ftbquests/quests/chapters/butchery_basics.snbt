@@ -1,0 +1,250 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "butchery_basics"
+	group: "27DF0060B7E4C476"
+	icon: {
+		id: "butchery:cow_carcass"
+	}
+	id: "2000000000000000"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			id: "4A1B2C3D4E5F6070"
+			rewards: [{
+				id: "1A2B3C4D5E6F7080"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "2B3C4D5E6F708191"
+					item: { count: 1, id: "butchery:copper_skinning_knife" }
+					type: "item"
+				}
+				{
+					id: "3C4D5E6F708192A2"
+					item: { count: 1, id: "butchery:copper_cleaver" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4A1B2C3D4E5F6070"]
+			id: "5E6F708192A3B4C4"
+			rewards: [{
+				count: 2
+				id: "6F708192A3B4C5D5"
+				item: {
+					count: 1
+					id: "butchery:rope"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "708192A3B4C5D6E6"
+				item: { count: 1, id: "butchery:rope" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5E6F708192A3B4C4"]
+			id: "55B24B02DE511F95"
+			rewards: [{
+				id: "65B62AA60533F97D"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "4892E2CB3CAAE968"
+				item: { count: 1, id: "butchery:cow_carcass" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["55B24B02DE511F95"]
+			id: "1B0BC55A085B98C4"
+			rewards: [{
+				count: 2
+				id: "01308ED45838FE0E"
+				item: {
+					count: 1
+					id: "butchery:blood_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "20524B8C1E7B4A49"
+					item: { count: 1, id: "butchery:drained_cow_carcass" }
+					type: "item"
+				}
+				{
+					id: "5A05FE86E51D5532"
+					item: { count: 1, id: "butchery:basin" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B0BC55A085B98C4"]
+			id: "754DE5EBCCBED146"
+			rewards: [{
+				id: "091A2B3C4D5E6F7F"
+				type: "xp"
+				xp: 150
+			}]
+			tasks: [
+				{
+					id: "28C47838D449E183"
+					item: { count: 1, id: "butchery:oak_butchers_table" }
+					type: "item"
+				}
+				{
+					id: "241A129E57B289F1"
+					item: { count: 1, id: "butchery:raw_beef_mince" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B0BC55A085B98C4"]
+			id: "0B5E5F9BEC364528"
+			rewards: [{
+				id: "4D5E6F708192A3B3"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "5B8E1FBF07D51DA9"
+				item: { count: 1, id: "butchery:rag" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["55B24B02DE511F95"]
+			id: "6529D95C9AF673DA"
+			rewards: [{
+				count: 4
+				id: "628715D35786DD39"
+				item: {
+					count: 1
+					id: "minecraft:chain"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "09D3FD923F85FEFE"
+					item: { count: 1, id: "butchery:hook" }
+					type: "item"
+				}
+				{
+					id: "0EAFA3D0FB86CE8F"
+					item: { count: 1, id: "butchery:blood_grate" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["754DE5EBCCBED146"]
+			id: "68306299E376CB98"
+			rewards: [{
+				count: 4
+				id: "26E66D4916B87AFD"
+				item: {
+					count: 1
+					id: "butchery:raw_beef_mince"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "54DAE6042FF64423"
+				item: { count: 1, id: "butchery:meat_grinder" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68306299E376CB98"]
+			id: "732D3B8792093EC6"
+			rewards: [{
+				count: 5
+				id: "3356C77D618A5255"
+				item: {
+					count: 1
+					id: "minecraft:leather"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "62D2A029177290D8"
+					item: { count: 1, id: "butchery:skin_rack" }
+					type: "item"
+				}
+				{
+					id: "4D44C14B53805E76"
+					item: { count: 1, id: "butchery:salt" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1B0BC55A085B98C4"]
+			id: "185451E65A124325"
+			rewards: [{
+				id: "2C1E5E1B95F57242"
+				type: "xp"
+				xp: 150
+			}]
+			tasks: [{
+				id: "12B12A501E2D4E22"
+				item: { count: 1, id: "butchery:wooden_spit_rotisserie" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4A1B2C3D4E5F6070"]
+			id: "6978D7EAEEA1F238"
+			rewards: [{
+				id: "42E8FF14BDB14664"
+				item: {
+					count: 1
+					id: "butchery:dragon_scale"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			tasks: [{
+				id: "585502C175B0D6B5"
+				item: { count: 1, id: "butchery:netherite_cleaver" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+}

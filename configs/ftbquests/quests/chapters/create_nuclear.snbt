@@ -1,0 +1,350 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_nuclear"
+	group: "36EEB16071C6C897"
+	icon: {
+		id: "createnuclear:reactor_core"
+	}
+	id: "5A23FB2EFB41A689"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "createnuclear:uranium_ore"
+			}
+			id: "1A11111111111111"
+			rewards: [{
+				id: "2A22222222222222"
+				type: "xp"
+				xp: 100
+			}]
+			size: 1.5d
+			tasks: [{
+				id: "3A33333333333333"
+				item: { count: 1, id: "createnuclear:raw_uranium" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A11111111111111"]
+			icon: {
+				id: "createnuclear:lead_ingot"
+			}
+			id: "1B11111111111111"
+			rewards: [{
+				count: 5
+				id: "2B22222222222222"
+				item: {
+					count: 1
+					id: "createnuclear:lead_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3B33333333333333"
+				item: { count: 1, id: "createnuclear:lead_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1A11111111111111"]
+			icon: {
+				id: "createnuclear:yellowcake"
+			}
+			id: "1C11111111111111"
+			rewards: [{
+				id: "2C22222222222222"
+				type: "xp_levels"
+				xp_levels: 2
+			}]
+			tasks: [{
+				id: "3C33333333333333"
+				item: { count: 1, id: "createnuclear:yellowcake" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B11111111111111"]
+			icon: {
+				id: "createnuclear:green_anti_radiation_chestplate"
+			}
+			id: "1D11111111111111"
+			rewards: [{
+				id: "2D22222222222222"
+				item: {
+					count: 1
+					id: "createnuclear:anti_radiation_boots"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "3D33333333333331"
+					item: { count: 1, id: "createnuclear:green_anti_radiation_helmet" }
+					type: "item"
+				}
+				{
+					id: "3D33333333333332"
+					item: { count: 1, id: "createnuclear:green_anti_radiation_chestplate" }
+					type: "item"
+				}
+				{
+					id: "3D33333333333333"
+					item: { count: 1, id: "createnuclear:green_anti_radiation_leggings" }
+					type: "item"
+				}
+				{
+					id: "3D33333333333334"
+					item: { count: 1, id: "createnuclear:anti_radiation_boots" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1C11111111111111"]
+			icon: {
+				id: "createnuclear:enriching_campfire"
+			}
+			id: "1E11111111111111"
+			rewards: [{
+				count: 4
+				id: "2E22222222222222"
+				item: {
+					count: 1
+					id: "createnuclear:enriched_soul_soil"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "3E33333333333331"
+					item: { count: 1, id: "createnuclear:enriching_campfire" }
+					type: "item"
+				}
+				{
+					id: "3E33333333333332"
+					item: { count: 1, id: "createnuclear:enriched_soul_soil" }
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E11111111111111"]
+			icon: {
+				id: "createnuclear:enriched_yellowcake"
+			}
+			id: "1F11111111111111"
+			rewards: [{
+				id: "2F22222222222222"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "3F33333333333333"
+				item: { count: 1, id: "createnuclear:enriched_yellowcake" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B11111111111111"]
+			icon: {
+				id: "createnuclear:graphene"
+			}
+			id: "15D509B8B352D806"
+			rewards: [{
+				count: 2
+				id: "04B2E5E3BF78FAF3"
+				item: {
+					count: 1
+					id: "createnuclear:graphite_rod"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "36AB7C434DA9E6B0"
+					item: { count: 1, id: "createnuclear:graphite_rod" }
+					type: "item"
+				}
+				{
+					id: "72104EC14E1E2981"
+					item: { count: 1, id: "createnuclear:graphene" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1F11111111111111"]
+			icon: {
+				id: "createnuclear:uranium_rod"
+			}
+			id: "1F5AE170F181DA39"
+			rewards: [{
+				count: 3
+				id: "43432E084699BD7D"
+				item: {
+					count: 1
+					id: "createnuclear:uranium_rod"
+				}
+				type: "item"
+			}]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				id: "2F239208DF6E1B5C"
+				item: { count: 1, id: "createnuclear:uranium_rod" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1B11111111111111"]
+			icon: {
+				id: "createnuclear:reactor_casing"
+			}
+			id: "3F38FB153E5A37BF"
+			rewards: [{
+				count: 16
+				id: "255E87D1729AC492"
+				item: {
+					count: 1
+					id: "createnuclear:reactor_casing"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					count: 8L
+					id: "65DDD975D11C7F02"
+					item: { count: 1, id: "createnuclear:reactor_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "33912CC6A758176E"
+					item: { count: 1, id: "createnuclear:reinforced_glass" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3F38FB153E5A37BF"]
+			icon: {
+				id: "createnuclear:reactor_controller"
+			}
+			id: "1D9B2FCE61EDB57C"
+			rewards: [{
+				id: "532F00ADFC065208"
+				item: {
+					count: 1
+					id: "createnuclear:reactor_blueprint_item"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "2893E2965E167957"
+					item: { count: 1, id: "createnuclear:reactor_controller" }
+					type: "item"
+				}
+				{
+					id: "2E4AEFCDAFFCC2AE"
+					item: { count: 1, id: "createnuclear:reactor_input" }
+					type: "item"
+				}
+				{
+					id: "72B8699C4464540F"
+					item: { count: 1, id: "createnuclear:reactor_output" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"1D9B2FCE61EDB57C"
+				"1F5AE170F181DA39"
+			]
+			icon: {
+				id: "createnuclear:reactor_core"
+			}
+			id: "2E441139D02DC1EF"
+			rewards: [{
+				id: "2812ECE62EBDA1FB"
+				type: "xp_levels"
+				xp_levels: 20
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "196C8CB41045D3E3"
+				item: { count: 1, id: "createnuclear:reactor_core" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["1D9B2FCE61EDB57C"]
+			icon: {
+				id: "createnuclear:reactor_cooler"
+			}
+			id: "094C48C17DD97AFE"
+			rewards: [{
+				count: 4
+				id: "08A55741E0C2357C"
+				item: {
+					count: 1
+					id: "minecraft:blue_ice"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				count: 4L
+				id: "51CE061B99C3B2CA"
+				item: { count: 1, id: "createnuclear:reactor_cooler" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.5d
+		}
+		{
+			dependencies: ["094C48C17DD97AFE"]
+			icon: {
+				id: "createnuclear:reactor_blueprint_item"
+			}
+			id: "289A96A8575CA342"
+			rewards: [{
+				id: "64F9B179EDF57A5B"
+				type: "xp_levels"
+				xp_levels: 5
+			}]
+			tasks: [{
+				id: "3D73D2625E75BCA0"
+				item: { count: 1, id: "createnuclear:reactor_blueprint_item" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -5.5d
+		}
+	]
+}

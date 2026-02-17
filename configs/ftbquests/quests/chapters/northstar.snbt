@@ -1,0 +1,363 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "northstar"
+	group: "36EEB16071C6C897"
+	icon: {
+		id: "northstar:rocket_combustion_chamber"
+	}
+	id: "5E29183746501928"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "10EEBBAA00000000"
+			rewards: [{
+				id: "10EEBBAA00000001"
+				type: "xp"
+				xp: 50
+			}]
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [
+				{
+					id: "10EEBBAA00000002"
+					item: { count: 1, id: "northstar:astronomy_table" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000003"
+					item: { count: 1, id: "northstar:telescope" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000000"]
+			id: "10EEBBAA00000004"
+			rewards: [{
+				count: 4
+				id: "10EEBBAA00000005"
+				item: {
+					count: 1
+					id: "northstar:oxygen_filler"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "10EEBBAA00000006"
+					item: { count: 1, id: "northstar:iron_space_suit_helmet" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000007"
+					item: { count: 1, id: "northstar:iron_space_suit_chestpiece" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000008"
+					item: { count: 1, id: "northstar:iron_space_suit_leggings" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000009"
+					item: { count: 1, id: "northstar:iron_space_suit_boots" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000004"]
+			id: "10EEBBAA0000000A"
+			rewards: [{
+				count: 16
+				id: "10EEBBAA0000000B"
+				item: {
+					count: 1
+					id: "northstar:titanium_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "10EEBBAA0000000C"
+					item: { count: 1, id: "northstar:rocket_station" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA0000000D"
+					item: { count: 1, id: "northstar:rocket_combustion_chamber" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA0000000E"
+					item: { count: 1, id: "northstar:rocket_controls" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000000A"]
+			id: "10EEBBAA0000000F"
+			rewards: [{
+				id: "10EEBBAA00000010"
+				item: {
+					count: 1
+					id: "northstar:liquid_oxygen_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "10EEBBAA00000011"
+					item: { count: 1, id: "northstar:electrolysis_machine" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000012"
+					item: { count: 1, id: "northstar:liquid_hydrogen_bucket" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000000F"]
+			id: "10EEBBAA00000013"
+			rewards: [{
+				count: 4
+				id: "10EEBBAA00000014"
+				item: {
+					count: 1
+					id: "northstar:lunar_sapphire_shard"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					dimension: "northstar:moon"
+					id: "10EEBBAA00000015"
+					type: "dimension"
+				}
+				{
+					id: "10EEBBAA00000016"
+					item: { count: 1, id: "northstar:lunar_sapphire_crystal" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000013"]
+			id: "10EEBBAA00000017"
+			rewards: [{
+				id: "10EEBBAA00000018"
+				item: {
+					count: 1
+					id: "northstar:oxygen_detector"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "10EEBBAA00000019"
+				item: { count: 1, id: "northstar:oxygen_sealer" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000013"]
+			id: "10EEBBAA0000001A"
+			rewards: [{
+				count: 4
+				id: "10EEBBAA0000001B"
+				item: {
+					count: 1
+					id: "northstar:martian_steel_sheet"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					dimension: "northstar:mars"
+					id: "10EEBBAA0000001C"
+					type: "dimension"
+				}
+				{
+					id: "10EEBBAA0000001D"
+					item: { count: 1, id: "northstar:martian_steel" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000001A"]
+			id: "10EEBBAA0000001E"
+			rewards: [{
+				count: 3
+				id: "10EEBBAA0000001F"
+				item: {
+					count: 1
+					id: "northstar:titanium_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "10EEBBAA00000020"
+				item: { count: 1, id: "northstar:titanium_ingot" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000001A"]
+			id: "10EEBBAA00000021"
+			rewards: [{
+				id: "10EEBBAA00000022"
+				item: {
+					count: 1
+					id: "northstar:martian_pickaxe"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "10EEBBAA00000023"
+				item: { count: 1, id: "northstar:martian_steel_chestplate" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000001E"]
+			id: "10EEBBAA00000024"
+			rewards: [{
+				id: "10EEBBAA00000025"
+				item: {
+					count: 1
+					id: "northstar:temperature_regulator"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					dimension: "northstar:venus"
+					id: "10EEBBAA00000026"
+					type: "dimension"
+				}
+				{
+					id: "10EEBBAA00000027"
+					item: { count: 1, id: "northstar:sulfuric_acid_bucket" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000024"]
+			id: "10EEBBAA00000028"
+			rewards: [{
+				count: 3
+				id: "10EEBBAA00000029"
+				item: {
+					count: 1
+					id: "northstar:tungsten_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					dimension: "northstar:mercury"
+					id: "10EEBBAA0000002A"
+					type: "dimension"
+				}
+				{
+					id: "10EEBBAA0000002B"
+					item: { count: 1, id: "northstar:tungsten_ingot" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["10EEBBAA00000013"]
+			id: "10EEBBAA0000002C"
+			rewards: [{
+				count: 2
+				id: "10EEBBAA0000002D"
+				item: {
+					count: 1
+					id: "northstar:circuit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "10EEBBAA0000002E"
+				item: { count: 1, id: "northstar:circuit_engraver" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"10EEBBAA0000002C"
+				"10EEBBAA0000001E"
+			]
+			id: "10EEBBAA0000002F"
+			rewards: [{
+				id: "10EEBBAA00000030"
+				item: {
+					count: 1
+					id: "northstar:advanced_circuit"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "10EEBBAA00000031"
+				item: { count: 1, id: "northstar:advanced_circuit" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["10EEBBAA0000002F"]
+			id: "10EEBBAA00000032"
+			rewards: [{
+				id: "10EEBBAA00000033"
+				type: "xp"
+				xp: 200
+			}]
+			tasks: [
+				{
+					id: "10EEBBAA00000034"
+					item: { count: 1, id: "northstar:computer_rack" }
+					type: "item"
+				}
+				{
+					id: "10EEBBAA00000035"
+					item: { count: 1, id: "northstar:targeting_computer" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+	]
+}

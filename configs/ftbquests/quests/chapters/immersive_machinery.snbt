@@ -1,0 +1,171 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "immersive_machinery"
+	group: "2DC686AF09EDD0A8"
+	icon: {
+		id: "immersive_machinery:tunnel_digger"
+	}
+	id: "5E9B231D9A7C4F1B"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			id: "19DA45DBBF6F9AF1"
+			rewards: [{
+				count: 4
+				id: "39453BF5CD7D24C8"
+				item: {
+					count: 1
+					id: "immersive_machinery:redstone_mechanism"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "70178F88AABECE2B"
+				item: { count: 1, id: "immersive_machinery:redstone_mechanism" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["19DA45DBBF6F9AF1"]
+			id: "33722A3E49CC67B4"
+			rewards: [{
+				count: 16
+				id: "1727DF15275B8B23"
+				item: {
+					count: 1
+					id: "minecraft:redstone"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "59D985A2DB8A6D80"
+				item: { count: 1, id: "immersive_machinery:redstone_sheep" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["19DA45DBBF6F9AF1"]
+			id: "794A92EFED534A3D"
+			rewards: [{
+				count: 16
+				id: "1B85016F85339184"
+				item: {
+					count: 1
+					id: "minecraft:copper_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "54C571AD4809AD92"
+				item: { count: 1, id: "immersive_machinery:copperfin" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["19DA45DBBF6F9AF1"]
+			id: "5FADE20C1DAD3513"
+			rewards: [{
+				count: 32
+				id: "0FCF26C8413879C5"
+				item: {
+					count: 1
+					id: "minecraft:bamboo"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7085DFDD46D09044"
+				item: { count: 1, id: "immersive_machinery:bamboo_bee" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["19DA45DBBF6F9AF1"]
+			id: "448766D3D7D1316A"
+			rewards: [{
+				id: "4CA3DFF41731F0C6"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "6F30D52039DA179E"
+				item: { count: 1, id: "immersive_machinery:iron_drill" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["448766D3D7D1316A"]
+			id: "3D62BF4936540218"
+			rewards: [{
+				count: 64
+				id: "0F67278041A572C6"
+				item: {
+					count: 1
+					id: "minecraft:rail"
+				}
+				type: "item"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [{
+				id: "6264E1C69AD2BAC5"
+				item: { count: 1, id: "immersive_machinery:tunnel_digger" }
+				type: "item"
+			}]
+			x: 3.75d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3D62BF4936540218"]
+			id: "733363ED6F6E171E"
+			rewards: [{
+				id: "705B33FBB0C2E3F0"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "0223BF6B90EB3EC2"
+				item: { count: 1, id: "immersive_machinery:diamond_drill" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["733363ED6F6E171E"]
+			id: "328740E6F3926215"
+			rewards: [{
+				id: "5A5099B1152E8FF7"
+				item: {
+					count: 1
+					id: "minecraft:netherite_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6C0B5AE3362744B9"
+				item: { count: 1, id: "immersive_machinery:netherite_drill" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 0.0d
+		}
+	]
+}

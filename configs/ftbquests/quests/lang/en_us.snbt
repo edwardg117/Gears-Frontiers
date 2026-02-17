@@ -1,0 +1,3536 @@
+{
+	chapter.07210DDF872160BA.title: "Digital Revolution"
+	chapter.07210DDF872160BB.title: "Quantum Network"
+	chapter.0B59EBDDDF8D3AF0.title: "&a&lGetting Started"
+	chapter.0E21FB2EFB41A583.title: "Minecolonies"
+	chapter.1000000000000000.title: "&a&lGetting Started"
+	chapter.2000000000000000.title: "Butchery Basics"
+	chapter.2D269AFDFA908BAD.title: "Cataclysmic Adventures"
+	chapter.2E8A4C9B1F5D3077.title: "Deeper and Darker"
+	chapter.320A26FC41362EE6.title: "End Remastered: The Dimensional Eyes"
+	chapter.3892019384910283.title: "Efficient Energy"
+	chapter.41D954C3F57B4BF1.title: "Storage Solutions"
+	chapter.4D6E8F12A09B3C4D.title: "Create: Logistics"
+	chapter.50860A3C903491E2.title: "Equestrian Engineering"
+	chapter.50860A3C903491E3.title: "The Culinary Arts"
+	chapter.58FD0DDD46EF0A01.title: "Create: Foundations and Kinetics"
+	chapter.58FD0DDD46EF0A02.title: "Create: Logistics and Brass"
+	chapter.5A23FB2EFB41A689.title: "Nuclear Power"
+	chapter.5A2B3C4D5E6F7080.title: "Deeper and Darker"
+	chapter.5E29183746501928.title: "Northstar"
+	chapter.5E9B231D9A7C4F1A.title: "Aviation"
+	chapter.5E9B231D9A7C4F1B.title: "Immersive Machinery"
+	chapter.7182937A9B1D2000.title: "Cataclysm: Boss Rush"
+	chapter.7235028456012345.title: "Immersive Engineering"
+	chapter.7235028456012399.title: "Dimensions and Dangers"
+	chapter.7A2B4C6E8F0D1A32.title: "Architectural Wonders"
+	chapter.7B3778D0B2A4E6C9.title: "Welcome!"
+	chapter_group.27DF0060B7E4C476.title: "&a&lEARLY GAME"
+	chapter_group.2DC686AF09EDD0A8.title: "&b&lMID GAME"
+	chapter_group.36EEB16071C6C897.title: "&c&lLATE GAME"
+	quest.0000000000000700.quest_desc: [
+		"Welcome to the Culinary Arts. To become a master chef, you must first master the tools."
+		""
+		"The &bFlint Knife&r is your first utensil. It allows you to harvest &eStraw&r from grass, salvage secondary drops from animals, and portion food on a Cutting Board."
+	]
+	quest.0000000000000700.title: "&bThe Chef's Knife"
+	quest.0000000000000703.quest_desc: [
+		"&eStraw&r is obtained by cutting grass with a knife."
+		""
+		"It is used to make &6Canvas&r (for mats and signs), &6Rope&r (for climbing and safety nets), and &6Organic Compost&r."
+	]
+	quest.0000000000000703.title: "&eStraw and Fibers"
+	quest.0000000000000706.quest_desc: [
+		"&6Organic Compost&r is the key to efficient farming. Place it in the world and let it decompose (sunlight and water speed this up)."
+		""
+		"Once it turns into &6Rich Soil&r, crops planted on it will grow faster, will not be trampled, and do not require water."
+	]
+	quest.0000000000000706.title: "&6Composting"
+	quest.0000000000000709.quest_desc: [
+		"The &7Stove&r is the hearth of your kitchen. It provides heat for the &cCooking Pot&r and &Skillet&r."
+		""
+		"Unlike a campfire, it does not spread fire, and you can cook up to 6 items directly on its surface at once."
+	]
+	quest.0000000000000709.title: "&7The Stove"
+	quest.000000000000070C.quest_desc: [
+		"The &cCooking Pot&r allows you to combine up to 6 ingredients into hearty meals."
+		""
+		"It MUST be placed on a heat source (Stove or Campfire). You will need &bBowls&r to scoop the food out."
+	]
+	quest.000000000000070C.title: "&cCooking Pot"
+	quest.000000000000070F.quest_desc: [
+		"The &7Skillet&r is a versatile tool. You can place it on a stove to cook items, or hold it to cook while moving (if near heat)."
+		""
+		"It can also be used as a blunt weapon with knockback."
+	]
+	quest.000000000000070F.title: "&7The Skillet"
+	quest.0000000000000712.quest_desc: [
+		"The &eCutting Board&r allows you to process items using a Knife."
+		""
+		"You can chop chicken into cuts, fish into slices, or cut cake into slices. It can also be used to fillet wild crops."
+	]
+	quest.0000000000000712.title: "&eMise en Place"
+	quest.0000000000000715.quest_desc: ["&2Wild Crops&r are found exploring the world. Harvest them to get seeds and vegetables for your garden."]
+	quest.0000000000000715.title: "&2The Gatherer"
+	quest.000000000000071B.quest_desc: ["&cTomatoes&r are used in sauces, pastas, and salads. They can be found in hot biomes."]
+	quest.000000000000071B.title: "&cTomatoes"
+	quest.000000000000071E.quest_desc: ["&fOnions&r grow in temperate biomes. They are essential for soups, stews, and burgers."]
+	quest.000000000000071E.title: "&fOnions"
+	quest.0000000000000721.quest_desc: ["&aCabbage&r grows near beaches. It is the main ingredient for salads and rolls."]
+	quest.0000000000000721.title: "&aCabbage"
+	quest.0000000000000724.quest_desc: ["&fRice&r grows in shallow water like sugar cane. It is the base for many Asian-inspired dishes and can be compacted into hay-like bales."]
+	quest.0000000000000724.title: "&fRice Fields"
+	quest.0000000000000727.quest_desc: [
+		"Using a knife on animals or their drops yields special cuts."
+		""
+		"&fChicken Cuts&r, &cBacon&r, &cMutton Chops&r, and &cMinced Beef&r allow for more efficient cooking."
+	]
+	quest.0000000000000727.title: "&cThe Butcher"
+	quest.000000000000072C.quest_desc: [
+		"&eAnimal Fat&r is obtained from butchering animals with a knife."
+		"It can be crafted into &eAnimal Oil&r, which is a cooking essential for the &9Delightful&r mod."
+	]
+	quest.000000000000072C.title: "&eFat and Oil"
+	quest.000000000000072F.quest_desc: [
+		"With Bun, Meat, Cheese, and Vegetables, you can craft the ultimate comfort food."
+		"&9Delightful&r adds the Cheeseburger and Deluxe Cheeseburger."
+	]
+	quest.000000000000072F.title: "&6Burger Time"
+	quest.0000000000000732.quest_desc: [
+		"&5Nether's Delight&r requires you to brave the heat."
+		"Craft a &8Machete&r. It clears vegetation instantly and is a formidable weapon for hunting Hoglins."
+	]
+	quest.0000000000000732.title: "&8The Machete"
+	quest.0000000000000735.quest_desc: [
+		"Hoglins drop &cHoglin Hide&r and specialized meat cuts like &cLoin&r and &cSirloin&r."
+		"These are excellent food sources in the Nether."
+	]
+	quest.0000000000000735.title: "&cHoglin Hunting"
+	quest.0000000000000738.quest_desc: [
+		"A whole &cStuffed Hoglin&r is a feast worthy of the piglins."
+		"Place it down and serve it with a bowl."
+	]
+	quest.0000000000000738.title: "&6The Beast Feast"
+	quest.000000000000073B.quest_desc: ["Striders can be... harvested. &cStrider Slices&r and &aGround Strider&r offer unique culinary options."]
+	quest.000000000000073B.title: "&cWalking Lava Food"
+	quest.000000000000073E.quest_desc: [
+		"&7Miner's Delight&r adds culinary value to caves."
+		"&6Cave Carrots&r can be found in chests or dropped by zombies. They are edible!"
+	]
+	quest.000000000000073E.title: "&6Underground Farming"
+	quest.0000000000000741.quest_desc: [
+		"Bats drop wings. While disgusting, they can be made into soup."
+		"Don't knock it until you try it."
+	]
+	quest.0000000000000741.title: "&8Bat Soup"
+	quest.0000000000000744.quest_desc: ["&6Pasta&r is made from Wheat Dough (using water and flour). Combine it with ingredients to make delicious dishes."]
+	quest.0000000000000744.title: "&ePasta Night"
+	quest.0000000000000747.quest_desc: [
+		"&7Squid Ink&r and &b Glow Ink&r can be used to make specialty pastas."
+		"Check out &3Squid Ink Pasta&r or &bGlow Ink Pasta&r."
+	]
+	quest.0000000000000747.title: "&3Exotic Noodles"
+	quest.000000000000074A.quest_desc: [
+		"&bStorage Delight&r offers better ways to organize."
+		"&6Drawers&r can hold many stacks of a single item. Great for cobble or crops."
+	]
+	quest.000000000000074A.title: "&6Deep Storage"
+	quest.000000000000074D.quest_desc: ["&6Cabinets&r act like barrels but look great in a kitchen. They connect to each other visually."]
+	quest.000000000000074D.title: "&6Kitchen Cabinets"
+	quest.0000000000000750.quest_desc: ["&eGlass Cabinets&r from Storage Delight allow you to see the items inside. Perfect for pantries!"]
+	quest.0000000000000750.title: "&eDisplay Case"
+	quest.0000000000000753.quest_desc: ["The &eRoast Chicken&r is a block-food. Place it down and feast with friends using bowls. It gives Regeneration."]
+	quest.0000000000000753.title: "&eWinner Winner"
+	quest.0000000000000756.quest_desc: ["&eShepherd's Pie&r is a hearty meal that prevents hunger from dropping for a while."]
+	quest.0000000000000756.title: "&eComfort Food"
+	quest.0000000000000759.quest_desc: [
+		"&aMatcha&r is a special green tea powder from Delightful."
+		"It is used for &aLattes&r, &aIce Cream&r, and &aGummies&r."
+	]
+	quest.0000000000000759.title: "&aTea Time"
+	quest.000000000000075C.quest_desc: ["&cSalmonberries&r are sweet fruits that can be made into jams, pies, or eaten raw."]
+	quest.000000000000075C.title: "&cWild Berries"
+	quest.000000000000075F.quest_desc: ["Craft &cPie Crust&r from wheat, sugar, and milk. It is the base for all delicious pies."]
+	quest.000000000000075F.title: "&cPastry Chef"
+	quest.0000000000000762.quest_desc: ["Who doesn't love a &fMarshmallow&r? Roast it on a stick for a &6S'more&r!"]
+	quest.0000000000000762.title: "&fCampfire Snacks"
+	quest.0000000000000765.quest_desc: [
+		"&9Delightful&r adds knives made of various materials."
+		"Upgrade to &bDiamond&r or &8Netherite&r for better durability and looting."
+	]
+	quest.0000000000000765.title: "&bSharpest Tool"
+	quest.0000000000000768.quest_desc: ["&6Cactus&r is no longer trash. Remove the skin to get &aCactus Flesh&r, which can be cooked into steaks or chili."]
+	quest.0000000000000768.title: "&aSucculent"
+	quest.000000000000076B.quest_desc: ["&9Cantaloupe&r is a refreshing fruit added by Delightful. Slice it up or make popsicles!"]
+	quest.000000000000076B.title: "&9Melon 2.0"
+	quest.000000000000076E.quest_desc: ["If you find acorns, roast them for a crunchy snack."]
+	quest.000000000000076E.title: "&6Squirrel Food"
+	quest.0000000000000771.quest_desc: ["&7Dog Food&r ensures your wolves are healthy and strong. Treat your pets right!"]
+	quest.0000000000000771.title: "&7Man's Best Friend"
+	quest.0000000000000774.quest_desc: ["&6Horse Feed&r grants speed and jump boost to your horses. Essential for long journeys."]
+	quest.0000000000000774.title: "&6Equestrian"
+	quest.0000000000000777.quest_desc: ["&fDumplings&r are simple, filling, and easy to mass-produce with vegetables."]
+	quest.0000000000000777.title: "&fDumplings"
+	quest.000000000000077A.quest_desc: ["&aVegetable Soup&r is a classic starter meal. Cheap and effective."]
+	quest.000000000000077A.title: "&aHealthy Choice"
+	quest.0000000000000800.quest_desc: [
+		"&4Cataclysm&r introduces some of the most difficult bosses in Minecraft."
+		""
+		"These are not simple mobs you stumble upon. You must hunt for their colossal dungeons in the Nether, the End, and the Deep Ocean."
+		""
+		"&cWarning:&r Netherite armor is the *minimum* recommendation for the first boss. Prepare potions, golden apples, and your best enchantments."
+	]
+	quest.0000000000000800.title: "&4L_Ender's Cataclysm"
+	quest.0000000000000803.quest_desc: [
+		"Your first target is the &6Netherite Monstrosity&r."
+		""
+		"Search the Nether for the &cSoul Black Smith&r. It is a massive structure made of Blackstone and Basalt."
+		""
+		"&eStrategy:&r The boss is slow but hits incredibly hard. Use ranged attacks and watch out for its lava wave attack."
+	]
+	quest.0000000000000803.title: "&6The Monstrosity"
+	quest.0000000000000806.quest_desc: [
+		"The Monstrosity drops &cMonstrous Horns&r."
+		""
+		"These are used to craft the &cMonstrous Helm&r, which grants strength and knockback resistance, or the &cInfernal Forge&r."
+	]
+	quest.0000000000000806.title: "&cMonstrous Horn"
+	quest.0000000000000809.quest_desc: [
+		"The &cInfernal Forge&r is a legendary crafting station."
+		""
+		"It is the only way to craft the most powerful weapons in this mod. It requires no fuel, but recipes are expensive."
+	]
+	quest.0000000000000809.title: "&cThe Infernal Forge"
+	quest.000000000000080C.quest_desc: [
+		"Also in the Nether, but much rarer, is the &cBurning Arena&r."
+		"Here you will find &6Ignis&r, the Knight of the Nether."
+		""
+		"&eStrategy:&r Ignis has a shield. You must damage him while his shield is down or break it with heavy attacks."
+	]
+	quest.000000000000080C.title: "&6Ignis, The Failed Knight"
+	quest.000000000000080F.quest_desc: [
+		"Ignis drops &6Ignitium Ingots&r."
+		""
+		"This metal is superior to Netherite. Use the Smithing Table to upgrade your Netherite gear into Ignitium gear."
+	]
+	quest.000000000000080F.title: "&6Ignitium"
+	quest.0000000000000812.quest_desc: [
+		"&6The Incinerator&r is a massive sword crafted in the Infernal Forge using Ignitium and the Monstrous Horn."
+		""
+		"It sets enemies on fire and deals massive area damage."
+	]
+	quest.0000000000000812.title: "&6The Incinerator"
+	quest.0000000000000815.quest_desc: [
+		"Travel to the &5End Dimension&r."
+		"Look for the &dRuined Citadel&r, a massive floating fortress."
+		"Inside, fight your way to the top to face the &5Ender Guardian&r."
+	]
+	quest.0000000000000815.title: "&5The Ender Guardian"
+	quest.0000000000000818.quest_desc: [
+		"The Guardian drops &dVoid Cores&r."
+		"Use these to craft the &5Gauntlet of Guard&r, which allows you to manipulate gravity."
+	]
+	quest.0000000000000818.title: "&5Void Core"
+	quest.000000000000081B.quest_desc: [
+		"The hardest boss in the End is &8The Harbinger&r."
+		"He resides in the bottom floor of the Ruined Citadel, but you need a &8Witherite Block&r to awaken him (found in the structure)."
+	]
+	quest.000000000000081B.title: "&8The Harbinger"
+	quest.000000000000081E.quest_desc: [
+		"Harbinger drops &8Witherite Ingots&r."
+		"These are used to craft &8The Annihilator&r, a weapon that auto-targets enemies with Wither skulls."
+	]
+	quest.000000000000081E.title: "&8The Annihilator"
+	quest.0000000000000821.quest_desc: [
+		"In the deepest oceans of the Overworld, you may find the &3Sunken City&r."
+		"Here lies the &3Leviathan&r, a massive abyssal creature."
+		""
+		"&eStrategy:&r Bring water breathing and depth strider. Avoid its laser beam at all costs."
+	]
+	quest.0000000000000821.title: "&3The Leviathan"
+	quest.0000000000000824.quest_desc: [
+		"The Leviathan drops the &3Abyss Eye&r."
+		"Combine this with other materials to craft the &3Abyssal Sacrifice&r or other deep-sea weaponry."
+	]
+	quest.0000000000000824.title: "&3Abyss Eye"
+	quest.0000000000000827.quest_desc: [
+		"Deep underground in caves, you may find the &eAncient Factory&r."
+		"This place is guarded by robots. At its core, you must awaken &7The Watcher&r."
+	]
+	quest.0000000000000827.title: "&7The Watcher"
+	quest.000000000000082A.quest_desc: [
+		"Defeating The Watcher yields &bAncient Metal&r."
+		"Use this to craft the &bLaser Gatling&r, a futuristic weapon that shreds armor."
+	]
+	quest.000000000000082A.title: "&bLaser Tech"
+	quest.000000000000082D.quest_desc: [
+		"In the deserts, look for the &eCursed Pyramid&r."
+		"Inside, you will face the &2Ancient Remnant&r, a sand-dwelling skeleton dinosaur."
+		"&eStrategy:&r Stay mobile. The sand slows you down."
+	]
+	quest.000000000000082D.title: "&2Ancient Remnant"
+	quest.0000000000000830.quest_desc: [
+		"Found in icy biomes inside the &bFrosted Prison&r."
+		"&bMaledictus&r is a ghost king who summons icy minions."
+		"Drops &bCursed Metal&r for the Cursium armor set."
+	]
+	quest.0000000000000830.title: "&bMaledictus"
+	quest.0000000000000833.quest_desc: ["&6Mechanical Fusion Anvil&r allows you to combine items or repair them using the new materials found in Cataclysm."]
+	quest.0000000000000833.title: "&6Mechanical Fusion"
+	quest.0000000000000836.quest_desc: [
+		"If you want to fight a boss again to get more drops, craft a &5Boss Respawner&r."
+		"Use it on the altar found in the boss arena to summon them back."
+	]
+	quest.0000000000000836.title: "&5Resurrection"
+	quest.0001E88C85BF5108.quest_desc: ["Regulate temperature in extreme environments."]
+	quest.0011223344556677.quest_desc: ["The &eRolling Mill&r creates rods and wires from ingots."]
+	quest.0011223344556677.title: "Early Wires"
+	quest.00611844AFD5C31E.quest_desc: [
+		"The &bEnergy Acceptor&r converts external power (FE) into AE2 power (AE)."
+		""
+		"Connect your power generation to this block."
+	]
+	quest.00611844AFD5C31E.quest_subtitle: "Powering the Grid"
+	quest.00611844AFD5C31E.title: "Energy Conversion"
+	quest.00A3AD4BD4EE0FC7.quest_desc: ["The &bGuard Tower&r houses guards who protect the colony from raids."]
+	quest.00A3AD4BD4EE0FC7.title: "&aGuard Tower"
+	quest.00A8DC9BB650A585.quest_desc: ["Use &eConnected&r gearboxes and shafts for cleaner wiring."]
+	quest.00A8DC9BB650A585.title: "Advanced Kinetics"
+	quest.00BEA4324F00DA2F.quest_desc: ["The dimension is composed of &8Gloomslate&r and &8Sculk Stone&r."]
+	quest.00BEA4324F00DA2F.title: "&3Dark Geology"
+	quest.00CFE55482C251DA.quest_desc: ["Craft the &4Monstrous Helm&r using the horn dropped by the boss."]
+	quest.011207A61DF23A64.quest_desc: ["The Drilling Machine extracts resources from fluid veins or ore veins found by the Sample Drill."]
+	quest.011207A61DF23A64.title: "The Big Drill"
+	quest.014E69AB0AB58DD8.quest_desc: ["The &bPrinter&r copies written books or enchanted books using Liquid XP."]
+	quest.014E69AB0AB58DD8.title: "&6The Printer"
+	quest.01D8F7213B7AFACF.quest_desc: ["The &cInfernal Forge&r is found within the Soul Blacksmith. It is used to upgrade gear to powerful variants."]
+	quest.01D8F7213B7AFACF.title: "Infernal Forging"
+	quest.01F3F0C25BA72BDA.quest_desc: [
+		"&bSpatial Storage&r allows you to digitize a region of the world."
+		""
+		"The &bSpatial IO Port&r controls the process, writing the physical region into a &bSpatial Storage Cell&r."
+	]
+	quest.01F3F0C25BA72BDA.title: "Spatial Storage"
+	quest.02B3962DF43A1FFF.quest_desc: ["The &cIgnited Berserker&r is a fiery warrior."]
+	quest.03273AEE3186A427.quest_desc: ["The &3Deepling Priest&r drops Coral Spears."]
+	quest.033B79759C1B42AA.quest_desc: [
+		"The &bQuadrocopter&r is the ultimate in stability and precision."
+		""
+		"It requires four propellers and advanced engines to stay aloft."
+	]
+	quest.033B79759C1B42AA.title: "&aDrone Technology"
+	quest.037488EF1F3581CE.quest_desc: ["Energy Cells store AE power for your network, acting as a buffer."]
+	quest.037488EF1F3581CE.title: "Power Buffer"
+	quest.03E6FA4DCB71162E.quest_desc: [
+		"The &bColor Applicator&r allows you to dye cables and machines in the world."
+		""
+		"Colored cables will not connect to cables of a different color (except Fluix cables, which connect to everything). This is crucial for dense cable management."
+	]
+	quest.03E6FA4DCB71162E.title: "Color Coding"
+	quest.0405060708090A0B.quest_desc: ["Ignitium is the ultimate fire-proof metal."]
+	quest.0405060708090A0B.title: "&6Ignitium"
+	quest.049FA0A6ADDD27F8.quest_desc: ["Find the Secret Bell."]
+	quest.049FA0A6ADDD27F8.title: "&6Secrets"
+	quest.04A8CD3D37E34882.quest_desc: [
+		"The &bSteam Engine&r is a powerful source of Rotational Force."
+		""
+		"1. Build a Fluid Tank."
+		"2. Pump water into it."
+		"3. Attach a Steam Engine to the tank."
+		"4. Heat the tank with Blaze Burners."
+		"5. Attach a Shaft to the engine."
+	]
+	quest.04A8CD3D37E34882.title: "&6Steam Power"
+	quest.04DDCC6627E4ED35.quest_desc: ["The &8Mechanical Fusion Anvil&r allows you to combine enchantments beyond vanilla limits."]
+	quest.04F3646EE7FDC052.quest_desc: [
+		"Craft a &bBlank Build Key&r."
+		"Activate it on a portal frame to enter your personal Build Dimension."
+		"This is a safe lobby area."
+	]
+	quest.04F3646EE7FDC052.title: "&6Build Dimension"
+	quest.058E980655D53AE0.quest_desc: [
+		"&bTracks&r are the path your train travels."
+		""
+		"You can curve them, go up slopes, and even make intersections."
+	]
+	quest.058E980655D53AE0.title: "&6Laying Track"
+	quest.0710BE288FAE3409.quest_desc: [
+		"Connects all touching Sophisticated Storage blocks."
+		"Allows for a single input/output point for a wall of barrels."
+	]
+	quest.0710BE288FAE3409.title: "Storage Controller"
+	quest.07171B589E7DF3D1.quest_desc: [
+		"The &bBridging System&r allows for beautiful river crossings. "
+		""
+		"Place your bridge blocks, then use &bPliers&r to toggle between &7Log&r, &dRope&r, or &8Stone&r styles. Don't forget to add &7Piers&r for structural support in deep water!"
+	]
+	quest.07171B589E7DF3D1.title: "&bCrossing the Gap"
+	quest.0789012345678901.quest_desc: ["A personal pocket dimension."]
+	quest.0789012345678901.title: "Pocket Dimension"
+	quest.079338BBBEB687CB.quest_desc: ["The &5Void Forge&r combines items with Void Cores."]
+	quest.079338BBBEB687CB.title: "&5Void Forge"
+	quest.07EC98B85252AB20.quest_desc: ["The &eWater Wheel&r is your first reliable source of power."]
+	quest.083D458032F0325C.quest_desc: [
+		"The &bExport Bus&r pushes items &lout&r of the network into the inventory it faces."
+		""
+		"You must specify which item to export in its UI."
+	]
+	quest.083D458032F0325C.quest_subtitle: "Out of the Network"
+	quest.083D458032F0325C.title: "Export Bus"
+	quest.085F473094778DCD.quest_desc: ["A scroll that helps track resources."]
+	quest.085F473094778DCD.title: "&aResource Scroll"
+	quest.0893281244B7CFA7.quest_desc: [
+		"&eChipped&r provides incredible variety but requires specific &6Workbenches&r for each material type."
+		""
+		"Start with the &6Carpenter's Table&r. It handles every type of wood in the game, providing hundreds of carved, paneled, and mosaic options."
+	]
+	quest.0893281244B7CFA7.title: "&6The Woodshop"
+	quest.08E1AB905D1A5EA9.quest_desc: ["&eBuilder's Tea&r provides a speed buff for placing blocks."]
+	quest.094C48C17DD97AFE.quest_desc: [
+		"&bReactor Coolers&r help dissipate excess heat to prevent explosions."
+		""
+		"They require ice or other coolants to function."
+	]
+	quest.094C48C17DD97AFE.title: "&bCooling Systems"
+	quest.096CF795A0438254.quest_desc: ["Manage items on belts with &eFunnels&r, &eTunnels&r, and &eDepots&r."]
+	quest.09AFB1AF741C49BD.quest_desc: [
+		"High Stress, high reward."
+		""
+		"&bCrushing Wheels&r crush items fast, increase raw ore outputs, and are an essential late-game item processor."
+		""
+		"They must be placed vertically, spinning into each other."
+	]
+	quest.09AFB1AF741C49BD.title: "&6Crushing Wheels"
+	quest.09C73561F955CF03.quest_desc: ["Higher tiers store exponentially more items."]
+	quest.09C73561F955CF03.title: "Colossal Tiers"
+	quest.0A1518D3536A11C6.quest_desc: ["The &cInfernal Forge&r upgrades items."]
+	quest.0A1518D3536A11C6.title: "&cInfernal Forge"
+	quest.0AABE46E00807946.quest_desc: [
+		"Mid-game machinery requires a stable and high-throughput source of Forge Energy (FE)."
+		""
+		"You have three main paths for efficient generation:"
+		"1. &6Biodiesel&r (Immersive Engineering)"
+		"2. &eAlternators&r (Create: Crafts & Additions)"
+		"3. &bGenerator Coils&r (Create: New Age)"
+	]
+	quest.0AABE46E00807946.title: "&aPowering the Industry"
+	quest.0AFAAFAAFA000001.quest_desc: [
+		"Welcome to &6Immersive Engineering&r!"
+		""
+		"This mod focuses on realistic technology, retro-futurism, and massive multiblock machines."
+	]
+	quest.0AFAAFAAFA000004.quest_desc: [
+		"The &3Engineer's Manual&r is your bible. It contains detailed instructions on how to build every multiblock structure in the mod."
+		""
+		"Craft it with a Book and a Lever."
+	]
+	quest.0AFAAFAAFA000007.quest_desc: [
+		"You cannot proceed without these tools."
+		""
+		"The &6Engineer's Hammer&r is used to form multiblock structures and rotate blocks."
+		""
+		"The &6Wire Cutters&r are used to craft wires and disconnect existing wires."
+	]
+	quest.0AFAAFAAFA000007.title: "Essential Tools"
+	quest.0AFAAFAAFA00000B.quest_desc: [
+		"Before you have a Crusher, you can craft Grit by crafting the Hammer with an Ore or Ingot."
+		""
+		"Use this to blend dusts for alloys."
+	]
+	quest.0AFAAFAAFA00000B.title: "Manual Crushing"
+	quest.0AFAAFAAFA00000E.quest_desc: [
+		"Industrial Hemp is a vital crop. It grows up to 2 blocks high."
+		""
+		"The fibers are used to make &6Tough Fabric&r."
+	]
+	quest.0AFAAFAAFA00000E.title: "Industrial Agriculture"
+	quest.0AFAAFAAFA000012.quest_desc: [
+		"The first step to heavy industry is the &8Coke Oven&r."
+		""
+		"Build a 3x3x3 cube of &6Coke Bricks&r. Right-click the center with your Hammer to form it."
+	]
+	quest.0AFAAFAAFA000012.title: "The Coke Oven"
+	quest.0AFAAFAAFA000015.quest_desc: [
+		"The Coke Oven turns Coal into &8Coal Coke&r."
+		""
+		"Coal Coke burns much longer than coal and is required for making Steel."
+	]
+	quest.0AFAAFAAFA000018.quest_desc: [
+		"A byproduct of the Coke Oven is &6Creosote Oil&r."
+		"Use a bucket to extract it."
+	]
+	quest.0AFAAFAAFA000018.title: "Liquid Byproduct"
+	quest.0AFAAFAAFA00001B.quest_desc: ["Surround a bucket of Creosote with planks to create &6Treated Wood&r."]
+	quest.0AFAAFAAFA00001B.title: "Treated Wood"
+	quest.0AFAAFAAFA00001E.quest_desc: [
+		"The &cAlloy Kiln&r is a simple 2x2x2 multiblock made of Kiln Bricks."
+		"Use the hammer to form it."
+	]
+	quest.0AFAAFAAFA00001E.title: "Alloy Kiln"
+	quest.0AFAAFAAFA000021.quest_desc: ["Combine Copper and Nickel to make &6Constantan&r."]
+	quest.0AFAAFAAFA000024.quest_desc: ["Combine Gold and Silver to make &eElectrum&r."]
+	quest.0AFAAFAAFA000027.quest_desc: [
+		"To get Steel, you need a &8Blast Furnace&r."
+		"Build a 3x3x3 of Blast Bricks."
+	]
+	quest.0AFAAFAAFA000027.title: "Crude Blast Furnace"
+	quest.0AFAAFAAFA00002A.quest_desc: ["Iron Ingots + Coal Coke in a Blast Furnace = &7Steel&r."]
+	quest.0AFAAFAAFA00002A.title: "The Age of Steel"
+	quest.0AFAAFAAFA00002D.quest_desc: ["The &cKinetic Dynamo&r converts rotational force into Flux (RF/FE)."]
+	quest.0AFAAFAAFA00002D.title: "Generating Power"
+	quest.0AFAAFAAFA000030.quest_desc: [
+		"Craft 3 &6Water Wheel Segments&r to make a Water Wheel."
+		"Place it against a Dynamo."
+	]
+	quest.0AFAAFAAFA000030.title: "Hydro Power"
+	quest.0AFAAFAAFA000033.quest_desc: [
+		"The &fWindmill&r requires open space."
+		"The higher up you place it, the more power it generates."
+	]
+	quest.0AFAAFAAFA000033.title: "Wind Power"
+	quest.0AFAAFAAFA000037.quest_desc: [
+		"Power in IE travels through wires between connectors."
+		""
+		"Place Connectors on machines, then link them with Wire Coils."
+	]
+	quest.0AFAAFAAFA000037.title: "Low Voltage Wiring"
+	quest.0AFAAFAAFA00003B.quest_desc: ["The &6Relay&r allows you to extend wires or split them."]
+	quest.0AFAAFAAFA00003E.quest_desc: ["Capacitors store energy. Configure I/O with the Hammer."]
+	quest.0AFAAFAAFA00003E.title: "LV Battery"
+	quest.0AFAAFAAFA000041.quest_desc: [
+		"The &6Engineer's Workbench&r is used to craft complex mechanical components."
+		""
+		"You need Blueprints to make it function."
+	]
+	quest.0AFAAFAAFA000041.title: "The Workbench"
+	quest.0AFAAFAAFA000044.quest_desc: ["Craft the &9Crafting Components Blueprint&r."]
+	quest.0AFAAFAAFA000047.quest_desc: ["Used in early machinery. Requires Copper and Iron Plates."]
+	quest.0AFAAFAAFA00004A.quest_desc: ["Used in heavy machinery. Requires Steel Plates and Copper."]
+	quest.0AFAAFAAFA00004D.quest_desc: ["&6Medium Voltage&r (MV) wires carry more power but burn if touched."]
+	quest.0AFAAFAAFA00004D.title: "Medium Voltage"
+	quest.0AFAAFAAFA000051.quest_desc: [
+		"The &8Metal Press&r automates plate, wire, and rod production."
+		""
+	]
+	quest.0AFAAFAAFA000051.title: "Metal Press"
+	quest.0AFAAFAAFA000054.quest_desc: ["Craft molds for the press."]
+	quest.0AFAAFAAFA000058.quest_desc: [
+		"The &8Crusher&r turns Ores into Dust (doubling them)."
+		""
+	]
+	quest.0AFAAFAAFA000058.title: "The Crusher"
+	quest.0AFAAFAAFA00005B.quest_desc: [
+		"The &8Sawmill&r processes wood."
+		""
+	]
+	quest.0AFAAFAAFA00005B.title: "The Sawmill"
+	quest.0AFAAFAAFA00005F.quest_desc: ["The &6Conveyor Belt&r moves items automatically."]
+	quest.0AFAAFAAFA00005F.title: "Logistics"
+	quest.0AFAAFAAFA000062.quest_desc: ["Reinforced Crates are blast resistant storage."]
+	quest.0AFAAFAAFA000065.quest_desc: ["Used for the Improved Blast Furnace."]
+	quest.0AFAAFAAFA000065.title: "Reinforced Blast Furnace"
+	quest.0AFAAFAAFA000068.quest_desc: ["Attach Preheaters to the Blast Furnace to speed it up."]
+	quest.0AFAAFAAFA00006B.quest_desc: ["The &cGarden Cloche&r is a high-speed farming machine."]
+	quest.0AFAAFAAFA00006B.title: "The Cloche"
+	quest.0AFAAFAAFA00006E.quest_desc: [
+		"The &8Industrial Squeezer&r extracts Plant Oil from seeds."
+		""
+	]
+	quest.0AFAAFAAFA00006E.title: "Squeezing Oil"
+	quest.0AFAAFAAFA000071.quest_desc: [
+		"The &8Industrial Fermenter&r turns crops into Ethanol."
+		""
+	]
+	quest.0AFAAFAAFA000071.title: "Fermenting Ethanol"
+	quest.0AFAAFAAFA000074.quest_desc: [
+		"The &8Refinery&r combines Plant Oil and Ethanol into &6Biodiesel&r."
+		""
+	]
+	quest.0AFAAFAAFA000074.title: "Biodiesel Production"
+	quest.0AFAAFAAFA000077.quest_desc: [
+		"The &8Diesel Generator&r burns Biodiesel to produce massive amounts of power."
+		""
+	]
+	quest.0AFAAFAAFA000077.title: "Diesel Power"
+	quest.0AFAAFAAFA00007A.quest_desc: ["&6High Voltage&r wires transfer power efficiently over long distances."]
+	quest.0AFAAFAAFA00007A.title: "High Voltage"
+	quest.0AFAAFAAFA00007D.quest_desc: [
+		"The &8Arc Furnace&r is the ultimate smelting machine."
+		"It requires Graphite Electrodes."
+		""
+	]
+	quest.0AFAAFAAFA00007D.title: "The Arc Furnace"
+	quest.0AFAAFAAFA000080.quest_desc: [
+		"1. Crush Coke -> Coke Dust."
+		"2. Squeeze Coke Dust -> HOP Graphite Dust."
+		"3. Smelt HOP Dust -> HOP Graphite Ingot."
+	]
+	quest.0AFAAFAAFA000080.title: "HOP Graphite"
+	quest.0AFAAFAAFA000084.quest_desc: [
+		"The &8Excavator&r mines minerals out of deep veins."
+		""
+	]
+	quest.0AFAAFAAFA000084.title: "The Excavator"
+	quest.0AFAAFAAFA000087.quest_desc: ["Use the &6Core Sample Drill&r to check chunks for mineral veins."]
+	quest.0AFAAFAAFA000087.title: "Prospecting"
+	quest.0AFAAFAAFA00008B.quest_desc: ["The Bucket Wheel is the main component of the Excavator."]
+	quest.0AFAAFAAFA00008D.quest_desc: [
+		"The &8Assembler&r automates crafting recipes."
+		""
+	]
+	quest.0AFAAFAAFA00008D.title: "Automated Assembly"
+	quest.0AFAAFAAFA00008F.quest_desc: ["The &8Auto-Workbench&r is a smaller automated crafter for Blueprints."]
+	quest.0AFAAFAAFA000091.quest_desc: ["Craft the &6Revolver&r for personal defense."]
+	quest.0AFAAFAAFA000091.title: "Firepower"
+	quest.0AFAAFAAFA000094.quest_desc: ["The &6Speedloader&r instantly reloads your revolver."]
+	quest.0AFAAFAAFA000096.quest_desc: ["A powered drill that mines a 1x1 area rapidly. Can be upgraded."]
+	quest.0AFAAFAAFA000096.title: "Mining Drill"
+	quest.0AFAAFAAFA000098.quest_desc: ["Lubricate your drill to make it faster."]
+	quest.0AFAAFAAFA00009A.quest_desc: ["The &6Railgun&r is a high-tech weapon using magnets to fire rods."]
+	quest.0AFAAFAAFA00009A.title: "Railgun"
+	quest.0AFAAFAAFA00009C.quest_desc: ["Passive power generation from temperature differences."]
+	quest.0AFAAFAAFA00009C.title: "Thermoelectric"
+	quest.0AFAAFAAFA00009E.quest_desc: ["The &6External Heater&r powers furnaces with RF."]
+	quest.0AFAAFAAFA00009E.title: "External Heater"
+	quest.0AFAAFAAFA0000A0.quest_desc: ["Charge your tools and armor."]
+	quest.0AFAAFAAFA0000A2.quest_desc: ["Use Constantan to make a &6Thermoelectric Generator&r."]
+	quest.0AFAAFAAFA0000A4.quest_desc: ["The &6Bottling Machine&r puts fluids into items/buckets."]
+	quest.0AFAAFAAFA0000A4.title: "Bottling Machine"
+	quest.0AFAAFAAFA0000A6.quest_desc: ["Drops items from the belt."]
+	quest.0AFAAFAAFA0000A8.quest_desc: ["Pulls items from inventories onto the belt."]
+	quest.0AFAAFAAFA0000AA.quest_desc: ["Sorts items to different paths."]
+	quest.0AFAAFAAFA0000AA.title: "Item Router"
+	quest.0AFAAFAAFA0000AC.quest_desc: ["A multiblock for fluid storage."]
+	quest.0AFAAFAAFA0000AC.title: "Fluid Tank"
+	quest.0AFAAFAAFA0000AE.quest_desc: ["A multiblock for massive item storage."]
+	quest.0AFAAFAAFA0000AE.title: "Item Silo"
+	quest.0AFAAFAAFA0000B0.quest_desc: ["Capture lighting for free power."]
+	quest.0AFAAFAAFA0000B0.title: "Lightning Rod"
+	quest.0AFAAFAAFA0000B2.quest_desc: ["Create Molds for the Metal Press."]
+	quest.0AFAAFAAFA0000B2.title: "Mold Blueprints"
+	quest.0AFAAFAAFA0000B4.quest_desc: ["Use the Engineer's Hammer to rotate the Dynamo."]
+	quest.0AFAAFAAFA0000B4.title: "Rotating the Dynamo"
+	quest.0AFAAFAAFA0000B6.quest_desc: ["MV Capacitor stores more power."]
+	quest.0AFAAFAAFA0000B8.quest_desc: ["HV Capacitor stores immense power."]
+	quest.0AFAAFAAFA0000BA.quest_desc: ["Mix liquids or items."]
+	quest.0AFAAFAAFA0000BA.title: "Mixer"
+	quest.0AFAAFAAFA0000BC.quest_desc: ["Pumps fluids from the world or between tanks."]
+	quest.0AFAAFAAFA0000BE.quest_desc: ["Wolfpack rounds split into multiple projectiles."]
+	quest.0AFAAFAAFA0000C0.quest_desc: ["High Explosive rounds."]
+	quest.0AFAAFAAFA0000C2.quest_desc: ["Good protection against Tesla Coils."]
+	quest.0AFAAFAAFA0000C2.title: "Faraday Suit"
+	quest.0AFAAFAAFA0000C4.quest_desc: ["Tough steel armor."]
+	quest.0AFAAFAAFA0000C6.quest_desc: ["Area denial system."]
+	quest.0AFAAFAAFA0000C6.title: "Tesla Coil"
+	quest.0AFAAFAAFA0000C8.quest_desc: ["Automated defense turret."]
+	quest.0AFAAFAAFA0000C8.title: "Gun Turret"
+	quest.0AFAAFAAFA0000CA.quest_desc: ["Automated chemical sprayer."]
+	quest.0AFAAFAAFA0000CA.title: "Chem Turret"
+	quest.0B009391E3F76D6E.quest_desc: ["The &bFisherman&r catches fish, providing food and sometimes treasure."]
+	quest.0B009391E3F76D6E.title: "&aThe Fisherman"
+	quest.0B218DD73FE8D985.quest_desc: [
+		"Build the &bQuantum Network Bridge&r."
+		""
+		"Structure: 8 Quantum Ring blocks surrounding 1 Quantum Link Chamber."
+		""
+		"Insert a pair of Entangled Singularities into two separate bridges to link their networks instantly."
+	]
+	quest.0B218DD73FE8D985.title: "Quantum Bridge"
+	quest.0B3BEE4AFD2411DA.quest_desc: ["The &eMillstone&r grinds items. Useful for flour and crushed ores."]
+	quest.0B5E5F9BEC364528.quest_desc: [
+		"Butchering is messy work. Blood will splatter on the floor and your table."
+		""
+		"Craft a &fRag&r to clean up blood puddles."
+	]
+	quest.0B5E5F9BEC364528.title: "&fCleanup"
+	quest.0B9FBE19F05FA925.quest_desc: ["Allows specific slots to stack much higher."]
+	quest.0C11EDEC44D240C1.quest_desc: [
+		"The &6Macaw's Suite&r introduces complex 3D models for structural building. "
+		""
+		"You will need two primary tools: the &bRoofing Hammer&r (to shape slopes and gutters) and the &bPliers&r (to connect and style bridge segments)."
+	]
+	quest.0C11EDEC44D240C1.title: "&eThe Engineer's Tools"
+	quest.0C4B02425E79E70B.quest_desc: ["&3Gloomy Grass&r covers the Otherside."]
+	quest.0D1289DF86B1D1D2.quest_desc: [
+		"To advance to the Brass Age, you need a heat source."
+		""
+		"Empty Blaze Burners can be found in Nether Fortresses. Right-click them on a Blaze to capture it."
+	]
+	quest.0D1289DF86B1D1D2.title: "&6The Blaze Burner"
+	quest.0D6AA84367EFD04A.quest_desc: ["Koboleton Bones can be used for bonemeal or crafting."]
+	quest.0D6E099A1A242153.quest_desc: [
+		"The &bTown Hall&r is the heart of your colony."
+		""
+		"You need the &6Build Tool&r to place it."
+		"Once placed, your colony is officially founded!"
+	]
+	quest.0D6E099A1A242153.title: "&aThe Town Hall"
+	quest.0D7172D63398611A.quest_desc: ["You are a true Dungeon Master."]
+	quest.0D7172D63398611A.title: "&6Master of Dimensions"
+	quest.0DAD9AEBC7539334.quest_desc: [
+		"&bFlexible Shafts&r allow you to connect rotational power at odd angles."
+		""
+		"Perfect for when you don't have the space for a gearbox mess."
+	]
+	quest.0DAD9AEBC7539334.title: "&6Flexible Logistics"
+	quest.0DB0801CB423315D.title: "Advanced Power: Steam"
+	quest.0E037BE28170E986.quest_desc: ["Revive ancient Martian flora."]
+	quest.0E42C9B15963D250.quest_desc: [
+		"For truly massive energy needs, the &8Diesel Generator&r from Immersive Engineering is unmatched in the mid-game."
+		""
+		"It requires a steady supply of Biodiesel (Ethanol + Plant Oil)."
+	]
+	quest.0E42C9B15963D250.title: "&aHeavy Industry Power"
+	quest.0EA53C4821B4794F.quest_desc: ["The &cIgnis Fireball&r is a ranged attack used by the boss."]
+	quest.0EBB4E5195610A82.quest_desc: ["Processes logs into planks and other wood items."]
+	quest.0EBB4E5195610A82.title: "&aThe Sawmill"
+	quest.0F08211296296797.quest_desc: ["Look to the stars. The next frontier awaits."]
+	quest.0F08211296296797.title: "The Space Race"
+	quest.0F409DACBEB7BBF8.quest_desc: ["Alternatively, use a &bSupply Chest&r if you want a more compact start."]
+	quest.0F409DACBEB7BBF8.title: "&aDeploying the Supply Chest"
+	quest.0F5D32098EA61D61.quest_desc: [
+		"The &bPlow&r is an agricultural tool."
+		""
+		"&eShift-Right-Click&r to open its inventory. Place &bHoes&r inside."
+		"Toggle the plow mode to till the ground as you ride."
+		"You can also use Shovels to create paths."
+	]
+	quest.0F5D32098EA61D61.title: "Farming: The Plow"
+	quest.1000000000000000.quest_desc: [
+		"As your factory grows, standard belts and chutes might not cut it."
+		""
+		"This chapter covers advanced addons that introduce:"
+		"1. &bFlexible Kinematics&r (Additional Logistics)"
+		"2. &cHigh-Speed Travel&r (Hypertubes)"
+		"3. &eDigital Inventory Management&r (MetaLogistics)"
+	]
+	quest.1000000000000001.quest_desc: [
+		"&bStorage Drawers&r offers high-density storage for single item types."
+		"Great for cobble, crops, and mob drops."
+	]
+	quest.1000000000000001.title: "Storage Drawers"
+	quest.1000000000000002.quest_desc: [
+		"Compacting Drawers automatically convert items between blocks, ingots, and nuggets."
+		"Very useful for metal storage."
+	]
+	quest.1000000000000002.title: "Compacting"
+	quest.1000000000000003.quest_desc: [
+		"Sometimes you need to connect rotation between two points that are simply awkward."
+		""
+		"The &bFlexible Shaft&r connects two points even if they aren't perfectly aligned, allowing for mess-free cable management."
+	]
+	quest.1000000000000003.title: "Flexible Kinematics"
+	quest.1000000000000004.quest_desc: ["Upgrades increase capacity or add features like voiding excess items."]
+	quest.1000000000000004.title: "Drawer Upgrades"
+	quest.1000000000000005.quest_desc: ["Lock your drawers to keep the item filter even when empty."]
+	quest.1000000000000005.title: "Locking"
+	quest.1000000000000006.quest_desc: [
+		"&bLazy Cogs&r and Shafts are optimized versions of standard kinetic blocks."
+		""
+		"They are designed to reduce lag in massive factories by simplifying the connection logic. Use them for long-distance power transmission."
+	]
+	quest.1000000000000006.title: "Lazy (Optimized) Parts"
+	quest.1000000000000009.quest_desc: [
+		"&6Create: New Age&r offers a highly efficient magnetic generation system."
+		""
+		"1. Place a &bGenerator Coil&r."
+		"2. Insert a &cRedstone Magnet&r (or better)."
+		"3. Use &bCarbon Brushes&r to extract power from the spinning magnet."
+	]
+	quest.1000000000000009.title: "Magnetic Generation"
+	quest.100000000000000A.quest_desc: [
+		"&cHypertubes&r are vacuum-sealed pipes capable of transporting items and entities at extreme speeds."
+		""
+		"Use them to move players between factory floors or items between buildings instantly."
+	]
+	quest.100000000000000A.title: "Hypertubes"
+	quest.100000000000000D.quest_desc: [
+		"To make Hypertubes effective, you need speed."
+		""
+		"The &cHypertube Accelerator&r uses Rotational Force to propel contents through the tube."
+	]
+	quest.100000000000000D.title: "Acceleration"
+	quest.1000000000000010.quest_desc: [
+		"&eCreate: MetaLogistics&r adds a digital inventory system to Create."
+		""
+		"The &bStock Manifest Compiler&r scans connected inventories (Vaults, Drawers, etc.) and builds a database of your items."
+	]
+	quest.1000000000000010.title: "The Brain"
+	quest.1000000000000013.quest_desc: [
+		"Once your stock is compiled, use a &bFilter Requester&r to automate item retrieval."
+		""
+		"Define a filter, and the system will attempt to locate and send the items to this block."
+	]
+	quest.1000000000000013.title: "Requesting Items"
+	quest.1000000000000016.quest_desc: [
+		"The &bTicket&r system allows for precise routing."
+		""
+		"You can stick tickets onto packages or trains to tell the logistics system exactly where they need to go."
+	]
+	quest.1000000000000016.title: "Ticketing"
+	quest.1000000000000017.quest_desc: ["The &bAdvanced Motor&r from New Age allows you to convert your massive FE generation back into Rotational Force with extreme efficiency."]
+	quest.1000000000000017.title: "Closing the Loop"
+	quest.1000000000000019.quest_desc: [
+		"&eCreate: Factory Logistics&r deals with packaging."
+		""
+		"The &bJar Packager&r compresses items or fluids into jars for easier transport."
+	]
+	quest.1000000000000019.title: "Jar Packaging"
+	quest.100000000000001C.quest_desc: ["The &bNetwork Link&r connects distant parts of your factory logistics system wirelessly."]
+	quest.100000000000001C.title: "Wireless Linking"
+	quest.100000000000001F.quest_desc: [
+		"Craft a full set of &bResonarium Armor&r."
+		""
+		"It offers protection comparable to Netherite and resonates with the dimension's energy."
+	]
+	quest.100000000000001F.title: "Resonarium Gear"
+	quest.1000000000000022.quest_desc: ["Smelt raw iron into ingots. This unlocks the true potential of your tools."]
+	quest.1000000000000022.title: "Heavy Metal"
+	quest.1000000000000025.quest_desc: ["Essential for electrical components and specialized Create components."]
+	quest.1000000000000025.title: "The Copper Circuit"
+	quest.1000000000000028.quest_desc: ["Forge the ultimate armor of the deep."]
+	quest.1000000000000028.title: "Warden Armor"
+	quest.100000000000002E.quest_desc: [
+		"The &bSculk Transmitter&r allows you to link inventories wirelessly across any distance, even between dimensions."
+		""
+		"Link it to a chest, then use the transmitter from anywhere to access that chest remotely."
+	]
+	quest.100000000000002E.title: "Wireless Access"
+	quest.1000000000000031.quest_desc: [
+		"Using &bSoul Dust&r (from Shattered) and other materials, craft the &bSoul Elytra&r."
+		""
+		"It has a built-in boost function, similar to using a firework rocket, but powered by its own durability."
+	]
+	quest.1000000000000031.title: "Soul Flight"
+	quest.1000000000000034.quest_desc: [
+		"The &bSonorous Staff&r unleashes the Warden's sonic boom attack."
+		""
+		"Charge it up to deal massive damage that bypasses armor and shields."
+	]
+	quest.1000000000000034.title: "Sonic Weaponry"
+	quest.1000000000000041.quest_desc: ["A bucket allows you to move water, lava, and milk. It's the most useful tool in your kit."]
+	quest.1000000000000041.title: "Logistics"
+	quest.1000000000000047.quest_desc: ["Diamonds are the pinnacle of mining. They are found deep near the world's bottom."]
+	quest.1000000000000047.title: "Diamonds!"
+	quest.1000000000000050.quest_desc: ["Upgrade to diamond. Only a diamond pickaxe can harvest obsidian."]
+	quest.1000000000000050.title: "Apex Miner"
+	quest.1000000000000053.quest_desc: ["Lava and water combined create obsidian. You'll need it to step into the beyond."]
+	quest.1000000000000053.title: "Volcanic Glass"
+	quest.1000000000000056.quest_desc: ["Enchant your gear to grant it magical properties."]
+	quest.1000000000000056.title: "Arcane Arts"
+	quest.1000000000000059.quest_desc: ["Entering the Nether is a dangerous venture. Bring gold."]
+	quest.1000000000000059.title: "Into the Fire"
+	quest.1000000000000068.quest_desc: ["Blazes are the guardians of Fortresses. You'll need their rods for alchemy."]
+	quest.1000000000000068.title: "Heat Rods"
+	quest.1000000000000071.quest_desc: ["Ender pearls are dropped by Endermen. They allow you to teleport and are keys to the End."]
+	quest.1000000000000071.title: "Void Matter"
+	quest.1000000000000074.quest_desc: ["Combine blaze powder with an ender pearl to create the Eye of Ender."]
+	quest.1000000000000074.title: "The Path Ahead"
+	quest.1000000000000077.quest_desc: ["Find the ancient structure hidden beneath the earth. Your destiny waits there."]
+	quest.1000000000000077.title: "EndOf the World"
+	quest.1000000000000098.quest_desc: ["You need more than just berries to survive. Get some seeds and start a plot."]
+	quest.1000000000000098.title: "Green Thumb"
+	quest.1000000000010001.quest_desc: ["The cornerstone of all your future projects. You can't build a kingdom without a workbench."]
+	quest.1000000000010001.title: "The Workshop"
+	quest.1000000000010004.quest_desc: ["The Blast Furnace works twice as fast as a regular furnace but only for ores."]
+	quest.1000000000010004.title: "Industrial Smelting"
+	quest.1000000000010010.quest_desc: ["Wheat can be baked into bread, the staple food of any pioneer."]
+	quest.1000000000010010.title: "Harvest Moon"
+	quest.1000000000010013.quest_desc: ["A chest allows you to keep your inventory manageable. Don't hoard; organize."]
+	quest.1000000000010013.title: "Safe Keeping"
+	quest.1000000000010016.quest_desc: ["Backpacks allow you to take your storage on the go. Essential for long mining trips."]
+	quest.1000000000010016.title: "On Your Back"
+	quest.1000000000010020.quest_desc: ["The night is dangerous. A shield is your best friend when things go 'thump'."]
+	quest.1000000000010020.title: "Active Defense"
+	quest.1000000000010023.quest_desc: ["Full iron plating. You're starting to look like a real knight."]
+	quest.1000000000010023.title: "Ironclad"
+	quest.1000000000010029.quest_desc: ["A campfire can cook four items at once for free. It just takes time."]
+	quest.1000000000010029.title: "Rustic Cooking"
+	quest.1000000000010032.quest_desc: ["The smoker cooks food significantly faster than a regular furnace."]
+	quest.1000000000010032.title: "The Pitmaster"
+	quest.1000000000010035.quest_desc: ["Precision stone cutting for all your architectural needs."]
+	quest.1000000000010035.title: "Masonry"
+	quest.1000000000010038.quest_desc: ["Find a village. They have secrets, trades, and food that you won't find anywhere else."]
+	quest.1000000000010038.title: "Civilization"
+	quest.1000000000010041.quest_desc: ["Trading requires currency. Emeralds are the blood of the economy."]
+	quest.1000000000010041.title: "The Local Currency"
+	quest.1000000000010044.quest_desc: ["A map helps you find your way back. Don't get lost."]
+	quest.1000000000010044.title: "Cartography"
+	quest.1000000000010047.quest_desc: ["Chickens provide feathers and eggs. Very useful for arrows later."]
+	quest.1000000000010047.title: "Poultry Research"
+	quest.1000000000010050.quest_desc: ["Sheep are the easiest source of wool for a bed."]
+	quest.1000000000010050.title: "Lanolin"
+	quest.1000000000010053.quest_desc: ["Sleep through the night to avoid the monsters."]
+	quest.1000000000010053.title: "Sweet Dreams"
+	quest.1000000000010056.quest_desc: ["Gold is soft but magical. In the Nether, it's the only language the Piglins speak."]
+	quest.1000000000010056.title: "Aurum"
+	quest.1000000000010059.quest_desc: ["Found in the Nether, Quartz is a great decorative block and a vital redstone component."]
+	quest.1000000000010059.title: "Crystalline"
+	quest.1000000000010062.quest_desc: ["Alchemy allows you to transcend your physical limits. Craft a stand to start brewing."]
+	quest.1000000000010062.title: "The Alchemist"
+	quest.1000000000010065.quest_desc: ["The base of almost every potion. Grow it on soul sand."]
+	quest.1000000000010065.title: "Fungal Growth"
+	quest.1000000000010073.quest_desc: ["Redstone is the foundation of automation. Start wiring."]
+	quest.1000000000010073.title: "Logic Gates"
+	quest.1000000000010076.quest_desc: ["The basic input. Simple but effective."]
+	quest.1000000000010076.title: "Power Switch"
+	quest.1000000000010079.quest_desc: ["Repeaters extend signals and add delay. Essential for timing circuits."]
+	quest.1000000000010079.title: "Signal Extension"
+	quest.100000AF00000000.quest_desc: [
+		"Cooking in Minecraft is more than just steak and potatoes."
+		""
+		"With &bFarmer's Delight&r, &bPam's HarvestCraft&r, and &bLender's Delight&r, you can create a 5-star kitchen, automate complex meals, and even feast on the flesh of bosses."
+		""
+		"Let's get cooking."
+	]
+	quest.100000AF00000003.quest_desc: [
+		"The &bFlint Knife&r (or Iron/Diamond) is essential. It guarantees &eStraw&r from grass and allows you to process items on a Cutting Board."
+		""
+		"The &bCutting Board&r is your workstation. Right-click items onto it and use a knife to chop them."
+	]
+	quest.100000AF00000003.title: "Prep Work"
+	quest.100000AF00000007.quest_desc: [
+		"The &bStove&r is a campfire upgrade. It cooks 6 items at once and doesn't consume fuel if placed on a heat source (like a campfire or magma block)."
+		""
+		"The &bCooking Pot&r is used for soups, stews, and feasts. It must be placed on a Stove (or heat source) to work."
+	]
+	quest.100000AF00000007.title: "Hot Kitchen"
+	quest.100000AF0000000B.quest_desc: [
+		"&bStorage Delight&r adds kitchen-themed storage."
+		""
+		"&eCabinets:&r Work like chests but look great."
+		"&eGlass Cabinets:&r Display items inside."
+	]
+	quest.100000AF0000000B.title: "Kitchen Cabinetry"
+	quest.100000AF0000000E.quest_desc: [
+		"Kitchen Drawers function similarly to Storage Drawers but fit the kitchen aesthetic."
+		""
+		"Use them to store your bulk crops like &cTomatoes&r, &fRice&r, and &eOnions&r."
+	]
+	quest.100000AF0000000E.title: "Pantry Storage"
+	quest.100000AF00000011.quest_desc: [
+		"&bPam's HarvestCraft&r adds hundreds of crops and trees."
+		""
+		"Before you can cook, you need the tools. These items stay in the crafting grid and are not consumed."
+	]
+	quest.100000AF00000011.title: "The Utensils"
+	quest.100000AF00000016.quest_desc: [
+		"Advanced processing for raw ingredients."
+		""
+		"&bGrinder:&r Turns meats into ground meat, and grains into flour."
+		"&bJuicer:&r Turns fruits into juices."
+	]
+	quest.100000AF00000016.title: "Food Processing"
+	quest.100000AF0000001A.quest_desc: [
+		"A balanced diet is key. Try making some classic meals using Farmer's Delight crops."
+		""
+		"&eFried Rice&r, &eHamburgers&r, and &ePasta&r are staples."
+	]
+	quest.100000AF0000001A.title: "Comfort Food"
+	quest.100000AF0000001F.quest_desc: [
+		"With Pam's tools, you can create the legendary &5Epic Bacon&r."
+		""
+		"You will need to dye cooked bacon with each of the primary dye colors."
+	]
+	quest.100000AF0000001F.title: "The Epic Meal"
+	quest.100000AF0000002F.quest_desc: [
+		"&bFeasts&r are block-placed meals that can be shared."
+		""
+		"Place them down and grab a bowl!"
+	]
+	quest.100000AF0000002F.title: "The Feast"
+	quest.100000AF00000033.quest_desc: [
+		"Pam's food offers tiered progression."
+		""
+		"Combine basics like &eToast&r, &dJelly&r, and &6Peanut Butter&r to make a proper sandwich."
+	]
+	quest.100000AF00000033.title: "Lunch Time"
+	quest.100000AF00000040.quest_desc: [
+		"Use the &bCutting Board&r to process raw ingredients."
+		""
+		"Try cutting a &eSalmon&r to get Slices, or cut a &eCake&r to get slices."
+	]
+	quest.100000AF00000040.title: "Knife Skills"
+	quest.100000AF00000043.quest_desc: [
+		"The &bSkillet&r can be placed on a Stove to cook items."
+		""
+		"It can also be held in your hand to cook while near a heat source, or used as a weapon!"
+	]
+	quest.100000AF00000043.title: "The Skillet"
+	quest.10A5877A970A410F.quest_desc: [
+		"1. Locate the massive frame made of &8Reinforced Deepslate&r in the center of the Ancient City."
+		"2. Clear any &3Sculk Veins&r that might be obstructing the inner frame area."
+		"3. Right-click the frame with the &bHeart of the Deep&r."
+		"4. Step through into the unknown."
+	]
+	quest.10A5877A970A410F.title: "The Otherside"
+	quest.10EEBBAA00000000.quest_desc: [
+		"To leave the Overworld, you must first look to the heavens."
+		""
+		"The &bAstronomy Table&r allows you to manage your star maps, while the &bTelescope&r allows you to discover new planets and gather &6Astronomical Readings&r."
+	]
+	quest.10EEBBAA00000000.title: "&6Eyes on the Sky"
+	quest.10EEBBAA00000004.quest_desc: [
+		"Space is cold, devoid of air, and hostile."
+		""
+		"You cannot survive without a fully pressurized &bSpace Suit&r. The Iron tier is heavy but will keep you alive."
+		""
+		"&cWarning:&r Do not enter a vacuum without filling the suit with Oxygen first!"
+	]
+	quest.10EEBBAA00000004.title: "&7Suiting Up"
+	quest.10EEBBAA0000000A.quest_desc: [
+		"The &bRocket Station&r is the assembly platform for your vessel."
+		""
+		"You will need a &bCombustion Chamber&r for the engine and &bRocket Controls&r to pilot it."
+		""
+		"The structure requires a multiblock assembly. Consult the Ponder system."
+	]
+	quest.10EEBBAA0000000A.title: "&cRocket Engineering"
+	quest.10EEBBAA0000000F.quest_desc: [
+		"Rockets drink fuel like water."
+		""
+		"The &bElectrolysis Machine&r separates water or other fluids to create &9Liquid Oxygen&r and &cLiquid Hydrogen&r, a potent fuel mixture."
+	]
+	quest.10EEBBAA0000000F.title: "&9Rocket Fuel"
+	quest.10EEBBAA00000013.quest_desc: [
+		"Once you have a rocket and fuel, target the &bMoon&r in your guidance computer and launch."
+		""
+		"The Moon is rich in &9Lunar Sapphires&r, which are essential for advanced optics and electronics."
+	]
+	quest.10EEBBAA00000013.title: "&bTo the Moon"
+	quest.10EEBBAA00000017.quest_desc: [
+		"To build a base on other planets, you need an atmosphere."
+		""
+		"The &bOxygen Sealer&r will pressurize an enclosed room with Oxygen, allowing you to take off your helmet safely."
+	]
+	quest.10EEBBAA00000017.title: "&3Life Support"
+	quest.10EEBBAA0000001A.quest_desc: [
+		"Mars is a rusted wasteland, but it hides immense value."
+		""
+		"Locate &cMars Iron&r and use the blast furnace to create &4Martian Steel&r, a material stronger than anything on Earth."
+	]
+	quest.10EEBBAA0000001A.title: "&4The Red Planet"
+	quest.10EEBBAA0000001E.quest_desc: [
+		"Mars is also the primary source of &7Titanium&r."
+		""
+		"This lightweight metal is crucial for advanced machinery and heavy-duty rockets."
+	]
+	quest.10EEBBAA0000001E.title: "&fTitanium Age"
+	quest.10EEBBAA00000021.quest_desc: [
+		"Upgrade your gear with &4Martian Steel&r."
+		""
+		"The Martian Space Suit offers superior protection against radiation and damage."
+	]
+	quest.10EEBBAA00000021.title: "&4Martian Engineering"
+	quest.10EEBBAA00000024.quest_desc: [
+		"&dVenus&r is a hellscape of heat and acid."
+		""
+		"You will need excellent thermal regulation to survive."
+		"The planet is a source of &eSulfuric Acid&r and unique flora."
+	]
+	quest.10EEBBAA00000024.title: "&dInferno"
+	quest.10EEBBAA00000028.quest_desc: [
+		"&8Mercury&r is small, dense, and rich in heavy metals."
+		""
+		"Here you will find &8Tungsten&r, a dense metal with an incredibly high melting point, needed for top-tier tech."
+	]
+	quest.10EEBBAA00000028.title: "&8Heavy Metals"
+	quest.10EEBBAA0000002C.quest_desc: [
+		"Precision manufacturing is key."
+		""
+		"The &bCircuit Engraver&r allows you to print &aCircuits&r using plates and precious materials."
+	]
+	quest.10EEBBAA0000002C.title: "&aSilicon Age"
+	quest.10EEBBAA0000002F.quest_desc: [
+		"Combine Titanium and high-tier electronics to create &bAdvanced Circuits&r."
+		""
+		"These are required for computers and advanced rocketry components."
+	]
+	quest.10EEBBAA0000002F.title: "&bAdvanced Electronics"
+	quest.10EEBBAA00000032.quest_desc: [
+		"The &5Targeting Computer&r is the brain of your interplanetary travel."
+		""
+		"Without it, you are flying blind."
+	]
+	quest.10EEBBAA00000032.title: "&5Supercomputing"
+	quest.10FF3931849B70E5.title: "Venus Fauna"
+	quest.1111222233334444.quest_desc: [
+		"&6Dimensional Dungeons&r allows you to build a portal to a personal, instanced dungeon."
+		""
+		"Start by crafting a &eBlank Portal Key&r."
+	]
+	quest.1111222233334444.title: "&6The Key to Adventure"
+	quest.1112131415161718.quest_desc: ["The &bAdvanced Key&r leads to harder dungeons with better loot."]
+	quest.1122334455667788.quest_desc: ["The &eMechanical Pump&r moves fluids through pipes."]
+	quest.1122334455667788.title: "Fluid Handling"
+	quest.120152510AD4B59A.quest_desc: ["These goggles allow you to see building previews and work orders more clearly."]
+	quest.120152510AD4B59A.title: "&aArchitect's Goggles"
+	quest.1213141516171819.quest_desc: ["Harvest the local flora: &3Echo Wood&r and &bBloooming Stems&r."]
+	quest.1213141516171819.title: "&3Alien Flora"
+	quest.1220D1A757633DB8.quest_desc: ["&lBoss Drop:&r Dropped by the &9Wither Boss&r."]
+	quest.1220D1A757633DB8.quest_subtitle: "Eye 14 of 16 (Boss)"
+	quest.1220D1A757633DB8.title: "Wither Eye"
+	quest.123456789ABCDEF1.quest_desc: ["Add depth to your builds with custom windows."]
+	quest.123456789ABCDEF1.title: "Window Shopping"
+	quest.125C1B72258B20FE.quest_subtitle: "Kinetic to Electric"
+	quest.125C1B72258B20FE.title: "The Electric Age"
+	quest.126E4E7926A5D825.quest_desc: ["The &5Gauntlet of Guard&r allows you to manipulate gravity."]
+	quest.129C1A2AB2DA1CBD.quest_desc: ["Separate water into Hydrogen and Oxygen. Essential for rocket fuel and breathing."]
+	quest.129C1A2AB2DA1CBD.title: "Chemistry: Electrolysis"
+	quest.12B302DC5A2D55F3.quest_desc: ["The Red Planet. Home to ancient fossils and iron."]
+	quest.12B302DC5A2D55F3.title: "Arrival: Mars"
+	quest.130E8FC7479E4271.quest_desc: ["The &bShepherd&r breeds and shears sheep for wool."]
+	quest.130E8FC7479E4271.title: "&aThe Shepherd"
+	quest.131517191B1D1F21.quest_desc: ["Soul Dust is used to craft Soul Elytra and other magical items."]
+	quest.132AF80A62FFF98D.quest_desc: [
+		"The &bTavern&r attracts visitors to your colony."
+		"Visitors can be recruited to become citizens."
+	]
+	quest.132AF80A62FFF98D.title: "&aThe Tavern"
+	quest.1348995F64A94396.quest_desc: [
+		"The &bCrafting Monitor&r allows you to see the progress of the Crafting CPU's current job."
+		""
+		"It is part of the multiblock structure and provides visual feedback."
+	]
+	quest.1348995F64A94396.quest_subtitle: "Job Status"
+	quest.1348995F64A94396.title: "Monitoring Progress"
+	quest.13B44C24AE5E2091.quest_desc: ["The &9Abyssal Sacrifice&r is a powerful magical artifact."]
+	quest.1403300A0BFE58FE.quest_desc: ["Build keys can be erased and reused."]
+	quest.140DE53DC0FCD9F4.quest_desc: [
+		"The &bAnnihilation Plane&r breaks any block that appears in front of it and sucks it into the network."
+		""
+		"Useful for automated cobble gens, tree farms, or specialized mining setups."
+	]
+	quest.140DE53DC0FCD9F4.quest_subtitle: "Block Breaker"
+	quest.140DE53DC0FCD9F4.title: "Annihilation Plane"
+	quest.14230CA38F252FE2.quest_desc: ["The &bBlaze Enchanter&r allows for automated enchanting of items."]
+	quest.14230CA38F252FE2.title: "&6Auto-Enchanting"
+	quest.144B46A330ECD1CA.quest_desc: ["Create a pressurized environment to breathe without a suit."]
+	quest.144B46A330ECD1CA.title: "Moon Base"
+	quest.14DA3DC7C0009A6A.quest_desc: ["50 Citizens."]
+	quest.14DA3DC7C0009A6A.title: "&aCity"
+	quest.15564C11744D6AA0.quest_desc: [
+		"Processors are the main component of advanced AE2 tech."
+		""
+		"1. Inscribe &eSilicon&r with a Silicon Press."
+		"2. Inscribe &aGold/Diamond/Quartz&r with their respective Press."
+		"3. Combine both printed items with &cRedstone&r."
+	]
+	quest.15564C11744D6AA0.title: "Processors"
+	quest.15614137E0D0C1F5.quest_desc: [
+		"Found in the &cBurning Arena&r."
+		""
+		"&6Ignis&r is a master of combat. He uses a shield to block attacks."
+		"&aTip:&r Strike him while he is attacking to break his stance."
+	]
+	quest.15614137E0D0C1F5.title: "&6Ignis"
+	quest.156E57B2A1212649.quest_desc: ["Your first celestial destination. A gray, barren world."]
+	quest.156E57B2A1212649.title: "Arrival: Luna"
+	quest.1584D3B43012078C.quest_desc: ["The base for all backpack upgrades."]
+	quest.15B51FB56A64C303.quest_desc: [
+		"The &bUniversity&r is where research happens."
+		""
+		"Research unlocks permanent buffs and new technology for your colony."
+	]
+	quest.15B51FB56A64C303.title: "&aThe University"
+	quest.15D509B8B352D806.quest_desc: [
+		"&8Graphite Rods&r are crucial for controlling the nuclear reaction."
+		""
+		"They are crafted using Graphene, which is made by compacting &8Steel Dust&r (not Coal)."
+	]
+	quest.15D509B8B352D806.title: "&8Control Rods"
+	quest.15F03A5E7E14C022.quest_desc: ["The &bStonemason&r crafts stone variants like bricks, stairs, and walls."]
+	quest.15F03A5E7E14C022.title: "&aThe Stonemason"
+	quest.16299B9AE87257DC.quest_desc: [
+		"The &bWireless Crafting Terminal&r gives you full access to items and crafting from anywhere in range."
+		""
+		"Requires power (charge it in a Charger)."
+	]
+	quest.16299B9AE87257DC.quest_subtitle: "Remote Control"
+	quest.16299B9AE87257DC.title: "Handheld Terminals"
+	quest.167C589E7E24F62D.quest_desc: ["The &3Deepling Warlock&r casts spells from the deep."]
+	quest.16868BE36DCBA595.quest_desc: ["You need an engine to escape gravity."]
+	quest.16CF18AC1533BE55.quest_desc: ["Collect volcanic ash for processing."]
+	quest.1710B3D05215A71E.quest_desc: [
+		"Dense Cables can carry &l32 Channels&r."
+		"&bP2P Tunnels&r allow you to transport channels (or power/fluids) instantly from one point to another over a single line."
+	]
+	quest.1710B3D05215A71E.quest_subtitle: "Tunneling Through the Grid"
+	quest.1710B3D05215A71E.title: "P2P Networking"
+	quest.18053C3BC9BB683B.quest_desc: ["The &bInventory Bridge&r connects external inventories (like chests) to your Create logistics network."]
+	quest.18053C3BC9BB683B.title: "&6Inventory Bridge"
+	quest.185451E65A124325.quest_desc: [
+		"Alternatively, you can roast the entire animal."
+		""
+		"Place the &bDrained Carcass&r onto the Rotisserie."
+		"Ensure there is a fire or campfire directly beneath it."
+		"Wait for it to cook, then carve off the meat."
+	]
+	quest.185451E65A124325.title: "&6Slow Roast"
+	quest.18B7460CAA5A46FF.quest_desc: [
+		"&3Resonarium&r is the ore of this dimension."
+		"It is used to craft powerful gear."
+	]
+	quest.18B7460CAA5A46FF.title: "&3Resonarium"
+	quest.18DFB25DC48D8BF7.quest_desc: [
+		"&bSpatial Pylons&r define the boundaries of the captured region."
+		""
+		"They must form a box shape. The efficiency of the pylons determines the energy cost of the transfer."
+	]
+	quest.18DFB25DC48D8BF7.title: "Spatial Pylons"
+	quest.19014BB12412492C.quest_desc: ["Use &eConnected&r gearboxes and shafts for cleaner wiring."]
+	quest.19014BB12412492C.title: "Advanced Kinetics"
+	quest.192665906C483E05.quest_desc: ["Incinerator."]
+	quest.192665906C483E05.title: "&cIncinerator"
+	quest.19C551CEA22B143E.quest_desc: [
+		"Knowing what you are looking at is half the battle."
+		""
+		"&aJade&r (The tooltip at the top of your screen) tells you what block you are looking at."
+		""
+		"&aJEI / EMI&r (The menu on the right of your inventory) lets you search for recipes. Hover over an item and press &bR&r."
+	]
+	quest.19C551CEA22B143E.title: "&aNavigating the UI"
+	quest.19C6960EEE60376C.title: "Bulk Washing"
+	quest.19D03831EB5EED02.quest_desc: ["The &bBlacksmith&r crafts tools, armor, and weapons for your citizens."]
+	quest.19D03831EB5EED02.title: "&aThe Blacksmith"
+	quest.19DA45DBBF6F9AF1.quest_desc: [
+		"&6Immersive Machinery&r offers mechanical entities to automate tasks and explore the world."
+		""
+		"The &bRedstone Mechanism&r is the core component required to craft these machines."
+	]
+	quest.19DA45DBBF6F9AF1.title: "&cThe Spark of Life"
+	quest.1A1088B822793120.quest_desc: [
+		"Macaw's Roofs allows you to create realistic, sloped roofing. No more stair-block roofs! "
+		""
+		"Use the &bRoofing Hammer&r on a placed roof block to toggle its shape (corners, steepness, etc.) and add &6Gutters&r to manage rain aesthetically."
+	]
+	quest.1A1088B822793120.title: "&cRaising the Roof"
+	quest.1A11111111111111.quest_desc: [
+		"Uranium Ore can be found deep underground."
+		""
+		"Mining it without protection will inflict radiation. Process it quickly or wear a hazmat suit."
+	]
+	quest.1A11111111111111.title: "&aRaw Uranium"
+	quest.1A2B3C4D5E6F7000.quest_desc: [
+		"The sky is no longer the limit."
+		""
+		"By combining advanced engineering with aerodynamics, you can construct complex flying machines."
+		""
+		"Prepare your workshop; you will need plenty of &bCanvas&r, &6Copper&r, and &8Iron&r."
+	]
+	quest.1A2B3C4D5E6F7890.quest_desc: ["Use &eLarge Cogwheels&r to increase speed or change rotation axis."]
+	quest.1A6D07612BD9354B.quest_desc: ["The &5Void Forge&r is the End's answer to the Infernal Forge."]
+	quest.1A6D07612BD9354B.title: "&5The Void Forge"
+	quest.1AAF0B31B47AF23D.quest_desc: [
+		"&bRedstone Cards&r allow buses and interfaces to respond to redstone signals."
+		""
+		"The &bToggle Bus&r is a cable connector that disconnects the line when powered (or unpowered). Useful for turning off entire sections of your network."
+	]
+	quest.1AAF0B31B47AF23D.title: "Redstone Control"
+	quest.1AB30BE7319A2CAE.quest_desc: [
+		"Find the &bWarden Upgrade Smithing Template&r in the Ancient City or Otherside chests."
+		"Upgrade your armor to Warden Armor for ultimate protection."
+	]
+	quest.1AB30BE7319A2CAE.title: "&3Warden Upgrade"
+	quest.1ABD9A4920E99153.quest_desc: ["Collect &3Gloomslate&r and &3Sculk Stone&r."]
+	quest.1ABD9A4920E99153.title: "&3Dark Blocks"
+	quest.1AC89ED3C39F1616.quest_desc: ["Allows external pipes (like AE2 or Hoppers) to access the Colossal Chest."]
+	quest.1AC89ED3C39F1616.title: "Colossal Interface"
+	quest.1B0BC55A085B98C4.quest_desc: [
+		"An animal cannot be butchered while full of blood."
+		""
+		"1. Place a &bBasin&r or &eBucket&r directly under the hanging animal."
+		"2. Use a &6Knife&r or &6Cleaver&r on the hanging animal to bleed it."
+		"3. Wait until the animal turns pale."
+	]
+	quest.1B0BC55A085B98C4.title: "&4Draining the Blood"
+	quest.1B11111111111111.quest_desc: [
+		"Lead is an essential material for shielding against radiation."
+		""
+		"It is used to craft the Anti-Radiation Suit and reactor casings."
+	]
+	quest.1B11111111111111.title: "&7Lead Shielding"
+	quest.1B686954D34A0F23.quest_desc: ["The &bQuartz Cutting Knife&r allows you to craft Name Presses and Cable Anchors."]
+	quest.1B686954D34A0F23.quest_subtitle: "Tool of the Trade"
+	quest.1B686954D34A0F23.title: "Network Maintenance"
+	quest.1B7A2B75109082F8.quest_desc: ["Better circuits for better rockets."]
+	quest.1B7A2B75109082F8.title: "Advanced Processing"
+	quest.1B98C457A823C585.quest_desc: ["&lLocation:&r Found in chests inside a &9Pillager Outpost&r."]
+	quest.1B98C457A823C585.quest_subtitle: "Eye 2 of 12 (Pillager)"
+	quest.1B98C457A823C585.title: "Corrupted Eye"
+	quest.1BB571557F74D3A1.quest_desc: ["To start your colony, you need a Supply Ship or Camp. Gather your resources and prepare to lead!"]
+	quest.1BB571557F74D3A1.title: "&aFounding a Colony"
+	quest.1BCB0D0CA331DB32.quest_desc: ["Produce fuel from organic matter."]
+	quest.1C11111111111111.quest_desc: [
+		"Process Raw Uranium in a Crushing Wheel to obtain &eYellowcake&r."
+		""
+		"This powder is the first step towards usable nuclear fuel."
+	]
+	quest.1C11111111111111.title: "&eYellowcake"
+	quest.1C16AEE8E29FB5A0.quest_desc: ["Rally your troops to defend the colony."]
+	quest.1C16AEE8E29FB5A0.title: "&aRally the Guards"
+	quest.1C179D8FCBDA7E0D.quest_desc: ["&aBlank Theme Key&r allows you to select the theme of your dungeon."]
+	quest.1C1D1E1F20212223.quest_desc: ["Craft the Ignitium armor set for immunity to fire and lava."]
+	quest.1C1D1E1F20212223.title: "&6Ignitium Armor"
+	quest.1C7C5B31498DEC96.title: "Jetpacks"
+	quest.1D11111111111111.quest_desc: [
+		"Before working with enriched materials, craft a full Anti-Radiation Suit."
+		""
+		"This will protect you from the deadly effects of radiation poisoning."
+	]
+	quest.1D11111111111111.title: "&aHazmat Suit"
+	quest.1D267ADE18DD9817.quest_desc: ["The &6printer&r duplicates enchanted books using Liquid XP and Ink."]
+	quest.1D7D1A77E7F571CF.quest_desc: ["Collect Music Discs."]
+	quest.1D7D1A77E7F571CF.title: "&dMusic Disc"
+	quest.1D857F2C9187CAF7.quest_desc: [
+		"The Otherside is composed of new stone types."
+		""
+		"&8Gloomslate&r: A dark, tough stone found in the upper layers."
+		"&3Sculk Stone&r: Infused with sculk, found deeper down."
+	]
+	quest.1D857F2C9187CAF7.title: "Alien Geology"
+	quest.1D9B2FCE61EDB57C.quest_desc: [
+		"The &bReactor Controller&r is the brain of the structure."
+		""
+		"The Blueprint determines the pattern of fuel rods (Uranium) and control rods (Graphite) inside the reactor."
+		""
+		"The &bReactor Input&r accepts the Blueprint to configure the core."
+		"The &bReactor Output&r expels waste."
+	]
+	quest.1D9B2FCE61EDB57C.title: "&bIntelligent Control"
+	quest.1DA740D406CFEFC8.quest_desc: ["Chests and Barrels that can be upgraded in place."]
+	quest.1DA740D406CFEFC8.title: "Sophisticated Storage"
+	quest.1E0924D51D2E7A78.quest_desc: ["Experience Nuggets can be crushed or processed for Liquid XP."]
+	quest.1E0924D51D2E7A78.title: "&6Liquid Experience"
+	quest.1E11111111111111.quest_desc: [
+		"The Enriching Campfire is used to process nuclear materials."
+		""
+		"You will need &bEnriched Soul Soil&r to build it, which burns hotter than normal soul soil."
+	]
+	quest.1E11111111111111.title: "&cEnriching Fire"
+	quest.1E1870FAD295DEDE.quest_desc: [
+		"Right-click the &bSupply Camp Deployer&r on the ground to spawn the structure preview."
+		"Use the wand to position it."
+	]
+	quest.1E1870FAD295DEDE.title: "&aDeploying the Camp"
+	quest.1E2F3A4B5C6D7E8F.quest_desc: [
+		"The &bScarlet Biplane&r is a high-performance aircraft."
+		""
+		"With improved speed and handling, it is perfect for long-distance travel or aerial maneuvers."
+	]
+	quest.1E2F3A4B5C6D7E8F.title: "&6Scarlet Biplane"
+	quest.1E4200A0817D30D3.quest_desc: ["&eCogwheels&r transfer rotation, change direction, and modify speed."]
+	quest.1EA5ACE38E453CDF.quest_desc: ["Record your findings."]
+	quest.1EF4B63BBBD95504.quest_desc: [
+		"The &6Precision Mechanism&r is a complex component required for high-tech machinery."
+		""
+		"It requires a sequence of Deployers applying various small parts to a Gold Sheet."
+		"Be careful: there is a chance it will fail and turn into scrap!"
+	]
+	quest.1EF4B63BBBD95504.title: "&6Precision Mechanism"
+	quest.1F11111111111111.quest_desc: [
+		"Cook Yellowcake on an Enriching Campfire to create &eEnriched Yellowcake&r."
+		""
+		"This highly radioactive substance is ready to be formed into fuel rods."
+	]
+	quest.1F11111111111111.title: "&eEnrichment"
+	quest.1F457829A5FBE97D.quest_desc: ["Full Resonarium Armor grants powerful buffs."]
+	quest.1F5AE170F181DA39.quest_desc: [
+		"Combine Enriched Yellowcake with empty rods to create &aUranium Rods&r."
+		""
+		"These are the fuel for your reactor."
+	]
+	quest.1F5AE170F181DA39.title: "&aNuclear Fuel"
+	quest.1F66912B1C7BD4A1.quest_desc: ["The &fGlassblower&r table allows you to take any stained glass and create intricate frames, leaded windows, and mosaics. Perfect for cathedrals or greenhouse designs."]
+	quest.1F66912B1C7BD4A1.title: "&fVitreous Art"
+	quest.1F7DFA5AA65F2812.quest_desc: [
+		"&bAcceleration Cards&r speed up the operation of machines, buses, and assemblers."
+		""
+		"They consume more power but are essential for high-speed automation."
+	]
+	quest.1F7DFA5AA65F2812.title: "Need for Speed"
+	quest.2000000000000001.quest_desc: [
+		"Welcome to &cButchery&r."
+		""
+		"This mod overhauls animal drops to be realistic. Mobs no longer drop meat on death; they drop a heavy carcass that must be processed."
+		""
+		"To start, you need two essential tools:"
+		"1. &eSkinning Knife&r: Used to kill animals for carcasses and to skin them."
+		"2. &eCleaver&r: Used to chop up carcasses into meat."
+	]
+	quest.2000000000000001.title: "The Butcher's Tools"
+	quest.2000000000000005.quest_desc: [
+		"You cannot process a carcass on the ground. You must hang it up."
+		""
+		"1. Place a &8Chain&r on the ceiling."
+		"2. Attach a &eHook&r to the chain."
+		"3. Place a &cBlood Grate&r on the floor directly under the hook to catch the mess."
+		""
+		"&7(Tip: Use a Sponge or Rag to clean up blood if you miss the grate.)&r"
+	]
+	quest.2000000000000005.title: "The Slaughterhouse"
+	quest.2000000000000009.quest_desc: [
+		"Go find a Cow (or Pig/Sheep)."
+		""
+		"Strike it with your &bSkinning Knife&r to kill it."
+		"It will drop a &eCarcass&r. Pick it up and &6Right-Click&r it onto your Hook to hang it."
+	]
+	quest.2000000000000009.title: "Step 1: The Kill"
+	quest.200000000000000C.quest_desc: [
+		"Before chopping, you must drain the blood."
+		""
+		"1. Place a &bBasin&r or Bucket under the hanging carcass."
+		"2. Right-click the carcass with your &bSkinning Knife&r."
+		"3. Wait for the blood to drain. The carcass will turn pale/grey when finished."
+		""
+		"&cWarning:&r If you chop before draining, you lose meat quality!"
+	]
+	quest.200000000000000C.title: "Step 2: Bleeding"
+	quest.2000000000000010.quest_desc: [
+		"Once drained, you have a choice:"
+		""
+		"&lOption A: Skinning&r"
+		"Use the &bSkinning Knife&r again on the drained carcass to remove the &eCow Skin&r."
+		""
+		"&lOption B: Butchering&r"
+		"Use the &bCleaver&r to chop the carcass into meat, bones, and organs."
+	]
+	quest.2000000000000010.title: "Step 3: Processing"
+	quest.2000000000000013.quest_desc: [
+		"Leftover scraps and specific cuts can be ground into mince."
+		""
+		"1. Place a &bMeat Grinder&r."
+		"2. Right-click it with compatible meat (like steak or scraps)."
+		"3. Hold Right-click to crank the grinder."
+	]
+	quest.2000000000000013.title: "Meat Grinder"
+	quest.2000000000000016.quest_desc: [
+		"Now let's turn that Cow Skin into Leather."
+		""
+		"1. Place the Skin on a &bSkin Rack&r."
+		"2. Right-click the rack with a &9Wet Sponge&r (or Rag) to hydrate it."
+		"3. Right-click with &fSalt&r to cure it."
+		"4. Wait for the texture to change, then harvest your Leather."
+	]
+	quest.2000000000000016.title: "Tanning Leather"
+	quest.2000000000000020.quest_desc: [
+		"If you make a mess, use a &eRag&r or &eSponge&r."
+		""
+		"Right-click blood splatters to clean them up."
+		"To clean a bloody rag, right-click it on a water-filled Cauldron."
+	]
+	quest.2000000000000020.title: "Cleanup Duty"
+	quest.2000000000000022.quest_desc: [
+		"To make leather, you first need &fSalt&r."
+		""
+		"1. Craft a &bBasin&r."
+		"2. Place it outside with a clear view of the sky."
+		"3. Fill it with a Water Bucket."
+		"4. Wait! The sun will evaporate the water into Salt."
+	]
+	quest.2000000000000022.title: "Making Salt"
+	quest.2000000000000024.quest_desc: [
+		"Small animals are processed on a table, not a hook."
+		""
+		"1. Kill a Chicken/Frog/Rabbit to get the carcass."
+		"2. Place the carcass on a &bButcher's Table&r."
+		"3. Use &eShears&r to remove feathers."
+		"4. Use a &eCleaver&r to remove the head."
+		"5. Use the Cleaver again to chop the meat."
+	]
+	quest.2000000000000024.title: "Small Game Processing"
+	quest.2000000000000027.quest_desc: [
+		"To harvest carcasses from boss mobs like the Wither or Ender Dragon, you need a stronger tool."
+		""
+		"The &bNetherite Cleaver&r is the only tool capable of butchering these powerful beasts."
+	]
+	quest.2000000000000027.title: "Master Butcher"
+	quest.201CB898A399F1D5.quest_desc: ["The &bSwineherder&r manages pigs for meat."]
+	quest.201CB898A399F1D5.title: "&aThe Swineherder"
+	quest.2033323CFDC9D1AB.quest_desc: ["The &3Warden Sword&r deals immense damage."]
+	quest.206159A3C7A78447.quest_desc: ["A magical place that grants buffs to the colony."]
+	quest.206159A3C7A78447.title: "&aThe Mystical Site"
+	quest.2077D64428E9C067.quest_desc: [
+		"&bQuartz Fiber&r allows you to share power between networks without sharing channels."
+		""
+		"It connects cables physically but stops data transfer. Useful for powering sub-networks."
+	]
+	quest.2077D64428E9C067.quest_subtitle: "Power Sharing"
+	quest.2077D64428E9C067.title: "Quartz Fiber"
+	quest.20788815179D5B06.quest_desc: ["&lAcquisition:&r Crafted using &9aquatic items&r (check JEI for the exact recipe)."]
+	quest.20788815179D5B06.quest_subtitle: "Eye 12 of 12 (Crafted/Aquatic)"
+	quest.20788815179D5B06.title: "Exotic Eye"
+	quest.20DA34FBC7C505DC.quest_desc: [
+		"&4L_Ender's Cataclysm&r introduces difficult dungeon bosses to Minecraft."
+		""
+		"These bosses are not for the faint of heart. They have complex AI, devastating attacks, and high health pools."
+		""
+		"Prepare your best gear. You will need it."
+	]
+	quest.20E75BFDEA34E400.quest_desc: ["The &cMech Eye&r fires a powerful laser."]
+	quest.219932CB19258C16.quest_desc: [
+		"Welcome to the high-tier of &bApplied Energistics&r."
+		""
+		"Your storage needs are growing. It is time to upgrade beyond basic 4k cells."
+		""
+		"The &b16k Storage Component&r allows for significantly denser storage of items."
+	]
+	quest.219932CB19258C16.quest_subtitle: "Mass Storage"
+	quest.219932CB19258C16.title: "High Capacity Storage"
+	quest.21F23C91555B284F.quest_desc: ["Navigate between planets automatically."]
+	quest.222426282A2C2E30.quest_desc: ["Craft the full set of Resonarium Armor."]
+	quest.222426282A2C2E30.title: "&3Resonarium Armor"
+	quest.22C4318523A43B49.quest_desc: [
+		"The &bTerminal&r allows you to see items in storage."
+		"Upgrade to a &bCrafting Terminal&r to craft with them."
+	]
+	quest.22C4318523A43B49.quest_subtitle: "Accessing the Cloud"
+	quest.22C4318523A43B49.title: "Terminals"
+	quest.22F4C38E79DEFF1E.quest_desc: ["Once your camp is placed, you are ready to establish your official colony."]
+	quest.22F4C38E79DEFF1E.title: "&aOfficial Colony"
+	quest.23012F6C4C522CEB.quest_desc: ["The &bLumberjack&r automatically chops trees and replants saplings, providing a steady stream of wood."]
+	quest.23012F6C4C522CEB.title: "&aThe Lumberjack"
+	quest.2345678901234567.quest_desc: [
+		"To attach a cart to your horse, you first need a &bWheel&r."
+		""
+		"The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."
+	]
+	quest.2345678901234567.title: "The Wheel"
+	quest.23D28D50FBB5C5A3.quest_desc: ["Emits a Redstone signal based on how full the drawer is."]
+	quest.23D511DEFB791453.quest_desc: ["Process your logs into planks. This is your first step toward real engineering."]
+	quest.23D511DEFB791453.title: "Mill Work"
+	quest.23E831D64F47162A.quest_desc: ["The &aBotanist's Workbench&r transforms organic blocks. Use it to create unique variations of &eLeaves&r, &6Vines&r, and &dFlowers&r for a more natural looking landscape."]
+	quest.23E831D64F47162A.title: "&aNaturalist's Detail"
+	quest.2421D9E88B1C5B58.quest_desc: [
+		"The &lUndead Eye&r must be crafted using an &lUndead Soul&r."
+		""
+		"The &9Undead Soul&r is dropped by killing &3Skeleton Horses&r."
+	]
+	quest.2421D9E88B1C5B58.title: "Preparation: Undead Soul"
+	quest.242ADC2366EB7F5F.quest_desc: [
+		"In the Build Dimension, find the &bKey Charger&r."
+		"Place a Blank Portal Key on top to activate it."
+	]
+	quest.242ADC2366EB7F5F.title: "&6Charging Keys"
+	quest.24652775D863903E.quest_desc: [
+		"The &bSonorous Staff&r unleashes the Warden's sonic boom attack."
+		""
+		"Charge it up to deal massive damage that bypasses armor and shields."
+	]
+	quest.24652775D863903E.title: "Sonic Weaponry"
+	quest.247420A406880567.quest_desc: [
+		"Arm your Warship."
+		""
+		"The &bRotary Cannon&r fires rapid shots."
+		"The &bBomb Bay&r drops explosives."
+		"The &bHeavy Crossbow&r deals massive single-target damage."
+	]
+	quest.247420A406880567.title: "&aWeaponry"
+	quest.24931532F04B4331.quest_desc: ["Ancient Remnant in the Desert."]
+	quest.24931532F04B4331.title: "&6Ancient Remnant"
+	quest.25C446F5472D5347.quest_desc: ["The highest tier of storage."]
+	quest.25F6FC66315FC9B7.quest_desc: [
+		"The &bSculk Transmitter&r allows you to link inventories wirelessly across any distance, even between dimensions."
+		""
+		"Link it to a chest, then use the transmitter from anywhere to access that chest remotely."
+	]
+	quest.25F6FC66315FC9B7.title: "Wireless Access"
+	quest.262DE6EC6B86EE1B.quest_desc: ["A strong alloy made from Martian resources."]
+	quest.26483316FD0491AD.quest_desc: [
+		"In the Nether, look for the &cBurning Arena&r."
+		"There you will find &6Ignis&r."
+		""
+		"He uses a shield. Wait for him to attack before striking."
+	]
+	quest.26483316FD0491AD.title: "&6Kill Ignis"
+	quest.275001F88C70865E.quest_desc: [
+		"The Warden has a chance to drop the &bHeart of the Deep&r."
+		""
+		"Use this item on the central reinforced deepslate portal in the Ancient City to light it."
+	]
+	quest.275001F88C70865E.title: "&3Heart of the Deep"
+	quest.27A2F6A6D195472B.quest_desc: [
+		"The &bRotation Speed Controller&r allows you to set the exact RPM of a shaft."
+		""
+		"Place a Large Cogwheel on top to input power."
+	]
+	quest.27A2F6A6D195472B.title: "&6Speed Control"
+	quest.27BCC7C61D5BD336.quest_subtitle: "Multiblock Battery"
+	quest.28374A3978F99667.quest_desc: [
+		"You have explored the furthest reaches of the architectural arts."
+		""
+		"Your home is now a monument to design. From the &bchiseled foundations&r to the &cshingled peaks&r, every block is perfectly placed."
+	]
+	quest.28374A3978F99667.title: "&6World Renowned Designer"
+	quest.2893F483C10293E6.quest_desc: [
+		"Welcome to &bApplied Energistics 2&r."
+		""
+		"This mod focuses on storing items digitally and automating crafting processes."
+		""
+		"To begin, find &bCertus Quartz&r ores. You will need a lot of it."
+	]
+	quest.2893F483C10293E6.quest_subtitle: "The Spark of Digital Matter"
+	quest.2893F483C10293E6.title: "The Digital Age"
+	quest.2897FA291E5A38D8.quest_desc: [
+		"&bSpatial Anchor:&r Keeps a chunk or spatial region loaded."
+		""
+		"&bSpatial Cells:&r Available in 2^3, 16^3, and 128^3 sizes. The larger the cell, the larger the volume of blocks you can capture."
+	]
+	quest.2897FA291E5A38D8.title: "Anchors and Cells"
+	quest.289A96A8575CA342.quest_desc: [
+		"Use the &bReactor Blueprint&r to design the layout of your fuel and control rods."
+		""
+		"Insert this blueprint into the Reactor Input port to configure the multiblock structure."
+	]
+	quest.289A96A8575CA342.title: "&bStructure Verification"
+	quest.28B91D352B2A1127.quest_desc: ["The brains of your rocket."]
+	quest.28D2767C188EAEF9.quest_desc: ["Decorate the portal."]
+	quest.28D2767C188EAEF9.title: "&6Portal Crown"
+	quest.28EE13DE7CBE9518.quest_subtitle: "For Barrels"
+	quest.28EE13DE7CBE9518.title: "Sophisticated Storage"
+	quest.295EAFEA068AD07E.quest_desc: ["Reinforced Echo Shards are used in high-tier crafting."]
+	quest.29FFE2FE9B6BF06B.quest_desc: [
+		"Standard engines are fine, but science offers better."
+		""
+		"&bNether Engine&r: Uses fuel faster but provides more power."
+		"&bEco Engine&r: Efficient but weaker."
+		"&bSteel Boiler&r: High durability steam power."
+	]
+	quest.29FFE2FE9B6BF06B.title: "&aAdvanced Propulsion"
+	quest.2A2B2C2D2E2F3031.quest_desc: [
+		"To enter the dimension, you must build a frame."
+		""
+		"1. Use &7Stone Bricks&r and &eGilded Portal Blocks&r."
+		"2. Place a &bPortal Keyhole&r in the bottom center."
+		"3. You create the portal by right-clicking the keyhole with an &aActivated Key&r."
+	]
+	quest.2A2B2C2D2E2F3031.title: "&6Constructing the Frame"
+	quest.2AFA69E8C6BCF178.quest_desc: ["The &eShaft&r transfers rotation in a straight line."]
+	quest.2B01B964638DFBD1.quest_desc: ["The &bCrusher&r processes cobblestone into gravel and sand."]
+	quest.2B01B964638DFBD1.title: "&aThe Crusher"
+	quest.2B22D74A4260C0CF.quest_desc: ["The &3Deepling Brute&r is a heavy hitter."]
+	quest.2B31E6C1707D8195.quest_desc: [
+		"The &bWireless Access Point&r provides a signal for your handheld terminals."
+		""
+		"It consumes significant power, especially when boosted."
+	]
+	quest.2B31E6C1707D8195.title: "Wireless Access"
+	quest.2B3C4D5E6F708000.quest_desc: [
+		"Every aircraft shares a common set of complex components."
+		""
+		"The &aEngine&r provides the torque."
+		"The &aPropeller&r provides thrust."
+		"The &aHull&r provides structure."
+	]
+	quest.2B3C4D5E6F708000.title: "&aCore Components"
+	quest.2B3C4D5E6F708192.quest_desc: [
+		"&bStorage Drawers&r are perfect for storing large amounts of a single item type."
+		""
+		"They have no GUI; simply Right-Click to insert items and Left-Click to extract."
+	]
+	quest.2B3C4D5E6F708192.title: "Storage Drawers"
+	quest.2B5B339F102AD65E.quest_desc: [
+		"The Nether is home to the most destructive forces."
+		""
+		"Look for the massive &8Soul Blacksmith&r towers and the gladiatorial &cBurning Arena&r."
+	]
+	quest.2B5B339F102AD65E.title: "Nether Nightmares"
+	quest.2B774A6B86BB64A3.quest_desc: [
+		"This chapter covers the three major combat dimensions:"
+		""
+		"&6Dimensional Dungeons&r: West path."
+		"&3Deeper and Darker&r: East path."
+		"&4Cataclysm&r: South path."
+	]
+	quest.2BAAD462A4EB5DE8.quest_desc: [
+		"The Otherside is inhabited by dangerous creatures."
+		""
+		"&3Sculk Snapper&r: A biting jaw that hides in the ground."
+		"&3Shattered&r: A lost soul that wanders the dark."
+		"&3Shriek Worm&r: A burrowing worm that reacts to sound."
+	]
+	quest.2BAAD462A4EB5DE8.title: "Hostile Fauna"
+	quest.2C04B3BA507D5673.quest_desc: [
+		"Autocrafting requires recipes. Use the &bPattern Encoding Terminal&r to encode &bBlank Patterns&r."
+		""
+		"You can encode crafting table recipes or processing recipes (for furnaces, crushers, etc.)."
+	]
+	quest.2C04B3BA507D5673.title: "Defining Recipes"
+	quest.2C9602C72816A60A.quest_desc: ["Wood tools won't last long. Dig into the earth and find something harder."]
+	quest.2C9602C72816A60A.title: "Rock Bottom"
+	quest.2D6AB82266DB98D0.quest_desc: ["Deepling Warlock."]
+	quest.2D6AB82266DB98D0.title: "&9Warlock"
+	quest.2DE20475853D08C9.quest_desc: ["The &5Void Core&r is a powerful crafting material."]
+	quest.2E0598379E9A1BF7.quest_desc: [
+		"Portable Interfaces allow you to transfer items and fluids between a moving train and a stationary platform."
+		""
+		"The transfer only happens when the train stops at a station."
+	]
+	quest.2E0598379E9A1BF7.title: "&6Portable Storage"
+	quest.2E1F3A4B5C6D7E8F.quest_desc: ["Harder materials require a diamond drill head."]
+	quest.2E441139D02DC1EF.quest_desc: [
+		"Once your reactor is built, verified, and fueled, it will begin to generate immense heat."
+		""
+		"This heat can be used by boilers to generate steam for your factory."
+		""
+		"Ensure you have enough cooling, or the core may melt down!"
+	]
+	quest.2E441139D02DC1EF.title: "&aReaction Started"
+	quest.2E6468A7B7740BE8.quest_desc: ["&lAcquisition:&r Bought from a &9Master Cleric Villager&r."]
+	quest.2E6468A7B7740BE8.quest_subtitle: "Eye 8 of 12 (Villager)"
+	quest.2E6468A7B7740BE8.title: "Evil Eye"
+	quest.2EC566E972E42E1A.quest_desc: ["Coral Golem."]
+	quest.2EC566E972E42E1A.title: "&3Coral Golem"
+	quest.2EDEF7AB6E6E8C35.quest_desc: [
+		"To open the portal to the Otherside, you need a &bHeart of the Deep&r."
+		""
+		"This item is dropped by the &1Warden&r. You must summon and defeat this terrifying beast."
+		""
+		"Prepare well. Netherite gear is recommended."
+	]
+	quest.2EDEF7AB6E6E8C35.title: "Silence the Warden"
+	quest.2EFCE1C85B75E278.quest_desc: ["&8Polished Gloomslate&r adds a refined touch."]
+	quest.2F16B6A173525277.quest_desc: [
+		"The &bController&r manages channels and powers the network."
+		""
+		"Each face of the controller provides &l32 Channels&r."
+	]
+	quest.2F16B6A173525277.title: "The Brain"
+	quest.2F3D6B5C4F3F5A7C.quest_desc: ["Decorate your train with specialized blocks!"]
+	quest.2F3D6B5C4F3F5A7C.title: "&6Train Aesthetics"
+	quest.2F46566C78D22FEE.quest_desc: ["The closest planet to the Sun. Extreme heat and cold."]
+	quest.2F46566C78D22FEE.title: "Arrival: Mercury"
+	quest.2F556E7919582D2D.quest_desc: [
+		"The &bCell Workbench&r allows you to partition your storage cells."
+		""
+		"By specifying which items a cell can hold, you can prevent your drives from getting clogged with junk and organize your system efficiently."
+	]
+	quest.2F556E7919582D2D.title: "Cell Partitioning"
+	quest.2FB231069D2E4E77.quest_desc: ["The basic storage unit. Holds 1,024 items of 63 types."]
+	quest.2FB231069D2E4E77.quest_subtitle: "Entry Level Storage"
+	quest.2FB231069D2E4E77.title: "1k Storage Component"
+	quest.3000000000000000.quest_desc: [
+		"This pack is designed with &amultiplayer interaction&r in mind."
+		""
+		"1. Respect other players' claims."
+		"2. Engage in trade and community projects."
+		"3. Don't be afraid to ask for help!"
+	]
+	quest.3000000000000000.title: "&aMultiplayer Expectations"
+	quest.3000BA2ECF1B640E.quest_desc: ["Collect all trophies from dungeon treasure rooms."]
+	quest.3000BA2ECF1B640E.title: "&6Trophy Hunter"
+	quest.3012345678901234.quest_desc: [
+		"The &bSeed Drill&r plants crops for you."
+		""
+		"Fill its inventory with seeds and ride over tilled soil to plant them automatically."
+	]
+	quest.3012345678901234.title: "Farming: Seed Drill"
+	quest.301E64EEC5C07FB2.quest_desc: [
+		"Use an Activated Key on a portal frame in the Overworld to open a dungeon."
+		"Enter and survive."
+	]
+	quest.301E64EEC5C07FB2.title: "&6Enter the Dungeon"
+	quest.3063F0AFCB455CB5.quest_desc: ["The &eNecklace of the Desert&r grants sandstorm immunity."]
+	quest.30E853CE699E669B.quest_desc: [
+		"&bCrafting Storage&r provides the memory required to execute complex crafting tasks."
+		""
+		"The larger the recipe (more bytes), the more storage you need. Multiblocks of these form the Crafting CPU."
+	]
+	quest.30E853CE699E669B.quest_subtitle: "CPU RAM"
+	quest.30E853CE699E669B.title: "Crafting Memory"
+	quest.3119BEA2C1E5794F.quest_desc: ["Kill the &5Ender Guardian&r in the Ruined Citadel."]
+	quest.3119BEA2C1E5794F.title: "&5Ender Guardian"
+	quest.3132333435363738.quest_desc: ["Collect all the trophies found in the treasure rooms of the dungeons."]
+	quest.3132333435363738.title: "&6Trophy Hunter"
+	quest.3195A7AA874163CD.quest_desc: [
+		"The &bEqual Distribution Card&r ensures that items are spread evenly across all valid slots or connected inventories."
+		""
+		"Useful when you want to split resources between multiple processing machines equally."
+	]
+	quest.3195A7AA874163CD.quest_subtitle: "Balanced Output"
+	quest.3195A7AA874163CD.title: "Equal Distribution Card"
+	quest.32102454271175B2.quest_desc: ["Mine &3Resonarium Ore&r."]
+	quest.32102454271175B2.title: "&3Resonarium"
+	quest.3216549870ABCDEF.quest_desc: ["The &eWrench&r rotates and dismantles components instantly."]
+	quest.3233343536373839.quest_desc: ["The &3Sculk Snapper&r is a hostile mob with a powerful bite."]
+	quest.324B15D60A55BF6A.quest_desc: ["The &cLaser Gatling&r is a rapid-fire energy weapon."]
+	quest.328740E6F3926215.quest_desc: [
+		"The &bNetherite Drill&r is the ultimate upgrade for the Tunnel Digger."
+		""
+		"It provides maximum mining speed and durability for your machine."
+	]
+	quest.328740E6F3926215.title: "&8Netherite Bit"
+	quest.33058894ACD9CB06.quest_desc: ["When citizens die, they are buried here. Prevents happiness loss."]
+	quest.33058894ACD9CB06.title: "&aThe Graveyard"
+	quest.332EB67B79E4C64A.quest_desc: [
+		"&6Create: New Age&r offers a highly efficient magnetic generation system."
+		""
+		"1. Place a &bGenerator Coil&r."
+		"2. Insert a &cRedstone Magnet&r (or better)."
+		"3. Use &bCarbon Brushes&r to extract power from the spinning magnet."
+	]
+	quest.332EB67B79E4C64A.title: "&aMagnetic Generation"
+	quest.3344556677889900.title: "Tanks and Filling"
+	quest.33722A3E49CC67B4.quest_desc: [
+		"The &bRedstone Sheep&r is an automated harvester."
+		""
+		"It will roam around, harvest fully grown crops nearby, and then return to its original placement position to deposit the items."
+	]
+	quest.33722A3E49CC67B4.title: "&cAutomatic Harvester"
+	quest.33ADE41526C39AFD.quest_desc: [
+		"The &bVoid Card&r deletes any items that would overflow the inventory."
+		""
+		"Be careful with this! Use it on storage buses connected to trash cans or on partitioned cells to delete excess cobble or dirt."
+	]
+	quest.33ADE41526C39AFD.title: "Void Card"
+	quest.3405D09DD63ED742.quest_desc: ["The &6Draugr&r is a frozen undead warrior."]
+	quest.342A1EF584823D2C.quest_desc: ["Teach your colonists how to craft torches so they can light up their own buildings."]
+	quest.342A1EF584823D2C.title: "&aTeaching Recipes: Torches"
+	quest.34493AB364E29AA4.quest_desc: ["The &bBamboo Hopper&r is a fragile but lightweight craft. A simple start for those without resources."]
+	quest.349060F64218C12C.quest_desc: ["&lLocation:&r Found in the basement chest of a &9Igloo&r."]
+	quest.349060F64218C12C.quest_subtitle: "Eye 6 of 12 (Cold)"
+	quest.349060F64218C12C.title: "Cold Eye"
+	quest.349EFB02D0A7B0CD.quest_desc: [
+		"In the deepest void of the End lies the &9Sunken City&r."
+		"The &9Leviathan&r is a massive terror. Beware its laser beam."
+	]
+	quest.349EFB02D0A7B0CD.title: "&9Kill the Leviathan"
+	quest.34AF4E67FE9ED70E.quest_desc: ["Rapidly grow trees with &eTree Fertilizer&r."]
+	quest.34BBB48AB9026C42.quest_desc: ["Liquid Oxygen is a powerful oxidizer for rocket engines."]
+	quest.34E78D296FE5E2ED.quest_desc: ["The journey of a thousand items begins with a single chest."]
+	quest.34E78D296FE5E2ED.title: "Storage Starter"
+	quest.35BB0498DD5DC544.quest_desc: ["&bHyper enchanting&r lets you go above the normal enchantment limit."]
+	quest.35BB0498DD5DC544.quest_subtitle: "Hyper Experience"
+	quest.360E9E02A494217C.quest_desc: ["Part of the Barracks complex."]
+	quest.360E9E02A494217C.title: "&aBarracks Tower"
+	quest.361CCBD353D6FF34.quest_desc: [
+		"Components must be housed in a Cell to be used in a drive."
+		""
+		"Combine your storage component with an Item Cell Housing to create a usable storage drive."
+	]
+	quest.361CCBD353D6FF34.title: "Assembling Drives"
+	quest.3677C83B8325F891.quest_desc: [
+		"Found in the &dRuined Citadel&r in the outer End islands."
+		""
+		"The &5Ender Guardian&r manipulates gravity and void energy. Be careful not to float away into the void."
+	]
+	quest.3677C83B8325F891.title: "&5The Ender Guardian"
+	quest.367CFD0949EC99E6.quest_desc: ["The &eWadjet&r is a snake-like creature found in deserts."]
+	quest.369A4E0896DCAD51.quest_desc: [
+		"Welcome to the world. You have nothing but your hands and your wits."
+		""
+		"This guide will walk you through the fundamentals of survival, industry, and eventual mastery of the dimensions."
+	]
+	quest.369A4E0896DCAD51.title: "The Pioneer's Handbook"
+	quest.36C7B16E9EFBB448.quest_desc: [
+		"In the End, find the &5Ruined Citadel&r."
+		"The &5Ender Guardian&r uses gravity and void magic."
+	]
+	quest.36C7B16E9EFBB448.title: "&5Kill the Ender Guardian"
+	quest.371A382CF1DDF2B2.quest_desc: [
+		"The &bCapacity Card&r increases the configuration slots or operation speed of buses and interfaces."
+		""
+		"Add these to an Import/Export bus to filter more items or transfer more per tick."
+	]
+	quest.371A382CF1DDF2B2.title: "Capacity Card"
+	quest.375DBF567029A93E.quest_desc: ["&lLocation:&r Found in the main treasure chest inside a &9Bastion Remnant&r (The Cursed Eye is sometimes called the Bastion Eye)."]
+	quest.375DBF567029A93E.quest_subtitle: "Eye 15 of 16 (Bastion)"
+	quest.375DBF567029A93E.title: "Cursed Eye"
+	quest.37B40001703A1199.quest_desc: ["Beautiful blue crystals found on the moon."]
+	quest.37BE190EE466D697.quest_desc: ["A maxed out Town Hall and a huge population."]
+	quest.37BE190EE466D697.title: "&aMetropolis"
+	quest.37D13A675F56C030.quest_desc: ["Fill your suit with Oxygen."]
+	quest.37E43341FA234E84.quest_desc: ["The &bFlorist&r gathers flowers and composts organic material."]
+	quest.37E43341FA234E84.title: "&aThe Florist"
+	quest.37F48F2C63286919.quest_desc: ["The &eSecret Bell&r reveals hidden rooms in dungeons."]
+	quest.384CD5BDE179AE31.quest_subtitle: "Generators"
+	quest.38C7C48CBF854D72.quest_desc: [
+		"Display Boards and Nixie Tubes are great for displaying information."
+		""
+		"Use a &bDisplay Link&r to read data from a block (like a tank or train station) and show it on the board."
+	]
+	quest.38C7C48CBF854D72.title: "&6Information Display"
+	quest.395A0F0EBBD59A7F.quest_desc: ["Kill &6Ignis&r in the Burning Arena."]
+	quest.395A0F0EBBD59A7F.title: "&6Ignis"
+	quest.3989030054BE0101.quest_desc: ["Kill the &9Leviathan&r in the Sunken City."]
+	quest.3989030054BE0101.title: "&9The Leviathan"
+	quest.39CE20A1017EDE6F.quest_desc: [
+		"To extract liquid experience, place a &bMechanical Grindstone&r over an &bItem Drain&r (Disenchanter)."
+		""
+		"When items or books are run through, experience is extracted."
+		"Bonus: This setup can also sand items! Drop &cRose Quartz&r to create &dPolished Rose Quartz&r without manual sandpapering."
+	]
+	quest.39CE20A1017EDE6F.title: "&6XP Drain"
+	quest.3A37E0403507BB0C.quest_desc: ["A hostile world with a thick, acidic atmosphere."]
+	quest.3A37E0403507BB0C.title: "Arrival: Venus"
+	quest.3A4B5C6D7E8F9012.quest_desc: [
+		"Horses are more than just transport; they are the engine of early agriculture and logistics."
+		""
+		"To begin, find a horse and tame it."
+	]
+	quest.3A4B5C6D7E8F9012.title: "Equestrian Engineering"
+	quest.3ABC77C61A07ED44.quest_desc: ["Craft the Monstrous Helm from the beast's horn."]
+	quest.3AC3C4B8BB78396B.quest_desc: ["Automatically picks up items into the backpack."]
+	quest.3AD5A205BCD31CBB.quest_desc: ["The &9Deepling&r is the common inhabitant of the Sunken City."]
+	quest.3AE1C3290500638F.quest_desc: ["10 Citizens."]
+	quest.3AE1C3290500638F.title: "&aHamlet"
+	quest.3B33FADC8B1BBC5F.quest_desc: ["Soul Crystals can be used to make decorative blocks."]
+	quest.3B40A769EDB26EA2.quest_desc: [
+		"The &bPostbox&r allows citizens to request items."
+		"The &bStash&r is personal storage they can access."
+	]
+	quest.3B40A769EDB26EA2.title: "&aPostbox and Stash"
+	quest.3B42CCC19D23EC6D.quest_desc: ["Holds 4,096 items. A good upgrade."]
+	quest.3B42CCC19D23EC6D.quest_subtitle: "Expanded Capacity"
+	quest.3B42CCC19D23EC6D.title: "4k Storage Component"
+	quest.3B4A27774D9844B2.quest_desc: ["&lBoss Drop:&r Dropped by the &9Elder Guardian&r (Ocean Monument boss)."]
+	quest.3B4A27774D9844B2.quest_subtitle: "Eye 13 of 16 (Boss)"
+	quest.3B4A27774D9844B2.title: "Guardian Eye"
+	quest.3B73A6AA2F43BE43.quest_desc: ["The &5Ender Golem&r guards the End."]
+	quest.3B91163DE3DA885C.quest_desc: ["A brave soul who works in the Nether mines."]
+	quest.3B91163DE3DA885C.title: "&aNether Worker"
+	quest.3C4D5E6F70819000.quest_desc: [
+		"The &bBiplane&r is a classic."
+		""
+		"Fast, agile, and reliable. A perfect choice for exploration and personal transport."
+	]
+	quest.3C4D5E6F70819000.title: "&aThe Biplane"
+	quest.3C4D5E6F708192A3.quest_desc: [
+		"The &bCompacting Drawer&r automatically converts items between their block, ingot, and nugget forms."
+		""
+		"Great for saving space with metals and redstone."
+	]
+	quest.3CB5C45569583168.quest_desc: ["Gather &3Echo Logs&r."]
+	quest.3CB5C45569583168.title: "&3Echo Wood"
+	quest.3D4549EF8F120520.quest_desc: [
+		"1. Locate the massive frame made of &8Reinforced Deepslate&r in the center of the Ancient City."
+		"2. Clear any &3Sculk Veins&r that might be obstructing the inner frame area."
+		"3. Right-click the frame with the &bHeart of the Deep&r."
+		"4. Step through into the unknown."
+	]
+	quest.3D4549EF8F120520.title: "The Otherside"
+	quest.3D62BF4936540218.quest_desc: [
+		"The &bTunnel Digger&r is a drivable mining vehicle."
+		""
+		"Constructed using an Iron Drill, this machine bores 3x3 tunnels through the earth effortlessly."
+	]
+	quest.3D62BF4936540218.title: "&6The Tunnel Digger"
+	quest.3D87F29A3B1C4E5D.quest_desc: ["Generate cobblestone from nothing using &eMechanical Generators&r."]
+	quest.3D87F29A3B1C4E5D.title: "Infinite Cobblestone"
+	quest.3DDB0DDA7571B2C1.quest_desc: [
+		"The &bLevel Emitter&r emits a redstone signal based on the quantity of a specific item in your network."
+		""
+		"Use this to turn off machines when you have enough of a product, automating production based on stock levels."
+	]
+	quest.3DDB0DDA7571B2C1.title: "Stock Control"
+	quest.3DF6AB072219A1B6.quest_desc: [
+		"&bResonarium&r is the rare ore of the Otherside."
+		""
+		"Found deep underground, it is used to craft high-tier equipment."
+	]
+	quest.3DF6AB072219A1B6.title: "Resonarium"
+	quest.3E2C5D29534DCF37.quest_desc: [
+		"Congratulations! You have obtained all 12 necessary Eyes. To enter the End, you must find a Stronghold's Portal Room."
+		""
+		"The final piece required to activate the End Portal is the &lAncient Portal Frame&r. Use the Dimensional Eyes on the existing frames, and the portal will activate with the Ancient Frame."
+	]
+	quest.3E2C5D29534DCF37.title: "The End Portal"
+	quest.3E3DF8E967D95DB0.quest_desc: [
+		"To bridge networks across dimensions, you need &bQuantum Entanglement&r."
+		""
+		"Craft a Singularity and Ender Dust."
+		"Blow them up with &cTiny TNT&r (or any explosion) to create a pair of Quantum Entangled Singularities."
+	]
+	quest.3E3DF8E967D95DB0.quest_subtitle: "Dense Matter"
+	quest.3E3DF8E967D95DB0.title: "Quantum Entanglement"
+	quest.3F38FB153E5A37BF.quest_desc: [
+		"Construct the housing for your reactor."
+		""
+		"&7Reactor Casings&r are made of lead and steel."
+		"&bReinforced Glass&r allows you to see inside safely."
+		""
+		"Check the Ponder scene on these blocks to learn the construction patterns."
+	]
+	quest.3F38FB153E5A37BF.title: "&7Reactor Components"
+	quest.3F41E4BC077172C8.quest_desc: ["Advanced Keys lead to harder dungeons with better loot."]
+	quest.3F41E4BC077172C8.title: "&6Advanced Keys"
+	quest.3F5F2507481E61E2.quest_desc: [
+		"The Overworld is safe... mostly. But for those seeking true power, you must traverse the boundaries of reality."
+		""
+		"This chapter challenges you to conquer:"
+		"1. &6Dimensional Dungeons&r: Puzzle-filled instances."
+		"2. &3The Otherside&r: The dark realm behind the Ancient Cities."
+		"3. &4The Cataclysm&r: The deadliest bosses in existence."
+	]
+	quest.3FCB6D1A52EE7B64.quest_desc: ["Release the Shattered."]
+	quest.3FCB6D1A52EE7B64.title: "&3Shattered"
+	quest.4000000000000000.quest_desc: [
+		"We use &aSimple Voice Chat&r for proximity communication."
+		""
+		"Press &b'V'&r (default) to open the voice chat settings."
+		"Make sure your microphone and speaker devices are selected correctly."
+	]
+	quest.4000000000000000.title: "&aVoice Chat Setup"
+	quest.4000000000000001.quest_desc: [
+		"&bColossal Chests&r allows you to build massive multiblock chests."
+		"You need a Core and Walls."
+	]
+	quest.4000000000000001.title: "Colossal Chests"
+	quest.4000000000000002.quest_desc: ["The Interface allows pipes and hoppers to interact with the Colossal Chest."]
+	quest.4000000000000002.title: "Interfaces"
+	quest.4000000000000003.quest_desc: ["Use tools to upgrade the material of the chest in-place."]
+	quest.4000000000000003.title: "Upgrading"
+	quest.4000000000000004.quest_desc: ["Diamond tier holds a staggering amount of items."]
+	quest.4000000000000004.title: "Diamond Tier"
+	quest.40C8D26E40C40AC7.quest_desc: [
+		"The Echoing Forests are home to &3Echo Wood&r."
+		""
+		"This wood is infused with the souls of the deep. It is fire-resistant and has a unique dark texture."
+	]
+	quest.40C8D26E40C40AC7.title: "Echo Wood"
+	quest.40E1C9ED9009C2B3.quest_desc: [
+		"The Harbinger drops &8Witherite&r, a dark alloy."
+		"It also drops the &cMech Eye&r, a powerful laser tool."
+	]
+	quest.40E1C9ED9009C2B3.title: "Ancient Technology"
+	quest.41206E7FDA5A9293.quest_desc: ["Craft Tools."]
+	quest.41206E7FDA5A9293.title: "&3Resonarium Pick"
+	quest.4150BD6B68E694AB.quest_desc: ["Liquid Hydrogen is a highly efficient rocket fuel."]
+	quest.420C44B5CD424AEC.quest_desc: [
+		"&eEnd Remastered&r overhauls the path to the End. You must find at least 12 out of 16 Dimensional Eyes to activate the End Portal. Each Eye has a unique method of acquisition."
+		""
+		"The original Eye of Ender is disabled; you must find and collect these Eyes through exploration, farming, and conquering structures/bosses in the Overworld and Nether."
+	]
+	quest.420C44B5CD424AEC.title: "Introduction: The Dimensional Eyes"
+	quest.42588A82C47BD69F.quest_desc: ["Portable storage that can be upgraded and worn."]
+	quest.42588A82C47BD69F.title: "Sophisticated Backpacks"
+	quest.4280D1ED8B55CAF2.quest_desc: ["Bulwark of the Flame."]
+	quest.4280D1ED8B55CAF2.title: "&cBulwark"
+	quest.42A0E7D610F0984B.title: "Mercury Fauna"
+	quest.430475E11D259B74.quest_desc: ["Smelts stone and cobblestone in bulk."]
+	quest.430475E11D259B74.title: "&aStone Smeltery"
+	quest.4320CFB4F2C993A6.quest_desc: ["Don't forget to pack a way home."]
+	quest.434547494B4D4F51.quest_desc: ["Soul Crystals are rare drops used for advanced crafting."]
+	quest.43701B72BB984E51.quest_desc: ["The &bItem Silo&r is a vertical storage solution that looks industrial and holds a ton of items."]
+	quest.43701B72BB984E51.title: "&6Item Silo"
+	quest.4394BB1840438AA4.quest_desc: ["The platform where your journey begins."]
+	quest.4394BB1840438AA4.title: "The Launchpad"
+	quest.43F5981C8E7B0B1B.quest_desc: ["&lLocation:&r Dropped by an &9Evoker&r (Woodland Mansion or Raid)."]
+	quest.43F5981C8E7B0B1B.quest_subtitle: "Eye 7 of 12 (Evoker)"
+	quest.43F5981C8E7B0B1B.title: "Magical Eye"
+	quest.44556677889900AA.quest_desc: [
+		"The Otherside is composed of new stone types."
+		""
+		"&8Gloomslate&r: A dark, tough stone found in the upper layers."
+		"&3Sculk Stone&r: Infused with sculk, found deeper down."
+	]
+	quest.44556677889900AA.title: "Alien Geology"
+	quest.448766D3D7D1316A.quest_desc: [
+		"The &bIron Drill&r is a large mechanical drill head."
+		""
+		"It is the primary component required to construct the &6Tunnel Digger&r."
+	]
+	quest.448766D3D7D1316A.title: "&7Iron Drill Bit"
+	quest.44B708752F794A88.quest_desc: ["The &3Shriek Worm&r burrows and attacks. Dig it out."]
+	quest.44EA8DB4ADF14B6F.quest_desc: ["Collect Sulfuric Acid from the Venusian atmosphere."]
+	quest.45438DED8CF7DFEF.quest_desc: ["The &eMechanical Press&r compacts items into plates or blocks."]
+	quest.4581A2674CF48BE1.quest_desc: ["The &6Koboleton&r are skeletal warriors of the desert."]
+	quest.4597D3B3BDC2BED5.quest_desc: [
+		"The &bMolecular Assembler&r is the auto-crafting table of AE2."
+		""
+		"The &bPattern Provider&r holds the recipe patterns and pushes items into the Assembler."
+	]
+	quest.4597D3B3BDC2BED5.title: "Auto-Crafting Basics"
+	quest.45B87D51EF224B8C.quest_desc: ["The &lSample Drill&r is your initial prospecting tool. Place it on a block, power it, and wait for a sample."]
+	quest.4628396CD22EDC11.quest_desc: [
+		"The &bEconomy Plane&r is a reliable entry-level aircraft."
+		""
+		"It's decent for exploration but lacks the speed and durability of military models."
+	]
+	quest.4628396CD22EDC11.title: "&6Economy Plane"
+	quest.462D6D429EE32B54.quest_desc: ["Craft the full set of Resonarium Tools."]
+	quest.462D6D429EE32B54.title: "&3Resonarium Tools"
+	quest.464C621239370782.quest_desc: ["Store, Copy, and Print builds with &eSchematics&r."]
+	quest.464C621239370782.title: "Blueprints and Printing"
+	quest.46C41F78602630AD.quest_desc: ["The pinnacle of protection."]
+	quest.46C41F78602630AD.title: "&3Warden Armor Set"
+	quest.46CA77513380C3D5.quest_desc: [
+		"Find the &bWarden Upgrade Template&r."
+		"Upgrade to Warden Armor."
+	]
+	quest.46CA77513380C3D5.title: "&3Warden Upgrade"
+	quest.47E81662104F2510.quest_desc: [
+		"&6Brass&r is an alloy of Copper and Zinc."
+		""
+		"You must use a &bMixer&r powered by a Blaze Burner (fed with fuel) to create it."
+		"Right-click Brass Ingots onto Stripped Logs to create &6Brass Casings&r."
+	]
+	quest.47E81662104F2510.title: "&6Brass Age"
+	quest.483612071C0B755E.quest_desc: [
+		"Alternatively, &eCreate Crafts & Additions&r allows for Bioethanol production."
+		""
+		"Process Biomass into &eBioethanol&r and burn it for power."
+	]
+	quest.483612071C0B755E.title: "&aBiofuel Alternative"
+	quest.48AC8545D66B71B7.quest_desc: ["Upgrade your Builder's Hut to Level 2 so they can build more advanced structures."]
+	quest.48AC8545D66B71B7.title: "&aBuilder Level 2"
+	quest.48ACE82E6C5624C3.quest_desc: [
+		"In the Blooming Caverns, you will find &bBlooming Stems&r."
+		""
+		"These vibrant blue fungi provide a light source and a unique building material."
+	]
+	quest.48ACE82E6C5624C3.title: "Blooming Flora"
+	quest.48BDEA7AA0FEC4A2.quest_desc: ["&lAcquisition:&r Crafted using the &9Undead Soul&r."]
+	quest.48BDEA7AA0FEC4A2.quest_subtitle: "Eye 10 of 12 (Crafted)"
+	quest.48BDEA7AA0FEC4A2.title: "Undead Eye"
+	quest.490628CE108A833A.quest_desc: ["The &bDeliveryman&r runs items between huts and the warehouse."]
+	quest.490628CE108A833A.title: "&aThe Courier"
+	quest.493B9FC17C3CF3CA.quest_desc: ["Raises rabbits for meat and hide."]
+	quest.493B9FC17C3CF3CA.title: "&aThe Rabbit Hutch"
+	quest.493DA1BD43FC0C4A.quest_desc: [
+		"The &dVoid Forge&r allows you to craft End-tier equipment using Void Cores."
+		""
+		"The &5Gauntlet of Guard&r allows you to create gravity shockwaves."
+	]
+	quest.493DA1BD43FC0C4A.title: "Void Mastery"
+	quest.494B632ABC3C761D.quest_desc: ["The &dLionfish&r is poisonous. Watch out!"]
+	quest.495233C1B537C04A.quest_desc: [
+		"Found in the &eCursed Pyramid&r in deserts."
+		""
+		"The &6Ancient Remnant&r is a skeletal giant. It summons minions and shakes the earth."
+	]
+	quest.495233C1B537C04A.title: "&6The Ancient Remnant"
+	quest.4971E0A095FF0A7E.quest_desc: ["Monstrous Eye."]
+	quest.4971E0A095FF0A7E.title: "&4Monstrous Eye"
+	quest.49793060345FB28C.quest_desc: ["The &bCowboy&r tends to cows, providing milk and leather."]
+	quest.49793060345FB28C.title: "&aThe Cowboy"
+	quest.49BC203D36E05D4E.quest_desc: [
+		"Locate the &bWarden Upgrade Smithing Template&r in Ancient City chests."
+		""
+		"Combine it with Resonarium Armor to create &1Warden Armor&r."
+		"This armor reduces Sculk Sensor detection range and prevents the Darkness effect."
+	]
+	quest.49BC203D36E05D4E.title: "Warden Upgrade"
+	quest.4A1B2C3D4E5F6070.quest_desc: [
+		"Welcome to &cButchery&r!"
+		""
+		"This mod focuses on realistic animal processing. Instead of simply killing animals for drops, you will butcher them for maximum yield."
+		""
+		"Start by crafting the essential copper tools. The &6Cleaver&r is used to obtain carcasses, and the &6Skinning Knife&r is used for... well, skinning."
+	]
+	quest.4A1B2C3D4E5F6070.title: "&cThe Butcher's Tools"
+	quest.4A7306CF924DA3B6.quest_desc: [
+		"&bPortable Cells&r act like batteries but for items or fluids."
+		""
+		"They have internal storage and need to be charged in a Charger. Great for moving large quantities of items manually between bases."
+	]
+	quest.4A7306CF924DA3B6.title: "Portable Storage"
+	quest.4A7B77493F63247F.quest_desc: ["Ignitium is the ultimate fire metal."]
+	quest.4A7B77493F63247F.title: "&6Ignitium"
+	quest.4AB0396B4A7FAAB2.quest_desc: [
+		"The &lWitch Eye&r must be crafted using a &lWitch Pupil&r."
+		""
+		"The &9Witch Pupil&r is a common item, dropped by &3Witches&r (1/3 chance)."
+	]
+	quest.4AB0396B4A7FAAB2.title: "Preparation: Witch Pupil"
+	quest.4B40542F8D683E4E.quest_desc: ["Upgrade your backpack to hold more slots and upgrades."]
+	quest.4B40542F8D683E4E.title: "Backpack Tiers"
+	quest.4B56C97D409CF55E.quest_desc: ["The &7Maledictus&r is a ghostly apparition."]
+	quest.4B7E1ED306BFBA1D.quest_desc: [
+		"In the Overworld, find the &7Ancient Factory&r."
+		"The &8Harbinger&r is a mechanical monstrosity."
+	]
+	quest.4B7E1ED306BFBA1D.title: "&8Kill the Harbinger"
+	quest.4BBD2AEA03A85C07.quest_desc: ["Warden Chestplate."]
+	quest.4BBD2AEA03A85C07.title: "&3Warden Chest"
+	quest.4BE48F442EF09DA9.quest_desc: ["&8Cobbled Gloomslate&r is great for building."]
+	quest.4BF0BB763BFFACF0.quest_desc: [
+		"Throw &cRedstone&r, &bCharged Certus Quartz&r, and &fNether Quartz&r into a pool of water."
+		""
+		"They will react to form &dFluix Crystals&r, the backbone of AE2 cables."
+	]
+	quest.4BF0BB763BFFACF0.title: "Fluix Technology"
+	quest.4BF6300CD97314C3.quest_desc: [
+		"Craft a full set of &bResonarium Armor&r."
+		""
+		"It offers protection comparable to Netherite and resonates with the dimension's energy."
+	]
+	quest.4BF6300CD97314C3.title: "Resonarium Gear"
+	quest.4C07CF3A3DA350A0.quest_desc: [
+		"The End holds the keys to the Void."
+		""
+		"Explore the outer islands to find the floating &dRuined Citadel&r and the abyss-dwelling &9Sunken City&r."
+	]
+	quest.4C07CF3A3DA350A0.title: "End Game"
+	quest.4C0D7283B04689D8.quest_desc: [
+		"Found in the &8Ancient Factory&r deep underground."
+		""
+		"The &8Harbinger&r is a Wither-like machine armed with lasers and missiles."
+		"Bring a shield and ranged weapons."
+	]
+	quest.4C0D7283B04689D8.title: "&8The Harbinger"
+	quest.4C2D1A1756D41739.quest_desc: ["Wireless Redstone."]
+	quest.4C2D1A1756D41739.title: "&3Transmitter"
+	quest.4C4D4E4F50515253.quest_desc: ["The Bulwark of the Flame is Ignis's shield."]
+	quest.4CB826526128B825.quest_desc: ["Use &eSchematics&r to save and reprint your creations."]
+	quest.4CB826526128B825.title: "Blueprints and Printing"
+	quest.4CDE7D78F487EB4E.quest_desc: ["Forge the ultimate armor of the deep."]
+	quest.4CDE7D78F487EB4E.title: "Warden Armor"
+	quest.4D49DB740FDB82F5.quest_desc: ["&lAcquisition:&r Has a small chance to appear when &9Enchanting&r an item."]
+	quest.4D49DB740FDB82F5.quest_subtitle: "Eye 9 of 12 (Enchanting)"
+	quest.4D49DB740FDB82F5.title: "Cryptic Eye"
+	quest.4D5E6F708192A3B4.quest_desc: [
+		"The &bDrawer Controller&r acts as the brain of your drawer system."
+		""
+		"Connecting pipes or storage buses to this block allows access to EVERY connected drawer within a 12-block radius."
+		""
+		"Double-Right-Clicking the controller with an item will deposit all matching items from your inventory into the system."
+	]
+	quest.4D5E6F7081A2A000.quest_desc: [
+		"The &bAirship&r is slower than the biplane but easier to control."
+		""
+		"It relies on a balloon for lift, making it a stable platform for surveying the land."
+	]
+	quest.4D5E6F7081A2A000.title: "&aThe Airship"
+	quest.4D61009737D94BDA.quest_desc: ["25 Citizens."]
+	quest.4D61009737D94BDA.title: "&aVillage"
+	quest.4D6FC901C29AD377.quest_desc: ["Assemble moving structures with the &eCart Assembler&r and &eGlue&r."]
+	quest.4D6FC901C29AD377.title: "Contraption Assembly"
+	quest.4D9DC4973FD340E5.quest_desc: ["Trains guards to level up their combat stats faster."]
+	quest.4D9DC4973FD340E5.title: "&aCombat Academy"
+	quest.4DD7E2BD8508A117.quest_desc: ["You have established all types of animal husbandry."]
+	quest.4DD7E2BD8508A117.title: "&aMaster Animal Herder"
+	quest.4E8A05C3BFA80540.quest_desc: [
+		"The &bDrive&r holds Storage Cells."
+		""
+		"It is the hard drive bay of your digital system."
+	]
+	quest.4E8A05C3BFA80540.quest_subtitle: "Digital Warehousing"
+	quest.4E8A05C3BFA80540.title: "Storage Drives"
+	quest.4ECBB150497F4343.quest_desc: ["Advanced circuitry requires precision engraving."]
+	quest.4ECBB150497F4343.title: "Micro-Electronics"
+	quest.4F0DD18D7647A103.quest_desc: ["Your main source for &3Backpack&r and &3Barrel&r storage."]
+	quest.4F0DD18D7647A103.title: "Sophisticated"
+	quest.4F1D2859F6BE40EF.quest_desc: [
+		"Advanced navigation tools for your railway network."
+		""
+		"The &bNavigator&r helps automate train routing."
+	]
+	quest.4F1D2859F6BE40EF.title: "&6Railway Navigation"
+	quest.4F51E3CE458274A3.quest_desc: [
+		"The &cInfernal Forge&r is the ultimate crafting station found in the Soul Blacksmith."
+		"It allows for gear upgrades."
+	]
+	quest.4F51E3CE458274A3.title: "&cThe Infernal Forge"
+	quest.4FA68572C444AE03.quest_desc: [
+		"Enhance your flying experience."
+		""
+		"&bGyroscope&r: Helps stabilize your flight."
+		"&bHull Reinforcement&r: Increases durability."
+		"&bImproved Landing Gear&r: Smoother landings on rough terrain."
+	]
+	quest.4FA68572C444AE03.title: "&aAvionics and Upgrades"
+	quest.5000000000000000.quest_desc: [
+		"Death is not the end, but it is dangerous."
+		""
+		"When you die, a &aCorpse&r will spawn holding your items."
+		""
+		"In some versions (Hardcore Revival), you may be incapacitated instead of killed immediately. Friends can revive you before you pass on!"
+	]
+	quest.5000000000000000.title: "&aDeath and Revival"
+	quest.50DD9E810879A49F.quest_desc: ["Feeds you food when hungry."]
+	quest.51130393AFDB397C.quest_desc: ["The &3Coral Golem&r is a sturdy construct of the seas."]
+	quest.51236544BFEF487B.quest_desc: [
+		"Inscribing Presses are found in &3Meteorites&r."
+		""
+		"Use a &bMeteorite Compass&r to locate them."
+	]
+	quest.51236544BFEF487B.quest_subtitle: "Hunting for Lost Technology"
+	quest.51236544BFEF487B.title: "Presses and Silicon"
+	quest.51398957A1EA2086.title: "Martian Fauna"
+	quest.51480BE2546785A5.quest_desc: [
+		"Found in the &9Sunken City&r, deep in the void of the End."
+		""
+		"The &9Leviathan&r is a massive terror. Avoid its laser beam at all costs."
+	]
+	quest.51480BE2546785A5.title: "&9The Leviathan"
+	quest.516F0F395F441DBD.quest_desc: ["Sculk veins block the portal. Remove them."]
+	quest.51B2F4324DE5482B.quest_desc: ["&eMechanical Belts&r move items horizontally."]
+	quest.51B2F4324DE5482B.title: "Logistics: Belts"
+	quest.51C33020883FAD5C.quest_desc: [
+		"The &bAnimal Cart&r allows you to transport entities."
+		""
+		"Simply push an animal (or villager) into the back of the cart to load them. Ride your horse to transport them easily."
+	]
+	quest.51C33020883FAD5C.title: "Transport: Animal Cart"
+	quest.51DE3157DE3E57B8.quest_desc: [
+		"Automation is the ultimate goal. The &bME Pattern Provider&r allows you to teach your system how to craft items."
+		""
+		"When placed next to a machine (like a furnace) or a Molecular Assembler, it can push ingredients for a recipe and expect the result back."
+		""
+		"You'll need a &bPattern Access Terminal&r to encode and manage your patterns."
+	]
+	quest.51DE3157DE3E57B8.quest_subtitle: "On-Demand Manufacturing"
+	quest.51DE3157DE3E57B8.title: "Autocrafting Setup"
+	quest.5233A447BAA4593C.quest_desc: [
+		"Diagnosing network issues can be tricky."
+		""
+		"&bSmart Cables&r display the number of active channels on their surface as glowing lines. This visual feedback is invaluable for managing your channel usage."
+	]
+	quest.5233A447BAA4593C.quest_subtitle: "Visualizing Data Flow"
+	quest.5233A447BAA4593C.title: "Smart Cabling"
+	quest.523853C1C4E688BA.quest_desc: ["The &b64k Component&r is the standard for late-game generic storage."]
+	quest.523853C1C4E688BA.quest_subtitle: "High Density Storage"
+	quest.523853C1C4E688BA.title: "64k Storage Component"
+	quest.52453550206EC770.quest_desc: ["The &bDyer&r crafts dyes and colored items like wool and glass."]
+	quest.52453550206EC770.title: "&aThe Dyer"
+	quest.5253545556575859.quest_desc: ["The &3Shattered&r are souls lost to the darkness. Put them to rest."]
+	quest.525F25F4ADE45B50.quest_desc: [
+		"The &bFormation Plane&r places blocks from the network into the world."
+		""
+		"You can filter which blocks it places. Useful for automated building or creating reaction setups."
+	]
+	quest.525F25F4ADE45B50.quest_subtitle: "Block Placer"
+	quest.525F25F4ADE45B50.title: "Formation Plane"
+	quest.52823495A6604B35.quest_desc: [
+		"The &bSchematicannon&r builds structures automatically from a Schematic."
+		""
+		"Use the &bSchematic Table&r to write schematics to a blueprint."
+	]
+	quest.52823495A6604B35.title: "&6Schematics"
+	quest.5313F57A58229A72.quest_desc: [
+		"&bFluid Tanks&r can store massive amounts of liquid."
+		""
+		"They connect vertically and horizontally to form larger tanks."
+	]
+	quest.5313F57A58229A72.title: "&6Fluid Storage"
+	quest.5373DF9C21EC80BE.quest_desc: ["Titanium is strong and light, perfect for advanced aerospace."]
+	quest.537A8F99CC3F525D.quest_desc: ["Recruit your first 8 guards."]
+	quest.537A8F99CC3F525D.title: "&aMilitia"
+	quest.53BB590289D14A36.quest_desc: ["The &6disenchanter&r removes enchants from items and stores them as liquid XP."]
+	quest.53F8923B85A8A9CC.quest_desc: ["Recruit 80 guards."]
+	quest.53F8923B85A8A9CC.title: "&aLegion"
+	quest.54534D5DB62641C9.quest_desc: [
+		"Start your &6Dimensional Dungeons&r journey by crafting a &eBlank Portal Key&r."
+		""
+		"You will need many of these."
+	]
+	quest.54534D5DB62641C9.title: "&6The Key"
+	quest.547811386BB04D12.quest_desc: ["Space is a vacuum. You need a suit to survive."]
+	quest.547811386BB04D12.title: "Life Support: Armor"
+	quest.5505E3EBFD4672C1.quest_desc: [
+		"Upgrade your magnets for significantly higher output."
+		""
+		"&bLayered Magnets&r offer a good mid-tier boost."
+		"&dNetherite Magnets&r are top-tier."
+	]
+	quest.5505E3EBFD4672C1.title: "&aBetter Magnets"
+	quest.55186B8602689B66.quest_desc: [
+		"To configure P2P tunnels:"
+		"1. Shift-Right-Click the &aInput&r tunnel with a Memory Card to save."
+		"2. Right-Click (no shift) the &eOutput&r tunnel(s) to load."
+		""
+		"This creates a direct link."
+	]
+	quest.55186B8602689B66.title: "Linking Tunnels"
+	quest.553C28959FC9DA28.title: "Logistics"
+	quest.556677889900AABB.quest_desc: [
+		"The Echoing Forests are home to &3Echo Wood&r."
+		""
+		"This wood is infused with the souls of the deep. It is fire-resistant and has a unique dark texture."
+	]
+	quest.556677889900AABB.title: "Echo Wood"
+	quest.55B24B02DE511F95.quest_desc: [
+		"Find a Cow, Pig, Sheep, or Chicken."
+		""
+		"Kill it using the &6Cleaver&r. Instead of dropping meat, it will drop a &cCarcass&r."
+		""
+		"Right-click the Carcass onto your Rope to hang it up."
+	]
+	quest.55B24B02DE511F95.title: "&cThe First Kill"
+	quest.5618B54BE7C3417B.quest_desc: ["Upgrade your space suit with Martian Steel."]
+	quest.563C76D529A4694B.quest_desc: ["The &eMechanical Mixer&r mixes fluids and items. Required for automated Andesite Alloy."]
+	quest.5640650E72BDAAEA.title: "Sophisticated Backpacks"
+	quest.5671234890ABCDEF.quest_desc: ["Organize your workshop with a &eToolbox&r."]
+	quest.5678901234567890.quest_desc: [
+		"The &bSupply Cart&r acts as a double chest on wheels."
+		""
+		"&eShift-Right-Click&r the cart to access its inventory."
+		"Great for early game transport of bulk items."
+	]
+	quest.5678901234567890.title: "Logistics: Supply Cart"
+	quest.56789ABCDEF01235.quest_desc: ["Explore the oceans with &ePrismarine Alloy&r."]
+	quest.5708ABC6B90BE39E.quest_desc: ["Sandstorm Necklace."]
+	quest.5708ABC6B90BE39E.title: "&eDesert Necklace"
+	quest.57367265FDA02E2C.quest_desc: ["&9Tidal Claws&r grant the power of the sea."]
+	quest.575A6FF022B9D2D0.quest_desc: ["Mastering heat is mastering the world. Use this to cook food and refine ores."]
+	quest.575A6FF022B9D2D0.title: "Pyromancy 101"
+	quest.57A298D0D4126067.quest_desc: ["Farming machines automate crops and trees."]
+	quest.57A298D0D4126067.title: "Contraption Farming"
+	quest.57A31F950959959F.quest_desc: [
+		"Use the Heart on the central portal frame in the Ancient City."
+		"Enter the &3Otherside&r."
+	]
+	quest.57A31F950959959F.title: "&3The Otherside"
+	quest.57C83419A8C1E370.quest_desc: [
+		"&aWelcome to the Modpack!&r"
+		""
+		"This chapter covers the basic rules, controls, and expectations for the server."
+		""
+		"&eDisclaimer:&r &oYou are free to ignore quests if you prefer your own path. These are here to guide you, not force you.&r"
+	]
+	quest.57C83419A8C1E370.title: "&aWelcome and Philosophy"
+	quest.57C889EC980D33D9.quest_desc: ["The &bFarmer&r tends to crops, ensuring a steady food supply."]
+	quest.57C889EC980D33D9.title: "&aThe Farmer"
+	quest.583A7AA84FEC027F.quest_desc: [
+		"The &bBuilder&r is the most important citizen."
+		""
+		"They construct and upgrade all other buildings. Build this hut first!"
+	]
+	quest.583A7AA84FEC027F.title: "&aThe Builder's Hut"
+	quest.587A9622F2BE6F2D.quest_desc: ["Select your dungeon theme."]
+	quest.587A9622F2BE6F2D.title: "&6Theme Key"
+	quest.58C03B30CDAD73A4.quest_desc: [
+		"The Overworld hides two ancient secrets."
+		""
+		"Search the &eDeserts&r for a buried pyramid, and the deep caves for a rusted factory."
+	]
+	quest.58C03B30CDAD73A4.title: "Overworld Threats"
+	quest.5930ADBE320F2752.quest_desc: ["Increases the storage size of your chests and barrels."]
+	quest.5930ADBE320F2752.title: "Tier Upgrades"
+	quest.59A8C98040EF2AE1.quest_desc: ["Craft the &3Sonorous Staff&r to harness sonic blasts."]
+	quest.59A8C98040EF2AE1.title: "&3Sonic Power"
+	quest.59D9DF0B17AC385B.quest_desc: ["&3Sculk Gleam&r provides light in the darkness."]
+	quest.59F3A1A17D9490D7.quest_desc: ["Destroys excess items when the drawer is full. Useful for automated farms."]
+	quest.5A11A2FC20E5CE2A.quest_desc: ["A large military building that houses many guards."]
+	quest.5A11A2FC20E5CE2A.title: "&aThe Barracks"
+	quest.5A6B7C8D9E0F1234.quest_desc: ["Automate egg collection and hatching with the &eIncubator&r."]
+	quest.5A6B7C8D9E0F1234.title: "Egg Farming"
+	quest.5A8D1E3F2C9B47A1.quest_desc: [
+		"Storage is the backbone of any modded Minecraft playthrough."
+		""
+		"Choose your path: Drawers for bulk items, Backpacks for travel, Sophisticated Storage for automation, or Colossal Chests for raw capacity."
+	]
+	quest.5AA3E5DFECB4AC4D.quest_desc: [
+		"Place crystal seeds in water."
+		"Place &bGrowth Accelerators&r around the water to speed up the growth process."
+	]
+	quest.5AA3E5DFECB4AC4D.title: "Crystal Growth"
+	quest.5AC2862AFF8D4231.quest_desc: [
+		"&6Create: MetaLogistics&r allows for a digital inventory system."
+		""
+		"The &bStock Manifest Reader&r lets you view the contents of your storage network."
+		"&bTickets&r are used to request items."
+	]
+	quest.5AC2862AFF8D4231.title: "&6Logistics Management"
+	quest.5B205726E8BF36BD.quest_desc: ["Craft Soul Elytra."]
+	quest.5B205726E8BF36BD.title: "&3Soul Elytra"
+	quest.5B543497006DEF04.quest_desc: [
+		"Attach a &bBrass Chunk Loader&r to your train contraption."
+		""
+		"This ensures your train (and the chunks it passes through) remain loaded, allowing it to travel long distances without you."
+	]
+	quest.5B543497006DEF04.title: "&6Chunk Loading"
+	quest.5BB887411B8B38FA.quest_desc: [
+		"The &bCondenser&r is used to destroy items and fluids to create Matter Balls or Singularities."
+		""
+		"&bMatter Balls&r are ammo for the Matter Cannon."
+		"&bSingularities&r are required for Quantum Rings."
+	]
+	quest.5BB887411B8B38FA.title: "Matter Condensation"
+	quest.5BE0839CD1C90A7F.quest_desc: ["The &eAndesite Alloy&r is the foundational material for all kinetic components."]
+	quest.5BF638A250C7106E.quest_desc: [
+		"To conquer the stars, you must first master the earth."
+		""
+		"Infinite resources are required for the massive industrial undertaking of building a rocket."
+	]
+	quest.5BF638A250C7106E.title: "Infinite Resources"
+	quest.5C22E3103544B120.quest_desc: [
+		"Standard Glass Cables carry &l8 Channels&r."
+		"Smart Cables display how many channels are in use."
+	]
+	quest.5C22E3103544B120.title: "Cables and Channels"
+	quest.5C6FE8E13FD3AB0B.quest_desc: [
+		"To open the portal to the Otherside, you need a &bHeart of the Deep&r."
+		""
+		"This item is dropped by the &1Warden&r. You must summon and defeat this terrifying beast."
+		""
+		"Prepare well. Netherite gear is recommended."
+	]
+	quest.5C6FE8E13FD3AB0B.title: "Silence the Warden"
+	quest.5CBDD9661EF475AA.quest_desc: [
+		"These components allow you to convert between Kinetic Energy and Forge Energy (FE)."
+		""
+		"&bAlternator&r: Kinetic -> FE"
+		"&bElectric Motor&r: FE -> Kinetic"
+	]
+	quest.5CBDD9661EF475AA.title: "&6Electrification"
+	quest.5CD4D703A402AF03.quest_desc: ["The &3Warden Pickaxe&r mines fast and durable."]
+	quest.5CD8D169181C7339.quest_desc: [
+		"AE2 offers some unique tools."
+		""
+		"The &bCharged Staff&r is a melee weapon that can also be used to rotate blocks."
+		""
+		"The &bEntropy Manipulator&r allows you to heat or cool blocks (e.g., turn water to ice, or cobble to stone)."
+		""
+		"The &bMatter Cannon&r uses Matter Balls or items as ammo to shoot projectiles."
+	]
+	quest.5CD8D169181C7339.quest_subtitle: "AE Tools"
+	quest.5CD8D169181C7339.title: "Technological Weaponry"
+	quest.5D09455F583C6C9E.quest_desc: [
+		"Trains allow for massive long-distance logistics."
+		""
+		"The &bTrain Station&r is where you assemble and schedule your trains."
+	]
+	quest.5D09455F583C6C9E.title: "&6All Aboard!"
+	quest.5D10936C9C14D3E6.quest_desc: [
+		"Using &bSoul Dust&r (from Shattered) and other materials, craft the &bSoul Elytra&r."
+		""
+		"It has a built-in boost function, similar to using a firework rocket, but powered by its own durability."
+	]
+	quest.5D10936C9C14D3E6.title: "Soul Flight"
+	quest.5D5565B85CAF2D22.quest_desc: [
+		"&3Deeper and Darker&r begins in the Deep Dark."
+		"Find an Ancient City."
+	]
+	quest.5D5565B85CAF2D22.title: "&3Ancient City"
+	quest.5DC7047FEF971307.quest_desc: ["Kill the &4Netherite Monstrosity&r in the Soul Blacksmith."]
+	quest.5DC7047FEF971307.title: "&4The Monstrosity"
+	quest.5DD5BC05FC4E8F11.quest_desc: ["The &bFluid Vessel&r is a large, heavy-duty tank for fluid storage."]
+	quest.5DD5BC05FC4E8F11.title: "&6Fluid Vessel"
+	quest.5E24012A3D9B72A1.quest_desc: [
+		"Items aren't the only thing you can store."
+		""
+		"Fluid Storage Cells allow you to store liquids like water, lava, or oil directly in your ME system, eliminating the need for vast tank arrays."
+	]
+	quest.5E24012A3D9B72A1.title: "Fluid Storage"
+	quest.5E3AE6EA742742D0.quest_desc: [
+		"Found in the &8Soul Blacksmith&r structure."
+		""
+		"The &4Netherite Monstrosity&r is extremely tanky and deals heavy knockback. Beware its lava eruptions."
+	]
+	quest.5E3AE6EA742742D0.title: "&4The Monstrosity"
+	quest.5E6585F7627247E3.quest_desc: [
+		"The &bCrafting Card&r allows an interface or export bus to automatically request the crafting of an item if the system doesn't have any in stock."
+		""
+		"This enables 'passive' automation, keeping a machine stocked with crafted components."
+	]
+	quest.5E6585F7627247E3.quest_subtitle: "Passive Crafting"
+	quest.5E6585F7627247E3.title: "Crafting Card"
+	quest.5E6F708192A3B4C4.quest_desc: [
+		"Before you can afford heavy iron equipment, you will need to use a &7Rope&r to suspend animals."
+		""
+		"The rope is cheap to make but has limited durability. Attach it to a ceiling block or fence."
+	]
+	quest.5E6F708192A3B4C4.title: "&7The Hanging Rope"
+	quest.5E6F708192A3B4C5.quest_desc: [
+		"&bDrawer Trims&r are used to connect drawers that are not directly touching."
+		""
+		"They carry the controller signal but cannot store items."
+	]
+	quest.5E6F7081A2B3B000.quest_desc: [
+		"The &bGyrodyne&r is a unique aircraft capable of vertical takeoff."
+		""
+		"It requires a bit more skill to pilot but offers unparalleled maneuverability."
+	]
+	quest.5E6F7081A2B3B000.title: "&aThe Gyrodyne"
+	quest.5E7E35CCAF1C88EE.quest_desc: ["The &bImport Bus&r pulls items &linto&r the network from the inventory it faces."]
+	quest.5E7E35CCAF1C88EE.quest_subtitle: "Into the Network"
+	quest.5E7E35CCAF1C88EE.title: "Import Bus"
+	quest.5E93C7569C223702.quest_desc: [
+		"&6Ignitium&r is the ultimate material."
+		"Armor made from it grants immunity to fire and lava."
+	]
+	quest.5E93C7569C223702.title: "Born of Fire"
+	quest.5EAA48B77D99A51B.quest_desc: [
+		"The &bDeployer&r mimics a player's hand."
+		""
+		"It can be used to automate player actions like placing blocks or using items, but it is also essential for assembly lines to craft items like &bTrain Tracks&r."
+	]
+	quest.5EAA48B77D99A51B.title: "&6Automated Hands"
+	quest.5F56892CD904C40F.quest_desc: ["Pushing the limits of standard AE2, the &b256k Component&r holds over a quarter-million items."]
+	quest.5F56892CD904C40F.quest_subtitle: "Extreme Storage"
+	quest.5F56892CD904C40F.title: "256k Storage Component"
+	quest.5F5DB67F6A470C73.quest_desc: ["Recruit 30 guards."]
+	quest.5F5DB67F6A470C73.title: "&aStanding Army"
+	quest.5F73CDCD08EC0CF1.quest_desc: [
+		"In the desert, find the &eCursed Pyramid&r."
+		"The &6Ancient Remnant&r guards it."
+	]
+	quest.5F73CDCD08EC0CF1.title: "&6Kill the Ancient Remnant"
+	quest.5FADE20C1DAD3513.quest_desc: [
+		"The &bBamboo Bee&r is a logistics drone."
+		""
+		"It transports items from one chest to another. Useful for moving items over short distances without pipes or belts."
+	]
+	quest.5FADE20C1DAD3513.title: "&aLogistic Drone"
+	quest.5FC01763770A062E.quest_desc: ["Your Builder needs to actually build the Town Hall structure before it fully functions."]
+	quest.5FC01763770A062E.title: "&aTown Hall Construction"
+	quest.6000000000000000.quest_desc: [
+		"To keep the server running smoothly for everyone, please follow these performance tips:"
+		""
+		"- &cDo not&r spam chunk loaders unnecessarily."
+		"- Turn off machines that are not in use."
+		"- Avoid large pits of entities (mob farms) without killing them."
+		"- Use performance-friendly pipes and cables where possible."
+	]
+	quest.6000000000000000.title: "&aPerformance Guidelines"
+	quest.6012A593D0FB81EC.quest_desc: ["A dedicated kitchen block for the restaurant."]
+	quest.6012A593D0FB81EC.title: "&aRestaurant Kitchen"
+	quest.602B6852E64C5444.quest_desc: ["The &2Endermaptera&r is a bug-like creature of the End."]
+	quest.604F116909414BFC.quest_desc: ["The &cLaser Gatling&r."]
+	quest.604F116909414BFC.title: "&8Laser Weapons"
+	quest.605C983DD6ED9F6A.quest_desc: ["&lLocation:&r Found in &9Buried Treasure&r chests."]
+	quest.605C983DD6ED9F6A.quest_subtitle: "Eye 16 of 16 (Buried Treasure)"
+	quest.605C983DD6ED9F6A.title: "Black Eye"
+	quest.60F10069FD956D54.quest_desc: [
+		"The standard terminal range is short."
+		"Insert &bWireless Boosters&r into the Access Point to extend range."
+	]
+	quest.60F10069FD956D54.title: "Boosting Range"
+	quest.6104FF7ED97FA641.quest_desc: [
+		"Store your generated power."
+		"The &eModular Accumulator&r is a multiblock battery. You can stack them to increase capacity."
+	]
+	quest.6104FF7ED97FA641.title: "&aEnergy Storage"
+	quest.6144202A97C6CD1C.quest_desc: [
+		"&bFacades&r hide your cables."
+		"&bCable Anchors&r prevent cables from connecting to specific blocks."
+	]
+	quest.6144202A97C6CD1C.quest_subtitle: "Cable Management"
+	quest.6144202A97C6CD1C.title: "Cable Management"
+	quest.61B9E0C9A302AC5C.quest_desc: ["The &3Sculk Leech&r drains your life."]
+	quest.61EB3710B685C879.quest_desc: ["The &dAmethyst Crab&r is a tough critter."]
+	quest.61F729428EB1B2B3.quest_desc: ["The &bAdvanced Motor&r from New Age allows you to convert your massive FE generation back into Rotational Force with extreme efficiency."]
+	quest.61F729428EB1B2B3.title: "&aClosing the Loop"
+	quest.61FFC30F34A03C74.quest_desc: [
+		"&bTrain Signals&r divide your track into blocks, preventing trains from crashing."
+		""
+		"Place them at intervals to allow multiple trains to share the same line safely."
+	]
+	quest.61FFC30F34A03C74.title: "&6Signaling"
+	quest.628194FFCE8D0528.quest_desc: [
+		"Increases storage capacity."
+		""
+		"Obsidian < Iron < Gold < Diamond < Emerald < Netherite"
+	]
+	quest.628194FFCE8D0528.title: "Capacity Upgrades"
+	quest.634C6FC0637AA4F9.quest_desc: ["&4Cataclysm&r adds endgame bosses."]
+	quest.638EB4E35F41405B.quest_subtitle: "For Backpacks"
+	quest.638EB4E35F41405B.title: "Sophisticated Backpacks Upgrade Base"
+	quest.638F9067393A5170.quest_desc: [
+		"You can cook an entire animal at once!"
+		""
+		"1. Place a &bSpit Rotisserie&r."
+		"2. Build a Campfire directly underneath it."
+		"3. Right-click the Rotisserie with a Drained Carcass."
+		"4. Wait for it to brown, then use a &bCleaver&r to carve off cooked meat chunks."
+	]
+	quest.638F9067393A5170.title: "Rotisserie Cooking"
+	quest.640402FBE87EAB47.quest_desc: [
+		"The &3Stalker&r is a fearsome predator."
+		""
+		"It moves silently and hits hard. Defeating it may yield a &bSoul Crystal&r."
+	]
+	quest.640402FBE87EAB47.title: "The Stalker"
+	quest.6431A384DDFBF439.quest_desc: [
+		"The &bNetwork Tool&r gives you a diagnostic overview of your connected devices."
+		""
+		"Use it on any cable to see power usage, channel consumption, and a list of all attached components. It's vital for troubleshooting channel bottlenecks."
+	]
+	quest.6431A384DDFBF439.title: "Network Diagnostics"
+	quest.64407A1BC7A1761B.quest_subtitle: "Liquid Experience Industry"
+	quest.64581F0BB1B8347B.quest_desc: [
+		"The &eNecklace of the Desert&r makes you immune to the Sandstorm effect."
+		"The &eAncient Spear&r is a powerful throwing weapon."
+	]
+	quest.64581F0BB1B8347B.title: "Desert Treasures"
+	quest.6465666768696A6B.quest_desc: ["The &cIgnited Revenant&r guards the arena."]
+	quest.6477F55B22A6405E.quest_desc: ["Kill the Shriek Worm."]
+	quest.6477F55B22A6405E.title: "&3Shriek Worm"
+	quest.647F95EED59927B7.quest_desc: [
+		"Citizens get hungry."
+		"The &bCook&r prepares food and distributes it to the restaurant for citizens to eat."
+	]
+	quest.647F95EED59927B7.title: "&aThe Restaurant"
+	quest.64C249E1826AE1FA.quest_desc: ["The &3Sculk Centipede&r is a long, burrowing horror."]
+	quest.64CC214BD1AA5791.title: "Engineer's Armor"
+	quest.6529D95C9AF673DA.quest_desc: [
+		"Ropes break eventually. For a permanent setup, upgrade to an &8Iron Hook&r."
+		""
+		"The &cBlood Grate&r is a floor block that automatically drains blood, preventing messy puddles."
+	]
+	quest.6529D95C9AF673DA.title: "&8Professional Equipment"
+	quest.65326FE0C2DBFD14.quest_desc: ["Nature's most versatile resource. Punch it until it gives up."]
+	quest.65326FE0C2DBFD14.title: "Timber!"
+	quest.65D23E7683812E26.quest_desc: ["In dire times, citizens will eat anything..."]
+	quest.65D23E7683812E26.title: "&aDesperate Measures"
+	quest.65ECC5E000658FB3.quest_desc: ["The &5Loom&r focuses on soft materials. It provides dozens of patterns for &dWool&r, &5Carpets&r, and &fBanners&r, allowing you to create custom tapestries and flooring."]
+	quest.65ECC5E000658FB3.title: "&5The Weaver's Loom"
+	quest.6677889900AABBCC.quest_desc: [
+		"In the Blooming Caverns, you will find &bBlooming Stems&r."
+		""
+		"These vibrant blue fungi provide a light source and a unique building material."
+	]
+	quest.6677889900AABBCC.title: "Blooming Flora"
+	quest.6692B95C052528D8.quest_desc: ["&eGoggles of Revealing&r allow you to see Stress Units (SU) and fluid amounts."]
+	quest.66B96CF20790222F.quest_desc: [
+		"Complete your exterior with &6Windows&r. Use &bBlinds&r and &bShutters&r to control light and privacy. "
+		""
+		"These windows come in multiple 3D styles like &fGothic&r or &6Modern&r."
+	]
+	quest.66B96CF20790222F.title: "&fSight and Shade"
+	quest.66DCF4934FE4A1EF.quest_desc: [
+		"&bElectron Tubes&r are used for advanced circuitry."
+		""
+		"You create them by using a Deployer to sand-paper a Polished Rose Quartz."
+	]
+	quest.66DCF4934FE4A1EF.title: "&6Electron Tubes"
+	quest.675886A9F75A5115.quest_desc: ["Use these tools to upgrade the material of the chest without breaking it."]
+	quest.675886A9F75A5115.title: "Upgrade Tool"
+	quest.67BA8255FA6C3AEB.quest_desc: ["Step through the portal into the &3Otherside&r."]
+	quest.67BA8255FA6C3AEB.title: "&3The Otherside"
+	quest.67E8B8DCFC93F832.quest_desc: [
+		"The &bWarehouse&r is the central storage for your colony."
+		"Couriers bring items here."
+	]
+	quest.67E8B8DCFC93F832.title: "&aCentral Storage: The Warehouse"
+	quest.68306299E376CB98.quest_desc: [
+		"Scraps of meat and offal shouldn't go to waste."
+		""
+		"Put them into the &7Meat Grinder&r to create Minced Meat, which can be used for burgers or sausages."
+	]
+	quest.68306299E376CB98.title: "&7The Grinder"
+	quest.68500900087F92BC.quest_desc: ["Teach the Carpenter or Sawmill how to make doors."]
+	quest.68500900087F92BC.title: "&aTeaching Recipes: Door"
+	quest.68B0B3DAF1145191.quest_desc: [
+		"The &bCharger&r is used to charge Certus Quartz into &bCharged Certus Quartz&r."
+		""
+		"The &bInscriber&r presses materials into circuits. It requires power."
+	]
+	quest.68B0B3DAF1145191.quest_subtitle: "Essential Processing Units"
+	quest.68B0B3DAF1145191.title: "Processing Hardware"
+	quest.68FC81E133443E76.quest_desc: ["The &bLibrary&r is essential for upgrading citizen skills."]
+	quest.68FC81E133443E76.title: "&aThe Library"
+	quest.696BDC29ACCBBE29.quest_desc: ["The Undertaker manages the graveyard."]
+	quest.696BDC29ACCBBE29.title: "&aThe Undertaker"
+	quest.6978D7EAEEA1F238.quest_desc: [
+		"Even dragons have meat."
+		""
+		"To process magical beasts or bosses, you will need a &5Netherite Cleaver&r."
+	]
+	quest.6978D7EAEEA1F238.title: "&5Legendary Butcher"
+	quest.69B7DE2283B4EE6C.quest_desc: [
+		"&bCrafting Co-Processors&r allow the CPU to perform multiple crafting steps in parallel."
+		""
+		"Essential for speeding up complex recipes with many sub-components."
+	]
+	quest.69B7DE2283B4EE6C.quest_subtitle: "Parallel Processing"
+	quest.69B7DE2283B4EE6C.title: "Co-Processing"
+	quest.69EAF1072D492F1A.quest_desc: ["Ancient Tomes are needed for high-level research."]
+	quest.69EAF1072D492F1A.title: "&aAncient Tome"
+	quest.6A2F1E0B4D9C7B31.quest_desc: [
+		"&6The Architect's Vision&r"
+		""
+		"Welcome, builder. This chapter is your guide to thousands of new blocks."
+		""
+		"You will start with simple tools to alter textures on the fly, progress to massive specialized workbenches, and finally master structural components like sloped roofs and suspension bridges."
+	]
+	quest.6A2F1E0B4D9C7B31.title: "&6The Art of Decoration"
+	quest.6A60B76053393288.quest_desc: ["Smelts ores into ingots."]
+	quest.6A60B76053393288.title: "&aThe Smeltery"
+	quest.6A85255CCCDE764F.title: "Bulk Smoking"
+	quest.6B0CE8AD86991E28.quest_desc: ["Turns organic waste into compost for the Farmer."]
+	quest.6B0CE8AD86991E28.title: "&aThe Composter"
+	quest.6B26495A9E7D77FC.quest_desc: ["5 Citizens."]
+	quest.6B26495A9E7D77FC.title: "&aGrowing Family"
+	quest.6B28A0332FFB37DD.quest_desc: ["Cute but hardy creatures of the Moon."]
+	quest.6B2E7A8E81CCA959.quest_desc: ["Keep track of your tasks with the &eClipboard&r."]
+	quest.6B41174603B189EC.quest_desc: ["&lLocation:&r Found in chests located in &9Mineshafts&r."]
+	quest.6B41174603B189EC.quest_subtitle: "Eye 3 of 12 (Mineshaft)"
+	quest.6B41174603B189EC.title: "Lost Eye"
+	quest.6B5BABC7C88B5C1A.quest_desc: ["The &cWither Assault Shoulder Weapon&r allows you to fire wither skulls."]
+	quest.6B6C6D6E6F707172.quest_desc: [
+		"Before you can find dungeons, you must enter the &eBuild Dimension&r."
+		""
+		"Craft a &bBlank Build Key&r. Activate it on a portal frame to enter your personal building lobby."
+	]
+	quest.6B6C6D6E6F707172.title: "&6The Build Key"
+	quest.6BB0C51EE8CA5966.quest_desc: ["The &bMiner&r digs mineshafts to gather stone and ores."]
+	quest.6BB0C51EE8CA5966.title: "&aThe Miner"
+	quest.6BD20C8EE13213DB.quest_desc: [
+		"The &eAlternator&r converts Rotational Force directly into FE."
+		""
+		"To maximize efficiency, you need high speed."
+		"Connect it to a Rotation Speed Controller set to 256 RPM for maximum output."
+	]
+	quest.6BD20C8EE13213DB.title: "&aRotational Power"
+	quest.6C539494EDBF4469.quest_desc: ["Void Core."]
+	quest.6C539494EDBF4469.title: "&5Void Core"
+	quest.6C7964C6A4F30674.quest_desc: ["&lAcquisition:&r Crafted using the &9Witch Pupil&r."]
+	quest.6C7964C6A4F30674.quest_subtitle: "Eye 11 of 12 (Crafted)"
+	quest.6C7964C6A4F30674.title: "Witch Eye"
+	quest.6D41C6C36A135EF0.quest_desc: ["Adds a visual indicator bar to show how full the drawer is."]
+	quest.6D54B45CDA70FEAB.quest_desc: [
+		"Sometimes you need to power devices remotely or expand your network's capacity."
+		""
+		"The &bEnergy Card&r allows devices like the Wireless Terminal to hold more charge or enables machines to accept power upgrades."
+	]
+	quest.6D54B45CDA70FEAB.title: "Portable Power"
+	quest.6D56AD1BEC644A10.quest_desc: ["Trains archers."]
+	quest.6D56AD1BEC644A10.title: "&aArchery Range"
+	quest.6D7948748AB275C4.quest_desc: ["Craft the &9Abyssal Sacrifice&r."]
+	quest.6D7948748AB275C4.title: "&9Abyssal Power"
+	quest.6D7E8F9012345678.quest_desc: [
+		"Not all horses are created equal. Some are faster, jump higher, or have more health."
+		""
+		"Craft a &bMonocle&r to inspect the stats of any horse you look at. This is crucial for breeding the perfect steed."
+	]
+	quest.6D7E8F9012345678.title: "Horse Expert"
+	quest.6DBDF0AA7C9FA2E0.quest_desc: ["Use the Telescope to identify planets and map the solar system."]
+	quest.6E15447FC3D678E0.quest_desc: [
+		"Advanced cards for specific situations."
+		""
+		"&bFuzzy Card&r: Allows buses to ignore NBT/Damage data."
+		"&bInverter Card&r: Inverts the filter logic (whitelist becomes blacklist)."
+	]
+	quest.6E15447FC3D678E0.quest_subtitle: "Advanced Logic"
+	quest.6E15447FC3D678E0.title: "Logic Cards"
+	quest.6E7F809123456789.quest_desc: ["Aesthetics matter! Use &eCopycat&r blocks to mimic other materials."]
+	quest.6E7F809123456789.title: "Architectural Design"
+	quest.6EB87E19FA4F072B.quest_desc: [
+		"The &9Tidal Claws&r allow you to grapple enemies."
+		"The &5Abyssal Sacrifice&r is a totem of dark magic."
+	]
+	quest.6EB87E19FA4F072B.title: "Abyssal Artifacts"
+	quest.6EEA012FA11C7C08.quest_desc: [
+		"The &bSupply Camp&r gives you a safe place to sleep and some starter resources."
+		"Place it carefully; it cannot be moved easily!"
+	]
+	quest.6EEA012FA11C7C08.title: "&aSupply Camp"
+	quest.6F007A938164AB04.quest_desc: [
+		"With an activated key, open a portal and step through."
+		""
+		"You are now in a dungeon. Solve puzzles, kill mobs, and loot chests."
+	]
+	quest.6F007A938164AB04.title: "&6Into the Dungeon"
+	quest.6F19D80A65B15EBC.quest_desc: [
+		"Each boss drops a unique Eye."
+		"Collecting them all proves your mastery over the dimensions."
+	]
+	quest.6F19D80A65B15EBC.title: "All Seeing"
+	quest.6F3D0A248B5A9CA2.quest_desc: [
+		"The &bSpatial Storage Cell&r holds the data of the stored region."
+		""
+		"Available in sizes of 2^3, 16^3, and 128^3 blocks."
+	]
+	quest.6F3D0A248B5A9CA2.title: "Spatial Cells"
+	quest.6F708192A3B4C5D6.quest_desc: [
+		"The &bDrawer Key&r locks a drawer to a specific item."
+		""
+		"This allows you to pull all items out without the drawer forgetting what it is supposed to store. Essential for automation systems."
+	]
+	quest.6F708192A3B4C5D6.title: "Locking Up"
+	quest.6F7081A2B3C4C000.quest_desc: [
+		"Sometimes you need to move more than just yourself."
+		""
+		"The &bCargo Airship&r trades speed for a massive inventory. Perfect for moving bases or transporting ores."
+	]
+	quest.6F7081A2B3C4C000.title: "&aHeavy Transport"
+	quest.6FAB01B97B33913A.title: "Automation Logic"
+	quest.6FD6079C84025112.quest_desc: ["The &7Mason's Table&r is used for heavy stone materials. Turn &8Cobblestone&r, &7Deepslate&r, and &8Bricks&r into pillars, runic symbols, and ancient tiles."]
+	quest.6FD6079C84025112.title: "&7Masonry Masterclass"
+	quest.7000000000000000.quest_desc: [
+		"Welcome to the &6Advanced Age&r."
+		""
+		"To progress further, you must master two new forces: &eElectricity&r and &aRadiation&r."
+		""
+		"This chapter will guide you through generating power with magnets, harnessing the atom, and bending space itself."
+	]
+	quest.7000000000000001.quest_desc: [
+		"To conquer the stars, you must first master the earth."
+		""
+		"Infinite resources are required for the massive industrial undertaking of building a rocket."
+	]
+	quest.7000000000000001.title: "Infinite Resources: The Start"
+	quest.7000000000000003.quest_desc: [
+		"&6Create: New Age&r introduces a new energy system: &eForge Energy (FE)&r."
+		""
+		"To begin, you need to construct a basic generator using &9Carbon Brushes&r and a &9Generator Coil&r."
+	]
+	quest.7000000000000003.title: "Generating Electricity"
+	quest.7000000000000005.quest_desc: ["The &lVein Finder&r helps you locate nearby ore veins found by the sample drill."]
+	quest.7000000000000007.quest_desc: [
+		"The Generator Coil requires a &bMagnet&r to function."
+		""
+		"1. Insert the Magnet into the Coil."
+		"2. Connect rotational force to the Carbon Brushes."
+		"3. The brushes must spin &aaround&r the coil."
+		""
+		"The &cRedstone Magnet&r is your starting point. It generates a small amount of power."
+	]
+	quest.7000000000000007.title: "Basic Magnetism"
+	quest.7000000000000008.quest_desc: ["Copper wires transmit energy. Use &lElectrical Connectors&r to attach wires to blocks."]
+	quest.7000000000000008.title: "Heavy Drilling"
+	quest.700000000000000A.quest_desc: [
+		"To generate power, you must extract it from the coil."
+		""
+		"Use &6Electrical Connectors&r placed on the coil to attach &6Copper Wires&r."
+	]
+	quest.700000000000000A.title: "Wiring"
+	quest.700000000000000C.quest_desc: ["&lThorium&r is a radioactive fuel found deep underground. It is safer than Uranium but requires a &lNuclear Reactor&r from New Age."]
+	quest.700000000000000C.title: "Thorium Power"
+	quest.700000000000000E.quest_desc: [
+		"Better magnets generate significantly more power."
+		""
+		"Upgrade to the &bLayered Magnet&r for a mid-tier power boost."
+	]
+	quest.700000000000000E.title: "Advanced Magnetism"
+	quest.700000000000000F.quest_desc: [
+		"The &lNew Age Reactor&r generates heat."
+		""
+		"1. Build a structure with &lReactor Casings&r and &lReactor Glass&r."
+		"2. Insert &lReactor Rods&r inside."
+		"3. Use a &lFuel Insertor&r to feed Thorium."
+		"4. Extract heat using &lHeat Pipes&r."
+	]
+	quest.700000000000000F.title: "Thorium Reactor"
+	quest.7000000000000011.quest_desc: [
+		"The ultimate magnet."
+		""
+		"The &5Netherite Magnet&r provides the highest energy output possible for a standard coil."
+	]
+	quest.7000000000000012.quest_desc: ["The ultimate drill head for the rarest resources."]
+	quest.7000000000000013.quest_desc: [
+		"&lCreate: Nuclear&r offers a different path: Fission."
+		""
+		"&lWARNING:&r Raw Uranium is radioactive. Do not hold it without a Hazmat Suit."
+	]
+	quest.7000000000000013.title: "The Nuclear Option"
+	quest.7000000000000014.quest_desc: [
+		"Now that you have power, you can use the &bEnergiser&r."
+		""
+		"This machine accepts items and blasts them with electricity to create &bOvercharged&r variants."
+		""
+		"&eNote:&r Ensure the Energiser connects to your grid via an Electrical Connector."
+	]
+	quest.7000000000000014.title: "Energising Materials"
+	quest.7000000000000015.quest_desc: ["Find and extract &lCrude Oil&r. Essential for rocket fuel."]
+	quest.7000000000000015.title: "Black Gold"
+	quest.7000000000000016.quest_desc: ["Craft a full &lHazmat Suit&r immediately. Radiation will kill you quickly."]
+	quest.7000000000000016.title: "Radiation Protection"
+	quest.7000000000000017.quest_desc: ["Energise Iron Ingots to create &bOvercharged Iron&r. This is a key component for advanced tech."]
+	quest.7000000000000018.quest_desc: ["Find and extract &lUranium&r for nuclear power."]
+	quest.700000000000001A.quest_desc: ["Energise Gold Ingots to create &eOvercharged Gold&r. Highly conductive."]
+	quest.700000000000001B.quest_subtitle: "Kinetic to Electric"
+	quest.700000000000001B.title: "The Electric Age"
+	quest.700000000000001C.quest_desc: ["Enrich uranium in an &lEnriching Campfire&r (or Centrifuge if available) to create Yellowcake."]
+	quest.700000000000001D.quest_desc: ["Energise Diamonds to create &bOvercharged Diamonds&r. These hold immense energy potential."]
+	quest.700000000000001F.quest_desc: [
+		"Construct a Fission Reactor."
+		""
+		"- &lReactor Core:&r Holds the fuel."
+		"- &lReactor Controller:&r Shows stats."
+		"- &lCoolers:&r Essential to prevent meltdown."
+	]
+	quest.700000000000001F.title: "Fission Reactor"
+	quest.7000000000000020.quest_desc: [
+		"Motors allow you to convert &eElectricity&r back into &6Rotational Force&r."
+		""
+		"The &9Basic Motor&r is your entry level option."
+	]
+	quest.7000000000000020.title: "Converting Back"
+	quest.7000000000000022.quest_desc: ["Radiation kills. Suit up before approaching enriched materials."]
+	quest.7000000000000022.title: "Hazmat Suit"
+	quest.7000000000000023.quest_desc: ["The &bAdvanced Motor&r can handle higher stress and speed."]
+	quest.7000000000000023.title: "The Space Program"
+	quest.7000000000000026.quest_desc: [
+		"&aThorium&r is a radioactive element found deep underground."
+		""
+		"It is the fuel source for the &6Create: New Age&r nuclear reactor system."
+	]
+	quest.7000000000000026.title: "Thorium"
+	quest.7000000000000028.quest_desc: ["Enrich uranium to create fuel for your reactor."]
+	quest.7000000000000029.quest_desc: [
+		"To build a Thorium Reactor, you need to assemble the structure."
+		""
+		"You will need &bReactor Casings&r and &bReactor Glass&r."
+	]
+	quest.7000000000000029.title: "Reactor Structure"
+	quest.700000000000002B.quest_desc: ["A nuclear reactor generates immense heat for boilers."]
+	quest.700000000000002B.title: "Fission Reactor"
+	quest.700000000000002C.quest_desc: ["Collect Liquid Hydrogen in tanks."]
+	quest.700000000000002D.quest_desc: [
+		"The heart of the reactor."
+		""
+		"1. Place &bReactor Rods&r inside the casing structure."
+		"2. Insert Thorium fuel into the rods using a &bFuel Acceptor&r."
+	]
+	quest.700000000000002D.title: "Reactor Rods"
+	quest.700000000000002E.quest_desc: ["Collect Liquid Oxygen in tanks."]
+	quest.700000000000002F.title: "Quantum Physics"
+	quest.7000000000000030.quest_desc: [
+		"Advanced rockets need guidance systems."
+		"The &lCircuit Engraver&r imprints patterns onto circuit boards."
+	]
+	quest.7000000000000030.title: "Avionics"
+	quest.7000000000000031.quest_desc: [
+		"Reactors produce immense &cHeat&r."
+		""
+		"You must dissipate this heat using &bHeat Vents&r or extract it for power."
+		""
+		"If the reactor overheats, it will become dangerous."
+	]
+	quest.7000000000000031.title: "Heat Management"
+	quest.7000000000000032.quest_desc: ["Instant travel between points."]
+	quest.7000000000000032.title: "Teleportation"
+	quest.7000000000000033.quest_desc: ["Assemble the &lTargeting Computer&r using circuits."]
+	quest.7000000000000034.quest_desc: [
+		"&6Create: Nuclear&r offers a different path: Fission using Uranium."
+		""
+		"&cWARNING: RADIATION HAZARD&r"
+		""
+		"Obtaining &aRaw Uranium&r is the first step. Do not hold this item in your inventory for long without protection."
+	]
+	quest.7000000000000034.title: "The Nuclear Age"
+	quest.7000000000000036.quest_desc: ["A personal pocket dimension."]
+	quest.7000000000000036.title: "Pocket Dimension"
+	quest.7000000000000037.quest_desc: [
+		"Before proceeding, you &lMUST&r craft a &fHazmat Suit&r."
+		""
+		"Without this, radiation from enriched materials and reactor components will be fatal."
+	]
+	quest.7000000000000037.title: "Hazmat Protection"
+	quest.7000000000000039.quest_desc: ["Bridge Kinetic power with Applied Energistics."]
+	quest.7000000000000039.title: "Applied Kinetics"
+	quest.700000000000003C.quest_desc: ["Craft a Space Suit. You cannot survive in a vacuum without it."]
+	quest.700000000000003C.title: "Suit Up"
+	quest.700000000000003D.quest_desc: [
+		"Raw Uranium must be processed."
+		""
+		"1. Crush Raw Uranium into Crushed Uranium."
+		"2. Process it in an &bEnriching Campfire&r (or Centrifuge) to get &eYellowcake&r."
+	]
+	quest.700000000000003D.title: "Enrichment"
+	quest.700000000000003F.quest_desc: ["Use the Telescope to identify planets and map the solar system."]
+	quest.7000000000000040.quest_desc: [
+		"Construct the base of your Fission Reactor."
+		""
+		"The &bReactor Core&r holds the reaction, while the &bReactor Controller&r allows you to monitor its status."
+	]
+	quest.7000000000000040.title: "Fission Reactor"
+	quest.7000000000000042.quest_desc: ["Use the &lOxygen Filler&r to pressurize your suit."]
+	quest.7000000000000044.quest_desc: [
+		"Fission generates massive amounts of heat."
+		""
+		"You &lmust&r install &bReactor Coolers&r adjacent to the cores."
+		""
+		"Failure to cool the reactor will result in a catastrophic meltdown."
+	]
+	quest.7000000000000044.title: "Cooling Systems"
+	quest.7000000000000047.quest_desc: [
+		"The reactor needs fuel."
+		""
+		"Craft &aUranium Rods&r and insert them into the Reactor Core to begin the reaction."
+	]
+	quest.7000000000000047.title: "Fuel Rods"
+	quest.700000000000004A.quest_desc: [
+		"&dCreate: Teleporters&r introduces Quantum mechanics."
+		""
+		"The &bQuantum Mechanism&r is the foundational component for all teleportation technology."
+	]
+	quest.700000000000004A.title: "Quantum Physics"
+	quest.700000000000004D.quest_desc: [
+		"Instant travel."
+		""
+		"1. Place a &bTeleporter&r at Location A."
+		"2. Place a &bTeleporter&r at Location B."
+		"3. Right-click both teleporters with a &dTP Link&r to connect them."
+	]
+	quest.700000000000004D.title: "Teleportation"
+	quest.700000000000004E.quest_desc: ["The brains of your rocket."]
+	quest.7000000000000050.quest_desc: ["Travel to Mercury. Collect &lTungsten&r."]
+	quest.7000000000000050.title: "Mercury"
+	quest.7000000000000051.quest_desc: [
+		"Advanced teleportation requires specialised casings."
+		""
+		"The &bQuantum Casing&r is used for high-tier teleportation devices."
+	]
+	quest.7000000000000052.quest_desc: ["Liquid Oxygen is a powerful oxidizer for rocket engines."]
+	quest.7000000000000053.quest_desc: ["The &lQuantum Mechanism&r bends space itself."]
+	quest.7000000000000053.title: "Quantum Physics"
+	quest.7000000000000054.quest_desc: [
+		"Need more space?"
+		""
+		"The &bPocket Dimension Remote&r grants you access to a personal, void dimension perfect for building compact machines or reactor setups."
+	]
+	quest.7000000000000054.title: "Pocket Dimension"
+	quest.7000000000000056.quest_desc: [
+		"Instant transportation."
+		"1. Place two &lTeleporters&r."
+		"2. Right-click both with a &lTP Link&r."
+	]
+	quest.7000000000000056.title: "The Launchpad"
+	quest.7000000000000057.quest_desc: [
+		"For complex networks, use the &bAdvanced TP Link&r."
+		""
+		"It allows for more configuration and channel management."
+	]
+	quest.7000000000000059.quest_desc: [
+		"A strange pearl found in the End, resonating with teleportation energy."
+		""
+		"Used to craft the Quantum Mechanism."
+	]
+	quest.700000000000005A.quest_desc: ["A &lPocket Dimension&r gives you a personal void room for machines."]
+	quest.700000000000005C.quest_desc: ["Fluids can also be teleported! Use the &bQuantum Fluid Bucket&r logic in your contraptions."]
+	quest.700000000000005F.quest_desc: ["Space is a vacuum. You need a suit to survive."]
+	quest.700000000000005F.title: "Life Support: Armor"
+	quest.7000000000000065.quest_desc: ["Fill your suit with Oxygen."]
+	quest.7000000000000067.quest_desc: ["Your first celestial destination. A gray, barren world."]
+	quest.7000000000000067.title: "Arrival: Luna"
+	quest.700000000000006A.quest_desc: ["Beautiful blue crystals found on the moon."]
+	quest.700000000000006D.quest_desc: ["Cute but hardy creatures of the Moon."]
+	quest.700000000000006F.quest_desc: ["Create a pressurized environment to breathe without a suit."]
+	quest.700000000000006F.title: "Moon Base"
+	quest.7000000000000071.quest_desc: ["The Red Planet. Home to ancient fossils and iron."]
+	quest.7000000000000071.title: "Arrival: Mars"
+	quest.7000000000000074.quest_desc: ["A strong alloy made from Martian resources."]
+	quest.7000000000000077.quest_desc: ["Upgrade your space suit with Martian Steel."]
+	quest.7000000000000079.quest_desc: ["Revive ancient Martian flora."]
+	quest.700000000000007D.quest_desc: ["A hostile world with a thick, acidic atmosphere."]
+	quest.700000000000007D.title: "Arrival: Venus"
+	quest.7000000000000080.quest_desc: ["Collect Sulfuric Acid from the Venusian atmosphere."]
+	quest.7000000000000083.quest_desc: ["The closest planet to the Sun. Extreme heat and cold."]
+	quest.7000000000000083.title: "Arrival: Mercury"
+	quest.7000000000000086.quest_desc: ["Harness the intense solar energy of Mercury."]
+	quest.7000000000000089.quest_desc: ["Navigate between planets automatically."]
+	quest.700000000000008B.quest_desc: ["Produce fuel from organic matter."]
+	quest.700000000000008D.title: "Mercury Fauna"
+	quest.7000000000000091.title: "Venus Fauna"
+	quest.7000000000000095.title: "Martian Fauna"
+	quest.7000000000000099.quest_desc: ["Regulate temperature in extreme environments."]
+	quest.700000000000009B.quest_desc: ["Collect volcanic ash for processing."]
+	quest.700000000000009D.quest_desc: ["Tungsten is a heat-resistant metal found on Mercury."]
+	quest.70000000000000A0.quest_desc: ["Titanium is strong and light, perfect for advanced aerospace."]
+	quest.70000000000000A3.quest_desc: [
+		"Right-click a P2P tunnel with a &cBucket&r."
+		""
+		"This converts it to transmit fluids efficiently."
+	]
+	quest.70000000000000A3.title: "P2P: Fluid"
+	quest.70000000000000A5.quest_desc: [
+		"Right-click a P2P tunnel with &cRedstone Dust&r."
+		""
+		"This allows you to transmit Redstone signals across your network instantly."
+	]
+	quest.70000000000000A5.title: "P2P: Redstone"
+	quest.70000000000000A7.quest_desc: ["Stores the fuel for your rocket."]
+	quest.70000000000000A7.title: "Fuel Tank"
+	quest.70000000000000A9.quest_desc: ["Refine Titanium into plates."]
+	quest.70000000000000AB.quest_desc: ["Refine Tungsten into plates."]
+	quest.70000000000000AD.quest_desc: ["A mysterious red pearl found in the End."]
+	quest.70000000000000AF.quest_desc: ["A casing infused with quantum properties."]
+	quest.70000000000000B0.quest_desc: [
+		"Need faster crafting?"
+		""
+		"Add &bCo-Processors&r to your Crafting CPU multiblock."
+		"Each co-processor allows the CPU to perform one additional task in parallel."
+	]
+	quest.70000000000000B0.title: "Co-Processors"
+	quest.70000000000000B1.quest_desc: ["Unearth ancient secrets."]
+	quest.70000000000000B2.quest_desc: [
+		"For complex recipes, you need large crafting storage."
+		"The &b64k Crafting Storage&r ensures you never run out of bytes during a large job."
+	]
+	quest.70000000000000B2.title: "64k Crafting CPU"
+	quest.70000000000000B3.quest_desc: ["A rare eel found on the moon."]
+	quest.70000000000000B5.quest_desc: ["The tough shell of the Mars Worm."]
+	quest.70000000000000B7.quest_desc: ["Ice cold methane."]
+	quest.70000000000000B9.quest_desc: ["High voltage connection."]
+	quest.70000000000000BB.quest_desc: ["Store massive amounts of FE."]
+	quest.70000000000000BD.quest_desc: ["Separate oxygen from the air."]
+	quest.70000000000000BF.quest_desc: ["Detect oxygen levels."]
+	quest.70000000000000C1.quest_desc: [
+		"Lost your horse? The &6Copper Horn&r allows you to call your tamed horse to your location."
+		""
+		"Very useful if you get separated while exploring."
+	]
+	quest.70000000000000C1.title: "The Horseman's Call"
+	quest.70000000000000C3.quest_desc: ["Find &lCopper&r veins."]
+	quest.70000000000000C5.quest_desc: ["Find &lEmerald&r veins."]
+	quest.70000000000000C7.quest_desc: ["Find &lGold&r veins."]
+	quest.70000000000000C9.quest_desc: ["A broken suit piece."]
+	quest.70000000000000CB.quest_desc: ["The raw board for circuits."]
+	quest.70000000000000CD.quest_desc: [
+		"The &bReaper&r automates harvesting."
+		""
+		"Attach it to your horse, equip it with Hoes (or scythes if compatible), and ride through mature crops to harvest them."
+	]
+	quest.70000000000000CD.title: "Farming: The Reaper"
+	quest.70000000000000CF.quest_desc: ["Special Martian tree."]
+	quest.70000000000000D0.quest_desc: [
+		"Don't have a horse? Use a &bHand Cart&r!"
+		""
+		"This cart is pulled by the player. Grab the handle and pull your items along."
+	]
+	quest.70000000000000D0.title: "Manual Labor"
+	quest.70000000000000D1.quest_desc: ["A standard moon snail."]
+	quest.70000000000000D3.quest_desc: ["A glowing vine from Venus."]
+	quest.70000000000000D5.quest_desc: ["A strange cactus from Mercury."]
+	quest.70000000000000D7.quest_desc: ["Keep your rocket cold."]
+	quest.70000000000000D9.quest_desc: ["Control the launch."]
+	quest.70000000000000DB.quest_desc: ["Enjoy a cold treat in space."]
+	quest.70000000000000DB.title: "Space Food"
+	quest.70000000000000DD.quest_desc: ["The cone for your ice cream."]
+	quest.70000000000000DF.quest_desc: ["Chocolate flavor."]
+	quest.70000000000000E1.quest_desc: ["Massive excavation for redstone."]
+	quest.70000000000000E3.quest_desc: ["Massive excavation for lapis."]
+	quest.70000000000000E5.quest_desc: ["Basic optics."]
+	quest.70000000000000E7.quest_desc: ["Better optics."]
+	quest.70000000000000E9.quest_desc: ["Salt from the process."]
+	quest.70000000000000EB.quest_desc: ["The machine base."]
+	quest.70000000000000ED.quest_desc: ["The machine base."]
+	quest.70000000000000EF.quest_desc: ["The unfinished brain."]
+	quest.70000000000000F1.quest_desc: ["Sand from the moon."]
+	quest.70000000000000F3.quest_desc: ["Sand from Mars."]
+	quest.70000000000000F5.quest_desc: ["Glowstone found on the moon."]
+	quest.70000000000000F7.quest_desc: ["Iron found on Mars."]
+	quest.70000000000000F9.quest_desc: ["Gold found on Venus."]
+	quest.70000000000000FB.quest_desc: ["Iron found on Mercury."]
+	quest.70000000000000FD.quest_desc: ["Special sand paper from the moon."]
+	quest.70000000000000FF.quest_desc: ["A vent for your machines."]
+	quest.7000000000000101.quest_desc: ["A jet engine for atmosphere."]
+	quest.7000000000000103.quest_desc: ["Special lamp from Mars."]
+	quest.7000000000000105.quest_desc: ["Special lamp from Venus."]
+	quest.7000000000000107.quest_desc: ["Special lamp from Mercury."]
+	quest.7000000000000109.quest_desc: ["Special lamp from the Moon."]
+	quest.700000000000010B.quest_desc: ["Sheet metal from Mars."]
+	quest.700000000000010D.quest_desc: ["Blocks from Mars."]
+	quest.700000000000010F.quest_desc: ["Sheet metal from Titanium."]
+	quest.7000000000000111.quest_desc: ["Sheet metal from Tungsten."]
+	quest.7000000000000113.quest_desc: ["Diamonds from Venus."]
+	quest.7000000000000115.quest_desc: ["Diamonds from Mercury."]
+	quest.7000000000000117.quest_desc: ["Diamonds from Mars."]
+	quest.7000000000000119.quest_desc: ["Diamonds from the Moon."]
+	quest.700000000000011B.quest_desc: ["Launchpad automation."]
+	quest.700000000000011D.quest_desc: ["Find &lNetherite&r."]
+	quest.700000000000011F.quest_desc: ["Find &lQuartz&r."]
+	quest.708192A3B4C5D6E7.quest_desc: ["The &bQuantify Key&r toggles the display of the exact item count on the drawer face."]
+	quest.7081A2B3C4D5D000.quest_desc: [
+		"The pinnacle of aerial combat: The &bWarship&r."
+		""
+		"It is heavily armored and can be fitted with weaponry to rain destruction from above."
+	]
+	quest.7081A2B3C4D5D000.title: "&aAerial Superiority"
+	quest.70AC468316D9936D.quest_desc: ["&bItem Vaults&r provide massive storage capacity for items, much like Fluid Tanks do for liquids."]
+	quest.70AC468316D9936D.title: "&6Mass Storage"
+	quest.7151B4E42A56AD8F.quest_desc: [
+		"Welcome to the Build Dimension."
+		""
+		"Here you can find &bKey Chargers&r. You cannot craft these; you must find them here or in dungeons."
+	]
+	quest.7151B4E42A56AD8F.title: "&6The Lobby"
+	quest.7191B8A3F0BCBB20.quest_desc: [
+		"&3Deeper and Darker&r expands upon the Deep Dark biome, adding a new dimension called &bThe Otherside&r."
+		""
+		"To begin your journey, you must first locate an &8Ancient City&r deep underground."
+	]
+	quest.7191B8A3F0BCBB20.title: "The Ancient City"
+	quest.71A3439A2E63864D.quest_desc: [
+		"Build the portal frame."
+		""
+		"It requires &7Stone Bricks&r, &eGilded Portal Blocks&r, and one &bPortal Keyhole&r."
+		""
+		""
+	]
+	quest.71A3439A2E63864D.title: "&6The Frame"
+	quest.71FCF06A98CC66D7.quest_desc: ["The &bClipboard&r allows you to manage colony requests and see what citizens need without running to the Town Hall."]
+	quest.71FCF06A98CC66D7.title: "&aColony Management"
+	quest.721C5949493946E1.quest_desc: ["Kill the Sculk Snapper."]
+	quest.721C5949493946E1.title: "&3Snapper"
+	quest.7273747576777879.quest_desc: ["The &3Stalker&r is a dangerous entity. Watch your back."]
+	quest.7273747576777879.title: "&3Stalker Hunter"
+	quest.72910EFCAA5E2C54.quest_desc: [
+		"Welcome to the &6Create&r Era."
+		""
+		"In this chapter, you will establish your first sources of &eRotational Force&r (SU) and automate basic resources."
+	]
+	quest.72910EFCAA5E2C54.title: "The Kinetic Age"
+	quest.72C749AD9F1C634E.quest_desc: ["First citizens born or recruited."]
+	quest.72C749AD9F1C634E.title: "&aNew Arrivals"
+	quest.732D3B8792093EC6.quest_desc: [
+		"Animal skins can be processed into Leather."
+		""
+		"1. Craft a &6Skin Rack&r."
+		"2. Place the skin on it."
+		"3. Use a Wet Sponge on it."
+		"4. Apply &fSalt&r."
+		"5. Use a knife to scrape it."
+	]
+	quest.732D3B8792093EC6.title: "&6Tannery"
+	quest.733363ED6F6E171E.quest_desc: [
+		"The &bDiamond Drill&r is an upgrade for your Tunnel Digger."
+		""
+		"It allows the machine to mine harder materials, such as Obsidian, which the Iron Drill cannot break."
+	]
+	quest.733363ED6F6E171E.title: "&bDiamond Bit"
+	quest.736DE76A2C657D73.quest_desc: [
+		"The &3Stalker&r is a fearsome predator."
+		""
+		"It moves silently and hits hard. Defeating it may yield a &bSoul Crystal&r."
+	]
+	quest.736DE76A2C657D73.title: "The Stalker"
+	quest.737577797B7D7F81.quest_desc: ["The &bSculk Transmitter&r allows for wireless redstone across any distance, even dimensions."]
+	quest.737577797B7D7F81.title: "&3Wireless Redstone"
+	quest.73969FAC806B799B.quest_desc: ["Gauntlet of Guard."]
+	quest.73969FAC806B799B.title: "&5Gauntlet"
+	quest.742EA21C6DB25291.quest_desc: ["&lLocation:&r Found in a hidden chest inside a &9Jungle Pyramid&r."]
+	quest.742EA21C6DB25291.quest_subtitle: "Eye 4 of 12 (Jungle)"
+	quest.742EA21C6DB25291.title: "Rogue Eye"
+	quest.743D7D9204915A13.quest_desc: ["Bury a fallen citizen."]
+	quest.743D7D9204915A13.title: "&aA Sad Day"
+	quest.74488BE7161D99BF.quest_desc: ["The &5Deeplings&r inhabit the Sunken City."]
+	quest.74488BE7161D99BF.title: "&9Deepling Slayer"
+	quest.74615FBE8C93952D.quest_subtitle: "This can only be found in chests or barrels!"
+	quest.7478B4950B93FB7F.quest_desc: ["The &bSteam Whistle&r is a decorative block that makes noise when powered by steam."]
+	quest.7478B4950B93FB7F.title: "&6Toot Toot"
+	quest.74C114D0C0D4D374.quest_desc: ["The &bHealer&r cures sick citizens."]
+	quest.74C114D0C0D4D374.title: "&aThe Hospital"
+	quest.74C52604CDA33587.quest_desc: [
+		"The &bMechanical Crafter&r is a multiblock structure that handles complex recipes."
+		""
+		"While it *can* be used to automate standard recipes, its primary purpose is to handle recipes larger than the standard 3x3 grid."
+		""
+		"Connect multiple crafters to form the required shape, ensure their arrows point to the output, and power them."
+	]
+	quest.74C52604CDA33587.title: "&6Mechanical Crafting"
+	quest.74F234F4A709DF7C.quest_desc: ["Compresses items like ingots into blocks automatically."]
+	quest.74FC0DDDB91DB172.quest_desc: [
+		"The &bInterface&r allows items to enter or leave the ME network from external automation."
+		""
+		"It acts like a chest that represents the network's contents."
+	]
+	quest.74FC0DDDB91DB172.quest_subtitle: "Network I/O"
+	quest.74FC0DDDB91DB172.title: "Interfaces"
+	quest.75017008BD08399F.quest_desc: [
+		"&3Deeper and Darker&r adds the &bOtherside&r dimension."
+		""
+		"To begin, find an Ancient City and kill a Warden."
+	]
+	quest.75017008BD08399F.title: "&3The Warden's Heart"
+	quest.754DE5EBCCBED146.quest_desc: [
+		"Once drained, Shift+Right Click to take the carcass down."
+		""
+		"Place it on a &6Butcher's Table&r. Use your Cleaver on the table repeatedly to chop the carcass into usable cuts of meat, bones, and leather."
+	]
+	quest.754DE5EBCCBED146.title: "&cButchering"
+	quest.75599A9909C7A8C8.quest_desc: ["Ensure your citizens have food. If they starve, they work slower and may die."]
+	quest.75599A9909C7A8C8.title: "&aFeeding the Populace"
+	quest.759C203CFB6CB8F9.quest_desc: ["Pulls items from a distance."]
+	quest.7696E2EF8160CAE0.quest_desc: ["Warden Helmet."]
+	quest.7696E2EF8160CAE0.title: "&3Warden Helm"
+	quest.76C1B8BC5C9B7624.quest_desc: ["The &eEncased Fan&r generates air streams for washing, smoking, or blasting."]
+	quest.76E7991459AA12A5.quest_desc: ["The &6Kobolediator&r is a champion of the sands."]
+	quest.7746A1DC8A15F8B3.quest_desc: ["Kill the &8Harbinger&r in the Ancient Factory."]
+	quest.7746A1DC8A15F8B3.title: "&8The Harbinger"
+	quest.7763AD9EAC0B8D6A.quest_desc: ["The &6Deepling Angler&r lures prey in the deep."]
+	quest.77889900AABBCCDD.quest_desc: [
+		"The Otherside is inhabited by dangerous creatures."
+		""
+		"&3Sculk Snapper&r: A biting jaw that hides in the ground."
+		"&3Shattered&r: A lost soul that wanders the dark."
+		"&3Shriek Worm&r: A burrowing worm that reacts to sound."
+	]
+	quest.77889900AABBCCDD.title: "Hostile Fauna"
+	quest.778F97226D621CF1.quest_desc: ["Craft the &aPortal Crown&r to finish your portal aesthetic."]
+	quest.77BF0925B658B31C.quest_desc: ["The &3Deepling Priest&r heals its allies."]
+	quest.77C9EE701F72586D.quest_desc: [
+		"&bPortable Cells&r act like batteries but for items or fluids."
+		""
+		"They have internal storage and need to be charged in a Charger. Great for moving large quantities of items manually between bases."
+	]
+	quest.77C9EE701F72586D.title: "Portable Storage"
+	quest.78311531069807DE.quest_desc: [
+		"Channels are the routing system of AE2. "
+		""
+		"Each device on the network uses one channel. A standard cable carries 8 channels. A dense cable connected to a controller carries 32."
+		""
+		"Proper channel management using P2P tunnels and dense cables is essential for a large base."
+	]
+	quest.78311531069807DE.title: "Understanding Channels"
+	quest.7835605E2E16B6C0.quest_desc: [
+		"&bResonarium&r is the rare ore of the Otherside."
+		""
+		"Found deep underground, it is used to craft high-tier equipment."
+	]
+	quest.7835605E2E16B6C0.title: "Resonarium"
+	quest.7849541AD31C1E66.quest_desc: ["Kill the Stalker."]
+	quest.7849541AD31C1E66.title: "&3Stalker"
+	quest.7870800C28A7E199.quest_desc: ["The &bChickenherder&r collects eggs and breeds chickens."]
+	quest.7870800C28A7E199.title: "&aThe Chickenherder"
+	quest.7914F1F9D9E4E42A.quest_desc: ["&lLocation:&r Found in the chests of a &9Nether Fortress&r."]
+	quest.7914F1F9D9E4E42A.quest_subtitle: "Eye 5 of 12 (Nether)"
+	quest.7914F1F9D9E4E42A.title: "Nether Eye"
+	quest.794A92EFED534A3D.quest_desc: [
+		"The &bCopperfin&r is a mechanical submarine."
+		""
+		"It allows for fast underwater travel. It does not rust or degrade, making it a reliable vehicle for ocean exploration."
+	]
+	quest.794A92EFED534A3D.title: "&6The Copperfin"
+	quest.79ECC9CA4784638E.quest_desc: ["Amethyst Crab."]
+	quest.79ECC9CA4784638E.title: "&dAmethyst Crab"
+	quest.7A34496BF92607CE.quest_desc: ["Harness the intense solar energy of Mercury."]
+	quest.7A4C3D5B79416997.quest_desc: [
+		"Build huge multi-block chests."
+		"Requires a &lColossal Chest Core&r and &lChest Walls&r."
+		"The structure must be a hollow cube."
+	]
+	quest.7A4C3D5B79416997.title: "Colossal Chests"
+	quest.7A79C31621659E92.quest_desc: ["The &bShroud Key&r hides the item icon on the drawer face. Good for reducing lag or for aesthetic walls."]
+	quest.7AF82CBB495FAA6E.quest_desc: ["The base upgrade for storage blocks."]
+	quest.7B372B6C9B3D9976.quest_desc: [
+		"&3Deeper and Darker&r expands upon the Deep Dark biome, adding a new dimension called &bThe Otherside&r."
+		""
+		"To begin your journey, you must first locate an &8Ancient City&r deep underground."
+	]
+	quest.7B372B6C9B3D9976.title: "The Ancient City"
+	quest.7B5E2CD676A1A1C4.quest_desc: ["The &bBaker&r turns wheat into bread and bakes cakes."]
+	quest.7B5E2CD676A1A1C4.title: "&aThe Bakery"
+	quest.7B62FB9233C352E1.quest_desc: [
+		"The &bKey Charger&r is essential."
+		""
+		"Place a Blank Portal Key on top of it to activate it. The key will now lead to a randomized dungeon."
+	]
+	quest.7B62FB9233C352E1.title: "&6Charging Keys"
+	quest.7B7D1F0CB326B28F.quest_desc: [
+		"The &bIO Port&r is used to move data between cells rapidly."
+		""
+		"If you want to upgrade a 1k cell to a 4k cell, or empty a drive to reformat it, put the source cell on the left and empty cells on the right to transfer the contents."
+	]
+	quest.7B7D1F0CB326B28F.quest_subtitle: "Data Transfer"
+	quest.7B7D1F0CB326B28F.title: "IO Port"
+	quest.7B8D957E01F99250.quest_desc: ["Craft Resonarium Armor."]
+	quest.7B8D957E01F99250.title: "&3Resonarium Armor"
+	quest.7B9A847CCCEA7FAA.quest_desc: ["Take to the skies with the &eEconomy Plane&r."]
+	quest.7B9A847CCCEA7FAA.title: "Aviation"
+	quest.7BD8E2DF0925B7CA.quest_desc: [
+		"&6Interior Design&r is about more than just a bed and a chest. "
+		""
+		"Macaw's Furnitures provides &eBookshelves&r that actually display books, &6Desks&r, and &bWardrobes&r. Combine these with &6Lighting&r options like &eChandeliers&r and &cTiki Torches&r for a perfect atmosphere."
+	]
+	quest.7BD8E2DF0925B7CA.title: "&dAtmospheric Interiors"
+	quest.7C28F0FA2A5EA2B2.quest_desc: [
+		"Kill a Warden."
+		"It may drop the &bHeart of the Deep&r."
+	]
+	quest.7C28F0FA2A5EA2B2.title: "&3Heart of the Deep"
+	quest.7C7B6B414E7CA9D4.quest_desc: ["&lLocation:&r Found in the main treasure chest inside a &9Desert Pyramid&r."]
+	quest.7C7B6B414E7CA9D4.quest_subtitle: "Eye 1 of 12 (Desert)"
+	quest.7C7B6B414E7CA9D4.title: "Old Eye"
+	quest.7C7D7E7F80818283.quest_desc: [
+		"Locate the &8Soul Blacksmith&r in the Nether."
+		"The &8Netherite Monstrosity&r is a hulking beast of lava and netherite."
+	]
+	quest.7C7D7E7F80818283.title: "&8Kill the Monstrosity"
+	quest.7CE1C76E647907BC.quest_desc: ["The &eLarge Water Wheel&r generates more stress capacity."]
+	quest.7EFBAF3E281D2EBE.quest_desc: [
+		"The &bStorage Bus&r allows you to see and use items in external inventories (like chests or drawers) as if they were in the ME system."
+		""
+		"Great for bulk storage."
+	]
+	quest.7EFBAF3E281D2EBE.quest_subtitle: "External Storage Interface"
+	quest.7EFBAF3E281D2EBE.title: "Storage Bus"
+	quest.7F24FF1AB76F4718.quest_desc: [
+		"&4Cataclysm&r adds the hardest bosses in the game."
+		"Prepare for hell."
+	]
+	quest.7F5D1106F8AFEBD7.quest_desc: ["Tungsten is a heat-resistant metal found on Mercury."]
+	quest.7F965B5109ECAA3C.quest_desc: ["Collect the Music Discs dropped by the bosses."]
+	quest.7F965B5109ECAA3C.title: "&dCataclysmic Tunes"
+	quest.7FF74E3DCC23C807.quest_desc: ["To upgrade a drawer, you first need an &bUpgrade Template&r."]
+	quest.7FF74E3DCC23C807.title: "Upgrades"
+	task.0000000000000801.title: "&4The Cataclysm Begins"
+	task.000000008002000A.title: "Any Drill Head"
+	task.00C3C5C7C9CBCDC1.title: "Cataclysmic Warning"
+	task.03A5B4B150E03A2F.title: "Planks"
+	task.05BEFE886CF3C8B2.title: "Dimensional Challenger"
+	task.06388948EEECDE07.title: "Recycling Keys"
+	task.086B854529510582.title: "Dodge the Fireball"
+	task.0899C3241BE8A442.title: "Any Animal Cart"
+	task.08DA73B1AC17E5F5.title: "Crafting Storage"
+	task.0A1B2C3D4E5F6789.title: "Dimensional Challenger"
+	task.0AED2789CF58BE21.title: "Cataclysmic Challenge"
+	task.0AFAAFAAFA000003.title: "The Engineer's Journey"
+	task.0AFAAFAAFA000046.title: "Blueprint: Components"
+	task.0AFAAFAAFA000056.title: "Blueprint: Molds"
+	task.0D31FB2D2AF9C5F2.title: "Place the Town Hall Block"
+	task.1000000000000002.title: "Advanced Logistics"
+	task.1000000000000012.title: "Log Procurement"
+	task.1000000000000015.title: "Planks"
+	task.1000000000000018.title: "Stone Gathering"
+	task.1000000000000061.title: "Enter the Nether"
+	task.1000000000000079.title: "Discover the Stronghold"
+	task.1000000000010003.title: "Any #c:player_workstations/crafting_tables"
+	task.1000000000010008.title: "Tilling the Soil"
+	task.1000000000010040.title: "Locate a Settlement"
+	task.1000000000010049.title: "Observe a Chicken"
+	task.1000000000010052.title: "Observe a Sheep"
+	task.1000000000010055.title: "Rest"
+	task.100000AF00000002.title: "The Master Chef"
+	task.1076BC82EECB73F5.title: "Quartz Cutting Knife"
+	task.1234567890ABCDEF.title: "Pattern Provider"
+	task.14DEFFB80CC96BC1.title: "Any Smart Cable"
+	task.1650A0BEF32C29C5.title: "Cataclysmic Warning"
+	task.1A2B3C4D5E6F7002.title: "Aviation"
+	task.23D186249A999B8C.title: "Quartz Cutting Knife"
+	task.2C5A54BB5DB514CC.title: "Any Roof Block"
+	task.2D19A4EF2E4B7A55.title: "Memory Card"
+	task.2D386EFC23C45581.title: "Crafting Monitor"
+	task.2D8D063E179605CF.title: "Any #sophisticatedstorage:base_tier_wooden_storage"
+	task.2D9D5EEFE92A13CD.title: "ME Portable Cell"
+	task.2F38FBA010E5659A.title: "The First Morning"
+	task.3000000000000002.title: "I will be nice"
+	task.338A6DA0D711B7DC.title: "Pattern Provider"
+	task.382E8129CA13F3A4.title: "Ok"
+	task.38E290AC5E011888.title: "Any Smart Dense Cable"
+	task.4000000000000002.title: "Mic Check"
+	task.40A7CC56DACC2623.title: "Any Glass Cable"
+	task.4A11EC407279C124.title: "Powering the Industry"
+	task.4AAD2F655B7107F6.title: "Got it"
+	task.4AD0A0DE10A96EBC.title: "Any Plow"
+	task.4D25BF3C4F05025D.title: "Collect all Presses"
+	task.4D9134BDD9B3D677.title: "Resonating Power"
+	task.4E0C5E3A98293C08.title: "Spatial Cell Component"
+	task.5000000000000002.title: "Understood"
+	task.5234567890123456.title: "Any Seed Drill"
+	task.52521FCD58B2FEF0.title: "ME Item Storage Cell"
+	task.52E618D45F07CF01.title: "I understand"
+	task.56601D1093A852EB.title: "Any Window Block"
+	task.5DB0D477F04CEA5E.title: "Understand the Goal"
+	task.5E60C9F71CAB9CE7.title: "Any #minecraft:doors"
+	task.5EC8D891031E34EF.title: "Crafting Co-Processor"
+	task.6000000000000002.title: "I promise to minimize lag"
+	task.61D179BD4171F5D6.title: "Grand Master Architect"
+	task.61D93B13D496547D.title: "Any Fluid Storage Cell"
+	task.64EAD3DE84E94F02.title: "Any Covered Cable"
+	task.65C439FD14C5EEB9.title: "ME Portable Cell"
+	task.6691176371563341.title: "Color Applicator"
+	task.69AD2578292B28FD.title: "Power Generation"
+	task.69C59B97E310195D.title: "Claim Colony Territory"
+	task.6ADEE9A929813117.title: "Stone Gathering"
+	task.7000000000000002.title: "The Industrial Revolution 2.0"
+	task.700000000000000B.title: "Iron Drill Head"
+	task.7000000000000017.title: "Extract Oil"
+	task.700000000000001A.title: "Excavate Uranium"
+	task.70000000000000CF.title: "Any Reaper"
+	task.70000000000000D2.title: "Any Hand Cart"
+	task.7241918F270CA402.title: "Interface"
+	task.75924053D6F5B242.title: "Any Spatial Storage Cell"
+	task.7732B5DC114EB3F3.title: "Hyper Enchanting"
+	task.7890123456789012.title: "Any Supply Cart"
+	task.78FBC62D3E36207A.title: "Log Procurement"
+	task.7BE92C777F0CDFCE.title: "Read the Introduction"
+	task.7C6E7D3E47882870.title: "Storage Solutions"
+	task.7E3A1C9D5F2B4862.title: "Begin the Blueprint"
+	task.7FC3DAA1BD5016A0.title: "Any Covered Dense Cable"
+}

@@ -1,0 +1,130 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "welcome"
+	group: ""
+	icon: {
+		id: "minecraft:book"
+	}
+	id: "7B3778D0B2A4E6C9"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "minecraft:grass_block"
+			}
+			id: "57C83419A8C1E370"
+			rewards: [{
+				id: "062017B04386FF01"
+				type: "xp"
+				xp: 10
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "52E618D45F07CF01"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			icon: {
+				id: "minecraft:spyglass"
+			}
+			id: "19C551CEA22B143E"
+			rewards: [{
+				id: "054A7E199C80B9BC"
+				type: "xp"
+				xp: 5
+			}]
+			tasks: [{
+				id: "4AAD2F655B7107F6"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			icon: {
+				id: "minecraft:player_head"
+			}
+			id: "3000000000000000"
+			rewards: [{
+				count: 5
+				id: "3000000000000001"
+				item: {
+					count: 1
+					id: "minecraft:bread"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3000000000000002"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3000000000000000"]
+			icon: {
+				id: "minecraft:jukebox"
+			}
+			id: "4000000000000000"
+			rewards: [{
+				id: "4000000000000001"
+				type: "xp"
+				xp: 5
+			}]
+			tasks: [{
+				id: "4000000000000002"
+				type: "checkmark"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3000000000000000"]
+			icon: {
+				id: "minecraft:skeleton_skull"
+			}
+			id: "5000000000000000"
+			rewards: [{
+				id: "5000000000000001"
+				type: "xp"
+				xp: 5
+			}]
+			tasks: [{
+				id: "5000000000000002"
+				type: "checkmark"
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			icon: {
+				id: "minecraft:comparator"
+			}
+			id: "6000000000000000"
+			rewards: [{
+				count: 16
+				id: "6000000000000001"
+				item: {
+					count: 1
+					id: "minecraft:cookie"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6000000000000002"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+}

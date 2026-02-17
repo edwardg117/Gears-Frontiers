@@ -1,0 +1,280 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "rsquare"
+	filename: "immersive_aircraft"
+	group: "36EEB16071C6C897"
+	icon: {
+		id: "immersive_aircraft:warship"
+	}
+	id: "5E9B231D9A7C4F1A"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1A2B3C4D5E6F7000"
+			rewards: [{
+				id: "1A2B3C4D5E6F7001"
+				type: "xp"
+				xp: 10
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "1A2B3C4D5E6F7002"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A2B3C4D5E6F7000"]
+			id: "2B3C4D5E6F708000"
+			rewards: [{
+				count: 4
+				id: "2B3C4D5E6F708001"
+				item: {
+					count: 1
+					id: "immersive_aircraft:sturdy_pipes"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "2B3C4D5E6F708002"
+					item: { count: 1, id: "immersive_aircraft:engine" }
+					type: "item"
+				}
+				{
+					id: "2B3C4D5E6F708003"
+					item: { count: 1, id: "immersive_aircraft:propeller" }
+					type: "item"
+				}
+				{
+					id: "2B3C4D5E6F708004"
+					item: { count: 1, id: "immersive_aircraft:hull" }
+					type: "item"
+				}
+				{
+					id: "2B3C4D5E6F708005"
+					item: { count: 1, id: "immersive_aircraft:sail" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2B3C4D5E6F708000"]
+			id: "3C4D5E6F70819000"
+			rewards: [{
+				id: "3C4D5E6F70819001"
+				item: {
+					count: 1
+					id: "immersive_aircraft:telescope"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "3C4D5E6F70819002"
+				item: { count: 1, id: "immersive_aircraft:biplane" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2B3C4D5E6F708000"]
+			id: "4D5E6F7081A2A000"
+			rewards: [{
+				id: "4D5E6F7081A2A001"
+				item: {
+					count: 1
+					id: "immersive_aircraft:telescope"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4D5E6F7081A2A002"
+				item: { count: 1, id: "immersive_aircraft:airship" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2B3C4D5E6F708000"]
+			id: "5E6F7081A2B3B000"
+			rewards: [{
+				id: "5E6F7081A2B3B001"
+				item: {
+					count: 1
+					id: "immersive_aircraft:improved_landing_gear"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5E6F7081A2B3B002"
+				item: { count: 1, id: "immersive_aircraft:gyrodyne" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4D5E6F7081A2A000"]
+			id: "6F7081A2B3C4C000"
+			rewards: [{
+				id: "6F7081A2B3C4C001"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "6F7081A2B3C4C002"
+				item: { count: 1, id: "immersive_aircraft:cargo_airship" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["3C4D5E6F70819000"]
+			id: "7081A2B3C4D5D000"
+			rewards: [{
+				count: 2
+				id: "7081A2B3C4D5D001"
+				item: {
+					count: 1
+					id: "immersive_aircraft:hull_reinforcement"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "7081A2B3C4D5D002"
+				item: { count: 1, id: "immersive_aircraft:warship" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["7081A2B3C4D5D000"]
+			id: "247420A406880567"
+			rewards: [{
+				count: 16
+				id: "0A6CEEF316D5286A"
+				item: {
+					count: 1
+					id: "minecraft:tnt"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "45B81805F01CED25"
+					item: { count: 1, id: "immersive_aircraft:rotary_cannon" }
+					type: "item"
+				}
+				{
+					id: "0833B2D52316236A"
+					item: { count: 1, id: "immersive_aircraft:bomb_bay" }
+					type: "item"
+				}
+				{
+					id: "04329D778A0E4326"
+					item: { count: 1, id: "immersive_aircraft:heavy_crossbow" }
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["2B3C4D5E6F708000"]
+			id: "29FFE2FE9B6BF06B"
+			rewards: [{
+				id: "2F1541FAEF753DAC"
+				item: {
+					count: 1
+					id: "immersive_aircraft:industrial_gears"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "38DABBC9EA052535"
+					item: { count: 1, id: "immersive_aircraft:nether_engine" }
+					type: "item"
+				}
+				{
+					id: "3CF97418CF0AD883"
+					item: { count: 1, id: "immersive_aircraft:eco_engine" }
+					type: "item"
+				}
+				{
+					id: "767EB669825A9E2A"
+					item: { count: 1, id: "immersive_aircraft:steel_boiler" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["5E6F7081A2B3B000"]
+			id: "033B79759C1B42AA"
+			rewards: [{
+				id: "687AB6333FDD844E"
+				item: {
+					count: 1
+					id: "immersive_aircraft:enhanced_propeller"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "21E9BA7C3E189B91"
+				item: { count: 1, id: "immersive_aircraft:quadrocopter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["2B3C4D5E6F708000"]
+			id: "4FA68572C444AE03"
+			rewards: [{
+				id: "42A38686A8AED744"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [
+				{
+					id: "756A630582A8C9B4"
+					item: { count: 1, id: "immersive_aircraft:gyroscope" }
+					type: "item"
+				}
+				{
+					id: "758177BF30CB24E5"
+					item: { count: 1, id: "immersive_aircraft:hull_reinforcement" }
+					type: "item"
+				}
+				{
+					id: "549CD5B0CA02820A"
+					item: { count: 1, id: "immersive_aircraft:improved_landing_gear" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			id: "34493AB364E29AA4"
+			tasks: [{
+				id: "4DA5ECA39CA2EFE6"
+				item: { count: 1, id: "immersive_aircraft:bamboo_hopper" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+	]
+}

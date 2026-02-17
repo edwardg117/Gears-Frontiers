@@ -1,0 +1,200 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "create_logistics"
+	group: "2DC686AF09EDD0A8"
+	icon: {
+		id: "createmetalogistics:stock_manifest_compiler"
+	}
+	id: "4D6E8F12A09B3C4D"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1000000000000000"
+			rewards: [{
+				id: "1000000000000001"
+				type: "xp"
+				xp: 10
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "1000000000000002"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			id: "1000000000000003"
+			rewards: [{
+				count: 4
+				id: "1000000000000004"
+				item: {
+					count: 1
+					id: "createadditionallogistics:flexible_shaft"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000005"
+				item: { count: 1, id: "createadditionallogistics:flexible_shaft" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000003"]
+			id: "1000000000000006"
+			rewards: [{
+				count: 8
+				id: "1000000000000007"
+				item: {
+					count: 1
+					id: "createadditionallogistics:lazy_shaft"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "1000000000000008"
+					item: { count: 1, id: "createadditionallogistics:lazy_shaft" }
+					type: "item"
+				}
+				{
+					id: "1000000000000009"
+					item: { count: 1, id: "createadditionallogistics:lazy_cogwheel" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			id: "100000000000000A"
+			rewards: [{
+				count: 8
+				id: "100000000000000B"
+				item: {
+					count: 1
+					id: "create_hypertube:hypertube"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "100000000000000C"
+				item: { count: 1, id: "create_hypertube:hypertube" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000000A"]
+			id: "100000000000000D"
+			rewards: [{
+				id: "100000000000000E"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "100000000000000F"
+				item: { count: 1, id: "create_hypertube:hypertube_accelerator" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			id: "1000000000000010"
+			rewards: [{
+				id: "1000000000000011"
+				item: {
+					count: 1
+					id: "createmetalogistics:stock_manifest_reader"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000012"
+				item: { count: 1, id: "createmetalogistics:stock_manifest_compiler" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			id: "1000000000000013"
+			rewards: [{
+				id: "1000000000000014"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "1000000000000015"
+				item: { count: 1, id: "createmetalogistics:filter_requester" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1000000000000010"]
+			id: "1000000000000016"
+			rewards: [{
+				count: 8
+				id: "1000000000000017"
+				item: {
+					count: 1
+					id: "createmetalogistics:ticket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "1000000000000018"
+				item: { count: 1, id: "createmetalogistics:ticket" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["1000000000000000"]
+			id: "1000000000000019"
+			rewards: [{
+				id: "100000000000001A"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "100000000000001B"
+				item: { count: 1, id: "create_factory_logistics:jar_packager" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000019"]
+			id: "100000000000001C"
+			rewards: [{
+				id: "100000000000001D"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "100000000000001E"
+				item: { count: 1, id: "create_factory_logistics:network_link" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+}

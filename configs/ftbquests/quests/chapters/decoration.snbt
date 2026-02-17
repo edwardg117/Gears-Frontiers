@@ -1,0 +1,259 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "decoration"
+	group: "27DF0060B7E4C476"
+	icon: {
+		id: "mcwstairs:quartz_balcony"
+	}
+	id: "7A2B4C6E8F0D1A32"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "6A2F1E0B4D9C7B31"
+			rewards: [{
+				id: "4B2657FD1E6A184C"
+				item: {
+					count: 1
+					id: "minecraft:painting"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "7E3A1C9D5F2B4862"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6A2F1E0B4D9C7B31"]
+			id: "0893281244B7CFA7"
+			rewards: [{
+				count: 16
+				id: "2251D3AFB8E78F5B"
+				item: {
+					count: 1
+					id: "minecraft:oak_planks"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "4F83A5D515E05D95"
+				item: { count: 1, id: "chipped:carpenters_table" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			id: "6FD6079C84025112"
+			rewards: [{
+				count: 16
+				id: "23C0DB114C4A3852"
+				item: {
+					count: 1
+					id: "minecraft:stone_bricks"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5AFCF953485860FF"
+				item: { count: 1, id: "chipped:mason_table" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 2.0d
+		}
+		{
+			id: "1F66912B1C7BD4A1"
+			rewards: [{
+				count: 16
+				id: "6532534EE63E0CD8"
+				item: {
+					count: 1
+					id: "minecraft:glass"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5A597FC5CBC5E64B"
+				item: { count: 1, id: "chipped:glassblower" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 2.0d
+		}
+		{
+			id: "23E831D64F47162A"
+			rewards: [{
+				count: 8
+				id: "5E6FDB7DD40B0F65"
+				item: {
+					count: 1
+					id: "minecraft:flowering_azalea_leaves"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2E84D820719929E7"
+				item: { count: 1, id: "chipped:botanist_workbench" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 3.5d
+		}
+		{
+			id: "65ECC5E000658FB3"
+			rewards: [{
+				count: 4
+				id: "4F630A91FDDBA0B7"
+				item: {
+					count: 1
+					id: "minecraft:white_wool"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "48289ACA7AB67859"
+				item: { count: 1, id: "chipped:loom_table" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6A2F1E0B4D9C7B31"]
+			id: "0C11EDEC44D240C1"
+			rewards: [{
+				id: "08532804DF460A84"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [
+				{
+					id: "43627198C8306794"
+					item: { count: 1, id: "mcwroofs:roofing_hammer" }
+					type: "item"
+				}
+				{
+					id: "48460279B1D80D51"
+					item: { count: 1, id: "mcwbridges:pliers" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			id: "1A1088B822793120"
+			rewards: [{
+				count: 32
+				id: "48D67F099ED2C893"
+				item: {
+					count: 1
+					id: "mcwroofs:oak_planks_attic_roof"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2C5A54BB5DB514CC"
+				item: { count: 1, id: "mcwroofs:base_roof" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			id: "07171B589E7DF3D1"
+			rewards: [{
+				id: "5CE7CA8AA210B80D"
+				item: {
+					count: 1
+					id: "mcwbridges:bridge_lantern"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6AE147BBBF6C9540"
+				item: { count: 1, id: "mcwbridges:oak_log_bridge_middle" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			id: "66B96CF20790222F"
+			rewards: [{
+				count: 4
+				id: "6149C49AA81218DA"
+				item: {
+					count: 1
+					id: "mcwwindows:oak_shutter"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "56601D1093A852EB"
+				item: { count: 1, id: "mcwwindows:oak_window" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			id: "7BD8E2DF0925B7CA"
+			rewards: [{
+				id: "645E8784E6326026"
+				item: {
+					count: 1
+					id: "mcwlights:iron_chandelier"
+				}
+				type: "item"
+			}]
+			tasks: [
+				{
+					id: "41400229A0B11369"
+					item: { count: 1, id: "mcwfurnitures:oak_desk" }
+					type: "item"
+				}
+				{
+					id: "4DF5D05CFA33832B"
+					item: { count: 1, id: "mcwlights:classic_street_lamp" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			id: "28374A3978F99667"
+			rewards: [
+				{
+					id: "60ECD885CD50F9B3"
+					item: {
+						count: 1
+						id: "chipped:chisel"
+					}
+					type: "item"
+				}
+				{
+					id: "36FF80BEA0FF477E"
+					type: "xp_levels"
+					xp_levels: 15
+				}
+			]
+			shape: "octagon"
+			size: 2.5d
+			tasks: [{
+				id: "61D179BD4171F5D6"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 6.25d
+		}
+	]
+}
