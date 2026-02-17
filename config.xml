@@ -25,10 +25,10 @@
 		</Module>
 		<Module name="KubeJS Files" id="kubejs_files" depends="kubejs" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
-			<Size>17665</Size>
+			<Size>17675</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>28a6b04e9e09fbd85ef73cafc5111ea9</MD5>
+			<MD5>b556335288d85d52d2790e12c1c34474</MD5>
 		</Module>
 	</Server>
 </ServerPack>
