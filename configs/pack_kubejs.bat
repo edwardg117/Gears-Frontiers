@@ -10,10 +10,9 @@ if exist "kubejs.zip" (
     del /f "kubejs.zip"
 )
 
-REM Compress kubejs folder into kubejs.zip
-REM Using PowerShell to create zip with the folder as root (not just contents)
+REM Compress kubejs folder into kubejs.zip using 7-Zip
 echo Compressing kubejs folder into kubejs.zip...
-powershell -NoProfile -Command "Compress-Archive -Path 'kubejs' -DestinationPath 'kubejs.zip' -Force"
+"C:\Program Files\7-Zip\7z.exe" a -tzip -mtc=off kubejs.zip kubejs
 
 REM Check if compression was successful
 if not exist "kubejs.zip" (
