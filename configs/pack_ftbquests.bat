@@ -10,9 +10,13 @@ if exist "ftbquests.zip" (
     del /f "ftbquests.zip"
 )
 
-REM Compress ftbquests folder into ftbquests.zip using 7-Zip
-echo Compressing ftbquests folder into ftbquests.zip...
+REM Compress ftbquests folder using 7-Zip
+echo Compressing ftbquests folder...
 "C:\Program Files\7-Zip\7z.exe" a -tzip -mtc=off ftbquests.zip ftbquests
+
+REM Rename folder structure inside zip to add config parent folder
+echo Restructuring archive to add config folder...
+"C:\Program Files\7-Zip\7z.exe" rn ftbquests.zip ftbquests config\ftbquests
 
 REM Check if compression was successful
 if not exist "ftbquests.zip" (

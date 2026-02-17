@@ -32,11 +32,10 @@
 		</Module>
 		<Module name="FTB Quests Files" id="ftbquests_files" depends="ftbquests" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/ftbquests.zip</URL>
-			<ModPath>config</ModPath>
-			<Size>103194</Size>
+			<Size>103614</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>16465c6d1256d30a52320fc6cbd7ed9d</MD5>
+			<MD5>f66a22cd7e90677b5a0e1293c222a504</MD5>
 		</Module>
 	</Server>
 </ServerPack>
