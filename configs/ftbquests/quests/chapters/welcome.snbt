@@ -29,7 +29,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1000000000000000"]
 			icon: {
 				id: "minecraft:spyglass"
 			}
@@ -47,7 +46,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["1000000000000000"]
 			icon: {
 				id: "minecraft:player_head"
 			}
@@ -105,7 +103,6 @@
 			y: 2.5d
 		}
 		{
-			dependencies: ["1000000000000000"]
 			icon: {
 				id: "minecraft:comparator"
 			}

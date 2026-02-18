@@ -25,17 +25,17 @@
 		</Module>
 		<Module name="KubeJS Files" id="kubejs_files" depends="kubejs" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/kubejs.zip</URL>
-			<Size>17675</Size>
+			<Size>17814</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>b556335288d85d52d2790e12c1c34474</MD5>
+			<MD5>034c600aacfb2c7e98b77897f5222812</MD5>
 		</Module>
 		<Module name="FTB Quests Files" id="ftbquests_files" depends="ftb_quests" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/ftbquests.zip</URL>
-			<Size>103614</Size>
+			<Size>108687</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>f66a22cd7e90677b5a0e1293c222a504</MD5>
+			<MD5>8b1cff65a1b2fc80e78de997a7a0f9e0</MD5>
 		</Module>
 	</Server>
 </ServerPack>

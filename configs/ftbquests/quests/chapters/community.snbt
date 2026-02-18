@@ -1,0 +1,74 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "community"
+	group: "09F6787236486872"
+	id: "7B0281E798689E79"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			disable_toast: true
+			icon: {
+				components: {
+					"ftbquests:icon": "voicechat:icons/invite_button"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0B82E3B5B20876D4"
+			shape: "gear"
+			size: 3.0d
+			tasks: [{
+				id: "64932DEAA6724BEE"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			can_repeat: true
+			id: "12297AC5E023A44B"
+			repeat_cooldown: 86400
+			rewards: [{
+				id: "2B772F5C495CCD7D"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				icon: {
+					id: "minecraft:name_tag"
+				}
+				id: "122738E71DCAAB8D"
+				type: "custom"
+			}]
+			x: -4.5d
+			y: -0.5d
+		}
+		{
+			id: "190A57827A174E4B"
+			rewards: [{
+				id: "112C47830F25977D"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "create:table_cloth_shop"
+				criterion: ""
+				disable_toast: true
+				icon: {
+					id: "create:red_table_cloth"
+				}
+				id: "19C31D3EA6207638"
+				type: "advancement"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+	]
+}

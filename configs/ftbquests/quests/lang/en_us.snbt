@@ -9,6 +9,7 @@
 	chapter.2E8A4C9B1F5D3077.title: "Deeper and Darker"
 	chapter.320A26FC41362EE6.title: "End Remastered: The Dimensional Eyes"
 	chapter.3892019384910283.title: "Efficient Energy"
+	chapter.3EB7CE30DC66F493.title: "Transportation"
 	chapter.41D954C3F57B4BF1.title: "Storage Solutions"
 	chapter.4D6E8F12A09B3C4D.title: "Create: Logistics"
 	chapter.50860A3C903491E2.title: "Equestrian Engineering"
@@ -24,7 +25,10 @@
 	chapter.7235028456012345.title: "Immersive Engineering"
 	chapter.7235028456012399.title: "Dimensions and Dangers"
 	chapter.7A2B4C6E8F0D1A32.title: "Architectural Wonders"
+	chapter.7B0281E798689E79.title: "Community"
 	chapter.7B3778D0B2A4E6C9.title: "Welcome!"
+	chapter.7BE927D18CBD14A7.title: "Challenges"
+	chapter_group.09F6787236486872.title: "&lMisc&r"
 	chapter_group.27DF0060B7E4C476.title: "&a&lEARLY GAME"
 	chapter_group.2DC686AF09EDD0A8.title: "&b&lMID GAME"
 	chapter_group.36EEB16071C6C897.title: "&c&lLATE GAME"
@@ -643,6 +647,9 @@
 		"Craft a &fRag&r to clean up blood puddles."
 	]
 	quest.0B5E5F9BEC364528.title: "&fCleanup"
+	quest.0B82E3B5B20876D4.quest_desc: ["Games are better with friends, so why not hang out together! This section features community oriented quests to encorage you to interact with other players and build community projects."]
+	quest.0B82E3B5B20876D4.quest_subtitle: "Community oriented quests"
+	quest.0B82E3B5B20876D4.title: "Community"
 	quest.0B9FBE19F05FA925.quest_desc: ["Allows specific slots to stack much higher."]
 	quest.0C11EDEC44D240C1.quest_desc: [
 		"The &6Macaw's Suite&r introduces complex 3D models for structural building. "
@@ -1070,6 +1077,8 @@
 	quest.1220D1A757633DB8.quest_desc: ["&lBoss Drop:&r Dropped by the &9Wither Boss&r."]
 	quest.1220D1A757633DB8.quest_subtitle: "Eye 14 of 16 (Boss)"
 	quest.1220D1A757633DB8.title: "Wither Eye"
+	quest.12297AC5E023A44B.quest_desc: ["Meet up with another player, have a conversation, build something together, play a prank, just as long as you're standing within 16 blocks you'll get this reward. &2&n&lCompletable once every 24 hours&r&r&r."]
+	quest.12297AC5E023A44B.quest_subtitle: "Stand next to another player"
 	quest.123456789ABCDEF1.quest_desc: ["Add depth to your builds with custom windows."]
 	quest.123456789ABCDEF1.title: "Window Shopping"
 	quest.125C1B72258B20FE.quest_subtitle: "Kinetic to Electric"
@@ -1180,6 +1189,21 @@
 	quest.18DFB25DC48D8BF7.title: "Spatial Pylons"
 	quest.19014BB12412492C.quest_desc: ["Use &eConnected&r gearboxes and shafts for cleaner wiring."]
 	quest.19014BB12412492C.title: "Advanced Kinetics"
+	quest.190A57827A174E4B.quest_desc: [
+		"The newest &6&lCreate&r&r update allows us to create &eItem Shops&r where you can sell items to other players."
+		""
+		"Start by creating a &6Stock Network&r that will be used to hold and deliver items to players. You will need the following items:"
+		"1x Stock Ticker"
+		"1x Blaze Burner or Mob on a seat next to the Stock Ticker"
+		"1x Storage, either a Vault or another inventory you can guard from other payers"
+		"1x Packager on the storage"
+		"1x Stock Link on the Packager"
+		"*x Items to sell"
+		"*x Table Cloth or Table Cover"
+		""
+		"Watch the ponder for the Table Cloth for how to set up your shop!"
+	]
+	quest.190A57827A174E4B.quest_subtitle: "Economy contribution"
 	quest.192665906C483E05.quest_desc: ["Incinerator."]
 	quest.192665906C483E05.title: "&cIncinerator"
 	quest.19C551CEA22B143E.quest_desc: [
@@ -1943,6 +1967,8 @@
 	]
 	quest.3E3DF8E967D95DB0.quest_subtitle: "Dense Matter"
 	quest.3E3DF8E967D95DB0.title: "Quantum Entanglement"
+	quest.3E94738A0260FD66.quest_subtitle: "You can make the joke after you get this one."
+	quest.3F191468D4FC9757.quest_subtitle: "Craft the Scarlet Biplane"
 	quest.3F38FB153E5A37BF.quest_desc: [
 		"Construct the housing for your reactor."
 		""
@@ -2018,6 +2044,8 @@
 	quest.43F5981C8E7B0B1B.quest_desc: ["&lLocation:&r Dropped by an &9Evoker&r (Woodland Mansion or Raid)."]
 	quest.43F5981C8E7B0B1B.quest_subtitle: "Eye 7 of 12 (Evoker)"
 	quest.43F5981C8E7B0B1B.title: "Magical Eye"
+	quest.44311263D4F66DDC.quest_subtitle: "Or a seasoned Palatte?"
+	quest.44311263D4F66DDC.title: "Bar Fly"
 	quest.44556677889900AA.quest_desc: [
 		"The Otherside is composed of new stone types."
 		""
@@ -2765,6 +2793,8 @@
 		"Connect it to a Rotation Speed Controller set to 256 RPM for maximum output."
 	]
 	quest.6BD20C8EE13213DB.title: "&aRotational Power"
+	quest.6C42D31B42C8ECA2.quest_subtitle: "Butcher every mob in the game"
+	quest.6C42D31B42C8ECA2.title: "Butcher"
 	quest.6C539494EDBF4469.quest_desc: ["Void Core."]
 	quest.6C539494EDBF4469.title: "&5Void Core"
 	quest.6C7964C6A4F30674.quest_desc: ["&lAcquisition:&r Crafted using the &9Witch Pupil&r."]
@@ -3388,6 +3418,8 @@
 	quest.7A4C3D5B79416997.title: "Colossal Chests"
 	quest.7A79C31621659E92.quest_desc: ["The &bShroud Key&r hides the item icon on the drawer face. Good for reducing lag or for aesthetic walls."]
 	quest.7AF82CBB495FAA6E.quest_desc: ["The base upgrade for storage blocks."]
+	quest.7B314C517F0B6221.quest_desc: ["The Challenges section is dedicated to things that aren't so progression focussed as they are on highlighting some achivement."]
+	quest.7B314C517F0B6221.quest_subtitle: "See Description"
 	quest.7B372B6C9B3D9976.quest_desc: [
 		"&3Deeper and Darker&r expands upon the Deep Dark biome, adding a new dimension called &bThe Otherside&r."
 		""
@@ -3471,16 +3503,17 @@
 	task.1000000000000061.title: "Enter the Nether"
 	task.1000000000000079.title: "Discover the Stronghold"
 	task.1000000000010003.title: "Any #c:player_workstations/crafting_tables"
-	task.1000000000010008.title: "Tilling the Soil"
 	task.1000000000010040.title: "Locate a Settlement"
 	task.1000000000010049.title: "Observe a Chicken"
 	task.1000000000010052.title: "Observe a Sheep"
 	task.1000000000010055.title: "Rest"
 	task.100000AF00000002.title: "The Master Chef"
 	task.1076BC82EECB73F5.title: "Quartz Cutting Knife"
+	task.122738E71DCAAB8D.title: "Tag!"
 	task.1234567890ABCDEF.title: "Pattern Provider"
 	task.14DEFFB80CC96BC1.title: "Any Smart Cable"
 	task.1650A0BEF32C29C5.title: "Cataclysmic Warning"
+	task.19C31D3EA6207638.title: "Open a shop"
 	task.1A2B3C4D5E6F7002.title: "Aviation"
 	task.23D186249A999B8C.title: "Quartz Cutting Knife"
 	task.2C5A54BB5DB514CC.title: "Any Roof Block"
@@ -3493,6 +3526,7 @@
 	task.338A6DA0D711B7DC.title: "Pattern Provider"
 	task.382E8129CA13F3A4.title: "Ok"
 	task.38E290AC5E011888.title: "Any Smart Dense Cable"
+	task.3981FEEF0028FAA0.title: "Information"
 	task.4000000000000002.title: "Mic Check"
 	task.40A7CC56DACC2623.title: "Any Glass Cable"
 	task.4A11EC407279C124.title: "Powering the Industry"
@@ -3512,6 +3546,7 @@
 	task.6000000000000002.title: "I promise to minimize lag"
 	task.61D179BD4171F5D6.title: "Grand Master Architect"
 	task.61D93B13D496547D.title: "Any Fluid Storage Cell"
+	task.64932DEAA6724BEE.title: "tmp"
 	task.64EAD3DE84E94F02.title: "Any Covered Cable"
 	task.65C439FD14C5EEB9.title: "ME Portable Cell"
 	task.6691176371563341.title: "Color Applicator"

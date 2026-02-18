@@ -1,0 +1,664 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "challenges"
+	group: "09F6787236486872"
+	id: "7BE927D18CBD14A7"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7B314C517F0B6221"
+			tasks: [{
+				id: "3981FEEF0028FAA0"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "148A2A8145972336"
+			tasks: [{
+				id: "0C5376FEA905C16E"
+				points: false
+				type: "xp"
+				value: 100L
+			}]
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["148A2A8145972336"]
+			id: "6BFD06E9B953ACBE"
+			tasks: [{
+				id: "30BEE882FEDB402E"
+				points: false
+				type: "xp"
+				value: 500L
+			}]
+			x: -1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6BFD06E9B953ACBE"]
+			id: "6889A2ACF2CFA8F1"
+			tasks: [{
+				id: "6EA12AEF241F823D"
+				points: false
+				type: "xp"
+				value: 1000L
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6889A2ACF2CFA8F1"]
+			id: "3E94738A0260FD66"
+			tasks: [{
+				id: "793AF3C3A7DB6F6C"
+				points: false
+				type: "xp"
+				value: 9001L
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			id: "2146F440DB29AA41"
+			tasks: [{
+				count: 64L
+				id: "5EB50F1416A4DC01"
+				item: { count: 1, id: "minecraft:diamond_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			id: "5B971EAA8CCBF018"
+			tasks: [{
+				count: 64L
+				id: "4CEF52BC16BC57FA"
+				item: { count: 1, id: "minecraft:netherite_block" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			id: "3F191468D4FC9757"
+			tasks: [{
+				id: "189D78A3DFAEE733"
+				item: { count: 1, id: "man_of_many_planes:scarlet_biplane" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			id: "6A218B9ACF7881C2"
+			tasks: [{
+				id: "6D9A2F85A0B68A68"
+				item: { count: 1, id: "minecraft:mace" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			id: "44311263D4F66DDC"
+			tasks: [
+				{
+					id: "41FB57E4A303038F"
+					item: { count: 1, id: "alcocraftplus:kvass" }
+					type: "item"
+				}
+				{
+					id: "66D8681435313FD1"
+					item: { count: 1, id: "alcocraftplus:chorus_ale" }
+					type: "item"
+				}
+				{
+					id: "69AD19A0DE278309"
+					item: { count: 1, id: "alcocraftplus:drowned_ale" }
+					type: "item"
+				}
+				{
+					id: "0CCF7F3AED6FE535"
+					item: { count: 1, id: "alcocraftplus:ice_beer" }
+					type: "item"
+				}
+				{
+					id: "0AC3920E692B805E"
+					item: { count: 1, id: "alcocraftplus:ice_beer" }
+					type: "item"
+				}
+				{
+					id: "5050AB10BE795EAC"
+					item: { count: 1, id: "alcocraftplus:leprechaun_cider" }
+					type: "item"
+				}
+				{
+					id: "1B0A0E10BA7F1158"
+					item: { count: 1, id: "alcocraftplus:magnet_pilsner" }
+					type: "item"
+				}
+				{
+					id: "32E91509886AA53C"
+					item: { count: 1, id: "alcocraftplus:nether_porter" }
+					type: "item"
+				}
+				{
+					id: "39A16B32A6DE3B57"
+					item: { count: 1, id: "alcocraftplus:nether_star_lager" }
+					type: "item"
+				}
+				{
+					id: "07D87A4227234B9C"
+					item: { count: 1, id: "alcocraftplus:night_rauch" }
+					type: "item"
+				}
+				{
+					id: "4E81D354602E3699"
+					item: { count: 1, id: "alcocraftplus:sun_pale_ale" }
+					type: "item"
+				}
+				{
+					id: "7B0BCD66462F16DA"
+					item: { count: 1, id: "alcocraftplus:wither_stout" }
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			id: "43B58C1B7A99E272"
+			tasks: [{
+				advancement: "minecraft:adventure/spyglass_at_dragon"
+				criterion: ""
+				id: "0A78228301E0608E"
+				type: "advancement"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			id: "6C42D31B42C8ECA2"
+			tasks: [
+				{
+					id: "3A5FD211A3CBBA53"
+					item: { count: 1, id: "butchery:pig_carcass" }
+					type: "item"
+				}
+				{
+					id: "6E85439ED2CF2755"
+					item: { count: 1, id: "butchery:cow_carcass" }
+					type: "item"
+				}
+				{
+					id: "5F46DCF036A702DC"
+					item: { count: 1, id: "butchery:sheep_carcass" }
+					type: "item"
+				}
+				{
+					id: "2D3701442E42FAFC"
+					item: { count: 1, id: "butchery:chicken_carcass" }
+					type: "item"
+				}
+				{
+					id: "13711873610609D0"
+					item: { count: 1, id: "butchery:bat_carcass" }
+					type: "item"
+				}
+				{
+					id: "60EEBB7F08F7C430"
+					item: { count: 1, id: "butchery:dolphin_carcass" }
+					type: "item"
+				}
+				{
+					id: "7E2A2B580600F814"
+					item: { count: 1, id: "butchery:glow_squid_carcass" }
+					type: "item"
+				}
+				{
+					id: "3EB360CA166AF336"
+					item: { count: 1, id: "butchery:goat_carcass" }
+					type: "item"
+				}
+				{
+					id: "4E73551A13A979D5"
+					item: { count: 1, id: "butchery:brown_mooshroom_carcass" }
+					type: "item"
+				}
+				{
+					id: "6F605135F1E0E822"
+					item: { count: 1, id: "butchery:red_mooshroom_carcass" }
+					type: "item"
+				}
+				{
+					id: "4EE864105A74B079"
+					item: { count: 1, id: "butchery:ocelot_carcass" }
+					type: "item"
+				}
+				{
+					id: "7C67A27EED45CD67"
+					item: { count: 1, id: "butchery:camel_carcass" }
+					type: "item"
+				}
+				{
+					id: "7FE78EBC8B6528B9"
+					item: { count: 1, id: "butchery:cave_spider_carcass" }
+					type: "item"
+				}
+				{
+					id: "5A796DF84710B0ED"
+					item: { count: 1, id: "butchery:spider_carcass" }
+					type: "item"
+				}
+				{
+					id: "53F0FE0FE31D06D5"
+					item: { count: 1, id: "butchery:creeper_carcass" }
+					type: "item"
+				}
+				{
+					id: "4CB73E458C41385A"
+					item: { count: 1, id: "butchery:donkey_carcass" }
+					type: "item"
+				}
+				{
+					id: "0558307E16C3BCCB"
+					item: { count: 1, id: "butchery:mule_carcass" }
+					type: "item"
+				}
+				{
+					id: "208C33BD09F4C58E"
+					item: { count: 1, id: "butchery:fox_carcass" }
+					type: "item"
+				}
+				{
+					id: "41865C92CECC3F22"
+					item: { count: 1, id: "butchery:snow_fox_carcass" }
+					type: "item"
+				}
+				{
+					id: "47C242F9DA539464"
+					item: { count: 1, id: "butchery:hoglin_carcass" }
+					type: "item"
+				}
+				{
+					id: "05599B4A68BB0C5C"
+					item: { count: 1, id: "butchery:guardian_carcass" }
+					type: "item"
+				}
+				{
+					id: "1C80F1DEC424A48F"
+					item: { count: 1, id: "butchery:panda_carcass" }
+					type: "item"
+				}
+				{
+					id: "280EF8D5B7F380B7"
+					item: { count: 1, id: "butchery:polar_bear_carcass" }
+					type: "item"
+				}
+				{
+					id: "5C72765EC0B2C0FA"
+					item: { count: 1, id: "butchery:pufferfish" }
+					type: "item"
+				}
+				{
+					id: "4D037796AB50C75C"
+					item: { count: 1, id: "butchery:shulker_carcass" }
+					type: "item"
+				}
+				{
+					id: "5F1CFDC2AABA93F9"
+					item: { count: 1, id: "butchery:rabbit_carcass" }
+					type: "item"
+				}
+				{
+					id: "40592AEA7AC99992"
+					item: { count: 1, id: "butchery:silverfish_carcass" }
+					type: "item"
+				}
+				{
+					id: "2E2C4B89D24097C2"
+					item: { count: 1, id: "butchery:small_slime_carcass" }
+					type: "item"
+				}
+				{
+					id: "533BFD79246D415D"
+					item: { count: 1, id: "butchery:medium_slime_carcass" }
+					type: "item"
+				}
+				{
+					id: "7432996C1E8B2D5A"
+					item: { count: 1, id: "butchery:magma_cube_carcass" }
+					type: "item"
+				}
+				{
+					id: "110E176894489E82"
+					item: { count: 1, id: "butchery:medium_magma_cube_carcass" }
+					type: "item"
+				}
+				{
+					id: "4C1F5920799217CC"
+					item: { count: 1, id: "butchery:strider_carcass" }
+					type: "item"
+				}
+				{
+					id: "3C23335379A990E9"
+					item: { count: 1, id: "butchery:gray_frog_carcass" }
+					type: "item"
+				}
+				{
+					id: "383E80BEFE9B3A20"
+					item: { count: 1, id: "butchery:green_frog_carcass" }
+					type: "item"
+				}
+				{
+					id: "166AD4DB4E9C324D"
+					item: { count: 1, id: "butchery:orange_frog_carcass" }
+					type: "item"
+				}
+				{
+					id: "0EBC3948F0C35759"
+					item: { count: 1, id: "butchery:brown_llama_carcass" }
+					type: "item"
+				}
+				{
+					id: "6DD9EF45CAE57191"
+					item: { count: 1, id: "butchery:creamy_llama_carcass" }
+					type: "item"
+				}
+				{
+					id: "4130B357F1C5E967"
+					item: { count: 1, id: "butchery:gray_llama_carcass" }
+					type: "item"
+				}
+				{
+					id: "1060B4034CAE1BAD"
+					item: { count: 1, id: "butchery:white_llama_carcass" }
+					type: "item"
+				}
+				{
+					id: "60E809CC3FB849A0"
+					item: { count: 1, id: "butchery:enderman_carcass" }
+					type: "item"
+				}
+				{
+					id: "1FD32112F62EE1BF"
+					item: { count: 1, id: "butchery:endermite_carcass" }
+					type: "item"
+				}
+				{
+					id: "7CB1DE6F2D480351"
+					item: { count: 1, id: "butchery:pink_axolotl_carcass" }
+					type: "item"
+				}
+				{
+					id: "4B04EFB64F98BBA4"
+					item: { count: 1, id: "butchery:blue_axolotl_carcass" }
+					type: "item"
+				}
+				{
+					id: "265F796ECC621EF4"
+					item: { count: 1, id: "butchery:cyan_axolotl_carcass" }
+					type: "item"
+				}
+				{
+					id: "13B7E29F6DB0292E"
+					item: { count: 1, id: "butchery:gold_axolotl_carcass" }
+					type: "item"
+				}
+				{
+					id: "1C44668CF13BBFED"
+					item: { count: 1, id: "butchery:brown_axolotl_carcass" }
+					type: "item"
+				}
+				{
+					id: "650AB4773745377A"
+					item: { count: 1, id: "butchery:phantom_carcass" }
+					type: "item"
+				}
+				{
+					id: "1F345A150E91A23B"
+					item: { count: 1, id: "butchery:all_black_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "0C72E789EE17D094"
+					item: { count: 1, id: "butchery:black_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "34B15BCAD73A36B7"
+					item: { count: 1, id: "butchery:british_shorthair_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "3570894CDAC284C0"
+					item: { count: 1, id: "butchery:calico_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "48110A06470A79FF"
+					item: { count: 1, id: "butchery:jellie_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "7A435DB9AED8DDA1"
+					item: { count: 1, id: "butchery:persian_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "646266341BDFCF5F"
+					item: { count: 1, id: "butchery:ragdoll_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "09F299581F15580D"
+					item: { count: 1, id: "butchery:red_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "3CC35E83D601B3DD"
+					item: { count: 1, id: "butchery:siamese_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "661BE4A0CD769343"
+					item: { count: 1, id: "butchery:tabby_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "34819677F2B8C3C2"
+					item: { count: 1, id: "butchery:white_cat_carcass" }
+					type: "item"
+				}
+				{
+					id: "2BF996DBE12A5BA5"
+					item: { count: 1, id: "butchery:zoglin_carcass" }
+					type: "item"
+				}
+				{
+					id: "2EF8DDA2E855D563"
+					item: { count: 1, id: "butchery:wolf_carcass" }
+					type: "item"
+				}
+				{
+					id: "4B8B2B39BFEAFC92"
+					item: { count: 1, id: "butchery:skeleton_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "52597E4B3F52428C"
+					item: { count: 1, id: "butchery:sniffer_carcass" }
+					type: "item"
+				}
+				{
+					id: "13898EA151D23EFB"
+					item: { count: 1, id: "butchery:bee_carcass" }
+					type: "item"
+				}
+				{
+					id: "280D896151DDE01D"
+					item: { count: 1, id: "butchery:regular_black_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "05DC9A1088732642"
+					item: { count: 1, id: "butchery:regular_brown_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "4D7BEBE10915B370"
+					item: { count: 1, id: "butchery:regular_chestnut_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "229B5593E4EF5430"
+					item: { count: 1, id: "butchery:regular_creamy_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "6DB90ED2BC219685"
+					item: { count: 1, id: "butchery:regular_dark_brown_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "1FF3BCBD0B670C74"
+					item: { count: 1, id: "butchery:regular_gray_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "265334B8DADA0721"
+					item: { count: 1, id: "butchery:regular_white_horse_carcass" }
+					type: "item"
+				}
+				{
+					id: "7D07814C40BB30F0"
+					item: { count: 1, id: "butchery:cod_carcass" }
+					type: "item"
+				}
+				{
+					id: "23FF0100F3D86A94"
+					item: { count: 1, id: "butchery:salmon_carcass" }
+					type: "item"
+				}
+				{
+					id: "03D17E85B960D3BD"
+					item: { count: 1, id: "butchery:ravager_carcass" }
+					type: "item"
+				}
+				{
+					id: "2E0A8C3AA1A5DEE8"
+					item: { count: 1, id: "butchery:ender_dragon_carcass" }
+					type: "item"
+				}
+				{
+					id: "1CCEB0E50E41337E"
+					item: { count: 1, id: "butchery:warden_carcass" }
+					type: "item"
+				}
+				{
+					id: "722FB6B64E86C49E"
+					item: { count: 1, id: "butchery:elder_guardian_carcass" }
+					type: "item"
+				}
+				{
+					id: "1BC8E84FF4E92BF3"
+					item: { count: 1, id: "butchery:wither_carcass" }
+					type: "item"
+				}
+				{
+					id: "7AD5372A1AB65099"
+					item: { count: 1, id: "butchery:drowned_corpse" }
+					type: "item"
+				}
+				{
+					id: "0780BF6F8308C3EE"
+					item: { count: 1, id: "butchery:zombie_corpse" }
+					type: "item"
+				}
+				{
+					id: "6A655032C9AD0168"
+					item: { count: 1, id: "butchery:husk_corpse" }
+					type: "item"
+				}
+				{
+					id: "26E8BA3B10565ABA"
+					item: { count: 1, id: "butchery:piglin_corpse" }
+					type: "item"
+				}
+				{
+					id: "1DE81C722D6AA402"
+					item: { count: 1, id: "butchery:piglin_brute_corpse" }
+					type: "item"
+				}
+				{
+					id: "02ADAD7EDE10C015"
+					item: { count: 1, id: "butchery:pillager_corpse" }
+					type: "item"
+				}
+				{
+					id: "679F9D9D677D330D"
+					item: { count: 1, id: "butchery:vindicator_corpse" }
+					type: "item"
+				}
+				{
+					id: "7FE75E4D33B275C6"
+					item: { count: 1, id: "butchery:evoker_corpse" }
+					type: "item"
+				}
+				{
+					id: "01CB0D313049B553"
+					item: { count: 1, id: "butchery:villager_corpse" }
+					type: "item"
+				}
+				{
+					id: "434FE05859050D6D"
+					item: { count: 1, id: "butchery:stray_corpse" }
+					type: "item"
+				}
+				{
+					id: "5187667AC0DAA69D"
+					item: { count: 1, id: "butchery:skeleton_corpse" }
+					type: "item"
+				}
+				{
+					id: "5EF4F9721468A9D9"
+					item: { count: 1, id: "butchery:zombified_piglin_corpse" }
+					type: "item"
+				}
+				{
+					id: "66EA8DDDA63AA038"
+					item: { count: 1, id: "butchery:zombie_villager_corpse" }
+					type: "item"
+				}
+				{
+					id: "1816B259794B1116"
+					item: { count: 1, id: "butchery:wither_skeleton_corpse" }
+					type: "item"
+				}
+				{
+					id: "7146A09BE7B7CCCA"
+					item: { count: 1, id: "butchery:turtle_carcass" }
+					type: "item"
+				}
+				{
+					id: "3F36B1172EC18448"
+					item: { count: 1, id: "butchery:witch_corpse" }
+					type: "item"
+				}
+				{
+					id: "391097362C9D1803"
+					item: { count: 1, id: "butchery:playercorpse" }
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 1.0d
+		}
+	]
+}

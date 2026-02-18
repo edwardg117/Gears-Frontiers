@@ -54,6 +54,7 @@
 			]
 			id: "23D511DEFB791453"
 			rewards: [{
+				count: 16
 				id: "2FC0EECC306070F9"
 				item: {
 					count: 1
@@ -201,6 +202,7 @@
 			dependencies: ["1000000000010001"]
 			id: "1000000000000098"
 			rewards: [{
+				count: 9
 				id: "1000000000010007"
 				item: {
 					count: 1
@@ -208,18 +210,13 @@
 				}
 				type: "item"
 			}]
-			tasks: [
-				{
-					id: "1000000000010008"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:hoes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-				{
-					id: "1000000000010009"
-					item: { count: 1, id: "minecraft:wheat_seeds" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				advancement: "minecraft:husbandry/plant_seed"
+				criterion: ""
+				disable_toast: true
+				id: "51EB166D5BC0760C"
+				type: "advancement"
+			}]
 			x: -2.0d
 			y: 5.0d
 		}

@@ -1,0 +1,10 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "transportation"
+	group: "09F6787236486872"
+	id: "3EB7CE30DC66F493"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+}
