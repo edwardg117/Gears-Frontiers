@@ -6,5 +6,353 @@
 	id: "3EB7CE30DC66F493"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			id: "40904B1CD40A7055"
+			tasks: [{
+				id: "1FE6CF5D019DA595"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "37C8D2A65EEBC8A1"
+			tasks: [{
+				id: "7FFA386B75B8CC9B"
+				type: "checkmark"
+			}]
+			x: -14.0d
+			y: 0.0d
+		}
+		{
+			id: "239420FB30F35FD6"
+			tasks: [{
+				id: "4908977FA2EE7329"
+				type: "checkmark"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["37C8D2A65EEBC8A1"]
+			id: "0F6394BBD6F5770C"
+			tasks: [{
+				id: "38CDCEF099DBC173"
+				item: { count: 1, id: "minecraft:saddle" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0F6394BBD6F5770C"]
+			id: "3A9DA929386A6A22"
+			tasks: [{
+				advancement: "minecraft:husbandry/tame_an_animal"
+				criterion: ""
+				id: "2FD0164FBF450A3B"
+				type: "advancement"
+			}]
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A9DA929386A6A22"]
+			id: "64CCEE45A6ECFA71"
+			tasks: [{
+				id: "4AB3E8A1C31BA347"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:spruce_plow)item(astikorcartsredux:birch_plow)item(astikorcartsredux:oak_plow)item(astikorcartsredux:acacia_plow)item(astikorcartsredux:cherry_plow)item(astikorcartsredux:jungle_plow)item(astikorcartsredux:dark_oak_plow)item(astikorcartsredux:crimson_plow)item(astikorcartsredux:warped_plow)item(astikorcartsredux:mangrove_plow)item(astikorcartsredux:bamboo_plow))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A9DA929386A6A22"]
+			id: "1521E17E5454D5CD"
+			tasks: [{
+				id: "0B5B1F87D2185591"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:oak_supply_cart)item(astikorcartsredux:spruce_supply_cart)item(astikorcartsredux:birch_supply_cart)item(astikorcartsredux:acacia_supply_cart)item(astikorcartsredux:cherry_supply_cart)item(astikorcartsredux:jungle_supply_cart)item(astikorcartsredux:dark_oak_supply_cart)item(astikorcartsredux:crimson_supply_cart)item(astikorcartsredux:warped_supply_cart)item(astikorcartsredux:mangrove_supply_cart)item(astikorcartsredux:bamboo_supply_cart))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["37C8D2A65EEBC8A1"]
+			id: "26A92A45EEB2EDB8"
+			tasks: [{
+				id: "533E9019A53EF32C"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:oak_hand_cart)item(astikorcartsredux:spruce_hand_cart)item(astikorcartsredux:birch_hand_cart)item(astikorcartsredux:acacia_hand_cart)item(astikorcartsredux:cherry_hand_cart)item(astikorcartsredux:jungle_hand_cart)item(astikorcartsredux:dark_oak_hand_cart)item(astikorcartsredux:crimson_hand_cart)item(astikorcartsredux:warped_hand_cart)item(astikorcartsredux:mangrove_hand_cart)item(astikorcartsredux:bamboo_hand_cart))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0BF68D138D12A206"]
+			id: "2BAA6085A7910749"
+			tasks: [{
+				id: "1407971261FC6BB6"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:oak_reaper)item(astikorcartsredux:spruce_reaper)item(astikorcartsredux:birch_reaper)item(astikorcartsredux:acacia_reaper)item(astikorcartsredux:cherry_reaper)item(astikorcartsredux:jungle_reaper)item(astikorcartsredux:dark_oak_reaper)item(astikorcartsredux:crimson_reaper)item(astikorcartsredux:warped_reaper)item(astikorcartsredux:mangrove_reaper)item(astikorcartsredux:bamboo_reaper))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3A9DA929386A6A22"]
+			id: "22713FEA163F56E6"
+			tasks: [{
+				id: "2BBADA7FFC2F42F0"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:oak_animal_cart)item(astikorcartsredux:spruce_animal_cart)item(astikorcartsredux:birch_animal_cart)item(astikorcartsredux:acacia_animal_cart)item(astikorcartsredux:cherry_animal_cart)item(astikorcartsredux:jungle_animal_cart)item(astikorcartsredux:dark_oak_animal_cart)item(astikorcartsredux:crimson_animal_cart)item(astikorcartsredux:warped_animal_cart)item(astikorcartsredux:mangrove_animal_cart)item(astikorcartsredux:bamboo_animal_cart))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["64CCEE45A6ECFA71"]
+			id: "0BF68D138D12A206"
+			tasks: [{
+				id: "1B4CA5B707FEFBE1"
+				item: { components: { "ftbfiltersystem:filter": "or(item(astikorcartsredux:oak_seed_drill)item(astikorcartsredux:spruce_seed_drill)item(astikorcartsredux:birch_seed_drill)item(astikorcartsredux:acacia_seed_drill)item(astikorcartsredux:cherry_seed_drill)item(astikorcartsredux:jungle_seed_drill)item(astikorcartsredux:dark_oak_seed_drill)item(astikorcartsredux:crimson_seed_drill)item(astikorcartsredux:warped_seed_drill)item(astikorcartsredux:mangrove_seed_drill)item(astikorcartsredux:bamboo_seed_drill))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["64CCEE45A6ECFA71"]
+			icon: {
+				id: "via_romana:charting_map"
+			}
+			id: "6FED6DB88059B50B"
+			tasks: [
+				{
+					disable_toast: true
+					id: "49136FB6EE41EAD0"
+					item: { count: 1, id: "via_romana:charting_map" }
+					type: "item"
+				}
+				{
+					disable_toast: true
+					icon: {
+						components: {
+							"minecraft:item_name": "{\"translate\":\"filled_map.buried_treasure\"}"
+							"minecraft:map_decorations": {
+								+: {
+									rotation: 180.0f
+									type: "minecraft:red_x"
+									x: 441.0d
+									z: -327.0d
+								}
+							}
+							"minecraft:map_id": 0
+						}
+						id: "minecraft:filled_map"
+					}
+					id: "21410F512F4073F8"
+					stat: "via_romana:distance_charted"
+					type: "stat"
+					value: 100
+				}
+				{
+					disable_toast: true
+					icon: {
+						id: "minecraft:leather_boots"
+					}
+					id: "22CD3B5E2487FA16"
+					stat: "via_romana:distance_walked"
+					type: "stat"
+					value: 100
+				}
+			]
+			x: -8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6FED6DB88059B50B"]
+			id: "3ED168791B6A6E9C"
+			tasks: [
+				{
+					id: "3C2540729E495005"
+					item: { count: 1, id: "immersive_aircraft:quadrocopter" }
+					type: "item"
+				}
+				{
+					id: "3F609A19DA49221E"
+					item: { count: 1, id: "immersive_aircraft:gyrodyne" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			id: "2929B8816005D8FD"
+			tasks: [
+				{
+					id: "34B1E99C29926472"
+					item: { count: 1, id: "create:track" }
+					type: "item"
+				}
+				{
+					id: "28F86EA21C1658E3"
+					item: { count: 1, id: "create:railway_casing" }
+					type: "item"
+				}
+				{
+					id: "6B2C708006C7A5C7"
+					item: { count: 1, id: "create:track_station" }
+					type: "item"
+				}
+				{
+					id: "07525561C001757C"
+					item: { count: 1, id: "create:controls" }
+					type: "item"
+				}
+				{
+					id: "4182F3AB5F902A8C"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(create:seats)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2929B8816005D8FD"]
+			id: "235AB6B47220C5C7"
+			tasks: [
+				{
+					disable_toast: true
+					id: "73F28750756B7FAA"
+					item: { count: 1, id: "create:track_signal" }
+					type: "item"
+				}
+				{
+					disable_toast: true
+					id: "1A9E0466C62D45D0"
+					item: { count: 1, id: "create:track_observer" }
+					type: "item"
+				}
+				{
+					id: "3E829729492548DF"
+					item: { count: 1, id: "create:train_door" }
+					type: "item"
+				}
+				{
+					id: "4625E6E85C8383AF"
+					item: { count: 1, id: "create:contraption_controls" }
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			id: "30522E74ED992C6E"
+			tasks: [{
+				id: "1D8DED65DF084FF8"
+				item: { count: 1, id: "immersive_aircraft:airship" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			id: "758DFD878A73821F"
+			tasks: [{
+				id: "7377C9BB8B1A96E8"
+				item: { count: 1, id: "kubejs:hardened_engine" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			id: "546DE814AC0B937C"
+			tasks: [{
+				id: "220D582952A1B088"
+				item: { count: 1, id: "immersive_aircraft:biplane" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			id: "1C4CBD6C3C666073"
+			tasks: [{
+				id: "5932154691E2511D"
+				item: { count: 1, id: "man_of_many_planes:scarlet_biplane" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.0d
+		}
+		{
+			id: "5CCCD62C0FB764C7"
+			tasks: [{
+				id: "0EA7071922EC2F78"
+				item: { count: 1, id: "man_of_many_planes:economy_plane" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			id: "233F1E695165837A"
+			tasks: [{
+				id: "2FEC24B341D90CB1"
+				item: { count: 1, id: "immersive_aircraft:cargo_airship" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			id: "774B168FC69D1CD5"
+			tasks: [{
+				id: "1E1F4B36B214936D"
+				item: { count: 1, id: "immersive_aircraft:warship" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "66CEEA3B4FDB976B"
+			tasks: [{
+				id: "5C840CE2827725F7"
+				item: { count: 1, id: "createteleporters:teleporter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: -0.5d
+		}
+		{
+			id: "34433E5BA1444DDE"
+			tasks: [
+				{
+					id: "1F54C86ABB7A4B09"
+					item: { count: 1, id: "create_hypertube:hypertube_entrance" }
+					type: "item"
+				}
+				{
+					id: "6BAA797F475E0B27"
+					item: { count: 1, id: "create_hypertube:hypertube" }
+					type: "item"
+				}
+				{
+					id: "16DBA49C902CDC91"
+					item: { count: 1, id: "create_hypertube:hypertube_accelerator" }
+					type: "item"
+				}
+			]
+			x: -5.0d
+			y: -2.0d
+		}
+	]
 }

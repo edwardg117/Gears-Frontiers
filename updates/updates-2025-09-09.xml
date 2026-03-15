@@ -553,7 +553,7 @@ Fixed crash with REI on 1.21.6+ (Closes [#610](https://github.com/tom5454/Toms-S
 			<ModType>Regular</ModType>
 			<MD5>2b396c00f56cb3c9fd8befff677dc0e6</MD5>
 		</Module>
-		<Module name="TownTalk" id="towntalk" depends="" side="BOTH">
+		<Module name="TownTalk" id="towntalk" depends="" side="CLIENT">
 			<URL priority="1">https://edge.forgecdn.net/files/5653/504/towntalk-1.2.0.jar</URL>
 			<Size>52301863</Size>
 			<Required>false</Required>

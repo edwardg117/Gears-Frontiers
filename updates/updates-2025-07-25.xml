@@ -209,7 +209,7 @@ Data packs containing CraftingTweaks compat files will continue to work. However
 				<version>6.1.12</version>
 			</Meta>
 		</Module>
-		<Module name="Better Advancements" id="betteradvancements" depends="" side="BOTH">
+		<Module name="Better Advancements" id="betteradvancements" depends="" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/Q2OqKxDG/versions/FjTYILOi/BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar</URL>
 			<Size>98641</Size>
 			<Required>true</Required>
@@ -1010,7 +1010,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 				<version>2.1.0</version>
 			</Meta>
 		</Module>
-		<Module name="Mouse Tweaks" id="mousetweaks" depends="" side="BOTH">
+		<Module name="Mouse Tweaks" id="mousetweaks" depends="" side="CLIENT">
 			<URL priority="1">https://cdn.modrinth.com/data/aC3cM3Vq/versions/9I21YYxf/MouseTweaks-neoforge-mc1.21-2.26.1.jar</URL>
 			<Size>73938</Size>
 			<Required>true</Required>

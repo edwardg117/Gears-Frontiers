@@ -18,6 +18,71 @@ ServerEvents.tags("item", (event) => {
   event.add("c:rawbeef", "#c:foods/raw_beef");
   // event.add("c:raw_beef", "#c:rawbeef");
   // testing change
+  //@pam'sharvestcraft - food
+    event.add("pamhc2foodcore:food", "/pamhc2foodcore:.*/");
+    // Remove coocking utensils
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:bakewareitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:cuttingboarditem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:juiceritem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:grinderitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:mixingbowlitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:potitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:rolleritem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:saucepanitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:skilletitem");
+    // remove recipe bases
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:flouritem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:doughitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:saltitem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:freshwateritem");
+    event.remove("pamhc2foodcore:food", "pamhc2foodcore:freshmilkitem");
+
+    // Add Pam's food to Create's food tags
+    event.add("c:food", "#pamhc2foodcore:food");
+
+    // let ids = event.get("pamhc2foodcore:food").getObjectIds();
+    // console.log("pamhc2foodcore:food items:");
+    // console.log(ids);
+    // ids.forEach((id) => {
+    //     console.log(id);
+    // });
+
+    // Seeds
+    event.add("c:seeds", "pamhc2foodcore:sunflowerseedsitem");
+    event.add("c:seeds", "northstar:dormant_martian_seed");
+    event.add("c:seeds", "northstar:mars_tulip_seeds");
+    event.add("c:seeds", "northstar:mars_palm_seeds");
+    event.add("c:seeds", "northstar:mars_sprout_seeds");
+    event.add("c:seeds", "alcocraftplus:hop_seeds");
+    event.add("c:seeds", "alcocraftplus:dry_seeds");
+
+    // let seeds = event.get("c:seeds").getObjectIds();
+    // console.log("c:seeds items:");
+    // console.log(seeds);
+    // seeds.forEach((id) => {
+    //     console.log(id);
+    // });
+
+    console.log("This is a console log");
+
+  //@pams food extended
+  event.add("pamhc2foodextended:food", "/pamhc2foodextended:.*/");
+  event.add("c:food", "#pamhc2foodextended:food");
+  // let extednedFoods = event.get("pamhc2foodextended:food").getObjectIds();
+    // console.log("pamhc2foodextended:food items:");
+    // console.log(extednedFoods);
+    // extednedFoods.forEach((id) => {
+    //     console.log(id);
+    // });
+  // event.add("gf:engineersshaders", "/.*shader.*/");
+  // let shaders = event.get("gf:engineersshaders").getObjectIds();
+  // console.log("Shader items:");
+  // console.log(shaders);
+  // shaders.forEach((id) => {
+  //       console.log(id);
+  //   });
+
+  event.add("gf:rope", ["comforts:rope_and_nail", "farmersdelight:rope", "immersiveengineering:wirecoil_structure_rope"]);
 });
 
 // Block tags

@@ -374,6 +374,7 @@
 	quest.079338BBBEB687CB.quest_desc: ["The &5Void Forge&r combines items with Void Cores."]
 	quest.079338BBBEB687CB.title: "&5Void Forge"
 	quest.07EC98B85252AB20.quest_desc: ["The &eWater Wheel&r is your first reliable source of power."]
+	quest.07ECB558355DEF52.quest_subtitle: "Produce 1,000 expirence with a mechanical grindstone"
 	quest.083D458032F0325C.quest_desc: [
 		"The &bExport Bus&r pushes items &lout&r of the network into the inventory it faces."
 		""
@@ -409,6 +410,12 @@
 	quest.09C73561F955CF03.title: "Colossal Tiers"
 	quest.0A1518D3536A11C6.quest_desc: ["The &cInfernal Forge&r upgrades items."]
 	quest.0A1518D3536A11C6.title: "&cInfernal Forge"
+	quest.0A8AB6D90083E077.quest_desc: [
+		"Time is in &eTicks&r and requirement is two in-game weeks."
+		"(&e280 minutes&r ~ &e4.6 hours&r)."
+	]
+	quest.0A8AB6D90083E077.quest_subtitle: "Don't sleep for two weeks"
+	quest.0A8AB6D90083E077.title: "Insomnia"
 	quest.0AABE46E00807946.quest_desc: [
 		"Mid-game machinery requires a stable and high-throughput source of Forge Energy (FE)."
 		""
@@ -658,6 +665,7 @@
 	]
 	quest.0C11EDEC44D240C1.title: "&eThe Engineer's Tools"
 	quest.0C4B02425E79E70B.quest_desc: ["&3Gloomy Grass&r covers the Otherside."]
+	quest.0CE5514C948E18CA.quest_subtitle: "Travel at least 5km from your starting destination by train"
 	quest.0D1289DF86B1D1D2.quest_desc: [
 		"To advance to the Brass Age, you need a heat source."
 		""
@@ -674,6 +682,8 @@
 	quest.0D6E099A1A242153.title: "&aThe Town Hall"
 	quest.0D7172D63398611A.quest_desc: ["You are a true Dungeon Master."]
 	quest.0D7172D63398611A.title: "&6Master of Dimensions"
+	quest.0D9818FB984A7B42.quest_subtitle: "Craft every snack item from Farmer's Delight"
+	quest.0D9818FB984A7B42.title: "Every Farmer's Delight Snack"
 	quest.0DAD9AEBC7539334.quest_desc: [
 		"&bFlexible Shafts&r allow you to connect rotational power at odd angles."
 		""
@@ -695,6 +705,8 @@
 	quest.0F08211296296797.title: "The Space Race"
 	quest.0F409DACBEB7BBF8.quest_desc: ["Alternatively, use a &bSupply Chest&r if you want a more compact start."]
 	quest.0F409DACBEB7BBF8.title: "&aDeploying the Supply Chest"
+	quest.0F53EAC66BEB0E3D.quest_subtitle: "Aquire all the Immesive Engineering shaders"
+	quest.0F53EAC66BEB0E3D.title: "All the shaders"
 	quest.0F5D32098EA61D61.quest_desc: [
 		"The &bPlow&r is an agricultural tool."
 		""
@@ -703,6 +715,8 @@
 		"You can also use Shovels to create paths."
 	]
 	quest.0F5D32098EA61D61.title: "Farming: The Plow"
+	quest.0F725BB0F3B0AD61.quest_subtitle: "The worst jetpack in the game"
+	quest.0F725BB0F3B0AD61.title: "The worst jetpack"
 	quest.1000000000000000.quest_desc: [
 		"As your factory grows, standard belts and chutes might not cut it."
 		""
@@ -964,6 +978,9 @@
 		"It can also be held in your hand to cook while near a heat source, or used as a weapon!"
 	]
 	quest.100000AF00000043.title: "The Skillet"
+	quest.1041F42105B080D7.quest_desc: ["To complete this quest, you must stand directly on top of a Stressometer with an available capacity of at least &n&64,194,304su&r&r. Allow up to &l&45 seconds&r&r for the detection function to run."]
+	quest.1041F42105B080D7.quest_subtitle: "Acheive creative levels of stress"
+	quest.1041F42105B080D7.title: "Stressful"
 	quest.10A5877A970A410F.quest_desc: [
 		"1. Locate the massive frame made of &8Reinforced Deepslate&r in the center of the Ancient City."
 		"2. Clear any &3Sculk Veins&r that might be obstructing the inner frame area."
@@ -971,6 +988,8 @@
 		"4. Step through into the unknown."
 	]
 	quest.10A5877A970A410F.title: "The Otherside"
+	quest.10DDB71CF71F1B2A.quest_subtitle: "Prevent all mob spawns"
+	quest.10DDB71CF71F1B2A.title: "Mob Hater"
 	quest.10EEBBAA00000000.quest_desc: [
 		"To leave the Overworld, you must first look to the heavens."
 		""
@@ -1116,6 +1135,7 @@
 	quest.14230CA38F252FE2.title: "&6Auto-Enchanting"
 	quest.144B46A330ECD1CA.quest_desc: ["Create a pressurized environment to breathe without a suit."]
 	quest.144B46A330ECD1CA.title: "Moon Base"
+	quest.14B76B7084E20E0B.title: "Sophistcated Storer"
 	quest.14DA3DC7C0009A6A.quest_desc: ["50 Citizens."]
 	quest.14DA3DC7C0009A6A.title: "&aCity"
 	quest.15564C11744D6AA0.quest_desc: [
@@ -1150,6 +1170,8 @@
 	quest.15D509B8B352D806.title: "&8Control Rods"
 	quest.15F03A5E7E14C022.quest_desc: ["The &bStonemason&r crafts stone variants like bricks, stairs, and walls."]
 	quest.15F03A5E7E14C022.title: "&aThe Stonemason"
+	quest.160B8E66CB9CA32F.quest_subtitle: "Obtain all Minecolonies foods"
+	quest.160B8E66CB9CA32F.title: "All Minecolonies Foods"
 	quest.16299B9AE87257DC.quest_desc: [
 		"The &bWireless Crafting Terminal&r gives you full access to items and crafting from anywhere in range."
 		""
@@ -1160,12 +1182,19 @@
 	quest.167C589E7E24F62D.quest_desc: ["The &3Deepling Warlock&r casts spells from the deep."]
 	quest.16868BE36DCBA595.quest_desc: ["You need an engine to escape gravity."]
 	quest.16CF18AC1533BE55.quest_desc: ["Collect volcanic ash for processing."]
+	quest.16DE2F8CE4BE6500.quest_subtitle: "Craft Every Farmer's Delight meal"
+	quest.16DE2F8CE4BE6500.title: "Every Farmer's Delight Meal"
 	quest.1710B3D05215A71E.quest_desc: [
 		"Dense Cables can carry &l32 Channels&r."
 		"&bP2P Tunnels&r allow you to transport channels (or power/fluids) instantly from one point to another over a single line."
 	]
 	quest.1710B3D05215A71E.quest_subtitle: "Tunneling Through the Grid"
 	quest.1710B3D05215A71E.title: "P2P Networking"
+	quest.174775E4D0C8AAFA.quest_subtitle: "Enchant 1,000 times"
+	quest.17CD379442061217.quest_desc: ["{image:chipped:block/lily_pad/dark_leaf_lily_pad width:100 height:100 align:center}"]
+	quest.17CD379442061217.title: "Make like a tree"
+	quest.17FF21415262F8AE.quest_subtitle: "Craft every feast item from Farmer's Delight"
+	quest.17FF21415262F8AE.title: "Every Farmer's Delight Feast"
 	quest.18053C3BC9BB683B.quest_desc: ["The &bInventory Bridge&r connects external inventories (like chests) to your Create logistics network."]
 	quest.18053C3BC9BB683B.title: "&6Inventory Bridge"
 	quest.185451E65A124325.quest_desc: [
@@ -1324,6 +1353,7 @@
 	quest.1D9B2FCE61EDB57C.title: "&bIntelligent Control"
 	quest.1DA740D406CFEFC8.quest_desc: ["Chests and Barrels that can be upgraded in place."]
 	quest.1DA740D406CFEFC8.title: "Sophisticated Storage"
+	quest.1DF317AF3A93C660.quest_subtitle: "Ollo!"
 	quest.1E0924D51D2E7A78.quest_desc: ["Experience Nuggets can be crushed or processed for Liquid XP."]
 	quest.1E0924D51D2E7A78.title: "&6Liquid Experience"
 	quest.1E11111111111111.quest_desc: [
@@ -1345,6 +1375,8 @@
 	quest.1E2F3A4B5C6D7E8F.title: "&6Scarlet Biplane"
 	quest.1E4200A0817D30D3.quest_desc: ["&eCogwheels&r transfer rotation, change direction, and modify speed."]
 	quest.1EA5ACE38E453CDF.quest_desc: ["Record your findings."]
+	quest.1EDB6D55562D418D.quest_subtitle: "Craft every guide book"
+	quest.1EDB6D55562D418D.title: "Can't get lost now!"
 	quest.1EF4B63BBBD95504.quest_desc: [
 		"The &6Precision Mechanism&r is a complex component required for high-tech machinery."
 		""
@@ -1492,6 +1524,8 @@
 		"Prepare your best gear. You will need it."
 	]
 	quest.20E75BFDEA34E400.quest_desc: ["The &cMech Eye&r fires a powerful laser."]
+	quest.2115B744A06726B5.quest_subtitle: "Visit every dimension"
+	quest.2115B744A06726B5.title: "Dimensional Traveler"
 	quest.219932CB19258C16.quest_desc: [
 		"Welcome to the high-tier of &bApplied Energistics&r."
 		""
@@ -1520,6 +1554,8 @@
 		"The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."
 	]
 	quest.2345678901234567.title: "The Wheel"
+	quest.235AB6B47220C5C7.title: "Extra Tain parts"
+	quest.237A02B4F49BBDFA.quest_subtitle: "Obtain every catalyst"
 	quest.23D28D50FBB5C5A3.quest_desc: ["Emits a Redstone signal based on how full the drawer is."]
 	quest.23D511DEFB791453.quest_desc: ["Process your logs into planks. This is your first step toward real engineering."]
 	quest.23D511DEFB791453.title: "Mill Work"
@@ -1612,6 +1648,7 @@
 	quest.28D2767C188EAEF9.title: "&6Portal Crown"
 	quest.28EE13DE7CBE9518.quest_subtitle: "For Barrels"
 	quest.28EE13DE7CBE9518.title: "Sophisticated Storage"
+	quest.2929B8816005D8FD.title: "Train Age"
 	quest.295EAFEA068AD07E.quest_desc: ["Reinforced Echo Shards are used in high-tier crafting."]
 	quest.29FFE2FE9B6BF06B.quest_desc: [
 		"Standard engines are fine, but science offers better."
@@ -1666,6 +1703,7 @@
 		"&3Deeper and Darker&r: East path."
 		"&4Cataclysm&r: South path."
 	]
+	quest.2B85573EC295B29B.quest_subtitle: "Fall 100km"
 	quest.2BAAD462A4EB5DE8.quest_desc: [
 		"The Otherside is inhabited by dangerous creatures."
 		""
@@ -1680,6 +1718,7 @@
 		"You can encode crafting table recipes or processing recipes (for furnaces, crushers, etc.)."
 	]
 	quest.2C04B3BA507D5673.title: "Defining Recipes"
+	quest.2C1C3C527ADB8B6F.quest_subtitle: "Overcome a brake with immense power"
 	quest.2C9602C72816A60A.quest_desc: ["Wood tools won't last long. Dig into the earth and find something harder."]
 	quest.2C9602C72816A60A.title: "Rock Bottom"
 	quest.2D6AB82266DB98D0.quest_desc: ["Deepling Warlock."]
@@ -1730,6 +1769,13 @@
 		"By specifying which items a cell can hold, you can prevent your drives from getting clogged with junk and organize your system efficiently."
 	]
 	quest.2F556E7919582D2D.title: "Cell Partitioning"
+	quest.2F8723E941F78CFE.quest_desc: [
+		"Number used for the stat is in &ecm&r, so &e100,000cm&r = &e1km&r"
+		""
+		"{image:via_romana:textures/screens/tutorial_1.png width:100 height:100 align:center fit:true}"
+	]
+	quest.2F8723E941F78CFE.quest_subtitle: "Chart 1km of roads"
+	quest.2FB04668F5DE6D4F.title: "Egg"
 	quest.2FB231069D2E4E77.quest_desc: ["The basic storage unit. Holds 1,024 items of 63 types."]
 	quest.2FB231069D2E4E77.quest_subtitle: "Entry Level Storage"
 	quest.2FB231069D2E4E77.title: "1k Storage Component"
@@ -1755,6 +1801,7 @@
 	]
 	quest.301E64EEC5C07FB2.title: "&6Enter the Dungeon"
 	quest.3063F0AFCB455CB5.quest_desc: ["The &eNecklace of the Desert&r grants sandstorm immunity."]
+	quest.3076FE32489FB954.quest_subtitle: "Serious about storage"
 	quest.30E853CE699E669B.quest_desc: [
 		"&bCrafting Storage&r provides the memory required to execute complex crafting tasks."
 		""
@@ -1778,6 +1825,8 @@
 	quest.3216549870ABCDEF.quest_desc: ["The &eWrench&r rotates and dismantles components instantly."]
 	quest.3233343536373839.quest_desc: ["The &3Sculk Snapper&r is a hostile mob with a powerful bite."]
 	quest.324B15D60A55BF6A.quest_desc: ["The &cLaser Gatling&r is a rapid-fire energy weapon."]
+	quest.32617407A0080BC4.quest_subtitle: "The seediest place"
+	quest.32617407A0080BC4.title: "Dedicated Farmer"
 	quest.328740E6F3926215.quest_desc: [
 		"The &bNetherite Drill&r is the ultimate upgrade for the Tunnel Digger."
 		""
@@ -1810,6 +1859,7 @@
 	quest.3405D09DD63ED742.quest_desc: ["The &6Draugr&r is a frozen undead warrior."]
 	quest.342A1EF584823D2C.quest_desc: ["Teach your colonists how to craft torches so they can light up their own buildings."]
 	quest.342A1EF584823D2C.title: "&aTeaching Recipes: Torches"
+	quest.34433E5BA1444DDE.title: "Hypertube Trnasportation"
 	quest.34493AB364E29AA4.quest_desc: ["The &bBamboo Hopper&r is a fragile but lightweight craft. A simple start for those without resources."]
 	quest.349060F64218C12C.quest_desc: ["&lLocation:&r Found in the basement chest of a &9Igloo&r."]
 	quest.349060F64218C12C.quest_subtitle: "Eye 6 of 12 (Cold)"
@@ -1893,6 +1943,7 @@
 		"To begin, find a horse and tame it."
 	]
 	quest.3A4B5C6D7E8F9012.title: "Equestrian Engineering"
+	quest.3A9DA929386A6A22.title: "Tame a horse"
 	quest.3ABC77C61A07ED44.quest_desc: ["Craft the Monstrous Helm from the beast's horn."]
 	quest.3AC3C4B8BB78396B.quest_desc: ["Automatically picks up items into the backpack."]
 	quest.3AD5A205BCD31CBB.quest_desc: ["The &9Deepling&r is the common inhabitant of the Sunken City."]
@@ -1926,6 +1977,7 @@
 	]
 	quest.3CB5C45569583168.quest_desc: ["Gather &3Echo Logs&r."]
 	quest.3CB5C45569583168.title: "&3Echo Wood"
+	quest.3CE4999A624B1948.quest_subtitle: "Take 1M Damage"
 	quest.3D4549EF8F120520.quest_desc: [
 		"1. Locate the massive frame made of &8Reinforced Deepslate&r in the center of the Ancient City."
 		"2. Clear any &3Sculk Veins&r that might be obstructing the inner frame area."
@@ -1933,6 +1985,13 @@
 		"4. Step through into the unknown."
 	]
 	quest.3D4549EF8F120520.title: "The Otherside"
+	quest.3D4A1299503F8E40.quest_desc: [
+		"Number used for the stat is in &ecm&r, so &e1,000,000cm&r = &e10km&r"
+		""
+		"{image:via_romana:textures/screens/tutorial_6.png width:100 height:100 align:center fit:true}"
+	]
+	quest.3D4A1299503F8E40.quest_subtitle: "Chart 10km of roads"
+	quest.3D4A1299503F8E40.title: "Main Roads Employee"
 	quest.3D62BF4936540218.quest_desc: [
 		"The &bTunnel Digger&r is a drivable mining vehicle."
 		""
@@ -1968,6 +2027,7 @@
 	quest.3E3DF8E967D95DB0.quest_subtitle: "Dense Matter"
 	quest.3E3DF8E967D95DB0.title: "Quantum Entanglement"
 	quest.3E94738A0260FD66.quest_subtitle: "You can make the joke after you get this one."
+	quest.3ED168791B6A6E9C.title: "First Flight"
 	quest.3F191468D4FC9757.quest_subtitle: "Craft the Scarlet Biplane"
 	quest.3F38FB153E5A37BF.quest_desc: [
 		"Construct the housing for your reactor."
@@ -1988,6 +2048,8 @@
 		"2. &3The Otherside&r: The dark realm behind the Ancient Cities."
 		"3. &4The Cataclysm&r: The deadliest bosses in existence."
 	]
+	quest.3F956F03BEC3B28E.quest_subtitle: "Craft every sweets item from Farmer's Deight"
+	quest.3F956F03BEC3B28E.title: "Every Farmer's Delight Sweets"
 	quest.3FCB6D1A52EE7B64.quest_desc: ["Release the Shattered."]
 	quest.3FCB6D1A52EE7B64.title: "&3Shattered"
 	quest.4000000000000000.quest_desc: [
@@ -2008,6 +2070,7 @@
 	quest.4000000000000003.title: "Upgrading"
 	quest.4000000000000004.quest_desc: ["Diamond tier holds a staggering amount of items."]
 	quest.4000000000000004.title: "Diamond Tier"
+	quest.40904B1CD40A7055.title: "Middle"
 	quest.40C8D26E40C40AC7.quest_desc: [
 		"The Echoing Forests are home to &3Echo Wood&r."
 		""
@@ -2019,6 +2082,8 @@
 		"It also drops the &cMech Eye&r, a powerful laser tool."
 	]
 	quest.40E1C9ED9009C2B3.title: "Ancient Technology"
+	quest.410A4438510E9B7A.quest_subtitle: "Find all armor trims"
+	quest.410A4438510E9B7A.title: "Armor Decorator"
 	quest.41206E7FDA5A9293.quest_desc: ["Craft Tools."]
 	quest.41206E7FDA5A9293.title: "&3Resonarium Pick"
 	quest.4150BD6B68E694AB.quest_desc: ["Liquid Hydrogen is a highly efficient rocket fuel."]
@@ -2061,7 +2126,12 @@
 	quest.448766D3D7D1316A.title: "&7Iron Drill Bit"
 	quest.44B708752F794A88.quest_desc: ["The &3Shriek Worm&r burrows and attacks. Dig it out."]
 	quest.44EA8DB4ADF14B6F.quest_desc: ["Collect Sulfuric Acid from the Venusian atmosphere."]
+	quest.44F2F19BA1177ACE.quest_subtitle: "Is spreading all around!"
+	quest.44F2F19BA1177ACE.title: "Uranuim Fever!"
 	quest.45438DED8CF7DFEF.quest_desc: ["The &eMechanical Press&r compacts items into plates or blocks."]
+	quest.454E716B4A1C7855.quest_subtitle: "Is that a substation in your pocket or are you just happy to see me?"
+	quest.456B45BE74701A7D.quest_subtitle: "Craft all of the factory gauges"
+	quest.456B45BE74701A7D.title: "All the Gauges!"
 	quest.4581A2674CF48BE1.quest_desc: ["The &6Koboleton&r are skeletal warriors of the desert."]
 	quest.4597D3B3BDC2BED5.quest_desc: [
 		"The &bMolecular Assembler&r is the auto-crafting table of AE2."
@@ -2070,6 +2140,8 @@
 	]
 	quest.4597D3B3BDC2BED5.title: "Auto-Crafting Basics"
 	quest.45B87D51EF224B8C.quest_desc: ["The &lSample Drill&r is your initial prospecting tool. Place it on a block, power it, and wait for a sample."]
+	quest.461BBED82164F4BC.quest_subtitle: "Serious snacker"
+	quest.461BBED82164F4BC.title: "Every Pam's Core Food"
 	quest.4628396CD22EDC11.quest_desc: [
 		"The &bEconomy Plane&r is a reliable entry-level aircraft."
 		""
@@ -2094,6 +2166,8 @@
 		"Right-click Brass Ingots onto Stripped Logs to create &6Brass Casings&r."
 	]
 	quest.47E81662104F2510.title: "&6Brass Age"
+	quest.481701E81A7308D1.quest_desc: ["Any combination of Suspicious Stews"]
+	quest.481701E81A7308D1.title: "Suspicious Individual"
 	quest.483612071C0B755E.quest_desc: [
 		"Alternatively, &eCreate Crafts & Additions&r allows for Bioethanol production."
 		""
@@ -2199,6 +2273,10 @@
 	quest.4C0D7283B04689D8.title: "&8The Harbinger"
 	quest.4C2D1A1756D41739.quest_desc: ["Wireless Redstone."]
 	quest.4C2D1A1756D41739.title: "&3Transmitter"
+	quest.4C31B09A49A20171.quest_subtitle: "Craft at least a 10x10x10 of every colossal chest"
+	quest.4C31B09A49A20171.title: "Storage of Epic Proportions"
+	quest.4C3458F02B6E0399.quest_subtitle: "Find all pottery sherds"
+	quest.4C3458F02B6E0399.title: "Pottery Master"
 	quest.4C4D4E4F50515253.quest_desc: ["The Bulwark of the Flame is Ignis's shield."]
 	quest.4CB826526128B825.quest_desc: ["Use &eSchematics&r to save and reprint your creations."]
 	quest.4CB826526128B825.title: "Blueprints and Printing"
@@ -2266,6 +2344,9 @@
 		"In some versions (Hardcore Revival), you may be incapacitated instead of killed immediately. Friends can revive you before you pass on!"
 	]
 	quest.5000000000000000.title: "&aDeath and Revival"
+	quest.502CEF8C69FC55F2.quest_subtitle: "Craft every drink item from Farmer's Delight"
+	quest.502CEF8C69FC55F2.title: "Every Farmer's Delight Drink"
+	quest.50C4083C1D6F534B.title: "Tools"
 	quest.50DD9E810879A49F.quest_desc: ["Feeds you food when hungry."]
 	quest.51130393AFDB397C.quest_desc: ["The &3Coral Golem&r is a sturdy construct of the seas."]
 	quest.51236544BFEF487B.quest_desc: [
@@ -2336,6 +2417,7 @@
 	quest.537A8F99CC3F525D.quest_desc: ["Recruit your first 8 guards."]
 	quest.537A8F99CC3F525D.title: "&aMilitia"
 	quest.53BB590289D14A36.quest_desc: ["The &6disenchanter&r removes enchants from items and stores them as liquid XP."]
+	quest.53C925818FB226C1.quest_subtitle: "Construct an ultimate chunk loader"
 	quest.53F8923B85A8A9CC.quest_desc: ["Recruit 80 guards."]
 	quest.53F8923B85A8A9CC.title: "&aLegion"
 	quest.54534D5DB62641C9.quest_desc: [
@@ -2376,6 +2458,7 @@
 		"Right-click the Carcass onto your Rope to hang it up."
 	]
 	quest.55B24B02DE511F95.title: "&cThe First Kill"
+	quest.55BE6137586D32BB.title: "Every Pam's Extended Food"
 	quest.5618B54BE7C3417B.quest_desc: ["Upgrade your space suit with Martian Steel."]
 	quest.563C76D529A4694B.quest_desc: ["The &eMechanical Mixer&r mixes fluids and items. Required for automated Andesite Alloy."]
 	quest.5640650E72BDAAEA.title: "Sophisticated Backpacks"
@@ -2594,6 +2677,7 @@
 	quest.5FADE20C1DAD3513.title: "&aLogistic Drone"
 	quest.5FC01763770A062E.quest_desc: ["Your Builder needs to actually build the Town Hall structure before it fully functions."]
 	quest.5FC01763770A062E.title: "&aTown Hall Construction"
+	quest.5FFC3B1D3CD0B61B.quest_subtitle: "Swim in lava with netherite diving gear"
 	quest.6000000000000000.quest_desc: [
 		"To keep the server running smoothly for everyone, please follow these performance tips:"
 		""
@@ -2611,6 +2695,7 @@
 	quest.605C983DD6ED9F6A.quest_desc: ["&lLocation:&r Found in &9Buried Treasure&r chests."]
 	quest.605C983DD6ED9F6A.quest_subtitle: "Eye 16 of 16 (Buried Treasure)"
 	quest.605C983DD6ED9F6A.title: "Black Eye"
+	quest.6097DBD641C936C4.title: "Trader"
 	quest.60F10069FD956D54.quest_desc: [
 		"The standard terminal range is short."
 		"Insert &bWireless Boosters&r into the Access Point to extend range."
@@ -2683,6 +2768,7 @@
 	quest.647F95EED59927B7.title: "&aThe Restaurant"
 	quest.64C249E1826AE1FA.quest_desc: ["The &3Sculk Centipede&r is a long, burrowing horror."]
 	quest.64CC214BD1AA5791.title: "Engineer's Armor"
+	quest.64CCEE45A6ECFA71.title: "Plow"
 	quest.6529D95C9AF673DA.quest_desc: [
 		"Ropes break eventually. For a permanent setup, upgrade to an &8Iron Hook&r."
 		""
@@ -2757,6 +2843,7 @@
 	quest.69B7DE2283B4EE6C.title: "Co-Processing"
 	quest.69EAF1072D492F1A.quest_desc: ["Ancient Tomes are needed for high-level research."]
 	quest.69EAF1072D492F1A.title: "&aAncient Tome"
+	quest.6A218B9ACF7881C2.quest_subtitle: "Craft a Mace"
 	quest.6A2F1E0B4D9C7B31.quest_desc: [
 		"&6The Architect's Vision&r"
 		""
@@ -2867,9 +2954,11 @@
 		"The &bCargo Airship&r trades speed for a massive inventory. Perfect for moving bases or transporting ores."
 	]
 	quest.6F7081A2B3C4C000.title: "&aHeavy Transport"
+	quest.6F96BB227EFE750D.quest_subtitle: "What are you even going to do with this many?"
 	quest.6FAB01B97B33913A.title: "Automation Logic"
 	quest.6FD6079C84025112.quest_desc: ["The &7Mason's Table&r is used for heavy stone materials. Turn &8Cobblestone&r, &7Deepslate&r, and &8Bricks&r into pillars, runic symbols, and ancient tiles."]
 	quest.6FD6079C84025112.title: "&7Masonry Masterclass"
+	quest.6FED6DB88059B50B.title: "Via Romana"
 	quest.7000000000000000.quest_desc: [
 		"Welcome to the &6Advanced Age&r."
 		""
@@ -3334,6 +3423,7 @@
 		"Connect multiple crafters to form the required shape, ensure their arrows point to the output, and power them."
 	]
 	quest.74C52604CDA33587.title: "&6Mechanical Crafting"
+	quest.74D953C74AED8710.quest_subtitle: "Forge 1,000 times"
 	quest.74F234F4A709DF7C.quest_desc: ["Compresses items like ingots into blocks automatically."]
 	quest.74FC0DDDB91DB172.quest_desc: [
 		"The &bInterface&r allows items to enter or leave the ME network from external automation."
@@ -3451,6 +3541,8 @@
 		"Macaw's Furnitures provides &eBookshelves&r that actually display books, &6Desks&r, and &bWardrobes&r. Combine these with &6Lighting&r options like &eChandeliers&r and &cTiki Torches&r for a perfect atmosphere."
 	]
 	quest.7BD8E2DF0925B7CA.title: "&dAtmospheric Interiors"
+	quest.7C253122D3A8EE71.quest_subtitle: "Create every star map"
+	quest.7C253122D3A8EE71.title: "Star Maps"
 	quest.7C28F0FA2A5EA2B2.quest_desc: [
 		"Kill a Warden."
 		"It may drop the &bHeart of the Deep&r."
@@ -3495,7 +3587,9 @@
 	task.0AFAAFAAFA000003.title: "The Engineer's Journey"
 	task.0AFAAFAAFA000046.title: "Blueprint: Components"
 	task.0AFAAFAAFA000056.title: "Blueprint: Molds"
+	task.0B5B1F87D2185591.title: "Supply Cart"
 	task.0D31FB2D2AF9C5F2.title: "Place the Town Hall Block"
+	task.0E0E048DB4EFE83E.title: "Boat"
 	task.1000000000000002.title: "Advanced Logistics"
 	task.1000000000000012.title: "Log Procurement"
 	task.1000000000000015.title: "Planks"
@@ -3509,13 +3603,24 @@
 	task.1000000000010055.title: "Rest"
 	task.100000AF00000002.title: "The Master Chef"
 	task.1076BC82EECB73F5.title: "Quartz Cutting Knife"
+	task.11373BA8283FDE65.title: "Axe"
 	task.122738E71DCAAB8D.title: "Tag!"
 	task.1234567890ABCDEF.title: "Pattern Provider"
+	task.13B13761B66AD04E.title: "Sophisticated Storage Netherite Upgrade"
+	task.1407971261FC6BB6.title: "Reaper"
 	task.14DEFFB80CC96BC1.title: "Any Smart Cable"
 	task.1650A0BEF32C29C5.title: "Cataclysmic Warning"
 	task.19C31D3EA6207638.title: "Open a shop"
 	task.1A2B3C4D5E6F7002.title: "Aviation"
+	task.1B4CA5B707FEFBE1.title: "Seed Drill"
+	task.1D0818DC1B75FDAB.title: "36 Suspicious Stew"
+	task.1FE6CF5D019DA595.title: "Start Here"
+	task.20C9C74F5470D8AC.title: "Minecart"
 	task.23D186249A999B8C.title: "Quartz Cutting Knife"
+	task.26779908AA413B0B.title: "a"
+	task.28D8F42C2DA83D25.title: "Pickaxe"
+	task.2A432927EE4F7ED2.title: "Happy Ghast Harness"
+	task.2BBADA7FFC2F42F0.title: "Animal Cart"
 	task.2C5A54BB5DB514CC.title: "Any Roof Block"
 	task.2D19A4EF2E4B7A55.title: "Memory Card"
 	task.2D386EFC23C45581.title: "Crafting Monitor"
@@ -3524,14 +3629,23 @@
 	task.2F38FBA010E5659A.title: "The First Morning"
 	task.3000000000000002.title: "I will be nice"
 	task.338A6DA0D711B7DC.title: "Pattern Provider"
+	task.35DA382B87ED43F8.title: "Firework Rocket"
+	task.37F76CB80411C464.title: "Shovel"
 	task.382E8129CA13F3A4.title: "Ok"
 	task.38E290AC5E011888.title: "Any Smart Dense Cable"
 	task.3981FEEF0028FAA0.title: "Information"
+	task.398F378D09637527.title: "Any #minecraft:leaves"
 	task.4000000000000002.title: "Mic Check"
+	task.4018FC2C3B50F4CD.title: "Hoe"
 	task.40A7CC56DACC2623.title: "Any Glass Cable"
+	task.4182F3AB5F902A8C.title: "Any #create:seats"
+	task.4537B5644A77D11D.title: "Elytra"
+	task.4908977FA2EE7329.title: "R"
+	task.49B0BF768461FBEF.title: "Jump 1M times"
 	task.4A11EC407279C124.title: "Powering the Industry"
 	task.4AAD2F655B7107F6.title: "Got it"
 	task.4AD0A0DE10A96EBC.title: "Any Plow"
+	task.4C0F2DCEE9622B02.title: "Ship"
 	task.4D25BF3C4F05025D.title: "Collect all Presses"
 	task.4D9134BDD9B3D677.title: "Resonating Power"
 	task.4E0C5E3A98293C08.title: "Spatial Cell Component"
@@ -3539,6 +3653,8 @@
 	task.5234567890123456.title: "Any Seed Drill"
 	task.52521FCD58B2FEF0.title: "ME Item Storage Cell"
 	task.52E618D45F07CF01.title: "I understand"
+	task.533E9019A53EF32C.title: "Hand Cart"
+	task.5573F526080731B3.title: "Construction Stick"
 	task.56601D1093A852EB.title: "Any Window Block"
 	task.5DB0D477F04CEA5E.title: "Understand the Goal"
 	task.5E60C9F71CAB9CE7.title: "Any #minecraft:doors"
@@ -3564,8 +3680,10 @@
 	task.7732B5DC114EB3F3.title: "Hyper Enchanting"
 	task.7890123456789012.title: "Any Supply Cart"
 	task.78FBC62D3E36207A.title: "Log Procurement"
+	task.79C19D9BB073FB20.title: "Read Description"
 	task.7BE92C777F0CDFCE.title: "Read the Introduction"
 	task.7C6E7D3E47882870.title: "Storage Solutions"
 	task.7E3A1C9D5F2B4862.title: "Begin the Blueprint"
 	task.7FC3DAA1BD5016A0.title: "Any Covered Dense Cable"
+	task.7FFA386B75B8CC9B.title: "L"
 }
