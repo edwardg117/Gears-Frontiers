@@ -68,7 +68,7 @@ ServerEvents.recipes((event) => {
 
   // #region Immersive Aircraft
   // Remove recipes and replace with https://www.curseforge.com/minecraft/texture-packs/create-immersive-aircrafts-data-pack
-  // event.remove({mod:"immersive_aircraft"});
+  event.remove({mod:"immersive_aircraft"});
   // event.remove({ output: "immersive_aircraft:biplane" });
   // event.remove({ output: "man_of_many_planes:economy_plane" });
 
