@@ -8,36 +8,27 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "40904B1CD40A7055"
-			tasks: [{
-				id: "1FE6CF5D019DA595"
-				type: "checkmark"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
+			disable_toast: true
 			id: "37C8D2A65EEBC8A1"
+			optional: true
 			tasks: [{
-				id: "7FFA386B75B8CC9B"
-				type: "checkmark"
+				disable_toast: true
+				icon: {
+					id: "minecraft:leather_boots"
+				}
+				id: "3EE8AD6045BB4C6A"
+				stat: "minecraft:walk_one_cm"
+				type: "stat"
+				value: 1
 			}]
 			x: -14.0d
-			y: 0.0d
-		}
-		{
-			id: "239420FB30F35FD6"
-			tasks: [{
-				id: "4908977FA2EE7329"
-				type: "checkmark"
-			}]
-			x: 14.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["37C8D2A65EEBC8A1"]
 			id: "0F6394BBD6F5770C"
 			tasks: [{
+				disable_toast: true
 				id: "38CDCEF099DBC173"
 				item: { count: 1, id: "minecraft:saddle" }
 				type: "item"
@@ -99,7 +90,7 @@
 				type: "item"
 			}]
 			x: -8.0d
-			y: -1.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["3A9DA929386A6A22"]
@@ -191,29 +182,35 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["3ED168791B6A6E9C"]
 			id: "2929B8816005D8FD"
 			tasks: [
 				{
+					disable_toast: true
 					id: "34B1E99C29926472"
 					item: { count: 1, id: "create:track" }
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "28F86EA21C1658E3"
 					item: { count: 1, id: "create:railway_casing" }
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "6B2C708006C7A5C7"
 					item: { count: 1, id: "create:track_station" }
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "07525561C001757C"
 					item: { count: 1, id: "create:controls" }
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4182F3AB5F902A8C"
 					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(create:seats)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
@@ -239,13 +236,25 @@
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "3E829729492548DF"
 					item: { count: 1, id: "create:train_door" }
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4625E6E85C8383AF"
 					item: { count: 1, id: "create:contraption_controls" }
+					type: "item"
+				}
+				{
+					id: "369647338521DBC1"
+					item: { count: 1, id: "create:schedule" }
+					type: "item"
+				}
+				{
+					id: "454593F697BAE037"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(create:postboxes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}
 			]
@@ -253,86 +262,105 @@
 			y: -1.0d
 		}
 		{
+			dependencies: ["2929B8816005D8FD"]
 			id: "30522E74ED992C6E"
 			tasks: [{
 				id: "1D8DED65DF084FF8"
 				item: { count: 1, id: "immersive_aircraft:airship" }
 				type: "item"
 			}]
-			x: -4.0d
-			y: 2.5d
+			x: -2.0d
+			y: 0.0d
 		}
 		{
+			dependencies: ["30522E74ED992C6E"]
 			id: "758DFD878A73821F"
 			tasks: [{
 				id: "7377C9BB8B1A96E8"
 				item: { count: 1, id: "kubejs:hardened_engine" }
 				type: "item"
 			}]
-			x: -2.0d
-			y: 1.0d
+			x: 0.0d
+			y: 0.0d
 		}
 		{
+			dependencies: ["758DFD878A73821F"]
 			id: "546DE814AC0B937C"
 			tasks: [{
 				id: "220D582952A1B088"
 				item: { count: 1, id: "immersive_aircraft:biplane" }
 				type: "item"
 			}]
-			x: 0.5d
-			y: 3.0d
+			x: 1.0d
+			y: 1.0d
 		}
 		{
+			dependencies: ["546DE814AC0B937C"]
 			id: "1C4CBD6C3C666073"
 			tasks: [{
 				id: "5932154691E2511D"
 				item: { count: 1, id: "man_of_many_planes:scarlet_biplane" }
 				type: "item"
 			}]
-			x: 3.0d
+			x: 2.0d
 			y: 2.0d
 		}
 		{
+			dependencies: ["758DFD878A73821F"]
 			id: "5CCCD62C0FB764C7"
 			tasks: [{
 				id: "0EA7071922EC2F78"
 				item: { count: 1, id: "man_of_many_planes:economy_plane" }
 				type: "item"
 			}]
-			x: 3.5d
-			y: 3.0d
+			x: 1.0d
+			y: -1.0d
 		}
 		{
+			dependencies: ["30522E74ED992C6E"]
 			id: "233F1E695165837A"
 			tasks: [{
 				id: "2FEC24B341D90CB1"
 				item: { count: 1, id: "immersive_aircraft:cargo_airship" }
 				type: "item"
 			}]
-			x: 3.0d
-			y: 1.0d
+			x: -1.0d
+			y: -1.0d
 		}
 		{
+			dependencies: ["233F1E695165837A"]
 			id: "774B168FC69D1CD5"
 			tasks: [{
 				id: "1E1F4B36B214936D"
 				item: { count: 1, id: "immersive_aircraft:warship" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 1.0d
+			x: 0.0d
+			y: -2.0d
 		}
 		{
+			dependencies: ["758DFD878A73821F"]
 			id: "66CEEA3B4FDB976B"
-			tasks: [{
-				id: "5C840CE2827725F7"
-				item: { count: 1, id: "createteleporters:teleporter" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: -0.5d
+			tasks: [
+				{
+					id: "5C840CE2827725F7"
+					item: { count: 1, id: "createteleporters:teleporter" }
+					type: "item"
+				}
+				{
+					id: "6D6DA434D8370412"
+					item: { count: 1, id: "createteleporters:tp_link" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
 		}
 		{
+			dependencies: [
+				"47E81662104F2510"
+				"3ED168791B6A6E9C"
+			]
 			id: "34433E5BA1444DDE"
 			tasks: [
 				{
@@ -352,7 +380,40 @@
 				}
 			]
 			x: -5.0d
-			y: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["3A9DA929386A6A22"]
+			id: "5746673B26335D2B"
+			tasks: [{
+				id: "6D59EC4970F15E40"
+				item: { components: { "minecraft:instrument": "minecraft:ponder_goat_horn" }, count: 1, id: "horseman:copper_horn" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A9DA929386A6A22"]
+			id: "012E3E93B7E56477"
+			tasks: [{
+				id: "7E212631FC8B79C9"
+				item: { count: 1, id: "horseexpert:monocle" }
+				type: "item"
+			}]
+			x: -12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["546DE814AC0B937C"]
+			id: "5DA2ABAB08D04A61"
+			tasks: [{
+				id: "0A0FFE57BD6DF06D"
+				item: { count: 1, id: "immersive_aircraft:bamboo_hopper" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
 		}
 	]
 }

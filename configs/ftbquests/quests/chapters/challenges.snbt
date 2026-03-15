@@ -3877,6 +3877,7 @@
 			tasks: [
 				{
 					dimension: "minecraft:overworld"
+					disable_toast: true
 					icon: {
 						id: "minecraft:grass_block"
 					}
@@ -3886,6 +3887,7 @@
 				}
 				{
 					dimension: "createteleporters:pocket_dimension"
+					disable_toast: true
 					icon: {
 						id: "createteleporters:pocket_dimension_remote"
 					}

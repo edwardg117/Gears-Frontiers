@@ -12,7 +12,6 @@
 	chapter.3EB7CE30DC66F493.title: "Transportation"
 	chapter.41D954C3F57B4BF1.title: "Storage Solutions"
 	chapter.4D6E8F12A09B3C4D.title: "Create: Logistics"
-	chapter.50860A3C903491E2.title: "Equestrian Engineering"
 	chapter.50860A3C903491E3.title: "The Culinary Arts"
 	chapter.58FD0DDD46EF0A01.title: "Create: Foundations and Kinetics"
 	chapter.58FD0DDD46EF0A02.title: "Create: Logistics and Brass"
@@ -305,6 +304,12 @@
 	quest.00CFE55482C251DA.quest_desc: ["Craft the &4Monstrous Helm&r using the horn dropped by the boss."]
 	quest.011207A61DF23A64.quest_desc: ["The Drilling Machine extracts resources from fluid veins or ore veins found by the Sample Drill."]
 	quest.011207A61DF23A64.title: "The Big Drill"
+	quest.012E3E93B7E56477.quest_desc: [
+		"Not all horses are created equal. Some are faster, jump higher, or have more health."
+		""
+		"Craft a &bMonocle&r to inspect the stats of any horse you look at. This is crucial for breeding the perfect steed."
+	]
+	quest.012E3E93B7E56477.title: "Horse Expert"
 	quest.014E69AB0AB58DD8.quest_desc: ["The &bPrinter&r copies written books or enchanted books using Liquid XP."]
 	quest.014E69AB0AB58DD8.title: "&6The Printer"
 	quest.01D8F7213B7AFACF.quest_desc: ["The &cInfernal Forge&r is found within the Soul Blacksmith. It is used to upgrade gear to powerful variants."]
@@ -658,6 +663,7 @@
 	quest.0B82E3B5B20876D4.quest_subtitle: "Community oriented quests"
 	quest.0B82E3B5B20876D4.title: "Community"
 	quest.0B9FBE19F05FA925.quest_desc: ["Allows specific slots to stack much higher."]
+	quest.0BF68D138D12A206.quest_subtitle: "Quickly fill empty farmland"
 	quest.0C11EDEC44D240C1.quest_desc: [
 		"The &6Macaw's Suite&r introduces complex 3D models for structural building. "
 		""
@@ -715,6 +721,7 @@
 		"You can also use Shovels to create paths."
 	]
 	quest.0F5D32098EA61D61.title: "Farming: The Plow"
+	quest.0F6394BBD6F5770C.quest_subtitle: "Craft yourself a saddle"
 	quest.0F725BB0F3B0AD61.quest_subtitle: "The worst jetpack in the game"
 	quest.0F725BB0F3B0AD61.title: "The worst jetpack"
 	quest.1000000000000000.quest_desc: [
@@ -1091,6 +1098,9 @@
 	quest.1122334455667788.title: "Fluid Handling"
 	quest.120152510AD4B59A.quest_desc: ["These goggles allow you to see building previews and work orders more clearly."]
 	quest.120152510AD4B59A.title: "&aArchitect's Goggles"
+	quest.1202043975B006FB.quest_desc: ["This can range from a simple parkour course to a fully fledged dungeon."]
+	quest.1202043975B006FB.quest_subtitle: "Construct a dungeon/challenge for other players to complete"
+	quest.1202043975B006FB.title: "Dungeon master"
 	quest.1213141516171819.quest_desc: ["Harvest the local flora: &3Echo Wood&r and &bBloooming Stems&r."]
 	quest.1213141516171819.title: "&3Alien Flora"
 	quest.1220D1A757633DB8.quest_desc: ["&lBoss Drop:&r Dropped by the &9Wither Boss&r."]
@@ -1138,6 +1148,8 @@
 	quest.14B76B7084E20E0B.title: "Sophistcated Storer"
 	quest.14DA3DC7C0009A6A.quest_desc: ["50 Citizens."]
 	quest.14DA3DC7C0009A6A.title: "&aCity"
+	quest.1521E17E5454D5CD.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."]
+	quest.1521E17E5454D5CD.quest_subtitle: "Bulk item transportation"
 	quest.15564C11744D6AA0.quest_desc: [
 		"Processors are the main component of advanced AE2 tech."
 		""
@@ -1303,6 +1315,7 @@
 		"It is used to craft the Anti-Radiation Suit and reactor casings."
 	]
 	quest.1B11111111111111.title: "&7Lead Shielding"
+	quest.1B2C79D90138FD51.quest_subtitle: "Make a trade agreement with another player"
 	quest.1B686954D34A0F23.quest_desc: ["The &bQuartz Cutting Knife&r allows you to craft Name Presses and Cable Anchors."]
 	quest.1B686954D34A0F23.quest_subtitle: "Tool of the Trade"
 	quest.1B686954D34A0F23.title: "Network Maintenance"
@@ -1538,6 +1551,8 @@
 	quest.21F23C91555B284F.quest_desc: ["Navigate between planets automatically."]
 	quest.222426282A2C2E30.quest_desc: ["Craft the full set of Resonarium Armor."]
 	quest.222426282A2C2E30.title: "&3Resonarium Armor"
+	quest.22713FEA163F56E6.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."]
+	quest.22713FEA163F56E6.quest_subtitle: "Animal Transportation"
 	quest.22C4318523A43B49.quest_desc: [
 		"The &bTerminal&r allows you to see items in storage."
 		"Upgrade to a &bCrafting Terminal&r to craft with them."
@@ -1548,12 +1563,14 @@
 	quest.22F4C38E79DEFF1E.title: "&aOfficial Colony"
 	quest.23012F6C4C522CEB.quest_desc: ["The &bLumberjack&r automatically chops trees and replants saplings, providing a steady stream of wood."]
 	quest.23012F6C4C522CEB.title: "&aThe Lumberjack"
+	quest.233F1E695165837A.quest_subtitle: "Item transporter"
 	quest.2345678901234567.quest_desc: [
 		"To attach a cart to your horse, you first need a &bWheel&r."
 		""
 		"The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."
 	]
 	quest.2345678901234567.title: "The Wheel"
+	quest.235AB6B47220C5C7.quest_subtitle: "Extra tring components you should investigate"
 	quest.235AB6B47220C5C7.title: "Extra Tain parts"
 	quest.237A02B4F49BBDFA.quest_subtitle: "Obtain every catalyst"
 	quest.23D28D50FBB5C5A3.quest_desc: ["Emits a Redstone signal based on how full the drawer is."]
@@ -1603,6 +1620,8 @@
 		"He uses a shield. Wait for him to attack before striking."
 	]
 	quest.26483316FD0491AD.title: "&6Kill Ignis"
+	quest.26A92A45EEB2EDB8.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while standing near the cart."]
+	quest.26A92A45EEB2EDB8.quest_subtitle: "Early game item transportation"
 	quest.275001F88C70865E.quest_desc: [
 		"The Warden has a chance to drop the &bHeart of the Deep&r."
 		""
@@ -1648,6 +1667,10 @@
 	quest.28D2767C188EAEF9.title: "&6Portal Crown"
 	quest.28EE13DE7CBE9518.quest_subtitle: "For Barrels"
 	quest.28EE13DE7CBE9518.title: "Sophisticated Storage"
+	quest.291F9B0D7C9D0993.quest_subtitle: "Defeat a dungeon with another player"
+	quest.291F9B0D7C9D0993.title: "Adventurers"
+	quest.2929B8816005D8FD.quest_desc: ["Trains are a versatile form of transportation that allows for automating not just transport of player, but items too. When supplied with fuel (coal or charcoal), trains travel even faster than planes. Trains can be supplied with a schedule, allowing them to tavel to destinations and complete tasks without a player, even when chunks aren't loaded. "]
+	quest.2929B8816005D8FD.quest_subtitle: "Choo Choo!"
 	quest.2929B8816005D8FD.title: "Train Age"
 	quest.295EAFEA068AD07E.quest_desc: ["Reinforced Echo Shards are used in high-tier crafting."]
 	quest.29FFE2FE9B6BF06B.quest_desc: [
@@ -1704,6 +1727,7 @@
 		"&4Cataclysm&r: South path."
 	]
 	quest.2B85573EC295B29B.quest_subtitle: "Fall 100km"
+	quest.2BAA6085A7910749.quest_subtitle: "Quickly harvest crops"
 	quest.2BAAD462A4EB5DE8.quest_desc: [
 		"The Otherside is inhabited by dangerous creatures."
 		""
@@ -1800,6 +1824,8 @@
 		"Enter and survive."
 	]
 	quest.301E64EEC5C07FB2.title: "&6Enter the Dungeon"
+	quest.30522E74ED992C6E.quest_desc: ["The &bAirship&r is the start of the proper aviation tree."]
+	quest.30522E74ED992C6E.quest_subtitle: "Entry into air travel"
 	quest.3063F0AFCB455CB5.quest_desc: ["The &eNecklace of the Desert&r grants sandstorm immunity."]
 	quest.3076FE32489FB954.quest_subtitle: "Serious about storage"
 	quest.30E853CE699E669B.quest_desc: [
@@ -1859,7 +1885,9 @@
 	quest.3405D09DD63ED742.quest_desc: ["The &6Draugr&r is a frozen undead warrior."]
 	quest.342A1EF584823D2C.quest_desc: ["Teach your colonists how to craft torches so they can light up their own buildings."]
 	quest.342A1EF584823D2C.title: "&aTeaching Recipes: Torches"
-	quest.34433E5BA1444DDE.title: "Hypertube Trnasportation"
+	quest.34433E5BA1444DDE.quest_desc: ["Hypertubes use rotational force to shoot a player through them at great speed."]
+	quest.34433E5BA1444DDE.quest_subtitle: "The design is very human"
+	quest.34433E5BA1444DDE.title: "Hypertube Transportation"
 	quest.34493AB364E29AA4.quest_desc: ["The &bBamboo Hopper&r is a fragile but lightweight craft. A simple start for those without resources."]
 	quest.349060F64218C12C.quest_desc: ["&lLocation:&r Found in the basement chest of a &9Igloo&r."]
 	quest.349060F64218C12C.quest_subtitle: "Eye 6 of 12 (Cold)"
@@ -1913,6 +1941,7 @@
 	quest.37B40001703A1199.quest_desc: ["Beautiful blue crystals found on the moon."]
 	quest.37BE190EE466D697.quest_desc: ["A maxed out Town Hall and a huge population."]
 	quest.37BE190EE466D697.title: "&aMetropolis"
+	quest.37C8D2A65EEBC8A1.title: "Start"
 	quest.37D13A675F56C030.quest_desc: ["Fill your suit with Oxygen."]
 	quest.37E43341FA234E84.quest_desc: ["The &bFlorist&r gathers flowers and composts organic material."]
 	quest.37E43341FA234E84.title: "&aThe Florist"
@@ -1943,6 +1972,8 @@
 		"To begin, find a horse and tame it."
 	]
 	quest.3A4B5C6D7E8F9012.title: "Equestrian Engineering"
+	quest.3A9DA929386A6A22.quest_desc: ["The horse is the primary method of transportation for the early game. There are several mods that have been added to improve the expirence with horses, including Horse Breeding Fix to make breeding better horses easier."]
+	quest.3A9DA929386A6A22.quest_subtitle: "The horse is going to be your main form of transportation for the early game"
 	quest.3A9DA929386A6A22.title: "Tame a horse"
 	quest.3ABC77C61A07ED44.quest_desc: ["Craft the Monstrous Helm from the beast's horn."]
 	quest.3AC3C4B8BB78396B.quest_desc: ["Automatically picks up items into the backpack."]
@@ -2027,6 +2058,7 @@
 	quest.3E3DF8E967D95DB0.quest_subtitle: "Dense Matter"
 	quest.3E3DF8E967D95DB0.title: "Quantum Entanglement"
 	quest.3E94738A0260FD66.quest_subtitle: "You can make the joke after you get this one."
+	quest.3ED168791B6A6E9C.quest_subtitle: "Crude flying devices"
 	quest.3ED168791B6A6E9C.title: "First Flight"
 	quest.3F191468D4FC9757.quest_subtitle: "Craft the Scarlet Biplane"
 	quest.3F38FB153E5A37BF.quest_desc: [
@@ -2070,7 +2102,6 @@
 	quest.4000000000000003.title: "Upgrading"
 	quest.4000000000000004.quest_desc: ["Diamond tier holds a staggering amount of items."]
 	quest.4000000000000004.title: "Diamond Tier"
-	quest.40904B1CD40A7055.title: "Middle"
 	quest.40C8D26E40C40AC7.quest_desc: [
 		"The Echoing Forests are home to &3Echo Wood&r."
 		""
@@ -2140,6 +2171,7 @@
 	]
 	quest.4597D3B3BDC2BED5.title: "Auto-Crafting Basics"
 	quest.45B87D51EF224B8C.quest_desc: ["The &lSample Drill&r is your initial prospecting tool. Place it on a block, power it, and wait for a sample."]
+	quest.46118EC8D417B7A6.quest_subtitle: "Construct a road between you and at least one other player"
 	quest.461BBED82164F4BC.quest_subtitle: "Serious snacker"
 	quest.461BBED82164F4BC.title: "Every Pam's Core Food"
 	quest.4628396CD22EDC11.quest_desc: [
@@ -2474,6 +2506,12 @@
 	quest.5708ABC6B90BE39E.quest_desc: ["Sandstorm Necklace."]
 	quest.5708ABC6B90BE39E.title: "&eDesert Necklace"
 	quest.57367265FDA02E2C.quest_desc: ["&9Tidal Claws&r grant the power of the sea."]
+	quest.5746673B26335D2B.quest_desc: [
+		"Lost your horse? The &6Copper Horn&r allows you to call your tamed horse to your location."
+		""
+		"Very useful if you get separated while exploring."
+	]
+	quest.5746673B26335D2B.title: "The Horseman's call"
 	quest.575A6FF022B9D2D0.quest_desc: ["Mastering heat is mastering the world. Use this to cook food and refine ores."]
 	quest.575A6FF022B9D2D0.title: "Pyromancy 101"
 	quest.57A298D0D4126067.quest_desc: ["Farming machines automate crops and trees."]
@@ -2768,6 +2806,12 @@
 	quest.647F95EED59927B7.title: "&aThe Restaurant"
 	quest.64C249E1826AE1FA.quest_desc: ["The &3Sculk Centipede&r is a long, burrowing horror."]
 	quest.64CC214BD1AA5791.title: "Engineer's Armor"
+	quest.64CCEE45A6ECFA71.quest_desc: [
+		"The &6Plow&r can be used to create large amount of farmland when supplied with hoes, or strip trees with axes. The &6Plow&r is useful for constructing simple roads. By supplying shovels, the &6Plow&r can create simple dirt paths that can be used for transportation."
+		""
+		"The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."
+	]
+	quest.64CCEE45A6ECFA71.quest_subtitle: "A multi-purpose tool"
 	quest.64CCEE45A6ECFA71.title: "Plow"
 	quest.6529D95C9AF673DA.quest_desc: [
 		"Ropes break eventually. For a permanent setup, upgrade to an &8Iron Hook&r."
@@ -2794,6 +2838,9 @@
 		"These windows come in multiple 3D styles like &fGothic&r or &6Modern&r."
 	]
 	quest.66B96CF20790222F.title: "&fSight and Shade"
+	quest.66CEEA3B4FDB976B.quest_desc: ["The final stage of transportation is teleportation. Teleporters are powered by telejuice (&bQuantam Fluid&r) and allow the player to cross great distances instantly."]
+	quest.66CEEA3B4FDB976B.quest_subtitle: "Advanced transportation"
+	quest.66CEEA3B4FDB976B.title: "Teleportation"
 	quest.66DCF4934FE4A1EF.quest_desc: [
 		"&bElectron Tubes&r are used for advanced circuitry."
 		""
@@ -2958,6 +3005,12 @@
 	quest.6FAB01B97B33913A.title: "Automation Logic"
 	quest.6FD6079C84025112.quest_desc: ["The &7Mason's Table&r is used for heavy stone materials. Turn &8Cobblestone&r, &7Deepslate&r, and &8Bricks&r into pillars, runic symbols, and ancient tiles."]
 	quest.6FD6079C84025112.title: "&7Masonry Masterclass"
+	quest.6FED6DB88059B50B.quest_desc: [
+		"Via Romana is a fast travel mod that requires setting up infrastructure. The mod requires signs to be used as entry/exit points into a road network that has to be physically created and mapped. See the tutorial in the &6Charting Map&r for specifics."
+		""
+		"To complete this quest you will need to create a path of at least a few blocks and travel it (using the fast travel system) from end to end."
+	]
+	quest.6FED6DB88059B50B.quest_subtitle: "Short range fast travel"
 	quest.6FED6DB88059B50B.title: "Via Romana"
 	quest.7000000000000000.quest_desc: [
 		"Welcome to the &6Advanced Age&r."
@@ -3446,6 +3499,7 @@
 	quest.754DE5EBCCBED146.title: "&cButchering"
 	quest.75599A9909C7A8C8.quest_desc: ["Ensure your citizens have food. If they starve, they work slower and may die."]
 	quest.75599A9909C7A8C8.title: "&aFeeding the Populace"
+	quest.758DFD878A73821F.quest_subtitle: "The Engine for planes"
 	quest.759C203CFB6CB8F9.quest_desc: ["Pulls items from a distance."]
 	quest.7696E2EF8160CAE0.quest_desc: ["Warden Helmet."]
 	quest.7696E2EF8160CAE0.title: "&3Warden Helm"
@@ -3453,6 +3507,7 @@
 	quest.76E7991459AA12A5.quest_desc: ["The &6Kobolediator&r is a champion of the sands."]
 	quest.7746A1DC8A15F8B3.quest_desc: ["Kill the &8Harbinger&r in the Ancient Factory."]
 	quest.7746A1DC8A15F8B3.title: "&8The Harbinger"
+	quest.774B168FC69D1CD5.quest_subtitle: "Airial Juggernaut"
 	quest.7763AD9EAC0B8D6A.quest_desc: ["The &6Deepling Angler&r lures prey in the deep."]
 	quest.77889900AABBCCDD.quest_desc: [
 		"The Otherside is inhabited by dangerous creatures."
@@ -3506,6 +3561,7 @@
 		"The structure must be a hollow cube."
 	]
 	quest.7A4C3D5B79416997.title: "Colossal Chests"
+	quest.7A6CD70F2896E0AE.quest_subtitle: "Kill 10,000 mobs"
 	quest.7A79C31621659E92.quest_desc: ["The &bShroud Key&r hides the item icon on the drawer face. Good for reducing lag or for aesthetic walls."]
 	quest.7AF82CBB495FAA6E.quest_desc: ["The base upgrade for storage blocks."]
 	quest.7B314C517F0B6221.quest_desc: ["The Challenges section is dedicated to things that aren't so progression focussed as they are on highlighting some achivement."]
@@ -3635,12 +3691,16 @@
 	task.38E290AC5E011888.title: "Any Smart Dense Cable"
 	task.3981FEEF0028FAA0.title: "Information"
 	task.398F378D09637527.title: "Any #minecraft:leaves"
+	task.3F63566789879C85.title: "Create a dungeon/challenge for other players to complete"
 	task.4000000000000002.title: "Mic Check"
 	task.4018FC2C3B50F4CD.title: "Hoe"
 	task.40A7CC56DACC2623.title: "Any Glass Cable"
 	task.4182F3AB5F902A8C.title: "Any #create:seats"
+	task.431B512FFB189FB0.title: "Build a minigame"
 	task.4537B5644A77D11D.title: "Elytra"
+	task.454593F697BAE037.title: "Any #create:postboxes"
 	task.4908977FA2EE7329.title: "R"
+	task.499546295B9D5CF4.title: "Build something with another player"
 	task.49B0BF768461FBEF.title: "Jump 1M times"
 	task.4A11EC407279C124.title: "Powering the Industry"
 	task.4AAD2F655B7107F6.title: "Got it"
@@ -3657,6 +3717,7 @@
 	task.5573F526080731B3.title: "Construction Stick"
 	task.56601D1093A852EB.title: "Any Window Block"
 	task.5DB0D477F04CEA5E.title: "Understand the Goal"
+	task.5E274A0871A83251.title: "Defeat a dungeon with another player"
 	task.5E60C9F71CAB9CE7.title: "Any #minecraft:doors"
 	task.5EC8D891031E34EF.title: "Crafting Co-Processor"
 	task.6000000000000002.title: "I promise to minimize lag"
@@ -3665,6 +3726,8 @@
 	task.64932DEAA6724BEE.title: "tmp"
 	task.64EAD3DE84E94F02.title: "Any Covered Cable"
 	task.65C439FD14C5EEB9.title: "ME Portable Cell"
+	task.65CAD4FDE0AE7632.title: "Connected"
+	task.6679F08B539A8C1E.title: "Conbtribute to a community project"
 	task.6691176371563341.title: "Color Applicator"
 	task.69AD2578292B28FD.title: "Power Generation"
 	task.69C59B97E310195D.title: "Claim Colony Territory"
@@ -3678,6 +3741,7 @@
 	task.7241918F270CA402.title: "Interface"
 	task.75924053D6F5B242.title: "Any Spatial Storage Cell"
 	task.7732B5DC114EB3F3.title: "Hyper Enchanting"
+	task.7822929A7C1736CF.title: "Deal!"
 	task.7890123456789012.title: "Any Supply Cart"
 	task.78FBC62D3E36207A.title: "Log Procurement"
 	task.79C19D9BB073FB20.title: "Read Description"
@@ -3685,5 +3749,4 @@
 	task.7C6E7D3E47882870.title: "Storage Solutions"
 	task.7E3A1C9D5F2B4862.title: "Begin the Blueprint"
 	task.7FC3DAA1BD5016A0.title: "Any Covered Dense Cable"
-	task.7FFA386B75B8CC9B.title: "L"
 }

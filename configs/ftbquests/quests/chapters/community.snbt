@@ -70,5 +70,85 @@
 			x: -4.0d
 			y: 2.0d
 		}
+		{
+			id: "1B1537B1F62B984B"
+			tasks: [{
+				id: "431B512FFB189FB0"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			id: "2714616A77F74344"
+			tasks: [{
+				id: "499546295B9D5CF4"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			id: "5820DB3B5FAD4C71"
+			tasks: [{
+				id: "6679F08B539A8C1E"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -3.0d
+		}
+		{
+			id: "1202043975B006FB"
+			tasks: [{
+				id: "3F63566789879C85"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: -4.5d
+		}
+		{
+			id: "08A1726416FABBF1"
+			tasks: [{
+				icon: {
+					components: {
+						"ftbquests:icon": "minecraft:textures/gui/sprites/hud/heart/hardcore_full.png"
+					}
+					id: "ftbquests:custom_icon"
+				}
+				id: "2086B71A6C61F8CB"
+				stat: "hardcorerevival:players_revived"
+				type: "stat"
+				value: 5
+			}]
+			x: -6.5d
+			y: -3.5d
+		}
+		{
+			id: "291F9B0D7C9D0993"
+			tasks: [{
+				id: "5E274A0871A83251"
+				type: "checkmark"
+			}]
+			x: -5.0d
+			y: -4.0d
+		}
+		{
+			id: "1B2C79D90138FD51"
+			tasks: [{
+				id: "7822929A7C1736CF"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: -4.5d
+		}
+		{
+			id: "46118EC8D417B7A6"
+			tasks: [{
+				id: "65CAD4FDE0AE7632"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
 	]
 }
