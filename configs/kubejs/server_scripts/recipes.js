@@ -654,6 +654,42 @@ ServerEvents.recipes((event) => {
 
   // Make ancient debris renewable
   event.recipes
+  .createCompacting(
+    "minecraft:gilded_blackstone",
+    [
+      "minecraft:blackstone",
+      "minecraft:gold_ingot",
+      "minecraft:gold_ingot"
+    ]
+  );
+
+  event.recipes
+  .createCompacting(
+    "minecraft:gilded_blackstone",
+    [
+      "minecraft:blackstone",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget",
+      "minecraft:gold_nugget"
+    ]
+  );
+
+  event.recipes
     .createMixing(
       [
         "minecraft:ancient_debris",
