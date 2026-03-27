@@ -37,5 +37,13 @@
 			<ModType inRoot="true">Extract</ModType>
 			<MD5>f7e9ba73c422333d2e766d88ea602695</MD5>
 		</Module>
+		<Module name="Better Compatibility Checker Config" id="bcc-common" depends="better_compatibility_checker" side="BOTH">
+			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/bcc-common.toml</URL>
+			<ModPath>/config/bcc-common.toml</ModPath>
+			<Size>380</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f4d066e83e79e63a92a655530cc63d9f</MD5>
+		</Module>
 	</Server>
 </ServerPack>
