@@ -395,6 +395,7 @@
 		"Start with the &6Carpenter's Table&r. It handles every type of wood in the game, providing hundreds of carved, paneled, and mosaic options."
 	]
 	quest.0893281244B7CFA7.title: "&6The Woodshop"
+	quest.08A1726416FABBF1.quest_desc: ["Revive another player five times."]
 	quest.08E1AB905D1A5EA9.quest_desc: ["&eBuilder's Tea&r provides a speed buff for placing blocks."]
 	quest.094C48C17DD97AFE.quest_desc: [
 		"&bReactor Coolers&r help dissipate excess heat to prevent explosions."
@@ -659,7 +660,11 @@
 		"Craft a &fRag&r to clean up blood puddles."
 	]
 	quest.0B5E5F9BEC364528.title: "&fCleanup"
-	quest.0B82E3B5B20876D4.quest_desc: ["Games are better with friends, so why not hang out together! This section features community oriented quests to encorage you to interact with other players and build community projects."]
+	quest.0B82E3B5B20876D4.quest_desc: [
+		"Games are better with friends, so why not hang out together! This section features community oriented quests to encorage you to interact with other players and build community projects. I can't actually detect most of these so it's on the honour system."
+		""
+		"If quests have overlapping requirements, choose one to complete. (No two for one)"
+	]
 	quest.0B82E3B5B20876D4.quest_subtitle: "Community oriented quests"
 	quest.0B82E3B5B20876D4.title: "Community"
 	quest.0B9FBE19F05FA925.quest_desc: ["Allows specific slots to stack much higher."]
@@ -1098,7 +1103,7 @@
 	quest.1122334455667788.title: "Fluid Handling"
 	quest.120152510AD4B59A.quest_desc: ["These goggles allow you to see building previews and work orders more clearly."]
 	quest.120152510AD4B59A.title: "&aArchitect's Goggles"
-	quest.1202043975B006FB.quest_desc: ["This can range from a simple parkour course to a fully fledged dungeon."]
+	quest.1202043975B006FB.quest_desc: ["This can range from a simple parkour course to a fully fledged dungeon. This quest should take more time and effort than the minigame quest."]
 	quest.1202043975B006FB.quest_subtitle: "Construct a dungeon/challenge for other players to complete"
 	quest.1202043975B006FB.title: "Dungeon master"
 	quest.1213141516171819.quest_desc: ["Harvest the local flora: &3Echo Wood&r and &bBloooming Stems&r."]
@@ -1315,6 +1320,8 @@
 		"It is used to craft the Anti-Radiation Suit and reactor casings."
 	]
 	quest.1B11111111111111.title: "&7Lead Shielding"
+	quest.1B1537B1F62B984B.quest_desc: ["Build a simple minigame for other players to play."]
+	quest.1B2C79D90138FD51.quest_desc: ["This could be a simple one-off trade (item for item), or an on-going agreement for materials or access to something."]
 	quest.1B2C79D90138FD51.quest_subtitle: "Make a trade agreement with another player"
 	quest.1B686954D34A0F23.quest_desc: ["The &bQuartz Cutting Knife&r allows you to craft Name Presses and Cable Anchors."]
 	quest.1B686954D34A0F23.quest_subtitle: "Tool of the Trade"
@@ -1553,6 +1560,9 @@
 	quest.222426282A2C2E30.title: "&3Resonarium Armor"
 	quest.22713FEA163F56E6.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."]
 	quest.22713FEA163F56E6.quest_subtitle: "Animal Transportation"
+	quest.22B5B73E05CD043E.quest_desc: ["Challenge one or more players to a competition of some kind. It could be a race, build-battle, ABBA Caving or PVP. The other player must accept and only the one proposing the challenge may claim this quest."]
+	quest.22B5B73E05CD043E.quest_subtitle: "Compete with other players"
+	quest.22B5B73E05CD043E.title: "Competitive!"
 	quest.22C4318523A43B49.quest_desc: [
 		"The &bTerminal&r allows you to see items in storage."
 		"Upgrade to a &bCrafting Terminal&r to craft with them."
@@ -1622,6 +1632,9 @@
 	quest.26483316FD0491AD.title: "&6Kill Ignis"
 	quest.26A92A45EEB2EDB8.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while standing near the cart."]
 	quest.26A92A45EEB2EDB8.quest_subtitle: "Early game item transportation"
+	quest.2714616A77F74344.quest_desc: ["It doesn't matter what it is, be it a house, shop, minigame or mob farm. Just as long as you do it together! Do not complete at the same time as &n&2Pillar of the community&r&r, pick one only."]
+	quest.2714616A77F74344.quest_subtitle: "Build something with another player"
+	quest.2714616A77F74344.title: "Teamwork!"
 	quest.275001F88C70865E.quest_desc: [
 		"The Warden has a chance to drop the &bHeart of the Deep&r."
 		""
@@ -2171,6 +2184,7 @@
 	]
 	quest.4597D3B3BDC2BED5.title: "Auto-Crafting Basics"
 	quest.45B87D51EF224B8C.quest_desc: ["The &lSample Drill&r is your initial prospecting tool. Place it on a block, power it, and wait for a sample."]
+	quest.46118EC8D417B7A6.quest_desc: ["Road must be mappable with &n&4Via Romana&r&r"]
 	quest.46118EC8D417B7A6.quest_subtitle: "Construct a road between you and at least one other player"
 	quest.461BBED82164F4BC.quest_subtitle: "Serious snacker"
 	quest.461BBED82164F4BC.title: "Every Pam's Core Food"
@@ -2531,6 +2545,9 @@
 	quest.57C83419A8C1E370.title: "&aWelcome and Philosophy"
 	quest.57C889EC980D33D9.quest_desc: ["The &bFarmer&r tends to crops, ensuring a steady food supply."]
 	quest.57C889EC980D33D9.title: "&aThe Farmer"
+	quest.5820DB3B5FAD4C71.quest_desc: ["Work on, or in some way, contribute to a comminity effort or project. It must be for the community and not a private/personal project. Do not complete this and &2&nTeamwork!&r&r at the same time, pick one."]
+	quest.5820DB3B5FAD4C71.quest_subtitle: "Contribute to a community project"
+	quest.5820DB3B5FAD4C71.title: "Pillar of the community"
 	quest.583A7AA84FEC027F.quest_desc: [
 		"The &bBuilder&r is the most important citizen."
 		""
@@ -2545,6 +2562,8 @@
 		"Search the &eDeserts&r for a buried pyramid, and the deep caves for a rusted factory."
 	]
 	quest.58C03B30CDAD73A4.title: "Overworld Threats"
+	quest.58C28D3B7105B183.quest_desc: ["Don't go overboard, the best pranks are ones where everyone has fun. Nothing more un-fun than spending 1h+ cleaning up/rebuilding or losing your stuff."]
+	quest.58C28D3B7105B183.quest_subtitle: "Prank another player"
 	quest.5930ADBE320F2752.quest_desc: ["Increases the storage size of your chests and barrels."]
 	quest.5930ADBE320F2752.title: "Tier Upgrades"
 	quest.59A8C98040EF2AE1.quest_desc: ["Craft the &3Sonorous Staff&r to harness sonic blasts."]
@@ -2791,6 +2810,8 @@
 	]
 	quest.6431A384DDFBF439.title: "Network Diagnostics"
 	quest.64407A1BC7A1761B.quest_subtitle: "Liquid Experience Industry"
+	quest.64560C6BFADC0406.quest_subtitle: "Obtain every enchanted book"
+	quest.64560C6BFADC0406.title: "Enchanted"
 	quest.64581F0BB1B8347B.quest_desc: [
 		"The &eNecklace of the Desert&r makes you immune to the Sandstorm effect."
 		"The &eAncient Spear&r is a powerful throwing weapon."
@@ -3564,7 +3585,11 @@
 	quest.7A6CD70F2896E0AE.quest_subtitle: "Kill 10,000 mobs"
 	quest.7A79C31621659E92.quest_desc: ["The &bShroud Key&r hides the item icon on the drawer face. Good for reducing lag or for aesthetic walls."]
 	quest.7AF82CBB495FAA6E.quest_desc: ["The base upgrade for storage blocks."]
-	quest.7B314C517F0B6221.quest_desc: ["The Challenges section is dedicated to things that aren't so progression focussed as they are on highlighting some achivement."]
+	quest.7B314C517F0B6221.quest_desc: [
+		"The Challenges section is dedicated to things that aren't so progression focussed as they are on highlighting some achivement."
+		""
+		"AKA: Bragging Rights."
+	]
 	quest.7B314C517F0B6221.quest_subtitle: "See Description"
 	quest.7B372B6C9B3D9976.quest_desc: [
 		"&3Deeper and Darker&r expands upon the Deep Dark biome, adding a new dimension called &bThe Otherside&r."
@@ -3666,6 +3691,7 @@
 	task.1407971261FC6BB6.title: "Reaper"
 	task.14DEFFB80CC96BC1.title: "Any Smart Cable"
 	task.1650A0BEF32C29C5.title: "Cataclysmic Warning"
+	task.167AAEC358F1AA24.title: "Challenge another player(s) to a competition"
 	task.19C31D3EA6207638.title: "Open a shop"
 	task.1A2B3C4D5E6F7002.title: "Aviation"
 	task.1B4CA5B707FEFBE1.title: "Seed Drill"
@@ -3686,6 +3712,7 @@
 	task.3000000000000002.title: "I will be nice"
 	task.338A6DA0D711B7DC.title: "Pattern Provider"
 	task.35DA382B87ED43F8.title: "Firework Rocket"
+	task.36DEB34D51E272EC.title: "A bit of mischief"
 	task.37F76CB80411C464.title: "Shovel"
 	task.382E8129CA13F3A4.title: "Ok"
 	task.38E290AC5E011888.title: "Any Smart Dense Cable"
@@ -3723,7 +3750,7 @@
 	task.6000000000000002.title: "I promise to minimize lag"
 	task.61D179BD4171F5D6.title: "Grand Master Architect"
 	task.61D93B13D496547D.title: "Any Fluid Storage Cell"
-	task.64932DEAA6724BEE.title: "tmp"
+	task.64932DEAA6724BEE.title: "Accept"
 	task.64EAD3DE84E94F02.title: "Any Covered Cable"
 	task.65C439FD14C5EEB9.title: "ME Portable Cell"
 	task.65CAD4FDE0AE7632.title: "Connected"

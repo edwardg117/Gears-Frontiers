@@ -16,17 +16,35 @@
 				id: "ftbquests:custom_icon"
 			}
 			id: "0B82E3B5B20876D4"
+			rewards: [{
+				count: 6
+				id: "28BF544A331BB0D6"
+				item: {
+					count: 1
+					id: "minecraft:bread"
+				}
+				type: "item"
+			}]
 			shape: "gear"
 			size: 3.0d
-			tasks: [{
-				id: "64932DEAA6724BEE"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "64932DEAA6724BEE"
+					type: "checkmark"
+				}
+				{
+					disable_toast: true
+					id: "1B2F51F8024AA622"
+					item: { count: 1, id: "minecraft:diamond" }
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
 		{
 			can_repeat: true
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "12297AC5E023A44B"
 			repeat_cooldown: 86400
 			rewards: [{
@@ -44,10 +62,11 @@
 				id: "122738E71DCAAB8D"
 				type: "custom"
 			}]
-			x: -4.5d
-			y: -0.5d
+			x: -3.5d
+			y: 0.0d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "190A57827A174E4B"
 			rewards: [{
 				id: "112C47830F25977D"
@@ -67,46 +86,83 @@
 				id: "19C31D3EA6207638"
 				type: "advancement"
 			}]
-			x: -4.0d
-			y: 2.0d
+			x: -2.5d
+			y: 1.0d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "1B1537B1F62B984B"
+			rewards: [{
+				id: "4A0B04352554EE6F"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "431B512FFB189FB0"
 				type: "checkmark"
 			}]
-			x: -3.5d
-			y: -2.5d
+			x: 1.0d
+			y: 2.5d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "2714616A77F74344"
+			rewards: [{
+				id: "60C8E8FD08E00BC7"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "499546295B9D5CF4"
 				type: "checkmark"
 			}]
-			x: -2.0d
-			y: -3.0d
+			x: 1.0d
+			y: -2.5d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "5820DB3B5FAD4C71"
+			rewards: [{
+				id: "6AAB3780C1E119DA"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "6679F08B539A8C1E"
 				type: "checkmark"
 			}]
-			x: -0.5d
-			y: -3.0d
+			x: 0.0d
+			y: -3.5d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "1202043975B006FB"
+			rewards: [{
+				id: "2C9D3403394F5537"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "3F63566789879C85"
 				type: "checkmark"
 			}]
-			x: -2.5d
-			y: -4.5d
+			x: 2.5d
+			y: -1.0d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "08A1726416FABBF1"
 			tasks: [{
 				icon: {
@@ -120,35 +176,98 @@
 				type: "stat"
 				value: 5
 			}]
-			x: -6.5d
-			y: -3.5d
+			x: -2.5d
+			y: -1.0d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "291F9B0D7C9D0993"
+			rewards: [{
+				id: "14E1D758C4061C48"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "5E274A0871A83251"
 				type: "checkmark"
 			}]
-			x: -5.0d
-			y: -4.0d
+			x: -1.0d
+			y: -2.5d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "1B2C79D90138FD51"
+			rewards: [{
+				id: "3134F6F1CFC3FAFB"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "7822929A7C1736CF"
 				type: "checkmark"
 			}]
-			x: -1.0d
-			y: -4.5d
+			x: 3.5d
+			y: 0.0d
 		}
 		{
+			dependencies: ["0B82E3B5B20876D4"]
 			id: "46118EC8D417B7A6"
+			rewards: [{
+				id: "1FE87500A2CD87E1"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "65CAD4FDE0AE7632"
 				type: "checkmark"
 			}]
-			x: 1.5d
-			y: -4.5d
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0B82E3B5B20876D4"]
+			id: "58C28D3B7105B183"
+			rewards: [{
+				id: "78F62289638C55A8"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "36DEB34D51E272EC"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0B82E3B5B20876D4"]
+			id: "22B5B73E05CD043E"
+			rewards: [{
+				id: "6D3A0EC6489C1F7A"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "167AAEC358F1AA24"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 1.0d
 		}
 	]
 }
