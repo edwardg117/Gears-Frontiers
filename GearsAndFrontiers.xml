@@ -8,6 +8,7 @@
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/2025-06-21.xml">null</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/updates-2025-07-25.xml">null</Import>
 		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/updates-2025-09-09.xml">null</Import>
-		<Loader type="NeoForge" version="21.1.194" loadOrder="0"/>
+		<Import url="https://raw.githubusercontent.com/edwardg117/Gears-Frontiers/refs/heads/main/updates/updates-2025-11-26.xml">null</Import>
+		<Loader type="NeoForge" version="21.1.219" loadOrder="0"/>
 	</Server>
 </ServerPack>
