@@ -2108,7 +2108,7 @@ This becoming a modpack in a mod.</description>
 			<URL priority="1">https://edge.forgecdn.net/files/7411/561/CustomNPCs-Unofficial-NeoForge-1.21.1.20251230.jar</URL>
 			<Size>10789250</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>34f52ed3b674bb956b7a0d7f6967c00f</MD5>
 			<Meta>
 				<license>CC BY-NC</license>
