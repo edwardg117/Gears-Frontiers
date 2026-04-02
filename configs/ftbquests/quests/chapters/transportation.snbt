@@ -115,7 +115,7 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["64CCEE45A6ECFA71"]
+			dependencies: ["17ADFFEE84F36460"]
 			icon: {
 				id: "via_romana:charting_map"
 			}
@@ -160,7 +160,7 @@
 					value: 100
 				}
 			]
-			x: -8.0d
+			x: -6.0d
 			y: 0.0d
 		}
 		{
@@ -178,7 +178,7 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
+			x: -4.0d
 			y: 0.0d
 		}
 		{
@@ -216,7 +216,7 @@
 					type: "item"
 				}
 			]
-			x: -4.0d
+			x: -2.0d
 			y: 0.0d
 		}
 		{
@@ -258,7 +258,7 @@
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -1.0d
 			y: -1.0d
 		}
 		{
@@ -269,7 +269,7 @@
 				item: { count: 1, id: "immersive_aircraft:airship" }
 				type: "item"
 			}]
-			x: -2.0d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -280,7 +280,7 @@
 				item: { count: 1, id: "kubejs:hardened_engine" }
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: 0.0d
 		}
 		{
@@ -291,7 +291,7 @@
 				item: { count: 1, id: "immersive_aircraft:biplane" }
 				type: "item"
 			}]
-			x: 1.0d
+			x: 3.0d
 			y: 1.0d
 		}
 		{
@@ -302,7 +302,7 @@
 				item: { count: 1, id: "man_of_many_planes:scarlet_biplane" }
 				type: "item"
 			}]
-			x: 2.0d
+			x: 4.0d
 			y: 2.0d
 		}
 		{
@@ -313,7 +313,7 @@
 				item: { count: 1, id: "man_of_many_planes:economy_plane" }
 				type: "item"
 			}]
-			x: 1.0d
+			x: 3.0d
 			y: -1.0d
 		}
 		{
@@ -324,7 +324,7 @@
 				item: { count: 1, id: "immersive_aircraft:cargo_airship" }
 				type: "item"
 			}]
-			x: -1.0d
+			x: 1.0d
 			y: -1.0d
 		}
 		{
@@ -335,7 +335,7 @@
 				item: { count: 1, id: "immersive_aircraft:warship" }
 				type: "item"
 			}]
-			x: 0.0d
+			x: 2.0d
 			y: -2.0d
 		}
 		{
@@ -353,7 +353,7 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -379,7 +379,7 @@
 					type: "item"
 				}
 			]
-			x: -5.0d
+			x: -3.0d
 			y: -1.0d
 		}
 		{
@@ -412,8 +412,44 @@
 				item: { count: 1, id: "immersive_aircraft:bamboo_hopper" }
 				type: "item"
 			}]
-			x: 1.0d
+			x: 3.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["64CCEE45A6ECFA71"]
+			id: "17ADFFEE84F36460"
+			tasks: [
+				{
+					disable_toast: true
+					id: "36465779BDB9638B"
+					item: { components: { "ftbfiltersystem:filter": "or(item(smallships:oak_cog)item(smallships:spruce_cog)item(smallships:birch_cog)item(smallships:jungle_cog)item(smallships:acacia_cog)item(smallships:cherry_cog)item(smallships:dark_oak_cog)item(smallships:mangrove_cog)item(smallships:bamboo_cog))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					disable_toast: true
+					id: "0A69CBE7616A08E3"
+					item: { components: { "ftbfiltersystem:filter": "or(item(smallships:oak_brigg)item(smallships:spruce_brigg)item(smallships:birch_brigg)item(smallships:jungle_brigg)item(smallships:acacia_brigg)item(smallships:cherry_brigg)item(smallships:dark_oak_brigg)item(smallships:mangrove_brigg)item(smallships:bamboo_brigg))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					disable_toast: true
+					id: "5D6EB5558593105F"
+					item: { components: { "ftbfiltersystem:filter": "or(item(smallships:oak_galley)item(smallships:spruce_galley)item(smallships:birch_galley)item(smallships:jungle_galley)item(smallships:acacia_galley)item(smallships:cherry_galley)item(smallships:dark_oak_galley)item(smallships:mangrove_galley)item(smallships:bamboo_galley))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					disable_toast: true
+					id: "0BA5709CCCB3CD6E"
+					item: { components: { "ftbfiltersystem:filter": "or(item(smallships:oak_drakkar)item(smallships:spruce_drakkar)item(smallships:birch_drakkar)item(smallships:jungle_drakkar)item(smallships:acacia_drakkar)item(smallships:cherry_drakkar)item(smallships:dark_oak_drakkar)item(smallships:mangrove_drakkar)item(smallships:bamboo_drakkar))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: -8.0d
+			y: 0.0d
 		}
 	]
 }

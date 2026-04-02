@@ -1301,7 +1301,7 @@
 				entity: "minecraft:zombie"
 				id: "4DF92E05F8B57B89"
 				type: "kill"
-				value: 100L
+				value: 10000L
 			}]
 			x: -2.0d
 			y: 1.0d
@@ -1312,7 +1312,7 @@
 				id: "25492B9647B02114"
 				stat: "minecraft:mob_kills"
 				type: "stat"
-				value: 10000
+				value: 1000000
 			}]
 			x: -2.0d
 			y: 2.0d
