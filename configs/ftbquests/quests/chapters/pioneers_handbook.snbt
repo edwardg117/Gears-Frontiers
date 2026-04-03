@@ -48,10 +48,7 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"1000000000000010"
-				"65326FE0C2DBFD14"
-			]
+			dependencies: ["65326FE0C2DBFD14"]
 			id: "23D511DEFB791453"
 			rewards: [{
 				count: 16
@@ -71,10 +68,7 @@
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"1000000000000013"
-				"23D511DEFB791453"
-			]
+			dependencies: ["23D511DEFB791453"]
 			id: "1000000000010001"
 			rewards: [{
 				count: 8
@@ -114,10 +108,7 @@
 			y: 6.5d
 		}
 		{
-			dependencies: [
-				"1000000000000016"
-				"2C9602C72816A60A"
-			]
+			dependencies: ["2C9602C72816A60A"]
 			id: "575A6FF022B9D2D0"
 			rewards: [{
 				count: 8
@@ -137,10 +128,7 @@
 			y: 8.0d
 		}
 		{
-			dependencies: [
-				"1000000000000019"
-				"575A6FF022B9D2D0"
-			]
+			dependencies: ["575A6FF022B9D2D0"]
 			id: "1000000000000022"
 			rewards: [{
 				count: 2
@@ -253,7 +241,7 @@
 			}]
 			tasks: [{
 				id: "1000000000010015"
-				item: { count: 1, id: "sophisticatedstorage:chest" }
+				item: { components: { "sophisticatedstorage:wood_type": "oak" }, count: 1, id: "sophisticatedstorage:chest" }
 				type: "item"
 			}]
 			x: 2.0d

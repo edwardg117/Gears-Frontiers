@@ -2021,16 +2021,6 @@ This becoming a modpack in a mod.</description>
 				<version>21.1.81</version>
 			</Meta>
 		</Module>
-		<Module name="Carry On" id="carryon" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/joEfVgkn/versions/cgZi7nC7/carryon-neoforge-1.21.1-2.2.4.4.jar</URL>
-			<Size>357489</Size>
-			<Required>true</Required>
-			<ModType>Regular</ModType>
-			<MD5>116381c8900494997eac5a2c1bf42348</MD5>
-			<Meta>
-				<version>2.2.4</version>
-			</Meta>
-		</Module>
 		<Module name="Cerulean" id="cerulean" depends="txnilib" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/dv57xmf9/versions/i5PXO3P7/cerulean-neoforge-1.0.0-1.21.1.jar</URL>
 			<Size>340526</Size>
