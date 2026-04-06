@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="update-20260406" abstract="false" name="Update 2026-04-06" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+		<Module name="AE2 JEI Integration" id="ae2_jei_integration" depends="applied_energistics_2" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/7727/898/ae2jeiintegration-1.2.1.jar</URL>
+			<Size>91710</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ec004c7b8c6ad337874806ea48d2afeb</MD5>
+			<Meta>
+				<version>1.2.1</version>
+			</Meta>
+		</Module>
+		<Module name="Pillager Caravans" id="pillager_caravans" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/8jJHxtdz/versions/LoE1S6Fk/caravans-neoforge-1.21.1-2.1.1.jar</URL>
+			<Size>399439</Size>
+			<Required>true</Required>
+			<ModType>Removal</ModType>
+			<MD5>eae24e7af3fd7c50cdcb834e8f2a9dd1</MD5>
+			<Meta>
+				<description>Removed becuase it just spams the server with donkeys and Vex</description>
+			</Meta>
+		</Module>
+	</Server>
+</ServerPack>
