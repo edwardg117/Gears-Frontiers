@@ -28,22 +28,22 @@
 			<Size>17814</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>6e2ff84982ab505c277b192532e01b9f</MD5>
+			<MD5>8df0e61bfd732bab1e41d477b45d2935</MD5>
 		</Module>
 		<Module name="FTB Quests Files" id="ftbquests_files" depends="ftb_quests" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/ftbquests.zip</URL>
 			<Size>108687</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>fa4808a9b35d1edbf7419217d7b14da9</MD5>
+			<MD5>acc8a7d64674c962f975c45057e5cf0b</MD5>
 		</Module>
 		<Module name="Better Compatibility Checker Config" id="bcc-common" depends="better_compatibility_checker" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/bcc-common.toml</URL>
 			<ModPath>/config/bcc-common.toml</ModPath>
-			<Size>380</Size>
+			<Size>382</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>f4d066e83e79e63a92a655530cc63d9f</MD5>
+			<MD5>edba5942903650f4e36efc18d462391e</MD5>
 		</Module>
 	</Server>
 </ServerPack>
