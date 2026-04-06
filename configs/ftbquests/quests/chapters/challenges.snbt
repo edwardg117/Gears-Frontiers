@@ -3676,7 +3676,7 @@
 				id: "7814D6E99A0C4D6A"
 				stat: "minecraft:fall_one_cm"
 				type: "stat"
-				value: 100000
+				value: 10000000
 			}]
 			x: -4.0d
 			y: 3.0d
@@ -4251,510 +4251,595 @@
 			shape: "rsquare"
 			tasks: [
 				{
+					disable_toast: true
 					id: "3A39C7EE2D4AA225"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:ambush": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "207EC1F6CB465C0B"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:antidote": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1CC6DC196D0C9F23"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:aqua_affinity": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5666DB20A0A3A6EA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "farmersdelight:backstabbing": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1D9DCD35F710C05E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:bane_of_arthropods": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "60E5FB7119F124E1"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:blast_protection": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "71AD99E880C9FFFF"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:breach": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5FE77352ED18FA34"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "butchery:butcherstouch": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4B71CC96CCA8AABA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:binding_curse": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "266F1B8B32361E78"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "create:capacity": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "51268E99E7B64F04"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "deeperdarker:catalysis": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "187016CFE94F6E01"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:channeling": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "25C0FD36C0422ACF"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:conductivity_curse": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5900E656D19DEBDF"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:critical_strike": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2E3086F600E273C6"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:daybroken": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "77AF395583010679"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:density": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "77BA893E042E48BA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:depth_strider": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1B0D063DD342E34D"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:draconic": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1B58FAC9F092E7FC"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:dune_speed": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "351191F1AC017CCB"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:efficiency": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "47637ACD9B93CE77"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:feather_falling": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1C3D68821CCEFC65"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:fire_aspect": 2 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "343C5EB822B60070"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:fire_protection": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "22D6B6797B277DE3"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:flame": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "0B76A3F9CC1CDCEC"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:fortune": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "37611BADF01FF6FA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:frost_walker": 2 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "790CE750FAA5B0F9"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "northstar:frostbite": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7F1395668DF3CC82"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:ghasted": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "58269A18FB90D0F0"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:gravity": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "3C1EBB4250D1978C"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:illagers_bane": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "142396F9ACCD3A02"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:impaling": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "63E099A7AAF95847"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:infernal_infusion": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "65315A4511FC4DD1"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:infinity": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "6FF2269E07AFD6C9"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:knockback": 2 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4E1C0FEF9CBC6221"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:levitation_shot": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7D81D570D5947E8E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:looting": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2FEC0220FC1FE831"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:loyalty": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4BAB82F8920E468E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:luck_of_the_sea": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "0317319A8AB052FF"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:lure": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7795428DE7CAFB19"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:mending": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "58507F08D070BE9E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:mighty_wind": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2906B62521FF3EDE"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:multishot": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7D62750ACB236D29"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:multishot": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5FF78D29F73117E8"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:outreach": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "0919357BC369608C"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:photosynthesis": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2D1A09E02790DA4E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:piercing": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4DABAD76D5B0D466"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:piercing": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "4EE8716DC77189C9"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:plated": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "34116C12D4EADB34"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "create:potato_recovery": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1AD8D921C72881A4"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:power": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "26AA3D428DEE218D"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:power": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "6C86FCBC0C81DAAF"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:projectile_protection": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "68524EA71B95982F"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:protection": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "3A4A9505EF9B047A"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:punch": 2 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "71FEEE9E7DA7973F"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:swift_sneak": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "208853227F7A6EFA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:sweeping_edge": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "57250078B576510A"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:soul_speed": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "60E83922363681C7"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:soul_harvest": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "39D09BC52042715E"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:soaring": 4 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "6CB97FB38382C35F"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:smite": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5AC852A448D8D380"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:silk_touch": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "437665D163607303"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:sharpness": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1DBA630EF475877D"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:quick_charge": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7759A6FEE54C72B6"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:thorns": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "35D9AE579F82F123"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:traveler": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "23A830C621CB5FDD"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:unbreaking": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2071D284C6C3DF37"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:vanishing_curse": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "62751644BA65F4A6"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/amethyst": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "666D32161EA5CD7D"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/copper": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "22FC130BAC5AC9DE"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/diamond": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "0450BB04A7158553"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/emerald": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "1C09D9C133265ECA"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/gold": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5B5D8BCEAEC8E397"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/iron": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "48E37E0EC605B1CC"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:wither_coated": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "6825939C8EA9CE8A"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:wind_burst": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "69A85EFDCE988AFD"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/lapis": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "2A6389D4EA8DE869"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "nova_structures:wax_wings": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "128903115C5C05F3"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_strike": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "328F089A75A3C8DD"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_shot": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "5F13A0B9807AA305"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/quartz": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "52B73D1A5D6E1555"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "stellarity:void_locket/netherite": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "68A218714B25ADCB"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "buildersjetpackmod:restacker": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "183075EE6522A324"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:riptide": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "0C45F9D69718888A"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "deeperdarker:sculk_smite": 5 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"
 					type: "item"
 				}
 				{
+					disable_toast: true
 					id: "7BE330A8B185C9A9"
 					item: { components: { "minecraft:stored_enchantments": { levels: { "minecraft:respiration": 3 } } }, count: 1, id: "minecraft:enchanted_book" }
 					match_components: "fuzzy"

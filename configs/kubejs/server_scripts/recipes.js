@@ -68,72 +68,47 @@ ServerEvents.recipes((event) => {
 
   // #region Immersive Aircraft
   // Remove recipes and replace with https://www.curseforge.com/minecraft/texture-packs/create-immersive-aircrafts-data-pack
-  event.remove({mod:"immersive_aircraft"});
+  event.remove({ mod: "immersive_aircraft" });
   // event.remove({ output: "immersive_aircraft:biplane" });
   // event.remove({ output: "man_of_many_planes:economy_plane" });
 
   // Hull
-  event.shaped(
-    Item.of("immersive_aircraft:hull", 1),
-    [
-      "AIA",
-      "AIA"
-    ],
-    {
-      A: {
-        item: "create:andesite_casing",
-      },
-      I: {
-        item: "minecraft:iron_ingot", // maybe "create:iron_sheet" instead?
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:hull", 1), ["AIA", "AIA"], {
+    A: {
+      item: "create:andesite_casing",
+    },
+    I: {
+      item: "minecraft:iron_ingot", // maybe "create:iron_sheet" instead?
+    },
+  });
 
   // Engine (Advanced Engine)
-  event.shaped(
-    Item.of("immersive_aircraft:engine", 1),
-    [
-      "BPB",
-      "SES"
-    ],
-    {
-      B: {
-        item: "create:brass_sheet",
-      },
-      P: {
-        item: "create:precision_mechanism",
-      },
-      S: {
-        item: "create:sturdy_sheet",
-      },
-      E: {
-        item: "immersive_aircraft:boiler",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:engine", 1), ["BPB", "SES"], {
+    B: {
+      item: "create:brass_sheet",
+    },
+    P: {
+      item: "create:precision_mechanism",
+    },
+    S: {
+      item: "create:sturdy_sheet",
+    },
+    E: {
+      item: "immersive_aircraft:boiler",
+    },
+  });
 
   // Sail (Large Sail)
-  event.shaped(
-    Item.of("immersive_aircraft:sail", 1),
-    [
-      "WWW",
-      "WWW"
-    ],
-    {
-      W: {
-        item: "create:white_sail",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:sail", 1), ["WWW", "WWW"], {
+    W: {
+      item: "create:white_sail",
+    },
+  });
 
   // Propeller (Large Propeller)
   event.shaped(
     Item.of("immersive_aircraft:propeller", 1),
-    [
-      " S ",
-      "SPS",
-      " S ",
-    ],
+    [" S ", "SPS", " S "],
     {
       S: {
         item: "create:iron_sheet",
@@ -141,39 +116,26 @@ ServerEvents.recipes((event) => {
       P: {
         item: "create:propeller",
       },
-    }
+    },
   );
 
   // Boiler (Basic Engine)
-  event.shaped(
-    Item.of("immersive_aircraft:boiler", 1),
-    [
-      "S",
-      "F",
-      "B"
-    ],
-    {
-      S: {
-        item: "create:steam_engine",
-      },
-      F: {
-        item: "create:fluid_tank",
-      },
-      B: {
-        item: "create:blaze_burner",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:boiler", 1), ["S", "F", "B"], {
+    S: {
+      item: "create:steam_engine",
+    },
+    F: {
+      item: "create:fluid_tank",
+    },
+    B: {
+      item: "create:blaze_burner",
+    },
+  });
 
   // Airship
   event.recipes.createMechanicalCrafting(
     "immersive_aircraft:airship",
-    [
-      "LLLLL",
-      " R R ",
-      " HSEP",
-      " HHH "
-    ],
+    ["LLLLL", " R R ", " HSEP", " HHH "],
     {
       L: {
         item: "immersive_aircraft:sail",
@@ -193,39 +155,26 @@ ServerEvents.recipes((event) => {
       P: {
         item: "create:propeller",
       },
-    }
+    },
   );
 
   // Cargo Airship
-  event.shaped(
-    Item.of("immersive_aircraft:cargo_airship", 1),
-    [
-      "CAC",
-      "CHC"
-    ],
-    {
-      C: {
-        item: "minecraft:chest",
-      },
-      A: {
-        item: "immersive_aircraft:airship",
-      },
-      H: {
-        item: "immersive_aircraft:hull",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:cargo_airship", 1), ["CAC", "CHC"], {
+    C: {
+      item: "minecraft:chest",
+    },
+    A: {
+      item: "immersive_aircraft:airship",
+    },
+    H: {
+      item: "immersive_aircraft:hull",
+    },
+  });
 
   // Warship
   event.recipes.createMechanicalCrafting(
     "immersive_aircraft:warship",
-    [
-      " LLLLLL",
-      "LLIIIEP",
-      " RR RR ",
-      "GSACHEP",
-      "BHHHH  "
-    ],
+    [" LLLLLL", "LLIIIEP", " RR RR ", "GSACHEP", "BHHHH  "],
     {
       L: {
         item: "immersive_aircraft:sail",
@@ -260,7 +209,7 @@ ServerEvents.recipes((event) => {
       B: {
         item: "immersive_aircraft:heavy_crossbow",
       },
-    }
+    },
   );
 
   // Add biplane recipe using Create
@@ -272,7 +221,7 @@ ServerEvents.recipes((event) => {
       "S  S ",
       "HHCEP",
       "S  S ",
-      "   S "
+      "   S ",
     ],
     {
       //   A: {
@@ -299,11 +248,7 @@ ServerEvents.recipes((event) => {
   // Gyrodyne
   event.shaped(
     Item.of("immersive_aircraft:gyrodyne", 1),
-    [
-      " P ",
-      "SMS",
-      "HCH"
-    ],
+    [" P ", "SMS", "HCH"],
     {
       S: {
         item: "immersive_aircraft:sail",
@@ -319,18 +264,14 @@ ServerEvents.recipes((event) => {
       },
       C: {
         tag: "create:seats",
-      }
-    }
+      },
+    },
   );
 
   // Quadrocopter
   event.shaped(
     Item.of("immersive_aircraft:quadrocopter", 1),
-    [
-      "PHP",
-      " S ",
-      "PEP"
-    ],
+    ["PHP", " S ", "PEP"],
     {
       P: {
         item: "create:propeller",
@@ -343,20 +284,14 @@ ServerEvents.recipes((event) => {
       },
       E: {
         item: "immersive_aircraft:boiler",
-      }
-    }
+      },
+    },
   );
 
   // Copper Seaplane (Bamboo Hopper)
   event.recipes.createMechanicalCrafting(
     "immersive_aircraft:bamboo_hopper",
-    [
-      " C SC ",
-      "SCICBG",
-      " CPEAG",
-      "SCICBG",
-      " C SC "
-    ],
+    [" C SC ", "SCICBG", " CPEAG", "SCICBG", " C SC "],
     {
       C: {
         item: "create:copper_casing",
@@ -381,18 +316,14 @@ ServerEvents.recipes((event) => {
       },
       A: {
         tag: "create:seats",
-      }
-    }
+      },
+    },
   );
 
   // Rotary Cannon
   event.shaped(
     Item.of("immersive_aircraft:rotary_cannon", 1),
-    [
-      "D",
-      "G",
-      "C"
-    ],
+    ["D", "G", "C"],
     {
       D: {
         item: "minecraft:dispenser",
@@ -402,18 +333,14 @@ ServerEvents.recipes((event) => {
       },
       C: {
         item: "minecraft:copper_ingot",
-      }
-    }
+      },
+    },
   );
 
   // Brass Propeller (Enhanced Propeller)
   event.shaped(
     Item.of("immersive_aircraft:enhanced_propeller", 1),
-    [
-      " B ",
-      "BPB",
-      " B ",
-    ],
+    [" B ", "BPB", " B "],
     {
       B: {
         item: "create:brass_sheet",
@@ -421,128 +348,85 @@ ServerEvents.recipes((event) => {
       P: {
         item: "create:propeller",
       },
-    }
+    },
   );
 
   // Water Engine (Eco Engine)
-  event.shaped(
-    Item.of("immersive_aircraft:eco_engine", 1),
-    [
-      "IWI",
-      "CEC"
-    ],
-    {
-      I: {
-        item: "create:iron_sheet",
-      },
-      W: {
-        item: "minecraft:water_bucket",
-      },
-      C: {
-        item: "create:copper_sheet",
-      },
-      E: {
-        item: "immersive_aircraft:boiler",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:eco_engine", 1), ["IWI", "CEC"], {
+    I: {
+      item: "create:iron_sheet",
+    },
+    W: {
+      item: "minecraft:water_bucket",
+    },
+    C: {
+      item: "create:copper_sheet",
+    },
+    E: {
+      item: "immersive_aircraft:boiler",
+    },
+  });
 
   // Lava Engine (Nether Engine)
-  event.shaped(
-    Item.of("immersive_aircraft:nether_engine", 1),
-    [
-      "IWI",
-      "CEC"
-    ],
-    {
-      I: {
-        item: "create:iron_sheet",
-      },
-      W: {
-        item: "minecraft:lava_bucket",
-      },
-      C: {
-        item: "create:sturdy_sheet",
-      },
-      E: {
-        item: "immersive_aircraft:boiler",
-      },
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:nether_engine", 1), ["IWI", "CEC"], {
+    I: {
+      item: "create:iron_sheet",
+    },
+    W: {
+      item: "minecraft:lava_bucket",
+    },
+    C: {
+      item: "create:sturdy_sheet",
+    },
+    E: {
+      item: "immersive_aircraft:boiler",
+    },
+  });
 
   // Iron Boiler (steel_boiler)
-  event.shaped(
-    Item.of("immersive_aircraft:steel_boiler", 1),
-    [
-      "IFI"
-    ],
-    {
-      I: {
-        item: "create:iron_sheet",
-      },
-      F: {
-        item: "create:fluid_tank",
-      }
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:steel_boiler", 1), ["IFI"], {
+    I: {
+      item: "create:iron_sheet",
+    },
+    F: {
+      item: "create:fluid_tank",
+    },
+  });
 
   // Industrial Gears
-  event.shaped(
-    Item.of("immersive_aircraft:industrial_gears", 1),
-    [
-      "ICI"
-    ],
-    {
-      I: {
-        item: "create:iron_sheet",
-      },
-      C: {
-        item: "create:cogwheel",
-      }
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:industrial_gears", 1), ["ICI"], {
+    I: {
+      item: "create:iron_sheet",
+    },
+    C: {
+      item: "create:cogwheel",
+    },
+  });
 
   // Sturdy Pipes
-  event.shaped(
-    Item.of("immersive_aircraft:sturdy_pipes", 1),
-    [
-      "IPI"
-    ],
-    {
-      P: {
-        item: "create:fluid_pipe",
-      },
-      I: {
-        item: "create:iron_sheet",
-      }
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:sturdy_pipes", 1), ["IPI"], {
+    P: {
+      item: "create:fluid_pipe",
+    },
+    I: {
+      item: "create:iron_sheet",
+    },
+  });
 
   // Gyroscope
-  event.shaped(
-    Item.of("immersive_aircraft:gyroscope", 1),
-    [
-      "E",
-      "C"
-    ],
-    {
-      E: {
-        item: "create:electron_tube",
-      },
-      C: {
-        item: "minecraft:compass",
-      }
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:gyroscope", 1), ["E", "C"], {
+    E: {
+      item: "create:electron_tube",
+    },
+    C: {
+      item: "minecraft:compass",
+    },
+  });
 
   // Electronic Gyroscope
   event.shaped(
     Item.of("immersive_aircraft:gyroscope_hud", 1),
-    [
-      "NPN",
-      "GLG",
-      "BYS"
-    ],
+    ["NPN", "GLG", "BYS"],
     {
       N: {
         item: "minecraft:gold_nugget",
@@ -564,17 +448,14 @@ ServerEvents.recipes((event) => {
       },
       S: {
         item: "minecraft:lever",
-      }
-    }
+      },
+    },
   );
 
   // Advanced Gyroscope
   event.shaped(
     Item.of("immersive_aircraft:gyroscope_dials", 1),
-    [
-      "CCC",
-      "NGL"
-    ],
+    ["CCC", "NGL"],
     {
       C: {
         item: "minecraft:clock",
@@ -587,33 +468,24 @@ ServerEvents.recipes((event) => {
       },
       L: {
         item: "minecraft:lever",
-      }
-    }
+      },
+    },
   );
 
   // Reinforced Hull
-  event.shaped(
-    Item.of("immersive_aircraft:hull_reinforcement", 1),
-    [
-      "IHI"
-    ],
-    {
-      I: {
-        item: "create:iron_sheet",
-      },
-      H: {
-        item: "immersive_aircraft:hull",
-      }
-    }
-  );
+  event.shaped(Item.of("immersive_aircraft:hull_reinforcement", 1), ["IHI"], {
+    I: {
+      item: "create:iron_sheet",
+    },
+    H: {
+      item: "immersive_aircraft:hull",
+    },
+  });
 
   // Improved Landing gear
   event.shaped(
     Item.of("immersive_aircraft:improved_landing_gear", 1),
-    [
-      "SI",
-      "B "
-    ],
+    ["SI", "B "],
     {
       S: {
         item: "create:iron_sheet",
@@ -623,8 +495,8 @@ ServerEvents.recipes((event) => {
       },
       B: {
         item: "create:belt_connector",
-      }
-    }
+      },
+    },
   );
 
   // Economy Plane
@@ -653,41 +525,33 @@ ServerEvents.recipes((event) => {
   // #endregion
 
   // Make ancient debris renewable
-  event.recipes
-  .createCompacting(
-    "minecraft:gilded_blackstone",
-    [
-      "minecraft:blackstone",
-      "minecraft:gold_ingot",
-      "minecraft:gold_ingot"
-    ]
-  );
+  event.recipes.createCompacting("minecraft:gilded_blackstone", [
+    "minecraft:blackstone",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+  ]);
 
-  event.recipes
-  .createCompacting(
-    "minecraft:gilded_blackstone",
-    [
-      "minecraft:blackstone",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget",
-      "minecraft:gold_nugget"
-    ]
-  );
+  event.recipes.createCompacting("minecraft:gilded_blackstone", [
+    "minecraft:blackstone",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+    "minecraft:gold_nugget",
+  ]);
 
   event.recipes
     .createMixing(
@@ -835,6 +699,8 @@ ServerEvents.recipes((event) => {
         "pamhc2foodcore:potitem",
         "pamhc2foodcore:rolleritem",
         "pamhc2foodcore:saucepanitem",
+        "pamhc2foodcore:cuttingboarditem",
+        "pamhc2foodcore:juiceritem",
       ],
     },
     (r) => {
@@ -862,9 +728,14 @@ ServerEvents.recipes((event) => {
           !ids.contains("pamhc2foodcore:skilletitem") &&
           !ids.contains("pamhc2foodcore:bakewareitem") &&
           !ids.contains("pamhc2foodcore:potitem") &&
-          !ids.contains("pamhc2foodcore:saucepanitem")
+          !ids.contains("pamhc2foodcore:saucepanitem") &&
+          !ids.contains("minecraft:water_bucket")
         ) {
           newIngredients.push(ingredient);
+        }
+        // Replace water bcukets with water
+        if (ids.contains("minecraft:water_bucket")) {
+          newIngredients.push(Fluid.of("minecraft:water", 1000));
         }
       }
 
@@ -878,15 +749,28 @@ ServerEvents.recipes((event) => {
   event.forEachRecipe(
     {
       type: "minecraft:crafting_shapeless",
-      input: ["pamhc2foodcore:mixingbowlitem"],
+      input: [
+        "pamhc2foodcore:mixingbowlitem",
+        "pamhc2foodcore:cuttingboarditem",
+        "pamhc2foodcore:juiceritem",
+      ],
     },
     (r) => {
       // find and remove utensils from ingredients
       let newIngredients = [];
       for (let ingredient of r.originalRecipeIngredients) {
         let ids = ingredient.getItemIds();
-        if (!ids.contains("pamhc2foodcore:mixingbowlitem")) {
+        if (
+          !ids.contains("pamhc2foodcore:mixingbowlitem") &&
+          !ids.contains("pamhc2foodcore:cuttingboarditem") &&
+          !ids.contains("pamhc2foodcore:juiceritem") &&
+          !ids.contains("minecraft:water_bucket")
+        ) {
           newIngredients.push(ingredient);
+        }
+        // Replace water bcukets with water
+        if (ids.contains("minecraft:water_bucket")) {
+          newIngredients.push(Fluid.of("minecraft:water", 1000));
         }
       }
 
@@ -904,8 +788,15 @@ ServerEvents.recipes((event) => {
       let newIngredients = [];
       for (let ingredient of r.originalRecipeIngredients) {
         let ids = ingredient.getItemIds();
-        if (!ids.contains("pamhc2foodcore:grinderitem")) {
+        if (
+          !ids.contains("pamhc2foodcore:grinderitem") &&
+          !ids.contains("minecraft:water_bucket")
+        ) {
           newIngredients.push(ingredient);
+        }
+        // Replace water bcukets with water
+        if (ids.contains("minecraft:water_bucket")) {
+          newIngredients.push(Fluid.of("minecraft:water", 1000));
         }
       }
       // If only one ingredient, add to grindstone
@@ -972,13 +863,13 @@ ServerEvents.recipes((event) => {
     "pamhc2foodcore:flouritem",
     "#gf:food_flour",
   );
-  // Fix water items being used instead of fluid
-  // TODO FIXME
+  // Allow all doughs
   event.replaceInput(
-    { input: "#c:water", type: "create:mixing" },
-    "#c:water",
-    "minecraft:water",
+    { input: "pamhc2foodcore:doughitem" },
+    "pamhc2foodcore:doughitem",
+    "#c:foods/dough",
   );
+
   // #endregion
 
   // #endregion

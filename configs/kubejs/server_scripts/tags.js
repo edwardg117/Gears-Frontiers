@@ -68,6 +68,8 @@ ServerEvents.tags("item", (event) => {
   //@pams food extended
   event.add("pamhc2foodextended:food", "/pamhc2foodextended:.*/");
   event.add("c:food", "#pamhc2foodextended:food");
+  event.add("c:doughs", ["#c:dough", "#c:dough/wheat"]);
+  event.add("c:foods/dough", "pamhc2foodcore:doughitem");
   // let extednedFoods = event.get("pamhc2foodextended:food").getObjectIds();
     // console.log("pamhc2foodextended:food items:");
     // console.log(extednedFoods);

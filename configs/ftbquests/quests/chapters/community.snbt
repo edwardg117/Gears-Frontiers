@@ -164,6 +164,14 @@
 		{
 			dependencies: ["0B82E3B5B20876D4"]
 			id: "08A1726416FABBF1"
+			rewards: [{
+				id: "3B9FB7E3831508BC"
+				item: {
+					count: 1
+					id: "minecraft:diamond"
+				}
+				type: "item"
+			}]
 			tasks: [{
 				icon: {
 					components: {
