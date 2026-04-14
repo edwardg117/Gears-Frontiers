@@ -85,6 +85,9 @@ ServerEvents.tags("item", (event) => {
   //   });
 
   event.add("gf:rope", ["comforts:rope_and_nail", "farmersdelight:rope", "immersiveengineering:wirecoil_structure_rope"]);
+
+  // Tag electrum so I can use it in recipe
+  event.add("gf:electrum_sheets", ["createaddition:electrum_sheet", "immersiveengineering:plate_electrum"]);
 });
 
 // Block tags

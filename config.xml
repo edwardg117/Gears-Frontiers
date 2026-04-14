@@ -28,7 +28,7 @@
 			<Size>17814</Size>
 			<Required>true</Required>
 			<ModType inRoot="true">Extract</ModType>
-			<MD5>8df0e61bfd732bab1e41d477b45d2935</MD5>
+			<MD5>fdcc46295929bd1b5ab121426a7aa78e</MD5>
 		</Module>
 		<Module name="FTB Quests Files" id="ftbquests_files" depends="ftb_quests" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/ftbquests.zip</URL>

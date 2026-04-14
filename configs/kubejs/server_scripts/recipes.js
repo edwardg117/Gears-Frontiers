@@ -70,7 +70,7 @@ ServerEvents.recipes((event) => {
   // Remove recipes and replace with https://www.curseforge.com/minecraft/texture-packs/create-immersive-aircrafts-data-pack
   event.remove({ mod: "immersive_aircraft" });
   // event.remove({ output: "immersive_aircraft:biplane" });
-  // event.remove({ output: "man_of_many_planes:economy_plane" });
+  event.remove({ output: "man_of_many_planes:economy_plane" });
 
   // Hull
   event.shaped(Item.of("immersive_aircraft:hull", 1), ["AIA", "AIA"], {
@@ -634,7 +634,7 @@ ServerEvents.recipes((event) => {
     ],
     {
       E: {
-        item: "createaddition:electrum_sheet",
+        tag: "gf:electrum_sheets",
       },
       B: {
         item: "minecraft:blaze_powder",
