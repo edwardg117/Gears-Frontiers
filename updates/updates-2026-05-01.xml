@@ -375,5 +375,19 @@
 			<ModType>Regular</ModType>
 			<MD5>9ee0e165f4a2afb8b2fc5f86982ae4fb</MD5>
 		</Module>
+		<Module name="Mega Cells" id="megacells" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/jjuIRIVr/versions/RPG4EriK/megacells-4.11.0.jar</URL>
+			<Size>1137276</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>03e13fdb8e3bbe5b578973d25a87c869</MD5>
+		</Module>
+		<Module name="Create Enhanced Schematicannon" id="create_enhanced_schematicannon" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/TfCIbLr4/versions/nPYO6I9j/create_enhanced_schematicannon-1.0.4.jar</URL>
+			<Size>136422</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b1e00719b94d16e79ef2ea89ea25e07e</MD5>
+		</Module>
 	</Server>
 </ServerPack>
