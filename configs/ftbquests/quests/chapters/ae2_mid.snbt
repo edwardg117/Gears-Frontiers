@@ -1282,5 +1282,33 @@
 			x: 7.0d
 			y: 1.5d
 		}
+		{
+			dependencies: ["4E8A05C3BFA80540"]
+			id: "5997C2770AD63B94"
+			rewards: [{
+				id: "4F562FED32D5FAFB"
+				type: "xp_levels"
+				xp_levels: 1
+			}]
+			tasks: [
+				{
+					id: "34BEACDEF9506EFE"
+					item: { count: 1, id: "megacells:cell_component_1m" }
+					type: "item"
+				}
+				{
+					id: "3D018782694A7E27"
+					item: { components: { "ftbfiltersystem:filter": "or(item(megacells:item_storage_cell_1m)item(megacells:item_storage_cell_4m)item(megacells:item_storage_cell_16m)item(megacells:item_storage_cell_64m)item(megacells:item_storage_cell_256m))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "4376E94091FA0059"
+					item: { components: { "ftbfiltersystem:filter": "or(item(megacells:fluid_storage_cell_1m)item(megacells:fluid_storage_cell_4m)item(megacells:fluid_storage_cell_16m)item(megacells:fluid_storage_cell_64m)item(megacells:fluid_storage_cell_256m))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 2.5d
+		}
 	]
 }

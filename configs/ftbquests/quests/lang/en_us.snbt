@@ -330,6 +330,8 @@
 	quest.033B79759C1B42AA.title: "&aDrone Technology"
 	quest.037488EF1F3581CE.quest_desc: ["Energy Cells store AE power for your network, acting as a buffer."]
 	quest.037488EF1F3581CE.title: "Power Buffer"
+	quest.03B010C768B5C44E.quest_desc: ["&bMonorail Train Tracks&r function much like the normal tracks, except the train connects to the sides of the track. This means you can place the bogey underneath the rail instead of on top, allowing for more flexibility in designs."]
+	quest.03B010C768B5C44E.title: "Monorail"
 	quest.03E6FA4DCB71162E.quest_desc: [
 		"The &bColor Applicator&r allows you to dye cables and machines in the world."
 		""
@@ -350,6 +352,11 @@
 		"5. Attach a Shaft to the engine."
 	]
 	quest.04A8CD3D37E34882.title: "&6Steam Power"
+	quest.04BCFD62A9BC62D8.quest_desc: [
+		"The &bConductor Cap&r is primarily used to create &eConductors&r, which are moste useful as train drivers."
+		"Create a &eConductor&r by right-clicking on an &bAndesite Casing&r block."
+	]
+	quest.04BCFD62A9BC62D8.title: "Conductor Cap"
 	quest.04DDCC6627E4ED35.quest_desc: ["The &8Mechanical Fusion Anvil&r allows you to combine enchantments beyond vanilla limits."]
 	quest.04F3646EE7FDC052.quest_desc: [
 		"Craft a &bBlank Build Key&r."
@@ -1374,6 +1381,8 @@
 	quest.1C179D8FCBDA7E0D.quest_desc: ["&aBlank Theme Key&r allows you to select the theme of your dungeon."]
 	quest.1C1D1E1F20212223.quest_desc: ["Craft the Ignitium armor set for immunity to fire and lava."]
 	quest.1C1D1E1F20212223.title: "&6Ignitium Armor"
+	quest.1C2798382CD55BBB.quest_desc: ["A &bRemote Lens&r lets you see through the eyes of a single &eConductor&r. You start by giving the &eConductor&r you want to look though a set of &bEngineer's Goggles&r, then binding it to the &eConductor&r by right-clicking with the &bRemote Lens&r in your hand."]
+	quest.1C2798382CD55BBB.title: "Remote Vision"
 	quest.1C7C5B31498DEC96.title: "Jetpacks"
 	quest.1D11111111111111.quest_desc: [
 		"Before working with enriched materials, craft a full Anti-Radiation Suit."
@@ -1402,6 +1411,7 @@
 	quest.1D9B2FCE61EDB57C.title: "&bIntelligent Control"
 	quest.1DA740D406CFEFC8.quest_desc: ["Chests and Barrels that can be upgraded in place."]
 	quest.1DA740D406CFEFC8.title: "Sophisticated Storage"
+	quest.1DE63BF1355A3EEA.quest_desc: ["&bTrain Coupler&r allows you to connect and disconnect train cars &nwithout&r disassembling the train first. See the ponder for details."]
 	quest.1DF317AF3A93C660.quest_subtitle: "Ollo!"
 	quest.1E0924D51D2E7A78.quest_desc: ["Experience Nuggets can be crushed or processed for Liquid XP."]
 	quest.1E0924D51D2E7A78.title: "&6Liquid Experience"
@@ -1416,12 +1426,6 @@
 		"Use the wand to position it."
 	]
 	quest.1E1870FAD295DEDE.title: "&aDeploying the Camp"
-	quest.1E2F3A4B5C6D7E8F.quest_desc: [
-		"The &bScarlet Biplane&r is a high-performance aircraft."
-		""
-		"With improved speed and handling, it is perfect for long-distance travel or aerial maneuvers."
-	]
-	quest.1E2F3A4B5C6D7E8F.title: "&6Scarlet Biplane"
 	quest.1E4200A0817D30D3.quest_desc: ["&eCogwheels&r transfer rotation, change direction, and modify speed."]
 	quest.1EA5ACE38E453CDF.quest_desc: ["Record your findings."]
 	quest.1EDB6D55562D418D.quest_subtitle: "Craft every guide book"
@@ -1575,6 +1579,8 @@
 	quest.20E75BFDEA34E400.quest_desc: ["The &cMech Eye&r fires a powerful laser."]
 	quest.2115B744A06726B5.quest_subtitle: "Visit every dimension"
 	quest.2115B744A06726B5.title: "Dimensional Traveler"
+	quest.2151D0DA574C971F.quest_desc: ["A &bTrack Switch&r can be used to manually route trains, it's mostly for aesthetic purposes as trains can make the decision on their own."]
+	quest.2151D0DA574C971F.title: "Track Switch"
 	quest.219932CB19258C16.quest_desc: [
 		"Welcome to the high-tier of &bApplied Energistics&r."
 		""
@@ -1589,6 +1595,8 @@
 	quest.222426282A2C2E30.title: "&3Resonarium Armor"
 	quest.22713FEA163F56E6.quest_desc: ["The default keybind to attach/detach a cart is usually &e'R'&r while riding the horse near the cart."]
 	quest.22713FEA163F56E6.quest_subtitle: "Animal Transportation"
+	quest.2297180E70EF92CE.quest_desc: ["&bPhantom Train Tracks&r are only visible in the world when holding one in your hand. When combined with making your boegy invisible/no wheels, this allows for floating trains. boats etc."]
+	quest.2297180E70EF92CE.title: "Invisible Rails"
 	quest.22B5B73E05CD043E.quest_desc: ["Challenge one or more players to a competition of some kind. It could be a race, build-battle, ABBA Caving or PVP. The other player must accept and only the one proposing the challenge may claim this quest."]
 	quest.22B5B73E05CD043E.quest_subtitle: "Compete with other players"
 	quest.22B5B73E05CD043E.title: "Competitive!"
@@ -1808,6 +1816,8 @@
 	quest.2E6468A7B7740BE8.quest_desc: ["&lAcquisition:&r Bought from a &9Master Cleric Villager&r."]
 	quest.2E6468A7B7740BE8.quest_subtitle: "Eye 8 of 12 (Villager)"
 	quest.2E6468A7B7740BE8.title: "Evil Eye"
+	quest.2E6A46C53D17A434.quest_desc: ["There are some recipe conflicts in the pack, most are harmless, but sometimes you want one recipe over the other. You can now use a &bWrench&r to right-click two &bCrushing Wheels&r to select the output recipe they should be using."]
+	quest.2E6A46C53D17A434.title: "Configruable Outputs"
 	quest.2EC566E972E42E1A.quest_desc: ["Coral Golem."]
 	quest.2EC566E972E42E1A.title: "&3Coral Golem"
 	quest.2EDEF7AB6E6E8C35.quest_desc: [
@@ -2217,12 +2227,6 @@
 	quest.46118EC8D417B7A6.quest_subtitle: "Construct a road between you and at least one other player"
 	quest.461BBED82164F4BC.quest_subtitle: "Serious snacker"
 	quest.461BBED82164F4BC.title: "Every Pam's Core Food"
-	quest.4628396CD22EDC11.quest_desc: [
-		"The &bEconomy Plane&r is a reliable entry-level aircraft."
-		""
-		"It's decent for exploration but lacks the speed and durability of military models."
-	]
-	quest.4628396CD22EDC11.title: "&6Economy Plane"
 	quest.462D6D429EE32B54.quest_desc: ["Craft the full set of Resonarium Tools."]
 	quest.462D6D429EE32B54.title: "&3Resonarium Tools"
 	quest.464C621239370782.quest_desc: ["Store, Copy, and Print builds with &eSchematics&r."]
@@ -2353,6 +2357,8 @@
 	quest.4C3458F02B6E0399.quest_subtitle: "Find all pottery sherds"
 	quest.4C3458F02B6E0399.title: "Pottery Master"
 	quest.4C4D4E4F50515253.quest_desc: ["The Bulwark of the Flame is Ignis's shield."]
+	quest.4C75BF5216DCBA53.quest_desc: ["There are several different types of filter available. They can be used to filter items going into, and out of, inventories and contraptions. The random filters are particularly helpful for making stylized paths."]
+	quest.4C75BF5216DCBA53.title: "Filters"
 	quest.4CB826526128B825.quest_desc: ["Use &eSchematics&r to save and reprint your creations."]
 	quest.4CB826526128B825.title: "Blueprints and Printing"
 	quest.4CDE7D78F487EB4E.quest_desc: ["Forge the ultimate armor of the deep."]
@@ -2595,6 +2601,8 @@
 	quest.58C28D3B7105B183.quest_subtitle: "Prank another player"
 	quest.5930ADBE320F2752.quest_desc: ["Increases the storage size of your chests and barrels."]
 	quest.5930ADBE320F2752.title: "Tier Upgrades"
+	quest.5997C2770AD63B94.quest_desc: ["You can craft MEGA cells to store large quantities of items in your ME system."]
+	quest.5997C2770AD63B94.title: "MEGA Storage!"
 	quest.59A8C98040EF2AE1.quest_desc: ["Craft the &3Sonorous Staff&r to harness sonic blasts."]
 	quest.59A8C98040EF2AE1.title: "&3Sonic Power"
 	quest.59D9DF0B17AC385B.quest_desc: ["&3Sculk Gleam&r provides light in the darkness."]
@@ -2625,7 +2633,7 @@
 	quest.5B543497006DEF04.quest_desc: [
 		"Attach a &bBrass Chunk Loader&r to your train contraption."
 		""
-		"This ensures your train (and the chunks it passes through) remain loaded, allowing it to travel long distances without you."
+		"This ensures your train (and the chunks it passes through) remain loaded. You can also place them on Train Stations to load chunks when a train has stopped at them. You do not need to chunkload Trains themselves as they travel through unloaded chunks."
 	]
 	quest.5B543497006DEF04.title: "&6Chunk Loading"
 	quest.5BB887411B8B38FA.quest_desc: [
@@ -2961,6 +2969,7 @@
 	quest.6B41174603B189EC.quest_desc: ["&lLocation:&r Found in chests located in &9Mineshafts&r."]
 	quest.6B41174603B189EC.quest_subtitle: "Eye 3 of 12 (Mineshaft)"
 	quest.6B41174603B189EC.title: "Lost Eye"
+	quest.6B47279E9DE72C01.quest_desc: ["&bSemaphores&r are used to visually tell the state of an intersection from a distance. Check the ponder for details."]
 	quest.6B5BABC7C88B5C1A.quest_desc: ["The &cWither Assault Shoulder Weapon&r allows you to fire wither skulls."]
 	quest.6B6C6D6E6F707172.quest_desc: [
 		"Before you can find dungeons, you must enter the &eBuild Dimension&r."
@@ -2984,6 +2993,8 @@
 	quest.6C7964C6A4F30674.quest_desc: ["&lAcquisition:&r Crafted using the &9Witch Pupil&r."]
 	quest.6C7964C6A4F30674.quest_subtitle: "Eye 11 of 12 (Crafted)"
 	quest.6C7964C6A4F30674.title: "Witch Eye"
+	quest.6D196B900DF36A30.quest_desc: ["A &bConductor Whistle&r first needs to be bound to a &eConductor&r driving a train. Once bound, you can right-click on a piece of track and the train the &eConductor&r is driving will navigate to that spot."]
+	quest.6D196B900DF36A30.title: "Valet Parking"
 	quest.6D41C6C36A135EF0.quest_desc: ["Adds a visual indicator bar to show how full the drawer is."]
 	quest.6D54B45CDA70FEAB.quest_desc: [
 		"Sometimes you need to power devices remotely or expand your network's capacity."
@@ -3554,6 +3565,7 @@
 	quest.7696E2EF8160CAE0.quest_desc: ["Warden Helmet."]
 	quest.7696E2EF8160CAE0.title: "&3Warden Helm"
 	quest.76C1B8BC5C9B7624.quest_desc: ["The &eEncased Fan&r generates air streams for washing, smoking, or blasting."]
+	quest.76DE38A13FBE2B06.quest_desc: ["The &bFuel Tank&r allows you to use &bLava&r to power your train instead of &bCoal&r/&bCharcoal&r. Your train will still run without fuel, but the top speed is reduced."]
 	quest.76E7991459AA12A5.quest_desc: ["The &6Kobolediator&r is a champion of the sands."]
 	quest.7746A1DC8A15F8B3.quest_desc: ["Kill the &8Harbinger&r in the Ancient Factory."]
 	quest.7746A1DC8A15F8B3.title: "&8The Harbinger"
@@ -3723,6 +3735,7 @@
 	task.14DEFFB80CC96BC1.title: "Any Smart Cable"
 	task.1650A0BEF32C29C5.title: "Cataclysmic Warning"
 	task.167AAEC358F1AA24.title: "Challenge another player(s) to a competition"
+	task.18F70B034F20F0B8.title: "Any #railways:conductor_caps"
 	task.19C31D3EA6207638.title: "Open a shop"
 	task.1A2B3C4D5E6F7002.title: "Aviation"
 	task.1B4CA5B707FEFBE1.title: "Seed Drill"
@@ -3750,12 +3763,14 @@
 	task.38E290AC5E011888.title: "Any Smart Dense Cable"
 	task.3981FEEF0028FAA0.title: "Information"
 	task.398F378D09637527.title: "Any #minecraft:leaves"
+	task.3D018782694A7E27.title: "MEGA Item Storage Cell"
 	task.3F63566789879C85.title: "Create a dungeon/challenge for other players to complete"
 	task.4000000000000002.title: "Mic Check"
 	task.4018FC2C3B50F4CD.title: "Hoe"
 	task.40A7CC56DACC2623.title: "Any Glass Cable"
 	task.4182F3AB5F902A8C.title: "Any #create:seats"
 	task.431B512FFB189FB0.title: "Build a minigame"
+	task.4376E94091FA0059.title: "MEGA Fluid Storage Cell"
 	task.4537B5644A77D11D.title: "Elytra"
 	task.454593F697BAE037.title: "Any #create:postboxes"
 	task.4908977FA2EE7329.title: "R"
@@ -3805,6 +3820,7 @@
 	task.7890123456789012.title: "Any Supply Cart"
 	task.78FBC62D3E36207A.title: "Log Procurement"
 	task.79C19D9BB073FB20.title: "Read Description"
+	task.7AA5D2C9E21CCEDF.title: "Any #create:tracks"
 	task.7BE92C777F0CDFCE.title: "Read the Introduction"
 	task.7C6E7D3E47882870.title: "Storage Solutions"
 	task.7E3A1C9D5F2B4862.title: "Begin the Blueprint"
