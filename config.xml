@@ -40,10 +40,10 @@
 		<Module name="Better Compatibility Checker Config" id="bcc-common" depends="better_compatibility_checker" side="BOTH">
 			<URL priority="0">https://github.com/edwardg117/Gears-Frontiers/raw/refs/heads/main/configs/bcc-common.toml</URL>
 			<ModPath>/config/bcc-common.toml</ModPath>
-			<Size>382</Size>
+			<Size>395</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>edba5942903650f4e36efc18d462391e</MD5>
+			<MD5>f67e22074a521a4da4fbd447d0ac9f6a</MD5>
 		</Module>
 	</Server>
 </ServerPack>
