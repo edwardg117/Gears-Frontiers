@@ -35,7 +35,7 @@
 			<URL priority="1">https://edge.forgecdn.net/files/7947/759/MineColonies_Compatibility-1.21.1-3.47.jar</URL>
 			<Size>1492648</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>88729fc10c5a7ba28b4e07ae758ab786</MD5>
 			<Meta>
 				<version>3.47</version>
@@ -218,7 +218,7 @@
 			<URL priority="1">https://edge.forgecdn.net/files/7944/189/MineColonies_Tweaks-1.21.1-3.29.jar</URL>
 			<Size>797329</Size>
 			<Required>true</Required>
-			<ModType>Regular</ModType>
+			<ModType>Removal</ModType>
 			<MD5>52543ac29d7edcfa19b19ecc55c2859e</MD5>
 		</Module>
 		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="create dragonlib" side="BOTH">
