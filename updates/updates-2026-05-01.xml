@@ -110,7 +110,7 @@
 			<ModType>Regular</ModType>
 			<MD5>179ddfa1dc036c7009651778df40ae58</MD5>
 		</Module>
-		<Module name="Butchery" id="butchery" depends="" side="BOTH">
+		<Module name="Butcher" id="butcher" depends="" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/8rWA0MzS/butchery-4.9-neoforge-1.21.1.jar</URL>
 			<Size>14018452</Size>
 			<Required>true</Required>
