@@ -35,7 +35,7 @@
 			<URL priority="1">https://edge.forgecdn.net/files/7947/759/MineColonies_Compatibility-1.21.1-3.47.jar</URL>
 			<Size>1492648</Size>
 			<Required>true</Required>
-			<ModType>Removal</ModType>
+			<ModType>Regular</ModType>
 			<MD5>88729fc10c5a7ba28b4e07ae758ab786</MD5>
 			<Meta>
 				<version>3.47</version>
@@ -180,11 +180,11 @@
 			<MD5>179189c52b45a469e683570be4e77188</MD5>
 		</Module>
 		<Module name="MineColonies" id="minecolonies" depends="" side="BOTH">
-			<URL priority="1">https://edge.forgecdn.net/files/8000/003/minecolonies-1.1.1305-1.21.1-snapshot.jar</URL>
-			<Size>77427182</Size>
+			<URL priority="1">https://edge.forgecdn.net/files/8027/059/minecolonies-1.1.1307-1.21.1-snapshot.jar</URL>
+			<Size>77427042</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>f61ff34714e14e51d7bbf2b07c47bd1f</MD5>
+			<MD5>f65bdc1c052e735411dfb2016e19aa67</MD5>
 		</Module>
 		<Module name="BlockUI" id="blockui" depends="" side="BOTH">
 			<URL priority="1">https://edge.forgecdn.net/files/7790/469/blockui-1.0.211-1.21.1-snapshot.jar</URL>
@@ -218,7 +218,7 @@
 			<URL priority="1">https://edge.forgecdn.net/files/7944/189/MineColonies_Tweaks-1.21.1-3.29.jar</URL>
 			<Size>797329</Size>
 			<Required>true</Required>
-			<ModType>Removal</ModType>
+			<ModType>Regular</ModType>
 			<MD5>52543ac29d7edcfa19b19ecc55c2859e</MD5>
 		</Module>
 		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="create dragonlib" side="BOTH">
