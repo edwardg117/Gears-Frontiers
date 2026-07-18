@@ -66,6 +66,21 @@ def test_override_without_required_keeps_base_required_false(tmp_path):
     assert mods["m"].required is False  # base's Required=false must survive
 
 
+def test_urlless_removal_overrides_base_entry(tmp_path):
+    base = tmp_path / "base.xml"
+    _write_pack(base,
+        '<Module name="Farsight" id="farsight" side="CLIENT">'
+        '<URL priority="1">https://cdn.modrinth.com/data/P/versions/V/farsight.jar</URL>'
+        '</Module>')
+    over = tmp_path / "updates-2026-05-01.xml"
+    _write_pack(over,  # a Removal with NO <URL> — must still override the base
+        '<Module name="Farsight" id="farsight" side="CLIENT">'
+        '<Required>false</Required><ModType>Removal</ModType></Module>')
+    mods = xml_model.parse_packs([base, over])
+    assert "farsight" in mods
+    assert mods["farsight"].mod_type == "Removal"  # so it's excluded from the picker
+
+
 def test_override_with_explicit_required_true_wins(tmp_path):
     base = tmp_path / "base.xml"
     _write_pack(base,

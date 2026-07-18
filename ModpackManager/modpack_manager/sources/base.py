@@ -39,3 +39,17 @@ class Candidate:
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+@dataclass
+class SearchHit:
+    platform: str
+    id: str
+    slug: str
+    name: str
+    summary: str
+    icon_url: str
+    page_url: str
+
+    def to_dict(self) -> dict:
+        return asdict(self)

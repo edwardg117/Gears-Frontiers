@@ -1,42 +1,35 @@
 import xml.etree.ElementTree as ET
 
-from modpack_manager.xml_model import Module
-from modpack_manager.sources.base import Candidate
 from modpack_manager import generate
 
 NS = {"m": "http://www.mcupdater.com"}
 
 
-def _module():
-    return Module(mod_id="appleskin", name="AppleSkin",
-                  url="https://cdn.modrinth.com/data/E/versions/OLD/appleskin-3.0.5.jar",
-                  side="CLIENT", required=True, mod_type="Regular", depends="cloth",
-                  mod_path="mods")
-
-
-def _candidate():
-    return Candidate(mod_id="appleskin", name="AppleSkin", platform="modrinth",
-                     source_url="https://cdn.modrinth.com/data/E/versions/NEW/appleskin-3.1.0.jar",
-                     current_version="3.0.5", latest_version="3.1.0", severity="minor",
-                     side="CLIENT", required=True, mod_type="Regular", status="ok",
-                     latest_size=1234)
-
-
-def test_write_update_xml_has_correct_hash_and_preserved_attrs(tmp_path):
-    out = tmp_path / "updates-2026-07-17.xml"
-    generate.write_update_xml(
-        [_candidate()], {"appleskin": _module()}, out, mc_version="1.21.1",
-        hashfn=lambda url: ("d41d8cd98f00b204e9800998ecf8427e", 1234))
+def test_write_batch_xml_regular_and_removal(tmp_path):
+    out = tmp_path / "updates-2026-07-18.xml"
+    entries = [
+        {"kind": "regular", "op": "add", "name": "Sodium", "id": "sodium",
+         "side": "CLIENT", "required": True, "mod_type": "Regular", "depends": "",
+         "mod_path": None, "url": "https://cdn/sodium-0.5.8.jar",
+         "md5": "d41d8cd98f00b204e9800998ecf8427e", "size": 1234, "version": "0.5.8"},
+        {"kind": "removal", "name": "Farsight", "id": "farsight", "side": "BOTH",
+         "size": 100, "required": False},
+    ]
+    summary = generate.write_batch_xml(entries, out, mc_version="1.21.1")
     root = ET.parse(out).getroot()
-    mod = root.find(".//m:Module", NS)
-    assert mod.get("id") == "appleskin"
-    assert mod.get("side") == "CLIENT"
-    assert mod.get("depends") == "cloth"
-    assert mod.find("m:MD5", NS).text == "d41d8cd98f00b204e9800998ecf8427e"
-    assert mod.find("m:Size", NS).text == "1234"
-    assert mod.find("m:ModPath", NS).text == "mods"
-    assert mod.find("m:URL", NS).text.endswith("appleskin-3.1.0.jar")
-    assert mod.find("m:Meta/m:version", NS).text == "3.1.0"
+    mods = root.findall(".//m:Module", NS)
+    assert {m.get("id") for m in mods} == {"sodium", "farsight"}
+    sod = root.find(".//m:Module[@id='sodium']", NS)
+    assert sod.get("side") == "CLIENT"
+    assert sod.find("m:MD5", NS).text == "d41d8cd98f00b204e9800998ecf8427e"
+    assert sod.find("m:Size", NS).text == "1234"
+    assert sod.find("m:Meta/m:version", NS).text == "0.5.8"
+    far = root.find(".//m:Module[@id='farsight']", NS)
+    assert far.find("m:ModType", NS).text == "Removal"
+    assert far.find("m:URL", NS) is None                # removal has no URL
+    assert far.find("m:Size", NS).text == "100"         # proven removal format keeps Size
+    assert far.find("m:Required", NS).text == "false"
+    assert [s["id"] for s in summary] == ["sodium", "farsight"]
 
 
 PREVIEW = """<?xml version="1.0" encoding="UTF-8"?>

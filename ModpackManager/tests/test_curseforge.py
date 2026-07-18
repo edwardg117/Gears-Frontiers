@@ -172,3 +172,45 @@ def test_build_candidate_with_ctx_skips_recover_and_info():
     assert c.status == "ok"
     assert c.latest_version == "1.39.8"
     assert c.project_url == "http://x"
+
+
+@responses.activate
+def test_search_returns_hits():
+    responses.add(responses.GET, f"{API}/mods/search", json={"data": [
+        {"id": 238222, "slug": "jei", "name": "JEI", "summary": "items",
+         "logo": {"url": "https://l/jei.png"}, "links": {"websiteUrl": "https://cf/jei"}},
+    ]}, status=200)
+    hits = curseforge.search("jei", "1.21.1", "neoforge", api_key="CF")
+    assert hits[0].platform == "curseforge"
+    assert hits[0].id == "238222"
+    assert hits[0].page_url == "https://cf/jei"
+
+
+def test_search_no_key_returns_empty():
+    assert curseforge.search("jei", "1.21.1", "neoforge", api_key="") == []
+
+
+@responses.activate
+def test_resolve_link_via_slug():
+    responses.add(responses.GET, f"{API}/mods/search", json={"data": [
+        {"id": 238222, "slug": "jei", "name": "JEI", "summary": "items",
+         "logo": {"url": "l.png"}, "links": {"websiteUrl": "https://cf/jei"}}]}, status=200)
+    hit = curseforge.resolve("https://www.curseforge.com/minecraft/mc-mods/jei", api_key="CF")
+    assert hit.id == "238222"
+    assert hit.name == "JEI"
+
+
+@responses.activate
+def test_project_versions_maps_release_types_and_skips_blocked():
+    responses.add(responses.GET, f"{API}/mods/77/files", json={"data": [
+        {"id": 9002, "displayName": "1.2.0", "fileName": "m-1.2.0.jar",
+         "fileDate": "2026-07-10T00:00:00Z", "releaseType": 2,
+         "downloadUrl": "https://edge/9002/m.jar"},
+        {"id": 9001, "displayName": "1.1.0", "fileName": "m-1.1.0.jar",
+         "fileDate": "2026-06-01T00:00:00Z", "releaseType": 1, "downloadUrl": None},
+    ]}, status=200)
+    out = curseforge.project_versions("77", "1.21.1", "neoforge", api_key="CF")
+    assert out["side"] == "BOTH"
+    assert len(out["versions"]) == 1               # blocked (null url) skipped
+    assert out["versions"][0]["type"] == "beta"
+    assert out["versions"][0]["ref"] == "9002"

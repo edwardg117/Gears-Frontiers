@@ -15,37 +15,54 @@ def _sub(parent, tag, text=None):
     return el
 
 
-def write_update_xml(selected, modules, out_path, mc_version, hashfn):
-    """selected: list[Candidate]; modules: dict[id,Module]; hashfn(url)->(md5,size)."""
-    ET.register_namespace("", MCU_NS)
-    root = ET.Element(f"{{{MCU_NS}}}ServerPack", {"version": "4.1"})
+def _server_element(root, mc_version):
     today = date.today().isoformat()
-    server = ET.SubElement(root, f"{{{MCU_NS}}}Server", {
+    return ET.SubElement(root, f"{{{MCU_NS}}}Server", {
         "id": f"update-{today}", "abstract": "false", "name": f"Update {today}",
         "newsUrl": "about:blank", "version": mc_version, "generateList": "true",
         "autoConnect": "false", "revision": "",
         "mainClass": "cpw.mods.bootstraplauncher.BootstrapLauncher", "launcherType": "Vanilla",
     })
-    summary = []
-    for cand in selected:
-        module = modules[cand.mod_id]
-        md5, size = hashfn(cand.source_url)
-        module_el = ET.SubElement(server, f"{{{MCU_NS}}}Module", {
-            "name": cand.name, "id": cand.mod_id,
-            "depends": module.depends or "", "side": cand.side,
-        })
-        url_el = _sub(module_el, f"{{{MCU_NS}}}URL", cand.source_url)
-        url_el.set("priority", "1")
-        if module.mod_path:
-            _sub(module_el, f"{{{MCU_NS}}}ModPath", module.mod_path)
-        _sub(module_el, f"{{{MCU_NS}}}Size", size)
-        _sub(module_el, f"{{{MCU_NS}}}Required", "true" if cand.required else "false")
-        _sub(module_el, f"{{{MCU_NS}}}ModType", cand.mod_type or "Regular")
-        _sub(module_el, f"{{{MCU_NS}}}MD5", md5)
-        meta = ET.SubElement(module_el, f"{{{MCU_NS}}}Meta")
-        _sub(meta, f"{{{MCU_NS}}}version", cand.latest_version)
-        summary.append({"id": cand.mod_id, "md5": md5, "size": size, "ok": True})
 
+
+def _write_module(server, e):
+    if e["kind"] == "removal":
+        # match the pack's proven removal format (Size + Required + ModType, no URL),
+        # so MCUpdater reliably deletes the mod
+        el = ET.SubElement(server, f"{{{MCU_NS}}}Module",
+                           {"name": e["name"], "id": e["id"], "depends": "", "side": e["side"]})
+        _sub(el, f"{{{MCU_NS}}}Size", e.get("size") or 0)
+        _sub(el, f"{{{MCU_NS}}}Required", "true" if e.get("required", True) else "false")
+        _sub(el, f"{{{MCU_NS}}}ModType", "Removal")
+        return
+    el = ET.SubElement(server, f"{{{MCU_NS}}}Module", {
+        "name": e["name"], "id": e["id"], "depends": e.get("depends") or "", "side": e["side"]})
+    url_el = _sub(el, f"{{{MCU_NS}}}URL", e["url"])
+    url_el.set("priority", "1")
+    if e.get("mod_path"):
+        _sub(el, f"{{{MCU_NS}}}ModPath", e["mod_path"])
+    _sub(el, f"{{{MCU_NS}}}Size", e["size"])
+    _sub(el, f"{{{MCU_NS}}}Required", "true" if e["required"] else "false")
+    _sub(el, f"{{{MCU_NS}}}ModType", e.get("mod_type") or "Regular")
+    _sub(el, f"{{{MCU_NS}}}MD5", e["md5"])
+    meta = ET.SubElement(el, f"{{{MCU_NS}}}Meta")
+    _sub(meta, f"{{{MCU_NS}}}version", e["version"])
+
+
+def write_batch_xml(entries, out_path, mc_version):
+    """entries: list of {kind:'regular'|'removal', ...}. Regular entries already
+    carry md5+size (the service downloads/hashes before calling this)."""
+    ET.register_namespace("", MCU_NS)
+    root = ET.Element(f"{{{MCU_NS}}}ServerPack", {"version": "4.1"})
+    server = _server_element(root, mc_version)
+    summary = []
+    for e in entries:
+        _write_module(server, e)
+        if e["kind"] == "removal":
+            summary.append({"id": e["id"], "op": "removal"})
+        else:
+            summary.append({"id": e["id"], "op": e.get("op", "update"),
+                            "md5": e["md5"], "size": e["size"]})
     tree = ET.ElementTree(root)
     ET.indent(tree, space="\t")
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)

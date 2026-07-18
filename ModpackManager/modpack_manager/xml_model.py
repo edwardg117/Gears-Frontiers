@@ -52,7 +52,11 @@ def _text(module: ET.Element, tag: str) -> str | None:
 
 def _parse_module(el: ET.Element, source_file: str) -> Module | None:
     url = _text(el, "URL")
-    if not url:
+    mod_type = _text(el, "ModType") or "Regular"
+    # Removal entries mark a mod for deletion and often omit <URL>; keep them so
+    # the merge can override the earlier (installed) layer. Everything else needs
+    # a URL to be a real mod we can check.
+    if not url and mod_type != "Removal":
         return None
     meta = el.find("m:Meta", NS)
     if meta is None:
@@ -68,11 +72,11 @@ def _parse_module(el: ET.Element, source_file: str) -> Module | None:
     return Module(
         mod_id=el.get("id", "unknown"),
         name=el.get("name", "unknown"),
-        url=url,
+        url=url or "",
         side=el.get("side", "BOTH"),
         required=(req_text or "true").lower() == "true",
         required_set=req_text is not None,
-        mod_type=_text(el, "ModType") or "Regular",
+        mod_type=mod_type,
         depends=el.get("depends", ""),
         mod_path=_text(el, "ModPath"),
         size=int(size) if size and size.isdigit() else None,

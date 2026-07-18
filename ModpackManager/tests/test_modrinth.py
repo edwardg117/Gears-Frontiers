@@ -113,3 +113,47 @@ def test_resolve_project_names_maps_id_and_slug_to_title():
     assert names["OZhUIuou"] == "Sodium"
     assert names["sodium"] == "Sodium"       # slug is mapped too
     assert names["AABBCCDD"] == "Lithium"
+
+
+@responses.activate
+def test_search_returns_hits():
+    responses.add(responses.GET, f"{API}/search", json={"hits": [
+        {"project_id": "AAB", "slug": "sodium", "title": "Sodium",
+         "description": "fast", "icon_url": "https://i/s.png"},
+    ]}, status=200)
+    hits = modrinth.search("sodium", "1.21.1", "neoforge")
+    assert len(hits) == 1
+    assert hits[0].platform == "modrinth"
+    assert hits[0].id == "AAB"
+    assert hits[0].name == "Sodium"
+    assert hits[0].page_url == "https://modrinth.com/mod/sodium"
+
+
+@responses.activate
+def test_resolve_link_to_project():
+    responses.add(responses.GET, f"{API}/project/sodium", json={
+        "id": "AAB", "slug": "sodium", "title": "Sodium", "description": "fast",
+        "icon_url": "i.png"}, status=200)
+    hit = modrinth.resolve("https://modrinth.com/mod/sodium")
+    assert hit.id == "AAB"
+    assert hit.name == "Sodium"
+
+
+@responses.activate
+def test_project_versions_side_and_types():
+    responses.add(responses.GET, f"{API}/project/AAB", json={
+        "id": "AAB", "slug": "sodium", "title": "Sodium",
+        "client_side": "required", "server_side": "unsupported"}, status=200)
+    responses.add(responses.GET, f"{API}/project/AAB/version", json=[
+        {"id": "V2", "version_number": "0.6.0", "version_type": "beta",
+         "date_published": "2026-07-10T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/0.6.0.jar"}]},
+        {"id": "V1", "version_number": "0.5.8", "version_type": "release",
+         "date_published": "2026-06-01T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/0.5.8.jar"}]},
+    ], status=200)
+    out = modrinth.project_versions("AAB", "1.21.1", "neoforge")
+    assert out["side"] == "CLIENT"
+    assert [v["type"] for v in out["versions"]] == ["beta", "release"]
+    assert out["versions"][0]["url"] == "https://cdn/0.6.0.jar"
+    assert out["versions"][1]["ref"] == "V1"

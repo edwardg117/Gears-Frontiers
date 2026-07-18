@@ -3,21 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gears &amp; Frontiers — Update Picker</title>
+  <title>Gears &amp; Frontiers — Pack Manager</title>
   <link rel="stylesheet" href="/web/style.css">
 </head>
 <body>
-  <header class="toolbar">
-    <div class="counts"><span id="update-count">0 updates</span> · <span id="selected-count">0 selected</span></div>
-    <select id="filter-severity"><option value="">All severity</option><option>major</option><option>minor</option><option>patch</option></select>
-    <select id="filter-source"><option value="">All sources</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
-    <button id="select-all" type="button">Select all</button>
+  <nav class="tabs">
+    <button class="tab active" data-tab="updates" type="button">Updates</button>
+    <button class="tab" data-tab="add" type="button">Add</button>
+    <button class="tab" data-tab="remove" type="button">Remove</button>
+  </nav>
+
+  <section id="tab-updates" class="tab-panel">
+    <div class="toolbar">
+      <div class="counts"><span id="update-count">0 updates</span> · <span id="selected-count">0 selected</span></div>
+      <select id="filter-severity"><option value="">All severity</option><option>major</option><option>minor</option><option>patch</option></select>
+      <select id="filter-source"><option value="">All sources</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
+      <button id="select-all" type="button">Select all</button>
+    </div>
+    <div class="panes">
+      <section id="mod-list" class="list"></section>
+      <section id="reader" class="reader"><p class="muted">Select a mod to read its changelog.</p></section>
+      <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p id="loading-text">Scanning for updates…</p>
+        <p class="muted small">Checking Modrinth &amp; CurseForge — this can take ~30&nbsp;seconds.</p>
+        <button id="loading-retry" type="button" hidden>Retry</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="tab-add" class="tab-panel" hidden>
+    <div class="add-search">
+      <input id="add-query" placeholder="Paste a Modrinth or CurseForge link, or search by name">
+      <select id="add-platform"><option value="both">Both platforms</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
+      <select id="add-release"><option value="">All release types</option><option value="release">Stable only</option><option value="beta">Beta</option><option value="alpha">Alpha</option></select>
+      <button id="add-search-btn" type="button">Search</button>
+    </div>
+    <div id="add-results" class="add-results"></div>
+    <div class="label">Queued to add (<span id="add-queue-count">0</span>)</div>
+    <div id="add-queue" class="add-queue"></div>
+  </section>
+
+  <section id="tab-remove" class="tab-panel" hidden>
+    <div class="toolbar">
+      <input id="remove-filter" placeholder="Filter your pack…" style="flex:1">
+      <select id="remove-platform"><option value="">All sources</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
+    </div>
+    <div id="remove-list" class="list"></div>
+  </section>
+
+  <footer class="batchbar">
+    <button id="review-btn" type="button" class="review">Review batch · <span id="batch-summary">0 updates · 0 adds · 0 removals</span> ›</button>
     <button id="generate" type="button" class="primary">Generate preview →</button>
-  </header>
-  <main class="panes">
-    <section id="mod-list" class="list" aria-label="Mods with updates"></section>
-    <section id="reader" class="reader"><p class="muted">Select a mod to read its changelog.</p></section>
-  </main>
+  </footer>
+
+  <div id="review" class="review-overlay" hidden>
+    <div class="review-panel">
+      <div class="review-head"><b>Review batch</b><button id="review-close" type="button" aria-label="Close">✕</button></div>
+      <div id="review-body"></div>
+      <div class="review-foot"><button id="review-generate" type="button" class="primary">Generate preview →</button></div>
+    </div>
+  </div>
   <div id="status" class="status" hidden></div>
   <script src="/web/app.js"></script>
 </body>

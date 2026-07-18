@@ -5,7 +5,7 @@ import re
 import requests
 from ..version_utils import classify_severity
 from ..text_render import sanitize_html
-from .base import Candidate, ChangelogEntry
+from .base import Candidate, ChangelogEntry, SearchHit
 
 API = "https://api.curseforge.com/v1"
 _LOADER_ID = {"forge": 1, "fabric": 4, "quilt": 5, "neoforge": 6}
@@ -232,3 +232,68 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
         if latest_fid != m.cf_file_id:
             updated.add(m.mod_id)
     return updated, unresolved, contexts
+
+
+def search(query, mc_version, loader, api_key=""):
+    if not api_key:
+        return []
+    session = _session(api_key)
+    r = session.get(f"{API}/mods/search", params={
+        "gameId": 432, "searchFilter": query, "gameVersion": mc_version,
+        "modLoaderType": _LOADER_ID.get(loader, 6), "pageSize": 20}, timeout=30)
+    r.raise_for_status()
+    hits = []
+    for m in r.json().get("data", []):
+        hits.append(SearchHit(
+            platform="curseforge", id=str(m.get("id", "")), slug=m.get("slug", ""),
+            name=m.get("name", ""), summary=m.get("summary", "") or "",
+            icon_url=(m.get("logo") or {}).get("url", "") or "",
+            page_url=(m.get("links") or {}).get("websiteUrl", "") or ""))
+    return hits
+
+
+_LINK = re.compile(r"curseforge\.com/minecraft/mc-mods/([^/?#]+)")
+_RELEASE_TYPE = {1: "release", 2: "beta", 3: "alpha"}
+
+
+def _mod_hit(m):
+    return SearchHit(platform="curseforge", id=str(m.get("id", "")), slug=m.get("slug", ""),
+                     name=m.get("name", ""), summary=m.get("summary", "") or "",
+                     icon_url=(m.get("logo") or {}).get("url", "") or "",
+                     page_url=(m.get("links") or {}).get("websiteUrl", "") or "")
+
+
+def resolve(ref, api_key=""):
+    if not api_key:
+        return None
+    ref = (ref or "").strip()
+    session = _session(api_key)
+    link = _LINK.search(ref)
+    if link:
+        r = session.get(f"{API}/mods/search",
+                        params={"gameId": 432, "slug": link.group(1), "pageSize": 1}, timeout=30)
+        r.raise_for_status()
+        data = r.json().get("data", [])
+        return _mod_hit(data[0]) if data else None
+    if ref.isdigit():
+        r = session.get(f"{API}/mods/{ref}", timeout=30)
+        if r.status_code != 200:
+            return None
+        mod = r.json().get("data")
+        return _mod_hit(mod) if mod else None
+    return None
+
+
+def project_versions(mod_id, mc_version, loader, api_key=""):
+    session = _session(api_key)
+    files, _ = _list_files(session, int(mod_id), mc_version, loader)
+    files.sort(key=lambda f: f.get("fileDate", ""), reverse=True)
+    opts = []
+    for f in files:
+        url = f.get("downloadUrl")
+        if not url:
+            continue  # distribution-blocked file can't be added (no jar to hash)
+        opts.append({"ref": str(f.get("id")),
+                     "name": _clean_version(f.get("displayName"), f.get("fileName"), mc_version),
+                     "type": _RELEASE_TYPE.get(f.get("releaseType"), "release"), "url": url})
+    return {"side": "BOTH", "versions": opts}

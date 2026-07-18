@@ -63,7 +63,8 @@ def _curseforge_to_check(cf_mods, config) -> tuple[list, dict]:
 
 
 def scan(modules: dict, config, max_workers: int = 5) -> list[Candidate]:
-    current_project_ids = {m.project_id for m in modules.values() if m.project_id}
+    current_project_ids = {m.project_id for m in modules.values()
+                           if m.project_id and m.mod_type != "Removal"}
     eligible = [m for m in modules.values() if _eligible(m, config)]
     modrinth_mods = [m for m in eligible if m.platform == "modrinth"]
     cf_mods = [m for m in eligible if m.platform == "curseforge"]

@@ -17,3 +17,13 @@ def test_candidate_to_dict_roundtrips_nested():
     assert d["added_dependencies"][0]["id"] == "morered"
     assert d["added_dependencies"][0]["satisfied"] is False
     assert d["status"] == "ok"
+
+
+def test_search_hit_to_dict():
+    from modpack_manager.sources.base import SearchHit
+    h = SearchHit(platform="modrinth", id="AAB", slug="sodium", name="Sodium",
+                  summary="fast", icon_url="i.png", page_url="https://modrinth.com/mod/sodium")
+    d = h.to_dict()
+    assert d["platform"] == "modrinth"
+    assert d["slug"] == "sodium"
+    assert d["page_url"].endswith("/sodium")

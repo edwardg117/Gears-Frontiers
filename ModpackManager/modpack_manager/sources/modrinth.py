@@ -1,14 +1,16 @@
 """Build update candidates from the Modrinth API."""
 
 import json
+import re
 
 import requests
 from ..version_utils import classify_severity
 from ..text_render import render_markdown
-from .base import Candidate, ChangelogEntry, AddedDependency
+from .base import Candidate, ChangelogEntry, AddedDependency, SearchHit
 
 API = "https://api.modrinth.com/v2"
 _UA = "Gears-Frontiers-ModpackManager/0.1 (github.com/edwardg117/Gears-Frontiers)"
+_MODRINTH = re.compile(r"cdn\.modrinth\.com/data/([^/]+)/versions/([^/]+)/")
 
 
 def _session(api_key: str = "") -> requests.Session:
@@ -159,3 +161,65 @@ def resolve_project_names(project_ids, api_key=""):
             if proj.get("slug"):
                 out[proj["slug"]] = title
     return out
+
+
+def search(query, mc_version, loader, api_key=""):
+    session = _session(api_key)
+    facets = f'[["project_type:mod"],["categories:{loader}"],["versions:{mc_version}"]]'
+    r = session.get(f"{API}/search",
+                    params={"query": query, "facets": facets, "limit": 20}, timeout=30)
+    r.raise_for_status()
+    hits = []
+    for h in r.json().get("hits", []):
+        slug = h.get("slug", "")
+        hits.append(SearchHit(
+            platform="modrinth", id=h.get("project_id", ""), slug=slug,
+            name=h.get("title", ""), summary=h.get("description", "") or "",
+            icon_url=h.get("icon_url", "") or "",
+            page_url=f"https://modrinth.com/mod/{slug}"))
+    return hits
+
+
+_LINK = re.compile(r"modrinth\.com/(?:mod|plugin|datapack|project)/([^/?#]+)")
+
+
+def _project_hit(p):
+    slug = p.get("slug", "")
+    return SearchHit(platform="modrinth", id=p.get("id", ""), slug=slug,
+                     name=p.get("title", ""), summary=p.get("description", "") or "",
+                     icon_url=p.get("icon_url", "") or "",
+                     page_url=f"https://modrinth.com/mod/{slug}")
+
+
+def resolve(ref, api_key=""):
+    ref = (ref or "").strip()
+    m = _LINK.search(ref) or _MODRINTH.search(ref)
+    slug = m.group(1) if m else ref
+    session = _session(api_key)
+    r = session.get(f"{API}/project/{slug}", timeout=30)
+    if r.status_code != 200:
+        return None
+    return _project_hit(r.json())
+
+
+def _detect_side(project):
+    cs = project.get("client_side", "required")
+    ss = project.get("server_side", "required")
+    if ss == "unsupported" and cs != "unsupported":
+        return "CLIENT"
+    if cs == "unsupported" and ss != "unsupported":
+        return "SERVER"
+    return "BOTH"
+
+
+def project_versions(project_id, mc_version, loader, api_key=""):
+    session = _session(api_key)
+    pr = session.get(f"{API}/project/{project_id}", timeout=30)
+    pr.raise_for_status()
+    side = _detect_side(pr.json())
+    versions = _fetch_versions(session, project_id, mc_version, loader)
+    versions.sort(key=lambda v: v.get("date_published", ""), reverse=True)
+    opts = [{"ref": v.get("id"), "name": v.get("version_number", "?"),
+             "type": v.get("version_type", "release"),
+             "url": _primary_file(v).get("url", "")} for v in versions]
+    return {"side": side, "versions": opts}
