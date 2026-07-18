@@ -251,3 +251,45 @@ def test_project_versions_side_and_types():
     assert [v["type"] for v in out["versions"]] == ["beta", "release"]
     assert out["versions"][0]["url"] == "https://cdn/0.6.0.jar"
     assert out["versions"][1]["ref"] == "V1"
+
+
+@responses.activate
+def test_build_candidate_handles_null_date_published():
+    # Regression: a version with date_published: null previously made .sort()
+    # raise TypeError. Null dates must sort as oldest instead of crashing.
+    responses.add(responses.GET, f"{API}/project/PROJ1234/version", json=[
+        {"id": "NEWVER", "version_number": "2.0", "date_published": "2026-07-10T00:00:00Z",
+         "changelog": "new", "dependencies": [],
+         "files": [{"primary": True, "url": "https://cdn.modrinth.com/new.jar", "size": 10,
+                    "hashes": {"sha1": "a"}}]},
+        {"id": "NULLVER", "version_number": "1.5", "date_published": None,
+         "changelog": "null date", "dependencies": [],
+         "files": [{"primary": True, "url": "https://cdn.modrinth.com/null.jar", "size": 5,
+                    "hashes": {"sha1": "b"}}]},
+    ], status=200)
+    m = Module(mod_id="appleskin", name="AppleSkin",
+               url="https://cdn.modrinth.com/data/PROJ1234/versions/NULLVER/appleskin-1.5.jar",
+               version="1.5")
+    c = modrinth.build_candidate(m, "1.21.1", "neoforge", current_project_ids=set())
+    assert c is not None
+    assert c.latest_version == "2.0"                       # null date sorts oldest -> NEWVER wins
+    assert c.source_url == "https://cdn.modrinth.com/new.jar"
+
+
+@responses.activate
+def test_project_versions_handles_null_date_published():
+    # Regression: a version with date_published: null must not crash the sort.
+    responses.add(responses.GET, f"{API}/project/AAB", json={
+        "id": "AAB", "slug": "sodium", "title": "Sodium",
+        "client_side": "required", "server_side": "required"}, status=200)
+    responses.add(responses.GET, f"{API}/project/AAB/version", json=[
+        {"id": "V2", "version_number": "0.6.0", "version_type": "release",
+         "date_published": None,
+         "files": [{"primary": True, "url": "https://cdn/0.6.0.jar"}]},
+        {"id": "V1", "version_number": "0.5.8", "version_type": "release",
+         "date_published": "2026-06-01T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/0.5.8.jar"}]},
+    ], status=200)
+    out = modrinth.project_versions("AAB", "1.21.1", "neoforge")
+    assert [v["ref"] for v in out["versions"]] == ["V1", "V2"]  # null date sorts oldest
+    assert out["side"] == "BOTH"

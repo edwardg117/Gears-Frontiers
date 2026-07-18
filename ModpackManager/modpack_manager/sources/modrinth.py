@@ -45,7 +45,7 @@ def build_candidate(module, mc_version, loader, current_project_ids, api_key="")
     versions = _fetch_versions(session, module.project_id, mc_version, loader)
     if not versions:
         return None
-    versions.sort(key=lambda v: v.get("date_published", ""), reverse=True)
+    versions.sort(key=lambda v: v.get("date_published") or "", reverse=True)
     latest = versions[0]
     if latest.get("id") == module.version_id:
         return None  # already on newest
@@ -260,7 +260,7 @@ def project_versions(project_id, mc_version, loader, api_key=""):
     pr.raise_for_status()
     side = _detect_side(pr.json())
     versions = _fetch_versions(session, project_id, mc_version, loader)
-    versions.sort(key=lambda v: v.get("date_published", ""), reverse=True)
+    versions.sort(key=lambda v: v.get("date_published") or "", reverse=True)
     opts = [{"ref": v.get("id"), "name": v.get("version_number", "?"),
              "type": v.get("version_type", "release"),
              "url": _primary_file(v).get("url", "")} for v in versions]
