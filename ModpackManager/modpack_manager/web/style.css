@@ -79,3 +79,8 @@ body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:v
 .add-row .add-btn { background:var(--accent); color:#fff; border:none; font-weight:600; }
 .add-row .add-btn:disabled { background:var(--panel); color:var(--muted); font-weight:400; cursor:default; }
 .add-row .rm-btn { border:none; background:transparent; color:var(--muted); }
+
+.dep-chip { font-size:.58rem; font-weight:600; padding:1px 7px; border-radius:100px;
+  background:rgba(255,159,10,.16); color:var(--minor); white-space:nowrap; }
+.dep-chips { display:flex; flex-wrap:wrap; gap:4px; margin-top:3px; }
+.add-row.auto-dep { border-left:2px solid var(--minor); }

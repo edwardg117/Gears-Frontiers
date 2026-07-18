@@ -27,7 +27,7 @@ async function load(refresh = false) {
     const data = await res.json();
     state.candidates = data.candidates || [];
     state.selected = new Set(state.candidates.filter((c) => c.status === "ok").map((c) => c.mod_id));
-    hideLoading(); renderUpdates(); updateBatch();
+    hideLoading(); renderUpdates(); renderQueue(); updateBatch();
   } catch (e) { loadingError("Couldn't load updates: " + e.message); }
 }
 function visible() {
@@ -63,17 +63,26 @@ function renderReader() {
   if (c.project_url && /^https?:\/\//i.test(c.project_url)) h += `<a class="open" href="${esc(c.project_url)}" target="_blank" rel="noopener">${link}</a>`;
   if (c.note) h += `<div class="dep">${esc(c.note)}</div>`;
   for (const e of c.changelogs) { h += `<div class="cl-ver">${esc(e.version)}<span class="cl-date">${esc(e.date)}</span></div><div class="cl-body">${e.body_html || '<span class="muted">No changelog provided.</span>'}</div>`; }
-  for (const d of c.added_dependencies) { h += `<div class="dep">⚠ New required dependency: <b>${esc(d.name || d.id)}</b>${d.satisfied ? "" : " — not in your pack"}</div>`; }
+  for (const d of c.added_dependencies) {
+    const label = esc(d.name || d.slug || d.id);
+    const tail = d.addable
+      ? ` <span class="muted">(${esc(d.version)})</span> — added to the Add queue`
+      : " — not in your pack; add it manually";
+    h += `<div class="dep">⚠ New required dependency: <b>${label}</b>${tail}</div>`;
+  }
   r.innerHTML = h;
 }
-function toggleUpdate(id) { state.selected.has(id) ? state.selected.delete(id) : state.selected.add(id); renderUpdates(); updateBatch(); }
+function toggleUpdate(id) {
+  state.selected.has(id) ? state.selected.delete(id) : state.selected.add(id);
+  renderUpdates(); renderQueue(); updateBatch();
+}
 $("#filter-severity").addEventListener("change", (e) => { state.filters.severity = e.target.value; renderUpdates(); });
 $("#filter-source").addEventListener("change", (e) => { state.filters.source = e.target.value; renderUpdates(); });
 $("#select-all").addEventListener("click", () => {
   const vis = visible().filter((c) => c.status === "ok");
   const all = vis.every((c) => state.selected.has(c.mod_id));
   vis.forEach((c) => all ? state.selected.delete(c.mod_id) : state.selected.add(c.mod_id));
-  renderUpdates(); updateBatch();
+  renderUpdates(); renderQueue(); updateBatch();
 });
 
 // ---- add tab ----
@@ -134,8 +143,37 @@ function queueAdd(hit, opt, side) {
     version: opt.name, url: opt.url, side: side || "BOTH", required: true, page_url: hit.page_url });
   renderQueue(); updateBatch();
 }
+// Derived: new deps of currently-selected updates, deduped by slug, one entry
+// per dep with the names of every selected mod that introduced it. Skips deps
+// that aren't addable or are already queued manually. (Deps already in the pack
+// are excluded upstream — the scan only reports a required dependency whose
+// Modrinth project id isn't already installed — so no pack check is needed.)
+function computeAutoDeps() {
+  const bySlug = new Map();
+  for (const c of state.candidates) {
+    if (!state.selected.has(c.mod_id)) continue;
+    for (const d of (c.added_dependencies || [])) {
+      if (!d.addable || !d.slug) continue;
+      if (state.adds.some((a) => a.module_id === d.slug)) continue;
+      const e = bySlug.get(d.slug) || { dep: d, requiredBy: [] };
+      if (!e.requiredBy.includes(c.name)) e.requiredBy.push(c.name);
+      bySlug.set(d.slug, e);
+    }
+  }
+  return [...bySlug.values()];
+}
 function renderQueue() {
   const box = $("#add-queue"); box.innerHTML = "";
+  const auto = computeAutoDeps();
+  for (const { dep, requiredBy } of auto) {
+    const row = document.createElement("div"); row.className = "add-row auto-dep";
+    const chips = requiredBy.map((n) => `<span class="dep-chip">dep of ${esc(n)}</span>`).join("");
+    row.innerHTML = `<span class="tag">MR</span>
+      <div class="main"><div class="name">${esc(dep.name || dep.slug)}</div>
+        <div class="dep-chips">${chips}</div></div>
+      <span class="ver">${esc(dep.version)}</span>${openLink(dep.url)}`;
+    box.append(row);
+  }
   for (const a of state.adds) {
     const row = document.createElement("div"); row.className = "add-row";
     row.innerHTML = `<span class="tag">${a.platform === "curseforge" ? "CF" : "MR"}</span>
@@ -147,7 +185,7 @@ function renderQueue() {
     });
     box.append(row);
   }
-  $("#add-queue-count").textContent = state.adds.length;
+  $("#add-queue-count").textContent = auto.length + state.adds.length;
 }
 $("#add-search-btn").addEventListener("click", runSearch);
 $("#add-query").addEventListener("keydown", (e) => { if (e.key === "Enter") runSearch(); });
@@ -181,7 +219,10 @@ $("#remove-filter").addEventListener("input", renderRemove);
 $("#remove-platform").addEventListener("change", renderRemove);
 
 // ---- batch + review + generate ----
-function batchCounts() { return { u: state.selected.size, a: state.adds.length, r: state.removals.size }; }
+function batchCounts() {
+  return { u: state.selected.size, a: state.adds.length + computeAutoDeps().length,
+           r: state.removals.size };
+}
 function updateBatch() {
   const b = batchCounts();
   $("#batch-summary").textContent = `${b.u} updates · ${b.a} adds · ${b.r} removals`;
@@ -192,9 +233,14 @@ function openReview() {
   const rem = [...state.removals].map((id) => state.pack.find((m) => m.mod_id === id) || { mod_id: id, name: id });
   const sec = (title, items, render) => items.length
     ? `<div class="review-sec">${title} (${items.length})</div>` + items.map(render).join("") : "";
+  const autoAdds = computeAutoDeps().map(({ dep, requiredBy }) =>
+    ({ name: dep.name || dep.slug, version: dep.version, auto: true, requiredBy }));
+  const addsForReview = [...state.adds, ...autoAdds];
   body.innerHTML =
     sec("Updates", upd, (c) => `<div class="review-item">${esc(c.name)} <span class="muted">${esc(c.current_version)} → ${esc(c.latest_version)}</span><button data-t="u" data-id="${esc(c.mod_id)}">remove</button></div>`) +
-    sec("Adds", state.adds, (a) => `<div class="review-item">+ ${esc(a.name)} <span class="muted">${esc(a.version)}</span><button data-t="a" data-id="${esc(a.module_id)}">remove</button></div>`) +
+    sec("Adds", addsForReview, (a) => a.auto
+      ? `<div class="review-item">+ ${esc(a.name)} <span class="muted">${esc(a.version)}</span> <span class="dep-chip">dep of ${esc(a.requiredBy.join(", "))}</span></div>`
+      : `<div class="review-item">+ ${esc(a.name)} <span class="muted">${esc(a.version)}</span><button data-t="a" data-id="${esc(a.module_id)}">remove</button></div>`) +
     sec("Removals", rem, (m) => `<div class="review-item">− ${esc(m.name)}<button data-t="r" data-id="${esc(m.mod_id)}">keep</button></div>`) ||
     '<p class="muted">Nothing queued yet.</p>';
   body.querySelectorAll("button").forEach((btn) => btn.addEventListener("click", () => {
@@ -209,7 +255,12 @@ function openReview() {
 $("#review-btn").addEventListener("click", openReview);
 $("#review-close").addEventListener("click", () => { $("#review").hidden = true; });
 async function generate() {
-  const payload = { updates: [...state.selected], adds: state.adds.map(({ page_url, ...a }) => a), removals: [...state.removals] };
+  const autoAdds = computeAutoDeps().map(({ dep }) => ({
+    platform: "modrinth", module_id: dep.slug, name: dep.name, version: dep.version,
+    url: dep.download_url, side: dep.side, required: true }));
+  const payload = { updates: [...state.selected],
+    adds: [...state.adds.map(({ page_url, ...a }) => a), ...autoAdds],
+    removals: [...state.removals] };
   if (!payload.updates.length && !payload.adds.length && !payload.removals.length) { setStatus("Nothing queued.", true); return; }
   $("#review").hidden = true;
   setStatus(`Downloading and hashing ${payload.updates.length + payload.adds.length} jar(s)…`);
