@@ -27,3 +27,29 @@ def test_search_hit_to_dict():
     assert d["platform"] == "modrinth"
     assert d["slug"] == "sodium"
     assert d["page_url"].endswith("/sodium")
+
+
+def test_added_dependency_new_fields_default_and_roundtrip():
+    from modpack_manager.sources.base import Candidate, AddedDependency
+    dep = AddedDependency(id="cloth-config", satisfied=False)
+    # new fields default to a not-yet-resolved, not-addable spec
+    assert dep.slug == ""
+    assert dep.side == "BOTH"
+    assert dep.version == ""
+    assert dep.download_url == ""
+    assert dep.size is None
+    assert dep.addable is False
+    # populated fields survive Candidate.to_dict() (asdict) nesting
+    dep2 = AddedDependency(id="create", satisfied=False, name="Create", slug="create",
+                           side="CLIENT", version="6.0.6",
+                           download_url="https://cdn/create.jar", size=1234, addable=True)
+    c = Candidate(mod_id="cbc", name="CBC", platform="modrinth", source_url="u",
+                  current_version="1", latest_version="2", severity="minor", side="BOTH",
+                  required=True, mod_type="Regular", added_dependencies=[dep2], status="ok")
+    d = c.to_dict()["added_dependencies"][0]
+    assert d["slug"] == "create"
+    assert d["side"] == "CLIENT"
+    assert d["version"] == "6.0.6"
+    assert d["download_url"] == "https://cdn/create.jar"
+    assert d["size"] == 1234
+    assert d["addable"] is True

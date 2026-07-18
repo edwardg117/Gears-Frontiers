@@ -16,6 +16,12 @@ class AddedDependency:
     satisfied: bool
     name: str | None = None
     url: str = ""               # project page, for the "open" link
+    slug: str = ""              # platform slug -> used as the add's module_id
+    side: str = "BOTH"          # CLIENT | SERVER | BOTH (detected)
+    version: str = ""           # resolved latest compatible version name
+    download_url: str = ""      # primary-file jar URL to hash/add
+    size: int | None = None     # primary-file size in bytes
+    addable: bool = False       # True once resolved to a queueable spec
 
 
 @dataclass
