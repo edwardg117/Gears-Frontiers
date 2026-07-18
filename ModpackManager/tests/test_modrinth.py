@@ -104,15 +104,109 @@ def test_find_updated_mod_ids_unresolved_when_hash_missing():
 
 
 @responses.activate
-def test_resolve_project_names_maps_id_and_slug_to_title():
+def test_resolve_dependencies_builds_addable_spec():
     responses.add(responses.GET, f"{API}/projects", json=[
-        {"id": "OZhUIuou", "slug": "sodium", "title": "Sodium"},
-        {"id": "AABBCCDD", "slug": "lithium", "title": "Lithium"},
+        {"id": "DEP0001", "slug": "cloth-config", "title": "Cloth Config API",
+         "client_side": "required", "server_side": "required"},
     ], status=200)
-    names = modrinth.resolve_project_names(["OZhUIuou", "AABBCCDD"])
-    assert names["OZhUIuou"] == "Sodium"
-    assert names["sodium"] == "Sodium"       # slug is mapped too
-    assert names["AABBCCDD"] == "Lithium"
+    responses.add(responses.GET, f"{API}/project/DEP0001/version", json=[
+        {"id": "CCV2", "version_number": "15.0.140",
+         "date_published": "2026-07-10T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn.modrinth.com/cc.jar", "size": 4242}]},
+        {"id": "CCV1", "version_number": "15.0.100",
+         "date_published": "2026-06-01T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn.modrinth.com/cc-old.jar", "size": 4000}]},
+    ], status=200)
+    out = modrinth.resolve_dependencies(["DEP0001"], "1.21.1", "neoforge")
+    spec = out["DEP0001"]
+    assert spec["name"] == "Cloth Config API"
+    assert spec["slug"] == "cloth-config"
+    assert spec["side"] == "BOTH"
+    assert spec["version"] == "15.0.140"          # newest by date
+    assert spec["download_url"] == "https://cdn.modrinth.com/cc.jar"
+    assert spec["size"] == 4242
+    assert spec["addable"] is True
+
+
+@responses.activate
+def test_resolve_dependencies_detects_client_side():
+    responses.add(responses.GET, f"{API}/projects", json=[
+        {"id": "DEP3", "slug": "clientmod", "title": "Client Mod",
+         "client_side": "required", "server_side": "unsupported"}], status=200)
+    responses.add(responses.GET, f"{API}/project/DEP3/version", json=[
+        {"id": "V", "version_number": "1.0", "date_published": "2026-07-10T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/c.jar", "size": 1}]}], status=200)
+    out = modrinth.resolve_dependencies(["DEP3"], "1.21.1", "neoforge")
+    assert out["DEP3"]["side"] == "CLIENT"
+    assert out["DEP3"]["addable"] is True
+
+
+@responses.activate
+def test_resolve_dependencies_no_compatible_version_not_addable():
+    responses.add(responses.GET, f"{API}/projects", json=[
+        {"id": "DEP2", "slug": "somelib", "title": "Some Lib",
+         "client_side": "required", "server_side": "required"}], status=200)
+    responses.add(responses.GET, f"{API}/project/DEP2/version", json=[], status=200)
+    out = modrinth.resolve_dependencies(["DEP2"], "1.21.1", "neoforge")
+    spec = out["DEP2"]
+    assert spec["name"] == "Some Lib"      # meta still resolved
+    assert spec["slug"] == "somelib"
+    assert spec["download_url"] == ""
+    assert spec["addable"] is False
+
+
+@responses.activate
+def test_resolve_dependencies_meta_failure_not_addable():
+    responses.add(responses.GET, f"{API}/projects", status=500)
+    responses.add(responses.GET, f"{API}/project/DEP4/version", json=[
+        {"id": "V", "version_number": "1.0", "date_published": "2026-07-10T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/d.jar", "size": 1}]}], status=200)
+    out = modrinth.resolve_dependencies(["DEP4"], "1.21.1", "neoforge")
+    spec = out["DEP4"]
+    assert spec["name"] is None            # no meta -> no name
+    assert spec["slug"] == ""
+    assert spec["addable"] is False        # can't queue without a slug
+
+
+@responses.activate
+def test_resolve_dependencies_isolates_one_bad_dep():
+    # DEP_OK resolves cleanly; DEP_BAD's version fetch fails (500).
+    # The failure must not abort resolution of the sibling dep.
+    responses.add(responses.GET, f"{API}/projects", json=[
+        {"id": "DEP_OK", "slug": "okmod", "title": "OK Mod",
+         "client_side": "required", "server_side": "required"},
+        {"id": "DEP_BAD", "slug": "badmod", "title": "Bad Mod",
+         "client_side": "required", "server_side": "required"},
+    ], status=200)
+    responses.add(responses.GET, f"{API}/project/DEP_OK/version", json=[
+        {"id": "V", "version_number": "1.0", "date_published": "2026-07-10T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/ok.jar", "size": 7}]}], status=200)
+    responses.add(responses.GET, f"{API}/project/DEP_BAD/version", status=500)
+    out = modrinth.resolve_dependencies(["DEP_OK", "DEP_BAD"], "1.21.1", "neoforge")
+    assert out["DEP_OK"]["addable"] is True          # sibling still resolves
+    assert out["DEP_OK"]["download_url"] == "https://cdn/ok.jar"
+    assert out["DEP_BAD"]["addable"] is False         # bad dep degrades gracefully
+    assert out["DEP_BAD"]["name"] == "Bad Mod"        # meta still filled
+
+
+@responses.activate
+def test_resolve_dependencies_handles_null_date_published():
+    # Regression: a version with date_published: null previously made .sort()
+    # raise TypeError and abort the whole batch. It must now sort as oldest.
+    responses.add(responses.GET, f"{API}/projects", json=[
+        {"id": "DEPN", "slug": "nulldate", "title": "Null Date Mod",
+         "client_side": "required", "server_side": "required"}], status=200)
+    responses.add(responses.GET, f"{API}/project/DEPN/version", json=[
+        {"id": "VN", "version_number": "2.0", "date_published": None,
+         "files": [{"primary": True, "url": "https://cdn/n2.jar", "size": 20}]},
+        {"id": "VO", "version_number": "1.0", "date_published": "2026-06-01T00:00:00Z",
+         "files": [{"primary": True, "url": "https://cdn/n1.jar", "size": 10}]},
+    ], status=200)
+    out = modrinth.resolve_dependencies(["DEPN"], "1.21.1", "neoforge")
+    spec = out["DEPN"]
+    assert spec["addable"] is True                    # resolved, no crash
+    assert spec["version"] == "1.0"                    # null date sorts oldest, so VO (1.0) is newest
+    assert spec["download_url"] == "https://cdn/n1.jar"
 
 
 @responses.activate

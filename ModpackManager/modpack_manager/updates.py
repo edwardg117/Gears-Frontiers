@@ -87,23 +87,35 @@ def scan(modules: dict, config, max_workers: int = 5) -> list[Candidate]:
                 results.append(candidate)
     results.sort(key=lambda c: (_STATUS_ORDER.get(c.status, 9),
                                 _SEVERITY_ORDER.get(c.severity, 9), c.name.lower()))
-    _resolve_dependency_names(results, config)
+    _resolve_dependencies(results, config)
     return results
 
 
-def _resolve_dependency_names(results, config):
-    """Fill in human-readable names for added Modrinth dependencies (they arrive
-    as opaque project ids) in one bulk lookup. Best-effort: on failure the UI
-    falls back to showing the id."""
+def _resolve_dependencies(results, config):
+    """Enrich each new (unsatisfied) dependency with a queueable add-spec: name,
+    slug, side, latest compatible version + download url + size, and an `addable`
+    flag. One bulk pass over all Modrinth candidates. Best-effort — a dep we
+    can't resolve stays addable=False and the UI keeps showing the warning
+    without auto-queuing it."""
     dep_ids = {d.id for c in results if c.platform == "modrinth"
-               for d in c.added_dependencies if d.name is None and d.id}
+               for d in c.added_dependencies if d.id}
     if not dep_ids:
         return
     try:
-        names = modrinth.resolve_project_names(list(dep_ids), config.modrinth_api_key)
+        specs = modrinth.resolve_dependencies(
+            list(dep_ids), config.mc_version, config.loader, config.modrinth_api_key)
     except Exception:
         return
     for c in results:
         for d in c.added_dependencies:
-            if d.name is None:
-                d.name = names.get(d.id)
+            spec = specs.get(d.id)
+            if not spec:
+                continue
+            if d.name is None:      # keep an already-resolved name; refresh the rest each scan
+                d.name = spec.get("name")
+            d.slug = spec.get("slug", "")
+            d.side = spec.get("side", "BOTH")
+            d.version = spec.get("version", "")
+            d.download_url = spec.get("download_url", "")
+            d.size = spec.get("size")
+            d.addable = spec.get("addable", False)

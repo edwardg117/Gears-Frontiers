@@ -2,6 +2,7 @@
 
 import json
 import re
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 from ..version_utils import classify_severity
@@ -147,19 +148,60 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
     return updated, unresolved
 
 
-def resolve_project_names(project_ids, api_key=""):
-    """Map Modrinth project id (and slug) -> human title, via bulk GET /projects."""
+def resolve_dependencies(dep_ids, mc_version, loader, api_key=""):
+    """Resolve new-dependency project ids into queueable add-specs.
+
+    Returns {dep_id: {name, slug, side, version, download_url, size, addable}}.
+    Best-effort: any dep we can't fully resolve comes back addable=False (with
+    whatever fields did resolve), so the UI still shows the warning but doesn't
+    auto-queue it.
+    """
+    dep_ids = list(dict.fromkeys(d for d in dep_ids if d))  # de-dupe, keep order
+    if not dep_ids:
+        return {}
     session = _session(api_key)
+
+    # 1) bulk project meta: id -> {name, slug, side}
+    meta = {}
+    try:
+        for chunk in _chunk(dep_ids):
+            r = session.get(f"{API}/projects", params={"ids": json.dumps(chunk)}, timeout=30)
+            r.raise_for_status()
+            for proj in r.json():
+                pid = proj.get("id")
+                if pid:
+                    meta[pid] = {"name": proj.get("title") or proj.get("slug") or pid,
+                                 "slug": proj.get("slug") or "",
+                                 "side": _detect_side(proj)}
+    except Exception:  # bulk meta failed -> deps stay non-addable (no slug/side)
+        meta = {}
+
+    # 2) latest compatible version per dep (concurrent, failure-isolated)
+    def _latest(pid):
+        try:
+            versions = _fetch_versions(session, pid, mc_version, loader)
+            if not versions:
+                return pid, None
+            versions.sort(key=lambda v: v.get("date_published") or "", reverse=True)
+            pf = _primary_file(versions[0])
+            return pid, {"version": versions[0].get("version_number", "?"),
+                         "download_url": pf.get("url", ""), "size": pf.get("size")}
+        except Exception:
+            return pid, None
+
+    with ThreadPoolExecutor(max_workers=5) as ex:
+        latest_by_id = dict(ex.map(_latest, dep_ids))
+
+    # 3) combine; addable requires both a slug (module_id) and a download url
     out = {}
-    for chunk in _chunk(project_ids):
-        r = session.get(f"{API}/projects", params={"ids": json.dumps(chunk)}, timeout=30)
-        r.raise_for_status()
-        for proj in r.json():
-            title = proj.get("title") or proj.get("slug")
-            if proj.get("id"):
-                out[proj["id"]] = title
-            if proj.get("slug"):
-                out[proj["slug"]] = title
+    for pid in dep_ids:
+        m = meta.get(pid, {})
+        v = latest_by_id.get(pid) or {}
+        download_url = v.get("download_url", "")
+        out[pid] = {"name": m.get("name"), "slug": m.get("slug", ""),
+                    "side": m.get("side", "BOTH"), "version": v.get("version", ""),
+                    "download_url": download_url, "size": v.get("size"),
+                    "addable": bool(m.get("slug")) and bool(download_url)}
     return out
 
 

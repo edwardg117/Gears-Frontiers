@@ -58,3 +58,51 @@ def test_excluded_mods_are_skipped(monkeypatch):
     from modpack_manager.config import Config
     result = updates.scan(mods, Config(excluded_mods={"a"}))
     assert result == []
+
+
+def _cand_with_dep(mod_id, dep_id):
+    from modpack_manager.sources.base import AddedDependency
+    c = _cand(mod_id, "minor")
+    c.added_dependencies = [AddedDependency(id=dep_id, satisfied=False)]
+    return c
+
+
+def test_resolve_dependencies_enriches_candidate(monkeypatch):
+    c = _cand_with_dep("createbigcannons", "DEP1")
+
+    def fake_resolve(ids, mc, loader, key):
+        assert list(ids) == ["DEP1"]
+        return {"DEP1": {"name": "Create", "slug": "create", "side": "BOTH",
+                         "version": "6.0.6", "download_url": "https://cdn/create.jar",
+                         "size": 1234, "addable": True}}
+
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_resolve)
+    from modpack_manager.config import Config
+    updates._resolve_dependencies([c], Config())
+    d = c.added_dependencies[0]
+    assert d.name == "Create"
+    assert d.slug == "create"
+    assert d.side == "BOTH"
+    assert d.version == "6.0.6"
+    assert d.download_url == "https://cdn/create.jar"
+    assert d.size == 1234
+    assert d.addable is True
+
+
+def test_resolve_dependencies_noop_without_deps(monkeypatch):
+    called = []
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies",
+                        lambda *a, **k: called.append(1) or {})
+    from modpack_manager.config import Config
+    updates._resolve_dependencies([_cand("plain")], Config())  # candidate with no deps
+    assert called == []                                        # no network pass triggered
+
+
+def test_resolve_dependencies_skips_unresolved_dep(monkeypatch):
+    c = _cand_with_dep("createbigcannons", "DEP1")
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", lambda *a, **k: {})
+    from modpack_manager.config import Config
+    updates._resolve_dependencies([c], Config())
+    d = c.added_dependencies[0]
+    assert d.addable is False      # unresolved dep stays non-addable
+    assert d.name is None          # left at its default; nothing copied
