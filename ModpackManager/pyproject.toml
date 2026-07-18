@@ -1,0 +1,18 @@
+[project]
+name = "modpack-manager"
+version = "0.1.0"
+description = "Gears & Frontiers modpack update picker"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.0",
+    "requests>=2.31",
+    "packaging>=23.0",
+    "markdown>=3.5",
+    "bleach>=6.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "responses>=0.25"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

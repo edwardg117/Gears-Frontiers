@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com">
+	<Server id="base" name="base" version="1.21.1">
+		<Module name="AppleSkin" id="appleskin" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/EsAfCjCV/versions/oy4bhPTN/appleskin-neoforge-mc1.21-3.0.5.jar</URL>
+			<Size>57725</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7056a521ac0d4c3a120a2d7bfdd54833</MD5>
+			<Meta>
+				<version>3.0.5</version>
+			</Meta>
+		</Module>
+		<Module name="Xaeros World Map" id="xaeroworldmap" depends="" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/7568/054/XaerosWorldMap_1.39.4_Neoforge_1.21.jar</URL>
+			<Size>1000</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</MD5>
+		</Module>
+		<Module name="Old Mod" id="oldmod" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/PPPPPPPP/versions/QQQQQQQQ/old-1.0.0.jar</URL>
+			<ModType>Regular</ModType>
+		</Module>
+	</Server>
+</ServerPack>

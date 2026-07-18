@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gears &amp; Frontiers — Update Picker</title>
+  <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <div class="counts"><span id="update-count">0 updates</span> · <span id="selected-count">0 selected</span></div>
+    <select id="filter-severity"><option value="">All severity</option><option>major</option><option>minor</option><option>patch</option></select>
+    <select id="filter-source"><option value="">All sources</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
+    <button id="select-all" type="button">Select all</button>
+    <button id="generate" type="button" class="primary">Generate preview →</button>
+  </header>
+  <main class="panes">
+    <section id="mod-list" class="list" aria-label="Mods with updates"></section>
+    <section id="reader" class="reader"><p class="muted">Select a mod to read its changelog.</p></section>
+  </main>
+  <div id="status" class="status" hidden></div>
+  <script src="/web/app.js"></script>
+</body>
+</html>

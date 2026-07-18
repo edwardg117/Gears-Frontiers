@@ -244,3 +244,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Superpowers brainstorming visual companion
+.superpowers/
