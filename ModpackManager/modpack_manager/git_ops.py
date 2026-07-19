@@ -27,13 +27,18 @@ def diff(root, paths) -> str:
     """Unified diff of ``paths``. Read-only: mutates no git state, so closing the
     result modal without acting leaves the tree exactly as generate left it.
     An untracked new file is diffed against /dev/null (git special-cases it
-    cross-platform and exits 1 when there are differences — expected, not an error)."""
+    cross-platform and exits 1 when there are differences — expected, not an error).
+    Best-effort: a git failure on a path yields no diff for it rather than raising,
+    so a diff problem can never abort the (already-written) generate result."""
     parts = []
     for p in paths:
-        if _is_untracked(root, p):
-            r = _run(root, ["diff", "--no-index", "--", "/dev/null", p], check=False)
-        else:
-            r = _run(root, ["diff", "--", p], check=False)
+        try:
+            if _is_untracked(root, p):
+                r = _run(root, ["diff", "--no-index", "--", "/dev/null", p], check=False)
+            else:
+                r = _run(root, ["diff", "--", p], check=False)
+        except Exception:  # noqa: BLE001 — diff is best-effort; never abort generation
+            continue
         if r.stdout:
             parts.append(r.stdout)
     return "\n".join(parts)

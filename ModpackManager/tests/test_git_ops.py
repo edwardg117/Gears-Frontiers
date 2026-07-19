@@ -99,3 +99,8 @@ def test_commit_excludes_prestaged_unrelated(repo):
     status = subprocess.run(["git", "-C", str(repo), "status", "--porcelain", "--", "unrelated.txt"],
                             capture_output=True, text=True, check=True).stdout
     assert status.startswith("M ")                 # staged M in column 1
+
+
+def test_diff_is_best_effort_on_git_error(tmp_path):
+    # tmp_path is NOT a git repo -> git commands fail, but diff must not raise
+    assert git_ops.diff(tmp_path, ["anything.xml"]) == ""

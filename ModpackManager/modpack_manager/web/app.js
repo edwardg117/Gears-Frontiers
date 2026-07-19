@@ -2,7 +2,7 @@ const state = {
   candidates: [], selected: new Set(), active: null,
   filters: { severity: "", source: "" },
   adds: [], removals: new Set(), pack: [], packLoaded: false,
-  releaseFilter: "", lastResult: null,
+  releaseFilter: "",
 };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -338,7 +338,6 @@ function resultSummaryHtml() {
   ) || '<p class="muted">Nothing queued.</p>';
 }
 function renderResult(result) {
-  state.lastResult = result;
   $("#result-progress").hidden = true;
   const body = $("#result-body"), foot = $("#result-foot");
   const failures = result.failures || [];
@@ -397,7 +396,7 @@ async function discardChanges() {
   try {
     const res = await fetch("/api/discard", { method: "POST" });
     const data = await res.json();
-    if (data.ok === false) { resultError(data.error || "Discard failed."); }
+    if (data.ok === false) { resultError(data.error || "Discard failed.", true); }
     else { closeResultModal(); setStatus("Discarded the generated changes — working tree restored."); }
   } catch (e) { resultError("Discard failed: " + e.message); }
 }

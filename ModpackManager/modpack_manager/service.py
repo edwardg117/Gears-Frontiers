@@ -164,16 +164,6 @@ def generate_events(payload, candidates=None):
            "diff": git_ops.diff(paths.root, touched), "manual_count": manual_count}
 
 
-def real_generate(payload, candidates=None):
-    """Synchronous drain of generate_events -> the final result dict (minus the
-    streaming-only 'type' key). Kept for non-streaming callers/tests."""
-    result = {"written_file": None, "new_revision": None, "mods": [], "failures": []}
-    for evt in generate_events(payload, candidates):
-        if evt.get("type") == "result":
-            result = {k: v for k, v in evt.items() if k != "type"}
-    return result
-
-
 def real_commit(touched, message):
     """Stage + commit exactly the paths generate wrote (see git_ops.commit)."""
     return git_ops.commit(pack_paths().root, touched, message)
