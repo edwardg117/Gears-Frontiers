@@ -5,6 +5,7 @@ from datetime import date
 
 from . import generate as gen
 from . import updates as upd
+from . import git_ops
 from .config import load_config
 from .hashing import HashCache, compute
 from .paths import pack_paths
@@ -92,42 +93,47 @@ def real_project_versions(platform, project_id):
                                      config.modrinth_api_key)
 
 
-def real_generate(payload, candidates=None):
-    """payload: {updates:[mod_id], adds:[AddSpec], removals:[mod_id]}."""
+def generate_events(payload, candidates=None):
+    """Generator: yields {'type':'progress',...} per downloaded jar, then a single
+    {'type':'result',...}. payload: {updates:[mod_id], adds:[AddSpec], removals:[mod_id]}."""
     paths = pack_paths()
     config = load_config(paths.config_ini)
     modules = parse_packs(_pack_layer_paths(paths))
     if candidates is None:
+        yield {"type": "progress", "phase": "scanning"}
         candidates = real_scan()
     cand_by_id = {c.mod_id: c for c in candidates}
     cache = HashCache(paths.cache_dir / "hashes.json")
 
-    entries, failures = [], []
-
-    def add_regular(op, name, mod_id, side, required, mod_type, depends, mod_path, url, version):
-        try:
-            md5, size = compute(url, cache=cache)
-        except Exception as e:  # noqa: BLE001
-            failures.append({"id": mod_id, "error": str(e)})
-            return
-        entries.append({"kind": "regular", "op": op, "name": name, "id": mod_id,
-                        "side": side, "required": required, "mod_type": mod_type,
-                        "depends": depends, "mod_path": mod_path, "url": url,
-                        "md5": md5, "size": size, "version": version})
-
+    # Collect the jars to download first, so progress can report a known total.
+    # Each spec: (op, name, mod_id, side, required, mod_type, depends, mod_path, url, version)
+    specs = []
     for mid in payload.get("updates", []):
         c = cand_by_id.get(mid)
         if not c or c.status != "ok":
             continue
         m = modules.get(mid)
-        add_regular("update", c.name, mid, c.side, c.required, c.mod_type,
-                    m.depends if m else "", m.mod_path if m else None,
-                    c.source_url, c.latest_version)
-
+        specs.append(("update", c.name, mid, c.side, c.required, c.mod_type,
+                      m.depends if m else "", m.mod_path if m else None,
+                      c.source_url, c.latest_version))
     for spec in payload.get("adds", []):
-        add_regular("add", spec["name"], spec["module_id"], spec.get("side", "BOTH"),
-                    bool(spec.get("required", True)), "Regular", "", None,
-                    spec["url"], spec.get("version", ""))
+        specs.append(("add", spec["name"], spec["module_id"], spec.get("side", "BOTH"),
+                      bool(spec.get("required", True)), "Regular", "", None,
+                      spec["url"], spec.get("version", "")))
+
+    entries, failures = [], []
+    total = len(specs)
+    for i, (op, name, mod_id, side, required, mod_type, depends, mod_path, url, version) in enumerate(specs, 1):
+        yield {"type": "progress", "i": i, "n": total, "name": name}
+        try:
+            md5, size = compute(url, cache=cache)
+        except Exception as e:  # noqa: BLE001
+            failures.append({"id": mod_id, "error": str(e)})
+            continue
+        entries.append({"kind": "regular", "op": op, "name": name, "id": mod_id,
+                        "side": side, "required": required, "mod_type": mod_type,
+                        "depends": depends, "mod_path": mod_path, "url": url,
+                        "md5": md5, "size": size, "version": version})
 
     for mid in payload.get("removals", []):
         m = modules.get(mid)
@@ -135,15 +141,44 @@ def real_generate(payload, candidates=None):
             entries.append({"kind": "removal", "name": m.name, "id": mid, "side": m.side,
                             "size": m.size, "required": m.required})
 
+    manual_count = sum(1 for c in candidates if getattr(c, "status", None) == "manual")
+
     if failures:
-        return {"written_file": None, "new_revision": None, "mods": [], "failures": failures}
+        yield {"type": "result", "written_file": None, "new_revision": None, "mods": [],
+               "failures": failures, "touched_files": [], "diff": "", "manual_count": manual_count}
+        return
     if not entries:
-        return {"written_file": None, "new_revision": None, "mods": [], "failures": [],
-                "note": "Nothing queued — nothing written."}
+        yield {"type": "result", "written_file": None, "new_revision": None, "mods": [],
+               "failures": [], "note": "Nothing queued — nothing written.",
+               "touched_files": [], "diff": "", "manual_count": manual_count}
+        return
 
     today = date.today().isoformat()
     out_path = paths.updates_dir / f"updates-{today}.xml"
     summary = gen.write_batch_xml(entries, out_path, config.mc_version)
     new_rev = gen.wire_into_preview(paths.preview_pack, f"{_GITHUB_RAW}updates-{today}.xml")
-    return {"written_file": f"updates/updates-{today}.xml", "new_revision": new_rev,
-            "mods": summary, "failures": []}
+    written_file = f"updates/updates-{today}.xml"
+    touched = [written_file, paths.preview_pack.name]
+    yield {"type": "result", "written_file": written_file, "new_revision": new_rev,
+           "mods": summary, "failures": [], "touched_files": touched,
+           "diff": git_ops.diff(paths.root, touched), "manual_count": manual_count}
+
+
+def real_generate(payload, candidates=None):
+    """Synchronous drain of generate_events -> the final result dict (minus the
+    streaming-only 'type' key). Kept for non-streaming callers/tests."""
+    result = {"written_file": None, "new_revision": None, "mods": [], "failures": []}
+    for evt in generate_events(payload, candidates):
+        if evt.get("type") == "result":
+            result = {k: v for k, v in evt.items() if k != "type"}
+    return result
+
+
+def real_commit(touched, message):
+    """Stage + commit exactly the paths generate wrote (see git_ops.commit)."""
+    return git_ops.commit(pack_paths().root, touched, message)
+
+
+def real_discard(touched):
+    """Revert exactly the paths generate wrote (see git_ops.discard)."""
+    return git_ops.discard(pack_paths().root, touched)
