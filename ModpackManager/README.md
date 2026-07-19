@@ -12,8 +12,11 @@ app; every run after that just launches it. PowerShell users can run **`run.ps1`
 instead (`powershell -ExecutionPolicy Bypass -File .\run.ps1` if it's blocked).
 
 Your browser opens at http://127.0.0.1:5178/. Pick mods, read changelogs, and
-click **Generate preview**. Then review the git diff, test the Preview pack in
-MCUpdater, and promote to the main pack manually. Press **Ctrl+C** to stop.
+click **Generate preview**. Watch the per-jar progress, review the built-in diff
+of the update file and the Preview pack, then **Commit preview** (a local,
+signed commit of just those two files — touch your YubiKey when prompted) or
+**Discard** to roll the changes back. Push when you're ready, test the Preview
+pack in MCUpdater, and promote to the main pack manually. Press **Ctrl+C** to stop.
 
 ## Run (manual)
 
@@ -33,7 +36,9 @@ python -m venv .venv                                    # first time only
 - **Generate** downloads only the jars you selected, computes the real
   lowercase-hex **MD5** and exact byte size MCUpdater expects, writes the dated
   update file, and adds its `<Import>` + a revision bump to the Preview pack.
-- The tool performs **no git actions** and never edits the main pack.
+- The tool can **commit the Preview pack + the dated update file** for you
+  (staging *only* those two paths, never anything else in your working tree). It
+  never edits the main pack and never pushes — those stay in your hands.
 
 ## Test
 

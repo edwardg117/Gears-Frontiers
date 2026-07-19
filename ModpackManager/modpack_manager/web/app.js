@@ -371,6 +371,39 @@ function renderResult(result) {
 }
 $("#generate").addEventListener("click", generate);
 $("#review-generate").addEventListener("click", generate);
+async function commitPreview() {
+  const message = $("#commit-message").value.trim();
+  if (!message) { $("#commit-message").focus(); return; }
+  $("#result-error").hidden = true;
+  $("#commit-btn").disabled = true; $("#discard-btn").disabled = true;
+  $("#result-title").textContent = "Touch your YubiKey to sign the commit…";
+  try {
+    const res = await fetch("/api/commit", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ message }) });
+    const data = await res.json();
+    if (data.ok) {
+      $("#result-title").textContent = "Committed ✓";
+      $("#result-foot").hidden = true;
+      $("#result-body").innerHTML = `<p>Committed <b>${esc(data.sha)}</b>. Run <code>git push</code> when you're ready to make the preview live for MCUpdater testing.</p>`;
+      $("#result-close").hidden = false;
+    } else {
+      $("#discard-btn").disabled = false;
+      resultError(data.error || "Commit failed.", true);
+    }
+  } catch (e) { $("#discard-btn").disabled = false; resultError("Commit failed: " + e.message, true); }
+}
+async function discardChanges() {
+  if (!confirm("Discard the generated changes? This reverts the preview pack and deletes the new update file.")) return;
+  $("#discard-btn").disabled = true; $("#commit-btn").disabled = true;
+  try {
+    const res = await fetch("/api/discard", { method: "POST" });
+    const data = await res.json();
+    if (data.ok === false) { resultError(data.error || "Discard failed."); }
+    else { closeResultModal(); setStatus("Discarded the generated changes — working tree restored."); }
+  } catch (e) { resultError("Discard failed: " + e.message); }
+}
+$("#commit-btn").addEventListener("click", commitPreview);
+$("#discard-btn").addEventListener("click", discardChanges);
+$("#result-close").addEventListener("click", closeResultModal);
 
 // ---- shared helpers ----
 function setStatus(msg, isError = false) { const el = $("#status"); el.textContent = msg; el.className = "status" + (isError ? " error" : ""); el.hidden = false; }
