@@ -1,4 +1,5 @@
 import responses
+from urllib3.util.retry import Retry
 from modpack_manager.xml_model import Module
 from modpack_manager.sources import modrinth
 
@@ -293,3 +294,21 @@ def test_project_versions_handles_null_date_published():
     out = modrinth.project_versions("AAB", "1.21.1", "neoforge")
     assert [v["ref"] for v in out["versions"]] == ["V1", "V2"]  # null date sorts oldest
     assert out["side"] == "BOTH"
+
+
+def test_modrinth_session_uses_retrying_adapter():
+    r = modrinth._session().get_adapter("https://api.modrinth.com").max_retries
+    assert isinstance(r, Retry) and 429 in r.status_forcelist
+
+
+def test_curseforge_session_uses_retrying_adapter():
+    from modpack_manager.sources import curseforge
+    r = curseforge._session("k").get_adapter("https://api.curseforge.com").max_retries
+    assert isinstance(r, Retry) and 429 in r.status_forcelist
+
+
+def test_hashing_default_session_uses_retrying_adapter():
+    from modpack_manager import hashing
+    s = hashing._download_session()
+    r = s.get_adapter("https://cdn.example.com").max_retries
+    assert isinstance(r, Retry) and 429 in r.status_forcelist

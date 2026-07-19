@@ -5,6 +5,7 @@ import re
 import requests
 from ..version_utils import classify_severity
 from ..text_render import sanitize_html
+from . import http
 from .base import Candidate, ChangelogEntry, SearchHit
 
 API = "https://api.curseforge.com/v1"
@@ -37,10 +38,7 @@ def _clean_version(display, file_name, mc_version):
 
 
 def _session(api_key: str) -> requests.Session:
-    s = requests.Session()
-    s.headers["x-api-key"] = api_key
-    s.headers["Accept"] = "application/json"
-    return s
+    return http.build_session({"x-api-key": api_key, "Accept": "application/json"})
 
 
 def _error(module, note) -> Candidate:

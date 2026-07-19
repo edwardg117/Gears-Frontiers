@@ -7,6 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 from ..version_utils import classify_severity
 from ..text_render import render_markdown
+from . import http
 from .base import Candidate, ChangelogEntry, AddedDependency, SearchHit
 
 API = "https://api.modrinth.com/v2"
@@ -15,11 +16,10 @@ _MODRINTH = re.compile(r"cdn\.modrinth\.com/data/([^/]+)/versions/([^/]+)/")
 
 
 def _session(api_key: str = "") -> requests.Session:
-    s = requests.Session()
-    s.headers["User-Agent"] = _UA
+    headers = {"User-Agent": _UA}
     if api_key:
-        s.headers["Authorization"] = api_key
-    return s
+        headers["Authorization"] = api_key
+    return http.build_session(headers)
 
 
 def _fetch_versions(session, project_id, mc_version, loader):

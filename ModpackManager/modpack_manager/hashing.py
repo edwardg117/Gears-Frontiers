@@ -4,7 +4,11 @@ import hashlib
 import json
 from pathlib import Path
 
-import requests
+from .sources import http
+
+
+def _download_session():
+    return http.build_session()
 
 
 class HashCache:
@@ -32,7 +36,7 @@ def compute(url: str, session=None, cache: HashCache | None = None) -> tuple[str
         hit = cache.get(url)
         if hit:
             return hit
-    session = session or requests.Session()
+    session = session or _download_session()
     md5 = hashlib.md5()
     size = 0
     with session.get(url, stream=True, timeout=120) as r:
