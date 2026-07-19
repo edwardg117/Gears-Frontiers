@@ -74,3 +74,17 @@ def test_real_commit_delegates_to_git_ops(monkeypatch, tmp_path):
     out = service.real_commit(["updates/u.xml", "GearsAndFrontiers_Preview.xml"], "msg")
     assert out == {"ok": True, "sha": "z"}
     assert seen["root"] == tmp_path and seen["paths"][0] == "updates/u.xml" and seen["msg"] == "msg"
+
+
+def test_real_search_records_notice_on_platform_failure(monkeypatch, tmp_path):
+    from modpack_manager.sources.base import SearchHit
+    monkeypatch.setattr(service, "pack_paths", lambda: types.SimpleNamespace(config_ini=tmp_path / "c.ini"))
+    monkeypatch.setattr(service, "load_config", lambda p: types.SimpleNamespace(
+        mc_version="1.21.1", loader="neoforge", modrinth_api_key="", curseforge_api_key="k"))
+    monkeypatch.setattr(service.modrinth, "search", lambda *a, **k: [SearchHit("modrinth", "A", "a", "A", "", "", "p")])
+    def boom(*a, **k):
+        raise RuntimeError("cf down")
+    monkeypatch.setattr(service.curseforge, "search", boom)
+    hits, warnings = service.real_search("x", "both")
+    assert [h.id for h in hits] == ["A"]                                 # modrinth hit still returned
+    assert any(w.code == "curseforge_search_failed" and w.level == "warn" for w in warnings)

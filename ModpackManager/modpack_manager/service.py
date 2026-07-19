@@ -10,6 +10,7 @@ from .config import load_config
 from .hashing import HashCache, compute
 from .paths import pack_paths
 from .sources import modrinth, curseforge
+from .sources.base import Notice
 from .xml_model import NS, parse_packs
 
 _GITHUB_MAIN_MARKER = "/main/"
@@ -58,18 +59,22 @@ def real_pack():
 def real_search(query, platform="both"):
     paths = pack_paths()
     config = load_config(paths.config_ini)
-    hits = []
+    hits, warnings = [], []
     if platform in ("both", "modrinth"):
         try:
             hits += modrinth.search(query, config.mc_version, config.loader, config.modrinth_api_key)
         except Exception:  # noqa: BLE001
-            pass
+            warnings.append(Notice("warn", "modrinth_search_failed",
+                                   "Modrinth search failed — showing CurseForge results only."
+                                   if platform == "both" else "Modrinth search failed."))
     if platform in ("both", "curseforge"):
         try:
             hits += curseforge.search(query, config.mc_version, config.loader, config.curseforge_api_key)
         except Exception:  # noqa: BLE001
-            pass
-    return hits
+            warnings.append(Notice("warn", "curseforge_search_failed",
+                                   "CurseForge search failed — showing Modrinth results only."
+                                   if platform == "both" else "CurseForge search failed."))
+    return hits, warnings
 
 
 def real_resolve(ref):
@@ -101,7 +106,7 @@ def generate_events(payload, candidates=None):
     modules = parse_packs(_pack_layer_paths(paths))
     if candidates is None:
         yield {"type": "progress", "phase": "scanning"}
-        candidates = real_scan()
+        candidates = real_scan().candidates
     cand_by_id = {c.mod_id: c for c in candidates}
     cache = HashCache(paths.cache_dir / "hashes.json")
 

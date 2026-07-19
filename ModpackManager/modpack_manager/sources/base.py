@@ -11,6 +11,16 @@ class ChangelogEntry:
 
 
 @dataclass
+class Notice:
+    level: str          # "warn" | "info"
+    code: str           # stable id for dedup/dismissal/tests
+    message: str        # human text for the banner
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+
+@dataclass
 class AddedDependency:
     id: str
     satisfied: bool

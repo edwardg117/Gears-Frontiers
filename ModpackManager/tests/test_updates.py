@@ -31,9 +31,10 @@ def test_scan_dispatches_by_platform_and_sorts(monkeypatch):
 
     from modpack_manager.config import Config
     result = updates.scan(mods, Config())
-    ids = [c.mod_id for c in result]
+    ids = [c.mod_id for c in result.candidates]
     assert set(ids) == {"a", "b"}          # c skipped (unknown), d skipped (Removal)
     assert ids[0] == "b"                    # major sorts before minor
+    assert result.warnings == []
 
 
 def test_scan_isolates_per_mod_errors(monkeypatch):
@@ -47,8 +48,8 @@ def test_scan_isolates_per_mod_errors(monkeypatch):
     monkeypatch.setattr(updates.modrinth, "build_candidate", boom)
     from modpack_manager.config import Config
     result = updates.scan(mods, Config())
-    assert result[0].status == "error"
-    assert "api down" in result[0].note
+    assert result.candidates[0].status == "error"
+    assert "api down" in result.candidates[0].note
 
 
 def test_excluded_mods_are_skipped(monkeypatch):
@@ -57,7 +58,7 @@ def test_excluded_mods_are_skipped(monkeypatch):
                         lambda m, *a, **k: _cand(m.mod_id))
     from modpack_manager.config import Config
     result = updates.scan(mods, Config(excluded_mods={"a"}))
-    assert result == []
+    assert result.candidates == []
 
 
 def _cand_with_dep(mod_id, dep_id):
@@ -106,3 +107,25 @@ def test_resolve_dependencies_skips_unresolved_dep(monkeypatch):
     d = c.added_dependencies[0]
     assert d.addable is False      # unresolved dep stays non-addable
     assert d.name is None          # left at its default; nothing copied
+
+
+def test_resolve_dependencies_returns_notice_on_failure(monkeypatch):
+    c = _cand_with_dep("m", "DEP1")
+    def boom(*a, **k):
+        raise RuntimeError("deps api down")
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", boom)
+    from modpack_manager.config import Config
+    notice = updates._resolve_dependencies([c], Config())
+    assert notice is not None and notice.code == "deps_unresolved" and notice.level == "warn"
+
+
+def test_scan_warns_on_bulk_fallback_but_still_builds(monkeypatch):
+    mods = {"a": _mod("a", "https://cdn.modrinth.com/data/A/versions/V/a.jar")}
+    def boom(*a, **k):
+        raise RuntimeError("bulk down")
+    monkeypatch.setattr(updates.modrinth, "find_updated_mod_ids", boom)   # bulk prefilter fails
+    monkeypatch.setattr(updates.modrinth, "build_candidate", lambda m, *a, **k: _cand(m.mod_id))
+    from modpack_manager.config import Config
+    result = updates.scan(mods, Config())
+    assert [c.mod_id for c in result.candidates] == ["a"]                 # per-mod fallback still built it
+    assert any(w.code == "modrinth_bulk_fallback" and w.level == "info" for w in result.warnings)
