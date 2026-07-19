@@ -2,7 +2,7 @@ const state = {
   candidates: [], selected: new Set(), active: null,
   filters: { severity: "", source: "" },
   adds: [], removals: new Set(), pack: [], packLoaded: false,
-  releaseFilter: "",
+  releaseFilter: "", lastResult: null,
 };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -263,15 +263,111 @@ async function generate() {
     removals: [...state.removals] };
   if (!payload.updates.length && !payload.adds.length && !payload.removals.length) { setStatus("Nothing queued.", true); return; }
   $("#review").hidden = true;
-  setStatus(`Downloading and hashing ${payload.updates.length + payload.adds.length} jar(s)…`);
+  openResultModal();
   try {
     const res = await fetch("/api/generate", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const data = await res.json();
-    if (data.failures && data.failures.length) setStatus(`Wrote nothing — failures: ${data.failures.map((f) => f.id).join(", ")}`, true);
-    else if (!data.written_file) setStatus(data.note || "Nothing to generate.", true);
-    else setStatus(`Wrote ${data.written_file}, bumped preview revision to ${data.new_revision}. Review the git diff, then commit & push.`);
-  } catch (e) { setStatus("Generate failed: " + e.message, true); }
+    if (!res.ok || !res.body) throw new Error("HTTP " + res.status);
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = "", result = null;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      let nl;
+      while ((nl = buf.indexOf("\n")) >= 0) {
+        const line = buf.slice(0, nl).trim(); buf = buf.slice(nl + 1);
+        if (!line) continue;
+        const evt = JSON.parse(line);
+        if (evt.type === "progress") renderProgress(evt);
+        else if (evt.type === "result") result = evt;
+      }
+    }
+    if (!result) throw new Error("No result from server");
+    renderResult(result);
+  } catch (e) { resultError("Generate failed: " + e.message); }
+}
+
+// ---- result modal: state + rendering ----
+function openResultModal() {
+  $("#result").hidden = false;
+  $("#result-title").textContent = "Generating…";
+  $("#result-error").hidden = true;
+  $("#result-progress").hidden = false;
+  $("#result-progress-text").textContent = "Starting…";
+  $("#result-body").hidden = true; $("#result-body").innerHTML = "";
+  $("#result-foot").hidden = true;
+  $("#result-close").hidden = true;
+  $("#commit-btn").disabled = false; $("#discard-btn").disabled = false;
+}
+function closeResultModal() { $("#result").hidden = true; }
+function renderProgress(evt) {
+  const t = $("#result-progress-text");
+  t.textContent = evt.phase === "scanning" ? "Re-scanning for updates…"
+    : `Hashing ${evt.i} / ${evt.n} · ${evt.name}…`;
+}
+function resultError(msg, retry = false) {
+  $("#result-progress").hidden = true;
+  const err = $("#result-error"); err.textContent = msg; err.hidden = false;
+  $("#result-close").hidden = false;
+  $("#result-foot").hidden = !retry;
+  $("#commit-btn").disabled = false; $("#discard-btn").disabled = false;
+}
+function renderDiff(text) {
+  if (!text || !text.trim()) return '<p class="muted">No diff available.</p>';
+  const cls = (l) =>
+    l.startsWith("+++") || l.startsWith("---") ? "meta" :
+    l.startsWith("@@") ? "hunk" :
+    l.startsWith("+") ? "add" :
+    l.startsWith("-") ? "del" :
+    (l.startsWith("diff ") || l.startsWith("index ") || l.startsWith("new file") || l.startsWith("deleted file")) ? "meta" : "";
+  const lines = text.split("\n").map((l) => `<div class="dl ${cls(l)}">${esc(l) || "&nbsp;"}</div>`).join("");
+  return `<div class="diff">${lines}</div>`;
+}
+function resultSummaryHtml() {
+  const upd = [...state.selected].map((id) => state.candidates.find((c) => c.mod_id === id)).filter(Boolean);
+  const rem = [...state.removals].map((id) => state.pack.find((m) => m.mod_id === id) || { mod_id: id, name: id });
+  const autoAdds = computeAutoDeps().map(({ dep, requiredBy }) => ({ name: dep.name || dep.slug, version: dep.version, auto: true, requiredBy }));
+  const adds = [...state.adds, ...autoAdds];
+  const sec = (title, items, render) => items.length
+    ? `<div class="review-sec">${title} (${items.length})</div>` + items.map(render).join("") : "";
+  return (
+    sec("Updates", upd, (c) => `<div class="review-item">${esc(c.name)} <span class="muted">${esc(c.current_version)} → ${esc(c.latest_version)}</span></div>`) +
+    sec("Adds", adds, (a) => `<div class="review-item">+ ${esc(a.name)} <span class="muted">${esc(a.version)}</span>${a.auto ? ` <span class="dep-chip">dep of ${esc(a.requiredBy.join(", "))}</span>` : ""}</div>`) +
+    sec("Removals", rem, (m) => `<div class="review-item">− ${esc(m.name)}</div>`)
+  ) || '<p class="muted">Nothing queued.</p>';
+}
+function renderResult(result) {
+  state.lastResult = result;
+  $("#result-progress").hidden = true;
+  const body = $("#result-body"), foot = $("#result-foot");
+  const failures = result.failures || [];
+  if (failures.length) {
+    $("#result-title").textContent = "Generate failed";
+    body.innerHTML = `<p class="muted">No file was written — these downloads failed:</p>` +
+      failures.map((f) => `<div class="review-item">✕ ${esc(f.id)} <span class="muted">${esc(f.error)}</span></div>`).join("");
+    body.hidden = false; foot.hidden = true; $("#result-close").hidden = false; return;
+  }
+  if (!result.written_file) {
+    $("#result-title").textContent = "Nothing written";
+    body.innerHTML = `<p class="muted">${esc(result.note || "Nothing queued.")}</p>`;
+    body.hidden = false; foot.hidden = true; $("#result-close").hidden = false; return;
+  }
+  $("#result-title").textContent = "Review & commit preview";
+  const manual = result.manual_count
+    ? `<div class="manual-note">⚠ ${result.manual_count} mod(s) in this scan need manual updating (CurseForge-blocked) and were not included.</div>` : "";
+  body.innerHTML = manual + resultSummaryHtml() +
+    `<div class="review-sec">Diff — ${esc(result.written_file)} + preview pack</div>` +
+    renderDiff(result.diff);
+  body.hidden = false;
+  const date = (result.written_file.match(/updates-(\d{4}-\d{2}-\d{2})/) || [])[1] || "";
+  const b = batchCounts();
+  const segs = [];
+  if (b.u) segs.push(`${b.u} update${b.u > 1 ? "s" : ""}`);
+  if (b.a) segs.push(`${b.a} add${b.a > 1 ? "s" : ""}`);
+  if (b.r) segs.push(`${b.r} removal${b.r > 1 ? "s" : ""}`);
+  $("#commit-message").value = `chore(preview): update ${date} — ${segs.join(", ")}`;
+  foot.hidden = false; $("#result-close").hidden = false;
 }
 $("#generate").addEventListener("click", generate);
 $("#review-generate").addEventListener("click", generate);
