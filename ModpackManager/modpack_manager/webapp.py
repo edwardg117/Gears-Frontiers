@@ -1,14 +1,17 @@
-"""Flask app: serve the picker UI and the scan/search/generate JSON API."""
+"""Flask app: serve the picker UI and the scan/search/generate/commit JSON API."""
 
+import json
 from pathlib import Path
-from flask import Flask, jsonify, request, send_from_directory
+
+from flask import Flask, Response, jsonify, request, send_from_directory, stream_with_context
 
 _WEB_DIR = Path(__file__).parent / "web"
 
 
-def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn) -> Flask:
+def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn,
+               commit_fn, discard_fn) -> Flask:
     app = Flask(__name__, static_folder=None)
-    cache = {"candidates": None}
+    cache = {"candidates": None, "last_touched": []}
 
     @app.get("/")
     def index():
@@ -46,6 +49,33 @@ def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn
     @app.post("/api/generate")
     def generate():
         payload = request.get_json(silent=True) or {}
-        return jsonify(generate_fn(payload, cache["candidates"]))
+
+        def stream():
+            for evt in generate_fn(payload, cache["candidates"]):
+                if evt.get("type") == "result":
+                    cache["last_touched"] = evt.get("touched_files") or []
+                yield json.dumps(evt) + "\n"
+
+        return Response(stream_with_context(stream()), mimetype="application/x-ndjson")
+
+    @app.post("/api/commit")
+    def commit():
+        touched = cache.get("last_touched") or []
+        message = ((request.get_json(silent=True) or {}).get("message") or "").strip()
+        if not touched:
+            return jsonify({"ok": False, "error": "Nothing generated to commit."}), 400
+        if not message:
+            return jsonify({"ok": False, "error": "A commit message is required."}), 400
+        return jsonify(commit_fn(touched, message))
+
+    @app.post("/api/discard")
+    def discard():
+        touched = cache.get("last_touched") or []
+        if not touched:
+            return jsonify({"ok": False, "error": "Nothing to discard."}), 400
+        result = discard_fn(touched)
+        if result.get("ok"):
+            cache["last_touched"] = []
+        return jsonify(result)
 
     return app
