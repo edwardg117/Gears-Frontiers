@@ -84,3 +84,26 @@ body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:v
   background:rgba(255,159,10,.16); color:var(--minor); white-space:nowrap; }
 .dep-chips { display:flex; flex-wrap:wrap; gap:4px; margin-top:3px; }
 .add-row.auto-dep { border-left:2px solid var(--minor); }
+
+/* --- result modal: progress, diff, commit --- */
+.result-progress { display:flex; flex-direction:column; align-items:center; gap:.7rem; padding:2rem 1rem; }
+.result-progress[hidden] { display:none; }
+.result-error { color:var(--major); padding:.4rem .9rem; margin:0; font-size:.82rem; }
+.result-error[hidden] { display:none; }
+#result-body { overflow-y:auto; padding:.4rem .9rem; }
+.manual-note { margin:.5rem 0; padding:.5rem .6rem; border:1px solid rgba(255,159,10,.3);
+  background:rgba(255,159,10,.1); color:var(--minor); border-radius:7px; font-size:.8rem; }
+.diff { font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.72rem; line-height:1.35;
+  background:var(--bg); border:1px solid var(--border); border-radius:7px; overflow:auto;
+  max-height:40vh; margin-top:.3rem; }
+.diff .dl { white-space:pre; padding:0 .5rem; }
+.diff .add { background:rgba(52,199,89,.14); color:#b8f0c4; }
+.diff .del { background:rgba(255,69,58,.14); color:#ffc4bf; }
+.diff .hunk { color:var(--accent); }
+.diff .meta { color:var(--muted); }
+.commit-message { flex:1; min-width:0; background:var(--bg); color:var(--text);
+  border:1px solid var(--border); border-radius:6px; padding:.4rem .6rem; font-size:.8rem; }
+.btn-danger { background:transparent; color:var(--major); border:1px solid var(--major);
+  border-radius:6px; padding:.4rem .9rem; font-size:.82rem; font-weight:600; cursor:pointer; }
+.btn-danger:disabled, .review-foot .primary:disabled { opacity:.5; cursor:default; }
+#result-foot { gap:.6rem; }

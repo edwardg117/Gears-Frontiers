@@ -64,6 +64,25 @@
       <div class="review-foot"><button id="review-generate" type="button" class="primary">Generate preview →</button></div>
     </div>
   </div>
+  <div id="result" class="review-overlay" hidden>
+    <div class="review-panel">
+      <div class="review-head">
+        <b id="result-title">Generating…</b>
+        <button id="result-close" type="button" aria-label="Close" hidden>✕</button>
+      </div>
+      <p id="result-error" class="result-error" hidden></p>
+      <div id="result-progress" class="result-progress">
+        <div class="spinner"></div>
+        <p id="result-progress-text">Starting…</p>
+      </div>
+      <div id="result-body" hidden></div>
+      <div id="result-foot" class="review-foot" hidden>
+        <input id="commit-message" class="commit-message" placeholder="Commit message">
+        <button id="discard-btn" type="button" class="btn-danger">Discard</button>
+        <button id="commit-btn" type="button" class="primary">Commit preview →</button>
+      </div>
+    </div>
+  </div>
   <div id="status" class="status" hidden></div>
   <script src="/web/app.js"></script>
 </body>
