@@ -2,13 +2,30 @@ const state = {
   candidates: [], selected: new Set(), active: null,
   filters: { severity: "", source: "" },
   adds: [], removals: new Set(), pack: [], packLoaded: false,
-  releaseFilter: "",
+  releaseFilter: "", dismissed: new Set(),
 };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const openLink = (u) => (u && /^https?:\/\//i.test(u))
   ? `<a class="open" href="${esc(u)}" target="_blank" rel="noopener" aria-label="Open page">↗</a>` : "";
+function renderWarnings(list, container) {
+  if (!container) return;
+  container.innerHTML = "";
+  const shown = (list || []).filter((n) => !state.dismissed.has(n.code));
+  container.hidden = shown.length === 0;
+  for (const n of shown) {
+    const row = document.createElement("div");
+    row.className = "notice " + (n.level === "info" ? "info" : "warn");
+    const span = document.createElement("span");
+    span.textContent = (n.level === "info" ? "ⓘ " : "⚠ ") + n.message;
+    const x = document.createElement("button");
+    x.type = "button"; x.className = "notice-x"; x.textContent = "✕"; x.setAttribute("aria-label", "Dismiss");
+    x.addEventListener("click", () => { state.dismissed.add(n.code); renderWarnings(list, container); });
+    row.append(span, x);
+    container.append(row);
+  }
+}
 
 // ---- tabs ----
 document.querySelectorAll(".tab").forEach((t) => t.addEventListener("click", () => {
@@ -25,9 +42,11 @@ async function load(refresh = false) {
     const res = await fetch("/api/updates" + (refresh ? "?refresh=1" : ""));
     if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
+    if (refresh) state.dismissed.clear();
     state.candidates = data.candidates || [];
     state.selected = new Set(state.candidates.filter((c) => c.status === "ok").map((c) => c.mod_id));
     hideLoading(); renderUpdates(); renderQueue(); updateBatch();
+    renderWarnings(data.warnings || [], $("#scan-warnings"));
   } catch (e) { loadingError("Couldn't load updates: " + e.message); }
 }
 function visible() {
@@ -97,6 +116,7 @@ async function runSearch() {
     const res = await fetch(url); if (!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     const hits = looksLink ? (data.hit ? [data.hit] : []) : data.hits;
+    renderWarnings(looksLink ? [] : (data.warnings || []), $("#add-warnings"));
     renderResults(hits);
   } catch (e) { $("#add-results").innerHTML = `<p class="muted" style="padding:.5rem">Search failed: ${esc(e.message)}</p>`; }
 }

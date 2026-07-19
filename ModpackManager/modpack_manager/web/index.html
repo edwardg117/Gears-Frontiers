@@ -20,6 +20,7 @@
       <select id="filter-source"><option value="">All sources</option><option value="modrinth">Modrinth</option><option value="curseforge">CurseForge</option></select>
       <button id="select-all" type="button">Select all</button>
     </div>
+    <div id="scan-warnings" class="warnings" hidden></div>
     <div class="panes">
       <section id="mod-list" class="list"></section>
       <section id="reader" class="reader"><p class="muted">Select a mod to read its changelog.</p></section>
@@ -39,6 +40,7 @@
       <select id="add-release"><option value="">All release types</option><option value="release">Stable only</option><option value="beta">Beta</option><option value="alpha">Alpha</option></select>
       <button id="add-search-btn" type="button">Search</button>
     </div>
+    <div id="add-warnings" class="warnings" hidden></div>
     <div id="add-results" class="add-results"></div>
     <div class="label">Queued to add (<span id="add-queue-count">0</span>)</div>
     <div id="add-queue" class="add-queue"></div>
