@@ -117,8 +117,8 @@ def test_failed_generate_leaves_nothing_committable():
                "failures": [{"id": "x", "error": "boom"}], "touched_files": [], "diff": "",
                "manual_count": 0}
     app = webapp.create_app(
-        scan_fn=lambda: [], generate_fn=_gen, pack_fn=lambda: [],
-        search_fn=lambda q, p: [], resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
+        scan_fn=lambda: ScanResult([], []), generate_fn=_gen, pack_fn=lambda: [],
+        search_fn=lambda q, p: ([], []), resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
         commit_fn=lambda t, m: {"ok": True, "sha": "x"}, discard_fn=lambda t: {"ok": True})
     app.config["TESTING"] = True
     c = app.test_client()
@@ -138,8 +138,8 @@ def test_discard_failure_keeps_paths_retryable():
         calls["n"] += 1
         return {"ok": False, "error": "restore failed"}
     app = webapp.create_app(
-        scan_fn=lambda: [], generate_fn=_gen, pack_fn=lambda: [],
-        search_fn=lambda q, p: [], resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
+        scan_fn=lambda: ScanResult([], []), generate_fn=_gen, pack_fn=lambda: [],
+        search_fn=lambda q, p: ([], []), resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
         commit_fn=lambda t, m: {"ok": True, "sha": "x"}, discard_fn=_failing_discard)
     app.config["TESTING"] = True
     c = app.test_client()
