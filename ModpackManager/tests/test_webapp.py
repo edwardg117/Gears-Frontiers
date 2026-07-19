@@ -1,6 +1,8 @@
 import json
 
 from modpack_manager.sources.base import Candidate, SearchHit
+from modpack_manager.updates import ScanResult
+from modpack_manager.sources.base import Notice
 from modpack_manager import webapp
 
 
@@ -21,11 +23,11 @@ def _client(calls):
                "diff": "diff text", "manual_count": 0}
 
     app = webapp.create_app(
-        scan_fn=lambda: [_cand()],
+        scan_fn=lambda: ScanResult([_cand()], []),
         generate_fn=_gen,
         pack_fn=lambda: [{"mod_id": "farsight", "name": "Farsight", "version": "1.2",
                           "platform": "modrinth", "side": "BOTH"}],
-        search_fn=lambda q, platform: [SearchHit("modrinth", "AAB", "sodium", "Sodium", "", "", "p")],
+        search_fn=lambda q, platform: ([SearchHit("modrinth", "AAB", "sodium", "Sodium", "", "", "p")], []),
         resolve_fn=lambda ref: SearchHit("modrinth", "AAB", "sodium", "Sodium", "", "", "p"),
         versions_fn=lambda platform, pid: {"side": "CLIENT",
                                            "versions": [{"ref": "V1", "name": "0.5.8",
@@ -47,6 +49,7 @@ def test_pack_route():
 def test_search_route():
     data = _client({}).get("/api/search?q=sodium&platform=both").get_json()
     assert data["hits"][0]["id"] == "AAB"
+    assert data["warnings"] == []
 
 
 def test_resolve_route():
@@ -144,3 +147,15 @@ def test_discard_failure_keeps_paths_retryable():
     assert c.post("/api/discard").get_json()["ok"] is False   # failed
     assert c.post("/api/discard").get_json()["ok"] is False   # still retryable, not 400
     assert calls["n"] == 2                                     # discard_fn called both times
+
+
+def test_updates_route_returns_candidates_and_warnings():
+    app = webapp.create_app(
+        scan_fn=lambda: ScanResult([_cand()], [Notice("warn", "deps_unresolved", "deps failed")]),
+        generate_fn=lambda p, c=None: iter([]), pack_fn=lambda: [],
+        search_fn=lambda q, pl: ([], []), resolve_fn=lambda r: None,
+        versions_fn=lambda pl, i: {}, commit_fn=lambda t, m: {"ok": True}, discard_fn=lambda t: {"ok": True})
+    app.config["TESTING"] = True
+    data = app.test_client().get("/api/updates").get_json()
+    assert data["candidates"][0]["mod_id"] == "appleskin"
+    assert data["warnings"][0]["code"] == "deps_unresolved"

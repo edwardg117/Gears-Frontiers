@@ -11,7 +11,7 @@ _WEB_DIR = Path(__file__).parent / "web"
 def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn,
                commit_fn, discard_fn) -> Flask:
     app = Flask(__name__, static_folder=None)
-    cache = {"candidates": None, "last_touched": []}
+    cache = {"scan": None, "last_touched": []}
 
     @app.get("/")
     def index():
@@ -23,9 +23,11 @@ def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn
 
     @app.get("/api/updates")
     def updates():
-        if cache["candidates"] is None or request.args.get("refresh") == "1":
-            cache["candidates"] = scan_fn()
-        return jsonify({"candidates": [c.to_dict() for c in cache["candidates"]]})
+        if cache["scan"] is None or request.args.get("refresh") == "1":
+            cache["scan"] = scan_fn()
+        sr = cache["scan"]
+        return jsonify({"candidates": [c.to_dict() for c in sr.candidates],
+                        "warnings": [w.to_dict() for w in sr.warnings]})
 
     @app.get("/api/pack")
     def pack():
@@ -33,8 +35,9 @@ def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn
 
     @app.get("/api/search")
     def search():
-        hits = search_fn(request.args.get("q", ""), request.args.get("platform", "both"))
-        return jsonify({"hits": [h.to_dict() for h in hits]})
+        hits, warnings = search_fn(request.args.get("q", ""), request.args.get("platform", "both"))
+        return jsonify({"hits": [h.to_dict() for h in hits],
+                        "warnings": [w.to_dict() for w in warnings]})
 
     @app.get("/api/resolve")
     def resolve():
@@ -51,7 +54,8 @@ def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn
         payload = request.get_json(silent=True) or {}
 
         def stream():
-            for evt in generate_fn(payload, cache["candidates"]):
+            sr = cache["scan"]
+            for evt in generate_fn(payload, sr.candidates if sr else None):
                 if evt.get("type") == "result":
                     cache["last_touched"] = evt.get("touched_files") or []
                 yield json.dumps(evt) + "\n"
