@@ -160,7 +160,7 @@ def generate_events(payload, candidates=None):
 
     today = date.today().isoformat()
     out_path = paths.updates_dir / f"updates-{today}.xml"
-    summary = gen.write_batch_xml(entries, out_path, config.mc_version)
+    summary = gen.write_batch_xml(entries, out_path, config.mc_version, config.loader)
     new_rev = gen.wire_into_preview(paths.preview_pack, f"{_GITHUB_RAW}updates-{today}.xml")
     written_file = f"updates/updates-{today}.xml"
     touched = [written_file, paths.preview_pack.name]

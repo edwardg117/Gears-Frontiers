@@ -61,3 +61,30 @@ def test_wire_into_preview_is_idempotent(tmp_path):
     text = p.read_text(encoding="utf-8")
     assert text.count("updates-2026-07-17.xml") == 1  # not duplicated
     assert 'revision="6"' in text                      # revision still bumps
+
+
+def _regular(**over):
+    e = {"kind": "regular", "op": "add", "name": "Sodium", "id": "sodium",
+         "side": "BOTH", "required": True, "mod_type": "Regular", "depends": "",
+         "mod_path": None, "url": "https://cdn/s.jar",
+         "md5": "d41d8cd98f00b204e9800998ecf8427e", "size": 1, "version": "1"}
+    e.update(over)
+    return e
+
+
+def _server(out):
+    return ET.parse(out).getroot().find(".//m:Server", NS)
+
+
+def test_launch_attrs_neoforge_unchanged(tmp_path):
+    out = tmp_path / "u.xml"
+    generate.write_batch_xml([_regular()], out, "1.21.1", loader="neoforge")
+    s = _server(out)
+    assert s.get("mainClass") == "cpw.mods.bootstraplauncher.BootstrapLauncher"
+    assert s.get("launcherType") == "Vanilla"
+
+
+def test_launch_attrs_unknown_loader_falls_back_to_neoforge(tmp_path):
+    out = tmp_path / "u.xml"
+    generate.write_batch_xml([_regular()], out, "1.21.1", loader="fabric")  # unmapped -> default
+    assert _server(out).get("mainClass") == "cpw.mods.bootstraplauncher.BootstrapLauncher"

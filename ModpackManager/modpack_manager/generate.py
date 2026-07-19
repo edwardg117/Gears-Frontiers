@@ -7,6 +7,18 @@ from pathlib import Path
 
 MCU_NS = "http://www.mcupdater.com"
 
+# loader -> (mainClass, launcherType). These per-update <Server> attributes are
+# effectively inert under <Import> (the entry pack supplies the launch-critical
+# <Loader>), so this is correctness hygiene, not a launch fix. Only verified
+# loaders are mapped; unknown loaders fall back to the NeoForge pair so this pack
+# never regresses. Add "fabric"/"quilt" here once their mainClass is verified
+# against MCUpdater's ServerPack schema.
+_LAUNCH = {
+    "neoforge": ("cpw.mods.bootstraplauncher.BootstrapLauncher", "Vanilla"),
+    "forge":    ("cpw.mods.bootstraplauncher.BootstrapLauncher", "Vanilla"),
+}
+_DEFAULT_LAUNCH = _LAUNCH["neoforge"]
+
 
 def _sub(parent, tag, text=None):
     el = ET.SubElement(parent, tag)
@@ -15,13 +27,14 @@ def _sub(parent, tag, text=None):
     return el
 
 
-def _server_element(root, mc_version):
+def _server_element(root, mc_version, loader):
     today = date.today().isoformat()
+    main_class, launcher_type = _LAUNCH.get((loader or "").lower(), _DEFAULT_LAUNCH)
     return ET.SubElement(root, f"{{{MCU_NS}}}Server", {
         "id": f"update-{today}", "abstract": "false", "name": f"Update {today}",
         "newsUrl": "about:blank", "version": mc_version, "generateList": "true",
         "autoConnect": "false", "revision": "",
-        "mainClass": "cpw.mods.bootstraplauncher.BootstrapLauncher", "launcherType": "Vanilla",
+        "mainClass": main_class, "launcherType": launcher_type,
     })
 
 
@@ -49,12 +62,12 @@ def _write_module(server, e):
     _sub(meta, f"{{{MCU_NS}}}version", e["version"])
 
 
-def write_batch_xml(entries, out_path, mc_version):
+def write_batch_xml(entries, out_path, mc_version, loader="neoforge"):
     """entries: list of {kind:'regular'|'removal', ...}. Regular entries already
     carry md5+size (the service downloads/hashes before calling this)."""
     ET.register_namespace("", MCU_NS)
     root = ET.Element(f"{{{MCU_NS}}}ServerPack", {"version": "4.1"})
-    server = _server_element(root, mc_version)
+    server = _server_element(root, mc_version, loader)
     summary = []
     for e in entries:
         _write_module(server, e)

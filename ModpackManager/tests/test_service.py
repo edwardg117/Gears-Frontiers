@@ -17,11 +17,12 @@ def _fake_paths(tmp_path):
 
 def _patch_collaborators(monkeypatch, tmp_path, compute):
     monkeypatch.setattr(service, "pack_paths", lambda: _fake_paths(tmp_path))
-    monkeypatch.setattr(service, "load_config", lambda p: types.SimpleNamespace(mc_version="1.21.1"))
+    monkeypatch.setattr(service, "load_config",
+                        lambda p: types.SimpleNamespace(mc_version="1.21.1", loader="neoforge"))
     monkeypatch.setattr(service, "parse_packs", lambda layers: {})
     monkeypatch.setattr(service, "_pack_layer_paths", lambda paths: [])
     monkeypatch.setattr(service, "compute", compute)
-    monkeypatch.setattr(service.gen, "write_batch_xml", lambda entries, out, mc: [])
+    monkeypatch.setattr(service.gen, "write_batch_xml", lambda entries, out, mc, loader: [])
     monkeypatch.setattr(service.gen, "wire_into_preview", lambda preview, url: "7")
     monkeypatch.setattr(service.git_ops, "diff", lambda root, paths: "DIFF")
 
