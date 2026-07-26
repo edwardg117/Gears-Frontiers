@@ -1,6 +1,6 @@
 const state = {
   candidates: [], selected: new Set(), active: null,
-  filters: { severity: "", source: "" },
+  filters: { severity: "", source: "", text: "" },
   adds: [], removals: new Set(), pack: [], packLoaded: false,
   releaseFilter: "", dismissed: new Set(), manualCollapsed: false,
 };
@@ -51,7 +51,8 @@ async function load(refresh = false) {
 }
 function matchesFilters(c) {
   return (!state.filters.severity || c.severity === state.filters.severity) &&
-         (!state.filters.source || c.platform === state.filters.source);
+         (!state.filters.source || c.platform === state.filters.source) &&
+         (!state.filters.text || c.name.toLowerCase().includes(state.filters.text));
 }
 function visible() { return state.candidates.filter((c) => c.status !== "manual" && matchesFilters(c)); }
 function manualVisible() { return state.candidates.filter((c) => c.status === "manual" && matchesFilters(c)); }
@@ -130,11 +131,42 @@ function toggleUpdate(id) {
 }
 $("#filter-severity").addEventListener("change", (e) => { state.filters.severity = e.target.value; renderUpdates(); });
 $("#filter-source").addEventListener("change", (e) => { state.filters.source = e.target.value; renderUpdates(); });
+$("#updates-filter").addEventListener("input", (e) => { state.filters.text = e.target.value.toLowerCase(); renderUpdates(); });
 $("#select-all").addEventListener("click", () => {
   const vis = visible().filter((c) => c.status === "ok");
   const all = vis.every((c) => state.selected.has(c.mod_id));
   vis.forEach((c) => all ? state.selected.delete(c.mod_id) : state.selected.add(c.mod_id));
   renderUpdates(); renderQueue(); updateBatch();
+});
+
+// Keyboard nav for the Updates list: ↑/↓ (+ k/j) move the active row through the
+// filtered visible() order, Enter opens its page, Space toggles its selection.
+// Gated so it never fires on other tabs or while typing in an input/select.
+document.addEventListener("keydown", (e) => {
+  if ($("#tab-updates").hidden || !$("#review").hidden || !$("#result").hidden) return;
+  const el = document.activeElement;
+  if (el && /^(INPUT|SELECT|TEXTAREA|BUTTON|A)$/.test(el.tagName)) return;
+  const rows = visible();
+  if (!rows.length) return;
+  const idx = rows.findIndex((c) => c.mod_id === state.active);   // -1 if active is filtered out / unset
+  if (["ArrowDown", "ArrowUp", "j", "k"].includes(e.key)) {
+    e.preventDefault();
+    const down = e.key === "ArrowDown" || e.key === "j";
+    const next = idx < 0 ? 0 : Math.min(Math.max(idx + (down ? 1 : -1), 0), rows.length - 1);
+    state.active = rows[next].mod_id;
+    renderUpdates();
+    const activeRow = $("#mod-list").children[next];              // render order === visible() order
+    if (activeRow) activeRow.scrollIntoView({ block: "nearest" });
+  } else if (e.key === "Enter") {
+    const c = rows[idx];
+    if (c && c.project_url && /^https?:\/\//i.test(c.project_url)) {
+      e.preventDefault();
+      window.open(c.project_url, "_blank", "noopener");
+    }
+  } else if (e.key === " " || e.key === "Spacebar") {
+    const c = rows[idx];
+    if (c && c.status === "ok") { e.preventDefault(); toggleUpdate(c.mod_id); }
+  }
 });
 
 // ---- add tab ----
