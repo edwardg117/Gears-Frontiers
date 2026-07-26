@@ -312,3 +312,26 @@ def test_hashing_default_session_uses_retrying_adapter():
     s = hashing._download_session()
     r = s.get_adapter("https://cdn.example.com").max_retries
     assert isinstance(r, Retry) and 429 in r.status_forcelist
+
+
+@responses.activate
+def test_project_changelog_returns_version_date_body():
+    responses.add(responses.GET, f"{API}/version/V2", json={
+        "id": "V2", "version_number": "0.6.0", "date_published": "2026-07-10T00:00:00Z",
+        "changelog": "- added things"}, status=200)
+    out = modrinth.project_changelog("V2")
+    assert out["version"] == "0.6.0"
+    assert out["date"] == "2026-07-10"
+    assert "added things" in out["body_html"]
+
+
+@responses.activate
+def test_project_changelog_non_200_is_empty():
+    responses.add(responses.GET, f"{API}/version/BAD", status=404)
+    assert modrinth.project_changelog("BAD") == {"version": "", "date": "", "body_html": ""}
+
+
+@responses.activate
+def test_project_changelog_transport_error_is_empty():
+    responses.add(responses.GET, f"{API}/version/BOOM", body=ConnectionError("boom"))
+    assert modrinth.project_changelog("BOOM") == {"version": "", "date": "", "body_html": ""}

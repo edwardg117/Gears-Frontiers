@@ -214,3 +214,28 @@ def test_project_versions_maps_release_types_and_skips_blocked():
     assert len(out["versions"]) == 1               # blocked (null url) skipped
     assert out["versions"][0]["type"] == "beta"
     assert out["versions"][0]["ref"] == "9002"
+
+
+@responses.activate
+def test_project_changelog_wraps_file_changelog():
+    responses.add(responses.GET, f"{API}/mods/999/files/7600000/changelog",
+                  json={"data": "<p>Fixed the map</p>"}, status=200)
+    out = curseforge.project_changelog(999, "7600000", api_key="CF")
+    assert out["version"] == "" and out["date"] == ""      # CF changelog endpoint has no version/date
+    assert "Fixed the map" in out["body_html"]
+
+
+@responses.activate
+def test_project_changelog_non_200_is_empty():
+    responses.add(responses.GET, f"{API}/mods/999/files/1/changelog", status=404)
+    assert curseforge.project_changelog(999, "1", api_key="CF")["body_html"] == ""
+
+
+def test_project_changelog_no_key_is_empty():
+    assert curseforge.project_changelog(999, "1", api_key="")["body_html"] == ""
+
+
+@responses.activate
+def test_project_changelog_transport_error_is_empty():
+    responses.add(responses.GET, f"{API}/mods/999/files/1/changelog", body=ConnectionError("boom"))
+    assert curseforge.project_changelog(999, "1", api_key="CF") == {"version": "", "date": "", "body_html": ""}

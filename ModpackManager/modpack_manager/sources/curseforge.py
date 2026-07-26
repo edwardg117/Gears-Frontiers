@@ -295,3 +295,18 @@ def project_versions(mod_id, mc_version, loader, api_key=""):
                      "name": _clean_version(f.get("displayName"), f.get("fileName"), mc_version),
                      "type": _RELEASE_TYPE.get(f.get("releaseType"), "release"), "url": url})
     return {"side": "BOTH", "versions": opts}
+
+
+def project_changelog(mod_id, file_id, api_key=""):
+    """One file's changelog for the Add preview. `mod_id` = the CF project id
+    (hit.id); `file_id` = the `ref` from project_versions (the CF file id).
+    Reuses `_changelog` (sanitized HTML, "" on non-200). CF's changelog endpoint
+    carries no version/date, so those stay empty and the frontend falls back to
+    the dropdown label. Best-effort: any failure returns an all-empty object."""
+    if not api_key:
+        return {"version": "", "date": "", "body_html": ""}
+    try:
+        session = _session(api_key)
+        return {"version": "", "date": "", "body_html": _changelog(session, mod_id, file_id)}
+    except Exception:  # noqa: BLE001
+        return {"version": "", "date": "", "body_html": ""}
