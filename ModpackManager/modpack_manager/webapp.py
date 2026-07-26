@@ -9,7 +9,7 @@ _WEB_DIR = Path(__file__).parent / "web"
 
 
 def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn,
-               commit_fn, discard_fn) -> Flask:
+               changelog_fn, commit_fn, discard_fn) -> Flask:
     app = Flask(__name__, static_folder=None)
     cache = {"scan": None, "last_touched": []}
 
@@ -48,6 +48,13 @@ def create_app(scan_fn, generate_fn, pack_fn, search_fn, resolve_fn, versions_fn
     def project_versions():
         return jsonify(versions_fn(request.args.get("platform", "modrinth"),
                                    request.args.get("id", "")))
+
+    @app.get("/api/project-changelog")
+    def project_changelog():
+        return jsonify(changelog_fn(
+            request.args.get("platform", "modrinth"),
+            request.args.get("id", ""),
+            request.args.get("ref", "")))
 
     @app.post("/api/generate")
     def generate():

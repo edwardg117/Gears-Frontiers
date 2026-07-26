@@ -32,6 +32,7 @@ def _client(calls):
         versions_fn=lambda platform, pid: {"side": "CLIENT",
                                            "versions": [{"ref": "V1", "name": "0.5.8",
                                                          "type": "release", "url": "u"}]},
+        changelog_fn=lambda platform, i, ref: calls.update(changelog=(platform, i, ref)) or {"version": "1.0", "date": "2026-07-01", "body_html": "<p>cl</p>"},
         commit_fn=lambda touched, message: calls.update(commit=(touched, message)) or {"ok": True, "sha": "abc1234"},
         discard_fn=lambda touched: calls.update(discard=touched) or {"ok": True})
     app.config["TESTING"] = True
@@ -119,6 +120,7 @@ def test_failed_generate_leaves_nothing_committable():
     app = webapp.create_app(
         scan_fn=lambda: ScanResult([], []), generate_fn=_gen, pack_fn=lambda: [],
         search_fn=lambda q, p: ([], []), resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
+        changelog_fn=lambda p, i, r: {},
         commit_fn=lambda t, m: {"ok": True, "sha": "x"}, discard_fn=lambda t: {"ok": True})
     app.config["TESTING"] = True
     c = app.test_client()
@@ -140,6 +142,7 @@ def test_discard_failure_keeps_paths_retryable():
     app = webapp.create_app(
         scan_fn=lambda: ScanResult([], []), generate_fn=_gen, pack_fn=lambda: [],
         search_fn=lambda q, p: ([], []), resolve_fn=lambda r: None, versions_fn=lambda p, i: {},
+        changelog_fn=lambda p, i, r: {},
         commit_fn=lambda t, m: {"ok": True, "sha": "x"}, discard_fn=_failing_discard)
     app.config["TESTING"] = True
     c = app.test_client()
@@ -154,8 +157,17 @@ def test_updates_route_returns_candidates_and_warnings():
         scan_fn=lambda: ScanResult([_cand()], [Notice("warn", "deps_unresolved", "deps failed")]),
         generate_fn=lambda p, c=None: iter([]), pack_fn=lambda: [],
         search_fn=lambda q, pl: ([], []), resolve_fn=lambda r: None,
-        versions_fn=lambda pl, i: {}, commit_fn=lambda t, m: {"ok": True}, discard_fn=lambda t: {"ok": True})
+        versions_fn=lambda pl, i: {}, changelog_fn=lambda p, i, r: {},
+        commit_fn=lambda t, m: {"ok": True}, discard_fn=lambda t: {"ok": True})
     app.config["TESTING"] = True
     data = app.test_client().get("/api/updates").get_json()
     assert data["candidates"][0]["mod_id"] == "appleskin"
     assert data["warnings"][0]["code"] == "deps_unresolved"
+
+
+def test_project_changelog_route():
+    calls = {}
+    data = _client(calls).get("/api/project-changelog?platform=modrinth&id=AAB&ref=V1").get_json()
+    assert data["body_html"] == "<p>cl</p>"
+    assert data["version"] == "1.0"
+    assert calls["changelog"] == ("modrinth", "AAB", "V1")   # route threads platform/id/ref in order

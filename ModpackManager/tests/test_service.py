@@ -89,3 +89,32 @@ def test_real_search_records_notice_on_platform_failure(monkeypatch, tmp_path):
     hits, warnings = service.real_search("x", "both")
     assert [h.id for h in hits] == ["A"]                                 # modrinth hit still returned
     assert any(w.code == "curseforge_search_failed" and w.level == "warn" for w in warnings)
+
+
+def test_real_project_changelog_dispatches_by_platform(monkeypatch, tmp_path):
+    monkeypatch.setattr(service, "pack_paths",
+                        lambda: types.SimpleNamespace(config_ini=tmp_path / "c.ini"))
+    monkeypatch.setattr(service, "load_config", lambda p: types.SimpleNamespace(
+        mc_version="1.21.1", loader="neoforge", modrinth_api_key="MK", curseforge_api_key="CK"))
+    seen = {}
+    monkeypatch.setattr(service.modrinth, "project_changelog",
+                        lambda ref, key: seen.update(mr=(ref, key)) or {"version": "1.0", "date": "", "body_html": "<p>m</p>"})
+    monkeypatch.setattr(service.curseforge, "project_changelog",
+                        lambda mod_id, ref, key: seen.update(cf=(mod_id, ref, key)) or {"version": "", "date": "", "body_html": "<p>c</p>"})
+
+    mr = service.real_project_changelog("modrinth", "AAB", "V1")
+    assert mr["body_html"] == "<p>m</p>"
+    assert seen["mr"] == ("V1", "MK")             # modrinth uses ref (version id) + its api key
+
+    cf = service.real_project_changelog("curseforge", "999", "7600000")
+    assert cf["body_html"] == "<p>c</p>"
+    assert seen["cf"] == (999, "7600000", "CK")   # id int-coerced (= mod id), ref = file id
+
+
+def test_real_project_changelog_bad_curseforge_id_is_empty(monkeypatch, tmp_path):
+    monkeypatch.setattr(service, "pack_paths",
+                        lambda: types.SimpleNamespace(config_ini=tmp_path / "c.ini"))
+    monkeypatch.setattr(service, "load_config", lambda p: types.SimpleNamespace(
+        mc_version="1.21.1", loader="neoforge", modrinth_api_key="MK", curseforge_api_key="CK"))
+    out = service.real_project_changelog("curseforge", "not-a-number", "1")
+    assert out == {"version": "", "date": "", "body_html": ""}

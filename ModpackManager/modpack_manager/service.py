@@ -98,6 +98,18 @@ def real_project_versions(platform, project_id):
                                      config.modrinth_api_key)
 
 
+def real_project_changelog(platform, project_id, ref):
+    paths = pack_paths()
+    config = load_config(paths.config_ini)
+    if platform == "curseforge":
+        try:
+            mod_id = int(project_id)
+        except (TypeError, ValueError):        # a CF preview without a numeric id -> empty, no 500
+            return {"version": "", "date": "", "body_html": ""}
+        return curseforge.project_changelog(mod_id, ref, config.curseforge_api_key)
+    return modrinth.project_changelog(ref, config.modrinth_api_key)
+
+
 def generate_events(payload, candidates=None):
     """Generator: yields {'type':'progress',...} per downloaded jar, then a single
     {'type':'result',...}. payload: {updates:[mod_id], adds:[AddSpec], removals:[mod_id]}."""
