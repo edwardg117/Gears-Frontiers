@@ -30,7 +30,7 @@ body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:v
 .badge.patch { background:rgba(52,199,89,.16); color:var(--patch); }
 .badge.unknown { background:var(--panel); color:var(--muted); }
 .tag { font-size:.58rem; padding:1px 5px; border:1px solid var(--border); border-radius:4px; color:var(--muted); }
-.row.manual, .row.error { opacity:.7; }
+.row.error { opacity:.7; }
 .reader { overflow-y:auto; padding:1rem 1.2rem; }
 .reader h2 { font-size:1rem; margin:0 0 .2rem; }
 .reader .open { display:inline-block; font-size:.75rem; color:var(--accent); text-decoration:none; margin-bottom:.4rem; }
@@ -117,3 +117,24 @@ body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:v
 .notice.info { border:1px solid var(--border); background:var(--panel); color:var(--muted); }
 .notice-x { background:transparent; border:none; color:inherit; cursor:pointer; opacity:.7; font-size:.8rem; padding:0 2px; }
 .notice-x:hover { opacity:1; }
+
+/* --- "Needs manual update" section (Updates tab) --- */
+.manual-updates { margin:.5rem .9rem 0; border:1px solid rgba(255,159,10,.3);
+  background:rgba(255,159,10,.08); border-radius:8px; overflow:hidden; }
+.manual-updates[hidden] { display:none; }
+.manual-head { display:flex; align-items:center; gap:.5rem; padding:.5rem .7rem;
+  cursor:pointer; color:var(--minor); font-size:.82rem; font-weight:600; }
+.manual-head .manual-title { flex:1; }
+.manual-head .caret { transition:transform .15s; }
+.manual-head.collapsed .caret { transform:rotate(-90deg); }
+.manual-body { max-height:32vh; overflow-y:auto; border-top:1px solid rgba(255,159,10,.2); }
+.manual-row { display:flex; align-items:center; gap:.6rem; padding:.45rem .7rem;
+  border-bottom:1px solid var(--border); cursor:pointer; }
+.manual-row:last-child { border-bottom:none; }
+.manual-row.active { background:var(--sel); box-shadow:inset 3px 0 0 var(--accent); }
+.manual-row .main { flex:1; min-width:0; }
+.manual-row .name { font-weight:600; font-size:.85rem; }
+.manual-row .ver { font-size:.72rem; color:var(--muted); }
+.manual-row .ver b { color:var(--accent); }
+.manual-row .reason { font-size:.72rem; max-width:40ch; text-align:right; }
+.manual-row a.open { color:var(--accent); text-decoration:none; padding:2px 5px; }

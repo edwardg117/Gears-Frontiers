@@ -2,7 +2,7 @@ const state = {
   candidates: [], selected: new Set(), active: null,
   filters: { severity: "", source: "" },
   adds: [], removals: new Set(), pack: [], packLoaded: false,
-  releaseFilter: "", dismissed: new Set(),
+  releaseFilter: "", dismissed: new Set(), manualCollapsed: false,
 };
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -49,11 +49,12 @@ async function load(refresh = false) {
     renderWarnings(data.warnings || [], $("#scan-warnings"));
   } catch (e) { loadingError("Couldn't load updates: " + e.message); }
 }
-function visible() {
-  return state.candidates.filter((c) =>
-    (!state.filters.severity || c.severity === state.filters.severity) &&
-    (!state.filters.source || c.platform === state.filters.source));
+function matchesFilters(c) {
+  return (!state.filters.severity || c.severity === state.filters.severity) &&
+         (!state.filters.source || c.platform === state.filters.source);
 }
+function visible() { return state.candidates.filter((c) => c.status !== "manual" && matchesFilters(c)); }
+function manualVisible() { return state.candidates.filter((c) => c.status === "manual" && matchesFilters(c)); }
 function renderUpdates() {
   const list = $("#mod-list"); list.innerHTML = "";
   for (const c of visible()) {
@@ -70,9 +71,41 @@ function renderUpdates() {
     row.addEventListener("click", () => { state.active = c.mod_id; renderUpdates(); });
     list.append(row);
   }
-  $("#update-count").textContent = `${state.candidates.length} updates`;
+  $("#update-count").textContent = `${state.candidates.filter((c) => c.status === "ok").length} updates`;
   $("#selected-count").textContent = `${state.selected.size} selected`;
+  renderManual();
   renderReader();
+}
+function renderManual() {
+  const band = $("#manual-updates");
+  band.innerHTML = "";
+  const rows = manualVisible();
+  band.hidden = rows.length === 0;
+  if (!rows.length) return;
+  const head = document.createElement("div");
+  head.className = "manual-head" + (state.manualCollapsed ? " collapsed" : "");
+  head.innerHTML = `<span class="manual-title">⚠ Needs manual update (${rows.length})</span><span class="caret">▾</span>`;
+  head.addEventListener("click", () => { state.manualCollapsed = !state.manualCollapsed; renderManual(); });
+  band.append(head);
+  if (state.manualCollapsed) return;
+  const body = document.createElement("div"); body.className = "manual-body";
+  for (const c of rows) {
+    const row = document.createElement("div");
+    row.className = "manual-row" + (state.active === c.mod_id ? " active" : "");
+    const main = document.createElement("div"); main.className = "main";
+    main.innerHTML = `<div class="name">${esc(c.name)}</div><div class="ver">${esc(c.current_version)} → <b>${esc(c.latest_version)}</b></div>`;
+    const reason = document.createElement("div"); reason.className = "reason muted";
+    reason.textContent = c.note || "";
+    const link = document.createElement("span");
+    link.innerHTML = openLink(c.project_url);
+    row.append(main, reason, link);
+    row.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;               // let the "open page" link work
+      state.active = c.mod_id; renderUpdates();
+    });
+    body.append(row);
+  }
+  band.append(body);
 }
 function renderReader() {
   const c = state.candidates.find((x) => x.mod_id === state.active); const r = $("#reader");
