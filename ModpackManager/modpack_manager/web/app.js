@@ -189,15 +189,23 @@ function renderResults(hits) {
   const box = $("#add-results"); box.innerHTML = "";
   if (!hits.length) { box.innerHTML = '<p class="muted" style="padding:.5rem">No results. Try a link or id.</p>'; return; }
   for (const hit of hits.slice(0, 12)) {
+    const wrap = document.createElement("div"); wrap.className = "add-result";
     const row = document.createElement("div"); row.className = "add-row";
     const inPack = state.pack.some((m) => m.name.toLowerCase() === hit.name.toLowerCase());
-    row.innerHTML = `<div class="main"><div class="name">${esc(hit.name)}</div><div class="sum">${esc(hit.summary)}</div></div>
+    row.innerHTML = `<button class="disc" type="button" aria-expanded="false" aria-label="Toggle details">▸</button>
+      <div class="main"><div class="name">${esc(hit.name)}</div><div class="sum">${esc(hit.summary)}</div></div>
       <span class="tag">${hit.platform === "curseforge" ? "CF" : "MR"}</span>${openLink(hit.page_url)}
       <select class="ver-sel"><option>loading…</option></select>
       <button class="add-btn" disabled>${inPack ? "In pack" : "Add"}</button>`;
-    box.append(row);
+    const preview = document.createElement("div"); preview.className = "add-preview"; preview.hidden = true;
+    wrap.append(row, preview);
+    box.append(wrap);
     const sel = row.querySelector(".ver-sel");
     const btn = row.querySelector(".add-btn");
+    const toggle = () => togglePreview(wrap, hit, sel);
+    row.querySelector(".disc").addEventListener("click", toggle);
+    row.querySelector(".name").addEventListener("click", toggle);
+    sel.addEventListener("change", () => { if (!preview.hidden) loadPreview(preview, hit, sel); });
     // fetch each row's versions in parallel — don't block rendering the next row
     fetchVersions(hit).then((versions) => {
       populateVersions(sel, versions);
@@ -207,8 +215,49 @@ function renderResults(hits) {
         const opt = versions.find((v) => v.ref === sel.value);
         if (opt) queueAdd(hit, opt, versions.side);
       });
+      if (!preview.hidden) loadPreview(preview, hit, sel);   // refresh if expanded before versions arrived
     }).catch(() => { sel.innerHTML = "<option>versions unavailable</option>"; });
   }
+}
+
+function togglePreview(wrap, hit, sel) {
+  const preview = wrap.querySelector(".add-preview");
+  const disc = wrap.querySelector(".disc");
+  const open = preview.hidden;                 // currently hidden -> we're opening it
+  preview.hidden = !open;
+  disc.textContent = open ? "▾" : "▸";
+  disc.setAttribute("aria-expanded", open ? "true" : "false");
+  if (open) loadPreview(preview, hit, sel);
+}
+
+async function loadPreview(preview, hit, sel) {
+  const req = (preview._req = (preview._req || 0) + 1);
+  const descHtml = `<div class="cl-ver">Description</div><div class="cl-body">${esc(hit.summary) || '<span class="muted">No description.</span>'}</div>`;
+  const optEl = sel.options[sel.selectedIndex];
+  const label = optEl ? optEl.textContent : "";
+  const placeholder = /^(loading…|no compatible versions|versions unavailable)$/.test(label);
+  if (!sel.value || placeholder) {
+    preview.innerHTML = descHtml + `<div class="cl-ver">Changelog</div><div class="cl-body muted">Select a version.</div>`;
+    return;
+  }
+  preview.innerHTML = descHtml + `<div class="cl-ver">Changelog</div><div class="cl-body muted">Loading changelog…</div>`;
+  try {
+    const cl = await fetchChangelog(hit.platform, hit.id, sel.value);
+    if (preview._req !== req) return;   // a newer load superseded this one
+    const ver = cl.version || label;
+    const date = cl.date ? `<span class="cl-date">${esc(cl.date)}</span>` : "";
+    const bodyHtml = cl.body_html || '<span class="muted">No changelog provided.</span>';
+    preview.innerHTML = descHtml + `<div class="cl-ver">${esc(ver)}${date}</div><div class="cl-body">${bodyHtml}</div>`;
+  } catch (e) {
+    if (preview._req !== req) return;   // a newer load superseded this one
+    preview.innerHTML = descHtml + `<div class="cl-ver">Changelog</div><div class="cl-body muted">Changelog unavailable.</div>`;
+  }
+}
+
+async function fetchChangelog(platform, id, ref) {
+  const res = await fetch(`/api/project-changelog?platform=${encodeURIComponent(platform)}&id=${encodeURIComponent(id)}&ref=${encodeURIComponent(ref)}`);
+  if (!res.ok) throw new Error("HTTP " + res.status);
+  return res.json();
 }
 async function fetchVersions(hit) {
   const res = await fetch(`/api/project-versions?platform=${hit.platform}&id=${encodeURIComponent(hit.id)}`);
