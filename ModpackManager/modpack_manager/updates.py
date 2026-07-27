@@ -24,14 +24,14 @@ def _eligible(module, config) -> bool:
     )
 
 
-def _check(module, config, current_project_ids, cf_ctx=None) -> Candidate | None:
+def _check(module, config, current_project_ids, installed_cf_mod_ids, cf_ctx=None) -> Candidate | None:
     try:
         if module.platform == "modrinth":
             return modrinth.build_candidate(
                 module, config.mc_version, config.loader, current_project_ids,
                 api_key=config.modrinth_api_key)
         return curseforge.build_candidate(
-            module, config.mc_version, config.loader, current_project_ids,
+            module, config.mc_version, config.loader, installed_cf_mod_ids,
             api_key=config.curseforge_api_key, ctx=cf_ctx)
     except Exception as e:  # isolate per-mod failures
         return Candidate(
@@ -57,15 +57,17 @@ def _modrinth_to_check(modrinth_mods, config):
 
 
 def _curseforge_to_check(cf_mods, config):
-    """Bulk-prefilter CF mods. Returns (mods_to_build, contexts, notice_or_None)."""
+    """Bulk-prefilter CF mods. Returns
+    (mods_to_build, contexts, installed_cf_mod_ids, notice_or_None)."""
     if not cf_mods:
-        return [], {}, None
+        return [], {}, set(), None
     try:
-        updated_ids, unresolved, contexts = curseforge.find_updated_mod_ids(
+        updated_ids, unresolved, contexts, installed_cf_mod_ids = curseforge.find_updated_mod_ids(
             cf_mods, config.mc_version, config.loader, config.curseforge_api_key)
-        return [m for m in cf_mods if m.mod_id in updated_ids] + unresolved, contexts, None
+        return ([m for m in cf_mods if m.mod_id in updated_ids] + unresolved,
+                contexts, installed_cf_mod_ids, None)
     except Exception:  # bulk failed entirely -> per-mod fallback for all
-        return list(cf_mods), {}, Notice(
+        return list(cf_mods), {}, set(), Notice(
             "info", "curseforge_bulk_fallback",
             "CurseForge bulk update-check was unavailable — fell back to per-mod checks (results are complete).")
 
@@ -81,13 +83,16 @@ def scan(modules: dict, config, max_workers: int = 5) -> ScanResult:
     with ThreadPoolExecutor(max_workers=2) as pre:
         cf_future = pre.submit(_curseforge_to_check, cf_mods, config)
         mr_future = pre.submit(_modrinth_to_check, modrinth_mods, config)
-        cf_to_check, cf_contexts, cf_notice = cf_future.result()
+        cf_to_check, cf_contexts, cf_installed_ids, cf_notice = cf_future.result()
         modrinth_to_check, mr_notice = mr_future.result()
     to_check = modrinth_to_check + cf_to_check
 
     results: list[Candidate] = []
     with ThreadPoolExecutor(max_workers=max_workers) as ex:
-        futures = {ex.submit(_check, m, config, current_project_ids, cf_contexts.get(m.mod_id)): m
+        futures = {ex.submit(_check, m, config,
+                             current_project_ids=current_project_ids,
+                             installed_cf_mod_ids=cf_installed_ids,
+                             cf_ctx=cf_contexts.get(m.mod_id)): m
                    for m in to_check}
         for fut in as_completed(futures):
             candidate = fut.result()

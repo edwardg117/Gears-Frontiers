@@ -221,18 +221,21 @@ def _latest_compatible_file_id(mod_obj, mc_version, loader):
 def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
     """Bulk update check for many CurseForge mods in a handful of requests.
 
-    Returns (updated_mod_ids, unresolved, contexts):
+    Returns (updated_mod_ids, unresolved, contexts, installed_cf_mod_ids):
       - updated_mod_ids: set of mod ids with a newer compatible file
       - unresolved: modules the bulk pass couldn't decide (per-mod fallback)
       - contexts: mod_id -> {cf_mod_id, allow_dist, website} for resolved mods,
         so build_candidate can skip re-fetching the recover + info calls.
+      - installed_cf_mod_ids: every installed CF modId the bulk pass resolved
+        (set(file_to_mod.values())), for dependency "already installed" filtering.
     """
     if not api_key:  # let the per-mod path report the key error for each mod
-        return set(), list(modules), {}
+        return set(), list(modules), {}, set()
     session = _session(api_key)
     file_ids = [m.cf_file_id for m in modules if m.cf_file_id]
     file_to_mod = _bulk_file_to_mod(session, file_ids)
-    mod_objs = _bulk_mods(session, list(set(file_to_mod.values())))
+    installed_cf_mod_ids = set(file_to_mod.values())
+    mod_objs = _bulk_mods(session, list(installed_cf_mod_ids))
 
     updated, unresolved, contexts = set(), [], {}
     for m in modules:
@@ -252,7 +255,7 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
         }
         if latest_fid != m.cf_file_id:
             updated.add(m.mod_id)
-    return updated, unresolved, contexts
+    return updated, unresolved, contexts, installed_cf_mod_ids
 
 
 def resolve_dependencies(dep_mod_ids, mc_version, loader, api_key=""):

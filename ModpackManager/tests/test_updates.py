@@ -23,7 +23,7 @@ def test_scan_dispatches_by_platform_and_sorts(monkeypatch):
     monkeypatch.setattr(updates.modrinth, "find_updated_mod_ids",
                         lambda mods_, *a, **k: ({m.mod_id for m in mods_}, []))
     monkeypatch.setattr(updates.curseforge, "find_updated_mod_ids",
-                        lambda mods_, *a, **k: ({m.mod_id for m in mods_}, [], {}))
+                        lambda mods_, *a, **k: ({m.mod_id for m in mods_}, [], {}, set()))
     monkeypatch.setattr(updates.modrinth, "build_candidate",
                         lambda m, *a, **k: _cand(m.mod_id, "minor"))
     monkeypatch.setattr(updates.curseforge, "build_candidate",

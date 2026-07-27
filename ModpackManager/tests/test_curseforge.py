@@ -119,11 +119,12 @@ def test_find_updated_mod_ids_bulk_flags_only_changed():
         {"id": 22, "allowModDistribution": True, "links": {"websiteUrl": "http://b"},
          "latestFilesIndexes": [{"gameVersion": "1.21.1", "modLoader": 6, "fileId": 2000002}]},
     ]}, status=200)
-    updated, unresolved, contexts = curseforge.find_updated_mod_ids(
+    updated, unresolved, contexts, installed = curseforge.find_updated_mod_ids(
         [ma, mb], "1.21.1", "neoforge", api_key="CF")
     assert updated == {"a"}                      # 11 has a newer fileId; 22 unchanged
     assert unresolved == []
     assert contexts["a"] == {"cf_mod_id": 11, "allow_dist": True, "website": "http://a"}
+    assert installed == {11, 22}                 # every installed CF modId the bulk pass resolved
 
 
 @responses.activate
@@ -135,19 +136,21 @@ def test_find_updated_unresolved_when_no_matching_index():
         {"id": 11, "allowModDistribution": True, "links": {},
          "latestFilesIndexes": [{"gameVersion": "1.20.1", "modLoader": 6, "fileId": 999}]},
     ]}, status=200)
-    updated, unresolved, contexts = curseforge.find_updated_mod_ids(
+    updated, unresolved, contexts, installed = curseforge.find_updated_mod_ids(
         [ma], "1.21.1", "neoforge", api_key="CF")
     assert updated == set()
     assert [m.mod_id for m in unresolved] == ["a"]  # no index for our version -> fallback
+    assert installed == {11}
 
 
 def test_find_updated_no_api_key_marks_all_unresolved():
     ma = _cf_module("a", "1000", "001")
-    updated, unresolved, contexts = curseforge.find_updated_mod_ids(
+    updated, unresolved, contexts, installed = curseforge.find_updated_mod_ids(
         [ma], "1.21.1", "neoforge", api_key="")
     assert updated == set()
     assert [m.mod_id for m in unresolved] == ["a"]
     assert contexts == {}
+    assert installed == set()
 
 
 @responses.activate
