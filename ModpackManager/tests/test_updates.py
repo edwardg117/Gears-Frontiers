@@ -223,3 +223,48 @@ def test_resolve_dependencies_partial_platform_failure(monkeypatch):
     # CF dep surfaced but not addable (its resolver raised)
     cf_deps = {d.id: d for d in cf.added_dependencies}
     assert cf_deps["306612"].addable is False
+
+
+def test_resolve_dependencies_skips_installed_transitive_dep(monkeypatch):
+    # candidate -> A -> B, but B is already installed. The fixpoint must not
+    # resolve OR attach B (installed-set filtering at the transitive frontier).
+    from modpack_manager.sources.base import AddedDependency
+    c = _cand("root", "minor")
+    c.added_dependencies = [AddedDependency(id="A", satisfied=False, platform="modrinth")]
+    resolved_ids = []
+    def fake_mr(ids, mc, loader, key):
+        resolved_ids.extend(ids)
+        table = {"A": {"name": "A", "slug": "a", "side": "BOTH", "version": "1",
+                       "download_url": "u", "size": 1, "addable": True, "requires": ["B"]},
+                 "B": {"name": "B", "slug": "b", "side": "BOTH", "version": "1",
+                       "download_url": "u", "size": 1, "addable": True, "requires": []}}
+        return {pid: table[pid] for pid in ids if pid in table}
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_mr)
+    from modpack_manager.config import Config
+    updates._resolve_dependencies([c], Config(), current_project_ids={"B"})  # B installed
+    assert {d.id for d in c.added_dependencies} == {"A"}   # B filtered: not attached
+    assert "B" not in resolved_ids                          # B filtered: never even resolved
+
+
+def test_resolve_dependencies_cf_transitive_chain(monkeypatch):
+    # A CF candidate whose dep 100 requires 200 (transitive), via the CF resolver.
+    from modpack_manager.sources.base import AddedDependency
+    c = _cand("cfmod", "minor"); c.platform = "curseforge"
+    c.added_dependencies = [AddedDependency(id="100", satisfied=False, platform="curseforge")]
+    def fake_cf(ids, mc, loader, key):
+        table = {"100": {"name": "Lib100", "slug": "lib100", "url": "https://cf/100",
+                         "side": "BOTH", "version": "1", "download_url": "u", "size": 1,
+                         "addable": True, "requires": ["200"]},
+                 "200": {"name": "Lib200", "slug": "lib200", "url": "https://cf/200",
+                         "side": "BOTH", "version": "2", "download_url": "u2", "size": 2,
+                         "addable": True, "requires": []}}
+        return {i: table[i] for i in ids if i in table}
+    monkeypatch.setattr(updates.curseforge, "resolve_dependencies", fake_cf)
+    from modpack_manager.config import Config
+    notice = updates._resolve_dependencies([c], Config())
+    assert notice is None
+    deps = {d.id: d for d in c.added_dependencies}
+    assert set(deps) == {"100", "200"}                 # transitive CF dep attached
+    assert deps["200"].platform == "curseforge"
+    assert deps["200"].slug == "lib200" and deps["200"].addable is True
+    assert deps["200"].url == "https://cf/200"         # CF resolver url flows through _new_dependency
