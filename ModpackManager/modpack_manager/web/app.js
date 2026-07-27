@@ -283,18 +283,21 @@ function queueAdd(hit, opt, side) {
 // are excluded upstream — the scan only reports a required dependency whose
 // Modrinth project id isn't already installed — so no pack check is needed.)
 function computeAutoDeps() {
-  const bySlug = new Map();
+  const byKey = new Map();
   for (const c of state.candidates) {
     if (!state.selected.has(c.mod_id)) continue;
     for (const d of (c.added_dependencies || [])) {
       if (!d.addable || !d.slug) continue;
-      if (state.adds.some((a) => a.module_id === d.slug)) continue;
-      const e = bySlug.get(d.slug) || { dep: d, requiredBy: [] };
+      const platform = d.platform || "modrinth";
+      // a dep already queued manually (same platform + slug) wins — skip it
+      if (state.adds.some((a) => a.platform === platform && a.module_id === d.slug)) continue;
+      const key = `${platform}:${d.slug}`;
+      const e = byKey.get(key) || { dep: d, requiredBy: [] };
       if (!e.requiredBy.includes(c.name)) e.requiredBy.push(c.name);
-      bySlug.set(d.slug, e);
+      byKey.set(key, e);
     }
   }
-  return [...bySlug.values()];
+  return [...byKey.values()];
 }
 function renderQueue() {
   const box = $("#add-queue"); box.innerHTML = "";
@@ -302,7 +305,8 @@ function renderQueue() {
   for (const { dep, requiredBy } of auto) {
     const row = document.createElement("div"); row.className = "add-row auto-dep";
     const chips = requiredBy.map((n) => `<span class="dep-chip">dep of ${esc(n)}</span>`).join("");
-    row.innerHTML = `<span class="tag">MR</span>
+    const pill = dep.platform === "curseforge" ? "CF" : "MR";
+    row.innerHTML = `<span class="tag">${pill}</span>
       <div class="main"><div class="name">${esc(dep.name || dep.slug)}</div>
         <div class="dep-chips">${chips}</div></div>
       <span class="ver">${esc(dep.version)}</span>${openLink(dep.url)}`;
@@ -390,7 +394,7 @@ $("#review-btn").addEventListener("click", openReview);
 $("#review-close").addEventListener("click", () => { $("#review").hidden = true; });
 async function generate() {
   const autoAdds = computeAutoDeps().map(({ dep }) => ({
-    platform: "modrinth", module_id: dep.slug, name: dep.name, version: dep.version,
+    platform: dep.platform || "modrinth", module_id: dep.slug, name: dep.name, version: dep.version,
     url: dep.download_url, side: dep.side, required: true }));
   const payload = { updates: [...state.selected],
     adds: [...state.adds.map(({ page_url, ...a }) => a), ...autoAdds],
