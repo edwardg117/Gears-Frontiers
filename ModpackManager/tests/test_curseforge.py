@@ -307,3 +307,34 @@ def test_resolve_dependencies_no_compatible_file_not_addable():
     assert spec["download_url"] == ""
     assert spec["addable"] is False
     assert spec["requires"] == []
+
+
+@responses.activate
+def test_build_candidate_detects_new_required_cf_dep():
+    responses.add(responses.POST, f"{API}/mods/files",
+                  json={"data": [{"id": 7568054, "modId": 999}]}, status=200)
+    responses.add(responses.GET, f"{API}/mods/999",
+                  json={"data": {"id": 999, "name": "Xaeros World Map",
+                                 "allowModDistribution": True}}, status=200)
+    responses.add(responses.GET, f"{API}/mods/999/files", json={"data": [
+        {"id": 7600000, "displayName": "1.39.8", "fileName": "Xaeros_1.39.8.jar",
+         "fileDate": "2026-07-10T00:00:00Z", "fileLength": 2000,
+         "downloadUrl": "https://edge.forgecdn.net/files/7600/000/Xaeros_1.39.8.jar",
+         "dependencies": [
+             {"modId": 306612, "relationType": 3},   # required, not installed -> collected
+             {"modId": 555, "relationType": 3},       # required, but installed -> skipped
+             {"modId": 777, "relationType": 2}],      # optional -> ignored
+         "gameVersions": ["1.21.1", "NeoForge"]},
+        {"id": 7568054, "displayName": "1.39.4", "fileName": "Xaeros_1.39.4.jar",
+         "fileDate": "2026-06-01T00:00:00Z", "fileLength": 1900,
+         "downloadUrl": "https://edge.forgecdn.net/files/7568/054/Xaeros_1.39.4.jar",
+         "gameVersions": ["1.21.1", "NeoForge"]},
+    ]}, status=200)
+    responses.add(responses.GET, f"{API}/mods/999/files/7600000/changelog",
+                  json={"data": "<p>cl</p>"}, status=200)
+    # 4th positional arg is now the installed-CF-modId set
+    c = curseforge.build_candidate(_module(), "1.21.1", "neoforge", {555}, api_key="CF")
+    deps = c.added_dependencies
+    assert [d.id for d in deps] == ["306612"]
+    assert deps[0].platform == "curseforge"
+    assert deps[0].satisfied is False

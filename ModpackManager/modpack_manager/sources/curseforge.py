@@ -6,7 +6,7 @@ import requests
 from ..version_utils import classify_severity
 from ..text_render import sanitize_html
 from . import http
-from .base import Candidate, ChangelogEntry, SearchHit
+from .base import Candidate, ChangelogEntry, AddedDependency, SearchHit
 
 API = "https://api.curseforge.com/v1"
 _LOADER_ID = {"forge": 1, "fabric": 4, "quilt": 5, "neoforge": 6}
@@ -85,7 +85,7 @@ def _changelog(session, mod_id, file_id):
     return sanitize_html(r.json().get("data", ""))
 
 
-def build_candidate(module, mc_version, loader, current_project_ids, api_key="", ctx=None):
+def build_candidate(module, mc_version, loader, installed_cf_mod_ids, api_key="", ctx=None):
     if not api_key:
         return _error(module, "No CurseForge API key configured.")
     session = _session(api_key)
@@ -133,6 +133,17 @@ def build_candidate(module, mc_version, loader, current_project_ids, api_key="",
             _clean_version(installed.get("displayName"), installed.get("fileName"), mc_version)
             if installed else "unknown")
 
+        # New required deps (relationType 3): compare modIds in CF's native int id
+        # space against installed_cf_mod_ids (the pack's installed CF modIds, supplied
+        # by the caller); id is stringified only for the AddedDependency/JSON contract.
+        added = []
+        for dep in latest.get("dependencies", []):
+            if dep.get("relationType") == 3 and dep.get("modId"):
+                dep_mod_id = dep["modId"]
+                if dep_mod_id not in installed_cf_mod_ids:
+                    added.append(AddedDependency(id=str(dep_mod_id), satisfied=False,
+                                                 platform="curseforge"))
+
         blocked = (not allow_dist) or not latest.get("downloadUrl")
         return Candidate(
             mod_id=module.mod_id, name=module.name, platform="curseforge",
@@ -141,7 +152,7 @@ def build_candidate(module, mc_version, loader, current_project_ids, api_key="",
             latest_version=latest_ver,
             severity=classify_severity(current_ver, latest_ver),
             side=module.side, required=module.required, mod_type=module.mod_type,
-            changelogs=changelogs, added_dependencies=[],
+            changelogs=changelogs, added_dependencies=added,
             status="manual" if blocked else "ok",
             note=("This mod blocks third-party downloads — update it manually."
                   if blocked else range_note),
