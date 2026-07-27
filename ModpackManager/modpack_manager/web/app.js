@@ -277,11 +277,13 @@ function queueAdd(hit, opt, side) {
     version: opt.name, url: opt.url, side: side || "BOTH", required: true, page_url: hit.page_url });
   renderQueue(); updateBatch();
 }
-// Derived: new deps of currently-selected updates, deduped by slug, one entry
-// per dep with the names of every selected mod that introduced it. Skips deps
-// that aren't addable or are already queued manually. (Deps already in the pack
-// are excluded upstream — the scan only reports a required dependency whose
-// Modrinth project id isn't already installed — so no pack check is needed.)
+// Derived: new deps of currently-selected updates, deduped by platform+slug, one
+// entry per dep with the names of every selected mod that introduced it. Skips deps
+// that aren't addable, already queued manually, or already in the pack under the same
+// display name. Upstream excludes deps whose platform id is already installed, but that
+// filter is per-platform — a dep installed from the OTHER platform (e.g. Architectury
+// from CF, required as a Modrinth project) can't be reconciled by id, so we also guard
+// by name here.
 function computeAutoDeps() {
   const byKey = new Map();
   for (const c of state.candidates) {
@@ -289,6 +291,13 @@ function computeAutoDeps() {
     for (const d of (c.added_dependencies || [])) {
       if (!d.addable || !d.slug) continue;
       const platform = d.platform || "modrinth";
+      // cross-platform "already in pack" guard: the dep arrays never cross platforms,
+      // but pack membership does (e.g. Architectury installed from CF, required as a
+      // Modrinth project). We can't reconcile by id across registries, so skip a dep
+      // whose display name already matches a pack entry (case-insensitive). state.pack
+      // is loaded eagerly; if it hasn't arrived yet the guard is a self-correcting no-op.
+      const depName = (d.name || d.slug || "").toLowerCase();
+      if (depName && state.pack.some((m) => m.name.toLowerCase() === depName)) continue;
       // a dep already queued manually (same platform + slug) wins — skip it
       if (state.adds.some((a) => a.platform === platform && a.module_id === d.slug)) continue;
       const key = `${platform}:${d.slug}`;
