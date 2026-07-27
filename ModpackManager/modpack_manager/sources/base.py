@@ -32,6 +32,7 @@ class AddedDependency:
     download_url: str = ""      # primary-file jar URL to hash/add
     size: int | None = None     # primary-file size in bytes
     addable: bool = False       # True once resolved to a queueable spec
+    platform: str = "modrinth"  # "modrinth" | "curseforge" — makes CF deps explicit
 
 
 @dataclass

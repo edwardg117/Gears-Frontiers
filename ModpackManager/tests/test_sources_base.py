@@ -53,3 +53,15 @@ def test_added_dependency_new_fields_default_and_roundtrip():
     assert d["download_url"] == "https://cdn/create.jar"
     assert d["size"] == 1234
     assert d["addable"] is True
+
+
+def test_added_dependency_platform_defaults_and_roundtrips():
+    from modpack_manager.sources.base import Candidate, AddedDependency
+    # defaults to "modrinth" so every existing construction + test is unchanged
+    assert AddedDependency(id="cloth-config", satisfied=False).platform == "modrinth"
+    # CF deps set it explicitly, and it survives Candidate.to_dict() (asdict) nesting
+    dep = AddedDependency(id="306612", satisfied=False, platform="curseforge")
+    c = Candidate(mod_id="cbc", name="CBC", platform="curseforge", source_url="u",
+                  current_version="1", latest_version="2", severity="minor", side="BOTH",
+                  required=True, mod_type="Regular", added_dependencies=[dep], status="ok")
+    assert c.to_dict()["added_dependencies"][0]["platform"] == "curseforge"
