@@ -182,6 +182,18 @@ def _bulk_mods(session, mod_ids):
     return out
 
 
+def _bulk_files(session, file_ids):
+    """fileId -> full file object, via POST /mods/files (richer than _bulk_file_to_mod)."""
+    out = {}
+    for chunk in _chunk(file_ids):
+        r = session.post(f"{API}/mods/files", json={"fileIds": chunk}, timeout=30)
+        r.raise_for_status()
+        for f in r.json().get("data", []):
+            if f.get("id") is not None:
+                out[f["id"]] = f
+    return out
+
+
 def _latest_compatible_file_id(mod_obj, mc_version, loader):
     """Latest file id for our MC version + loader from latestFilesIndexes."""
     loader_id = _LOADER_ID.get(loader, 6)
@@ -230,6 +242,64 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
         if latest_fid != m.cf_file_id:
             updated.add(m.mod_id)
     return updated, unresolved, contexts
+
+
+def resolve_dependencies(dep_mod_ids, mc_version, loader, api_key=""):
+    """Resolve new CF dependency modIds into queueable add-specs.
+
+    Returns {dep_mod_id(str): {name, slug, url, side, version, download_url, size,
+    addable, requires}}, where `requires` is the list of same-platform (CF) modIds
+    this dep's latest compatible file itself requires (relationType==3), for the
+    transitive fixpoint. Two bulk calls, no per-dep fan-out. Best-effort: a dep we
+    can't fully resolve comes back addable=False with whatever meta did resolve, so
+    the UI still warns without auto-queuing it (mirrors modrinth.resolve_dependencies).
+    """
+    ids = list(dict.fromkeys(int(d) for d in dep_mod_ids if d is not None))  # de-dupe, keep order
+    if not ids or not api_key:
+        return {}
+    session = _session(api_key)
+
+    # 1) bulk mod meta: modId -> {name, slug, url, allow_dist, latest compatible file id}
+    try:
+        mods = _bulk_mods(session, ids)
+    except requests.RequestException:
+        mods = {}
+    meta = {}
+    for mid in ids:
+        m = mods.get(mid)
+        if not m:
+            continue
+        meta[mid] = {
+            "name": m.get("name") or m.get("slug") or str(mid),
+            "slug": m.get("slug") or "",
+            "url": (m.get("links") or {}).get("websiteUrl", "") or "",
+            "allow_dist": m.get("allowModDistribution", True),
+            "file_id": _latest_compatible_file_id(m, mc_version, loader),
+        }
+
+    # 2) bulk file details for every resolved latest-file id
+    file_ids = [meta[mid]["file_id"] for mid in meta if meta[mid]["file_id"]]
+    try:
+        files = _bulk_files(session, file_ids) if file_ids else {}
+    except requests.RequestException:
+        files = {}
+
+    # 3) combine; side is BOTH (CF exposes no reliable per-dep side)
+    out = {}
+    for mid in ids:
+        m = meta.get(mid, {})
+        f = files.get(m.get("file_id")) or {}
+        download_url = f.get("downloadUrl") or ""
+        version = _clean_version(f.get("displayName"), f.get("fileName"), mc_version) if f else ""
+        requires = [str(d["modId"]) for d in f.get("dependencies", [])
+                    if d.get("relationType") == 3 and d.get("modId")]
+        addable = bool(m.get("allow_dist", True)) and bool(download_url) and bool(m.get("slug"))
+        out[str(mid)] = {
+            "name": m.get("name"), "slug": m.get("slug", ""), "url": m.get("url", ""),
+            "side": "BOTH", "version": version, "download_url": download_url,
+            "size": f.get("fileLength"), "addable": addable, "requires": requires,
+        }
+    return out
 
 
 def search(query, mc_version, loader, api_key=""):

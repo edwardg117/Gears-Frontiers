@@ -239,3 +239,71 @@ def test_project_changelog_no_key_is_empty():
 def test_project_changelog_transport_error_is_empty():
     responses.add(responses.GET, f"{API}/mods/999/files/1/changelog", body=ConnectionError("boom"))
     assert curseforge.project_changelog(999, "1", api_key="CF") == {"version": "", "date": "", "body_html": ""}
+
+
+@responses.activate
+def test_resolve_dependencies_happy_path_with_requires():
+    # modId 306612 -> latest compatible file 8001 (from latestFilesIndexes);
+    # that file itself requires modId 319057 (required) and 999999 (optional).
+    responses.add(responses.POST, f"{API}/mods", json={"data": [
+        {"id": 306612, "name": "Cloth Config API", "slug": "cloth-config",
+         "allowModDistribution": True, "links": {"websiteUrl": "https://cf/cloth"},
+         "latestFilesIndexes": [{"gameVersion": "1.21.1", "modLoader": 6, "fileId": 8001}]},
+    ]}, status=200)
+    responses.add(responses.POST, f"{API}/mods/files", json={"data": [
+        {"id": 8001, "displayName": "15.0.140", "fileName": "cloth-15.0.140.jar",
+         "fileLength": 512000, "downloadUrl": "https://edge.forgecdn.net/8001/cloth.jar",
+         "dependencies": [{"modId": 319057, "relationType": 3},
+                          {"modId": 999999, "relationType": 2}]},
+    ]}, status=200)
+    out = curseforge.resolve_dependencies([306612], "1.21.1", "neoforge", api_key="CF")
+    spec = out["306612"]
+    assert spec["name"] == "Cloth Config API"
+    assert spec["slug"] == "cloth-config"
+    assert spec["url"] == "https://cf/cloth"
+    assert spec["side"] == "BOTH"
+    assert spec["version"] == "15.0.140"
+    assert spec["download_url"] == "https://edge.forgecdn.net/8001/cloth.jar"
+    assert spec["size"] == 512000
+    assert spec["addable"] is True
+    assert spec["requires"] == ["319057"]           # required kept, optional dropped, str ids
+
+
+@responses.activate
+def test_resolve_dependencies_blocked_dep_not_addable():
+    responses.add(responses.POST, f"{API}/mods", json={"data": [
+        {"id": 306612, "name": "Blocked Lib", "slug": "blocked-lib",
+         "allowModDistribution": False, "links": {"websiteUrl": "https://cf/blocked"},
+         "latestFilesIndexes": [{"gameVersion": "1.21.1", "modLoader": 6, "fileId": 8001}]},
+    ]}, status=200)
+    responses.add(responses.POST, f"{API}/mods/files", json={"data": [
+        {"id": 8001, "displayName": "1.0", "fileName": "blocked-1.0.jar",
+         "fileLength": 100, "downloadUrl": None, "dependencies": []},
+    ]}, status=200)
+    out = curseforge.resolve_dependencies([306612], "1.21.1", "neoforge", api_key="CF")
+    spec = out["306612"]
+    assert spec["name"] == "Blocked Lib"            # meta still resolved -> name shows in banner
+    assert spec["download_url"] == ""
+    assert spec["addable"] is False
+    assert spec["requires"] == []
+
+
+def test_resolve_dependencies_no_key_returns_empty():
+    assert curseforge.resolve_dependencies([306612], "1.21.1", "neoforge", api_key="") == {}
+
+
+@responses.activate
+def test_resolve_dependencies_no_compatible_file_not_addable():
+    # mod meta resolves, but latestFilesIndexes has nothing for our mc_version/loader
+    responses.add(responses.POST, f"{API}/mods", json={"data": [
+        {"id": 306612, "name": "No Compat Lib", "slug": "no-compat-lib",
+         "allowModDistribution": True, "links": {"websiteUrl": "https://cf/nc"},
+         "latestFilesIndexes": [{"gameVersion": "1.20.1", "modLoader": 6, "fileId": 8001}]},
+    ]}, status=200)
+    out = curseforge.resolve_dependencies([306612], "1.21.1", "neoforge", api_key="CF")
+    spec = out["306612"]
+    assert spec["name"] == "No Compat Lib"     # meta still resolved (name shown in banner)
+    assert spec["version"] == ""
+    assert spec["download_url"] == ""
+    assert spec["addable"] is False
+    assert spec["requires"] == []
