@@ -129,3 +129,97 @@ def test_scan_warns_on_bulk_fallback_but_still_builds(monkeypatch):
     result = updates.scan(mods, Config())
     assert [c.mod_id for c in result.candidates] == ["a"]                 # per-mod fallback still built it
     assert any(w.code == "modrinth_bulk_fallback" and w.level == "info" for w in result.warnings)
+
+
+def test_resolve_dependencies_transitive_closure_and_memo(monkeypatch):
+    # candidate -> A (required), A -> B (required), B not installed.
+    # Two candidates share A, so the memo must fetch A once and B once.
+    from modpack_manager.sources.base import AddedDependency
+    c1 = _cand("cbc", "minor"); c1.added_dependencies = [AddedDependency(id="A", satisfied=False)]
+    c2 = _cand("guns", "minor"); c2.added_dependencies = [AddedDependency(id="A", satisfied=False)]
+
+    calls = []
+    def fake_resolve(ids, mc, loader, key):
+        calls.append(sorted(ids))
+        table = {
+            "A": {"name": "Arch", "slug": "arch", "side": "BOTH", "version": "1",
+                  "download_url": "u", "size": 1, "addable": True, "requires": ["B"]},
+            "B": {"name": "Bee", "slug": "bee", "side": "BOTH", "version": "2",
+                  "download_url": "u2", "size": 2, "addable": True, "requires": []},
+        }
+        return {pid: table[pid] for pid in ids if pid in table}
+
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_resolve)
+    from modpack_manager.config import Config
+    notice = updates._resolve_dependencies([c1, c2], Config())
+    assert notice is None
+    for c in (c1, c2):
+        assert {d.id for d in c.added_dependencies} == {"A", "B"}       # flattened closure
+        assert {d.slug for d in c.added_dependencies} == {"arch", "bee"}
+        assert all(d.platform == "modrinth" for d in c.added_dependencies)
+    assert calls == [["A"], ["B"]]     # A resolved once (shared), then B once — no re-fetch
+
+
+def test_resolve_dependencies_handles_cycle(monkeypatch):
+    from modpack_manager.sources.base import AddedDependency
+    c = _cand("root", "minor"); c.added_dependencies = [AddedDependency(id="A", satisfied=False)]
+    def fake_resolve(ids, mc, loader, key):
+        table = {"A": {"slug": "a", "name": "A", "side": "BOTH", "version": "1",
+                       "download_url": "u", "size": 1, "addable": True, "requires": ["B"]},
+                 "B": {"slug": "b", "name": "B", "side": "BOTH", "version": "1",
+                       "download_url": "u", "size": 1, "addable": True, "requires": ["A"]}}
+        return {pid: table[pid] for pid in ids if pid in table}
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_resolve)
+    from modpack_manager.config import Config
+    notice = updates._resolve_dependencies([c], Config())
+    assert notice is None                              # A<->B cycle terminates via `seen`
+    assert {d.id for d in c.added_dependencies} == {"A", "B"}   # each attached exactly once
+
+
+def test_resolve_dependencies_depth_cap_surfaces_overcap_dep(monkeypatch):
+    from modpack_manager.sources.base import AddedDependency
+    c = _cand("root", "minor"); c.added_dependencies = [AddedDependency(id="D0", satisfied=False)]
+    chain = {f"D{i}": [f"D{i+1}"] for i in range(5)}   # D0->D1->D2->D3->D4->D5 (6 links)
+    def fake_resolve(ids, mc, loader, key):
+        return {pid: {"slug": pid.lower(), "name": pid, "side": "BOTH", "version": "1",
+                      "download_url": "u", "size": 1, "addable": True,
+                      "requires": chain.get(pid, [])} for pid in ids}
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_resolve)
+    from modpack_manager.config import Config
+    updates._resolve_dependencies([c], Config())      # MAX_DEPTH == 4
+    deps = {d.id: d for d in c.added_dependencies}
+    assert deps["D0"].addable is True and deps["D3"].addable is True   # within the cap
+    assert "D4" in deps and deps["D4"].addable is False               # over-cap: surfaced, not addable
+    assert "D5" not in deps                                            # never discovered
+
+
+def test_resolve_dependencies_partial_platform_failure(monkeypatch):
+    # Modrinth candidate resolves a transitive chain fully; the CF candidate's
+    # resolver raises -> its dep stays non-addable, MR closure is complete, one notice.
+    from modpack_manager.sources.base import AddedDependency
+    mr = _cand("mrmod", "minor")
+    mr.added_dependencies = [AddedDependency(id="A", satisfied=False, platform="modrinth")]
+    cf = _cand("cfmod", "minor"); cf.platform = "curseforge"
+    cf.added_dependencies = [AddedDependency(id="306612", satisfied=False, platform="curseforge")]
+
+    def fake_mr(ids, mc, loader, key):
+        table = {"A": {"name": "Arch", "slug": "arch", "side": "BOTH", "version": "1",
+                       "download_url": "u", "size": 1, "addable": True, "requires": ["B"]},
+                 "B": {"name": "Bee", "slug": "bee", "side": "BOTH", "version": "2",
+                       "download_url": "u2", "size": 2, "addable": True, "requires": []}}
+        return {pid: table[pid] for pid in ids if pid in table}
+    def boom_cf(ids, mc, loader, key):
+        raise RuntimeError("cf api down")
+
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_mr)
+    monkeypatch.setattr(updates.curseforge, "resolve_dependencies", boom_cf)
+    from modpack_manager.config import Config
+    notice = updates._resolve_dependencies([mr, cf], Config())
+    # CF platform failed -> deps_unresolved warn notice
+    assert notice is not None and notice.code == "deps_unresolved" and notice.level == "warn"
+    # Modrinth closure fully resolved despite the CF failure
+    assert {d.id for d in mr.added_dependencies} == {"A", "B"}
+    assert all(d.addable for d in mr.added_dependencies)
+    # CF dep surfaced but not addable (its resolver raised)
+    cf_deps = {d.id: d for d in cf.added_dependencies}
+    assert cf_deps["306612"].addable is False

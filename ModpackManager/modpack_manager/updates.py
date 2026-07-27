@@ -4,10 +4,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 
 from .sources import modrinth, curseforge
-from .sources.base import Candidate, Notice
+from .sources.base import Candidate, Notice, AddedDependency
 
 _SEVERITY_ORDER = {"major": 0, "minor": 1, "patch": 2, "unknown": 3}
 _STATUS_ORDER = {"ok": 0, "manual": 1, "error": 2}
+MAX_DEPTH = 4  # direct + 3 hops; Minecraft dependency chains are shallow, and this
+               # plus the `seen` set is belt-and-suspenders against cycles.
 
 
 @dataclass
@@ -100,39 +102,139 @@ def scan(modules: dict, config, max_workers: int = 5) -> ScanResult:
                 results.append(candidate)
     results.sort(key=lambda c: (_STATUS_ORDER.get(c.status, 9),
                                 _SEVERITY_ORDER.get(c.severity, 9), c.name.lower()))
-    dep_notice = _resolve_dependencies(results, config)
+    dep_notice = _resolve_dependencies(results, config, current_project_ids, cf_installed_ids)
     warnings = [n for n in (mr_notice, cf_notice, dep_notice) if n]
     return ScanResult(results, warnings)
 
 
-def _resolve_dependencies(results, config):
-    """Enrich each new (unsatisfied) dependency with a queueable add-spec: name,
-    slug, side, latest compatible version + download url + size, and an `addable`
-    flag. One bulk pass over all Modrinth candidates. Best-effort — a dep we
-    can't resolve stays addable=False and the UI keeps showing the warning
-    without auto-queuing it."""
-    dep_ids = {d.id for c in results if c.platform == "modrinth"
-               for d in c.added_dependencies if d.id}
-    if not dep_ids:
-        return None
+def _resolve_platform(platform, dep_ids, config):
+    """Resolve one platform's pending dep ids in bulk. Returns (specs, failed)."""
     try:
-        specs = modrinth.resolve_dependencies(
-            list(dep_ids), config.mc_version, config.loader, config.modrinth_api_key)
-    except Exception:
-        return Notice("warn", "deps_unresolved",
-                      "Dependency resolution failed — new required dependencies were not auto-queued. "
-                      "Check the changelog banners and add them manually.")
+        if platform == "modrinth":
+            return (modrinth.resolve_dependencies(
+                dep_ids, config.mc_version, config.loader, config.modrinth_api_key), False)
+        if platform == "curseforge":
+            return (curseforge.resolve_dependencies(
+                dep_ids, config.mc_version, config.loader, config.curseforge_api_key), False)
+        return {}, False
+    except Exception:  # this platform's pass aborts; its deps stay addable=False
+        return {}, True
+
+
+def _apply_spec(dep, spec):
+    """Copy a resolved add-spec onto an existing (direct) AddedDependency in place,
+    preserving a name/url already set at detection time."""
+    if dep.name is None:
+        dep.name = spec.get("name")
+    dep.slug = spec.get("slug", "")
+    dep.side = spec.get("side", "BOTH")
+    dep.version = spec.get("version", "")
+    dep.download_url = spec.get("download_url", "")
+    dep.size = spec.get("size")
+    dep.addable = spec.get("addable", False)
+    if spec.get("url"):
+        dep.url = spec["url"]
+
+
+def _new_dependency(platform, dep_id, spec):
+    """Build a fresh AddedDependency for a transitive dep from its resolved spec,
+    or a bare non-addable one if it never resolved (over-cap / failed lookup)."""
+    spec = spec or {}
+    url = spec.get("url", "")
+    if not url and platform == "modrinth":
+        url = f"https://modrinth.com/mod/{dep_id}"
+    return AddedDependency(
+        id=str(dep_id), satisfied=False, platform=platform,
+        name=spec.get("name"), url=url, slug=spec.get("slug", ""),
+        side=spec.get("side", "BOTH"), version=spec.get("version", ""),
+        download_url=spec.get("download_url", ""), size=spec.get("size"),
+        addable=spec.get("addable", False))
+
+
+def _closure_ids(candidate, resolved, installed):
+    """Every (platform, id) reachable from a candidate's direct deps via resolved
+    `requires` edges, skipping installed ids and cycles. Naturally bounded: only
+    resolved specs carry edges, so the walk stops at the fixpoint's frontier."""
+    out, stack = set(), []
+    for d in candidate.added_dependencies:
+        if d.id:
+            stack.append((d.platform, str(d.id)))
+    while stack:
+        key = stack.pop()
+        platform, dep_id = key
+        if key in out or dep_id in installed.get(platform, set()):
+            continue
+        out.add(key)
+        spec = resolved.get(key)
+        if spec:
+            for req in spec.get("requires", []):
+                stack.append((platform, str(req)))
+    return out
+
+
+def _resolve_dependencies(results, config, current_project_ids=frozenset(),
+                          installed_cf_mod_ids=frozenset()):
+    """Enrich every new required dependency — direct and transitive, both platforms —
+    with a queueable add-spec, and flatten each candidate's full transitive closure
+    onto its `added_dependencies`. Runs a bounded fixpoint (MAX_DEPTH hops) over a
+    shared memo so a subtree shared by two updates is fetched once. Best-effort: a
+    platform whose resolver raises leaves its deps addable=False and yields a
+    `deps_unresolved` warning; the reactive frontend behaviour is inherited."""
+    installed = {"modrinth": {str(x) for x in current_project_ids},
+                 "curseforge": {str(x) for x in installed_cf_mod_ids}}
+
+    # 1) seed the frontier from every candidate's direct deps, minus installed
+    frontier = set()
     for c in results:
         for d in c.added_dependencies:
-            spec = specs.get(d.id)
-            if not spec:
+            if d.id and str(d.id) not in installed.get(d.platform, set()):
+                frontier.add((d.platform, str(d.id)))
+    if not frontier:
+        return None
+
+    # 2) fixpoint: resolve the frontier, fold newly-required ids into the next
+    resolved, seen, failed, depth = {}, set(), False, 0
+    while frontier and depth < MAX_DEPTH:
+        pending = {}
+        for (platform, dep_id) in frontier:
+            if (platform, dep_id) not in seen:
+                pending.setdefault(platform, []).append(dep_id)
+        seen |= frontier
+        if not pending:
+            break
+        # resolve the (<=2) platforms concurrently, mirroring scan's prefilter
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            futs = {ex.submit(_resolve_platform, p, ids, config): p
+                    for p, ids in pending.items()}
+            batches = {futs[f]: f.result() for f in as_completed(futs)}
+        nxt = set()
+        for platform, (specs, plat_failed) in batches.items():
+            failed = failed or plat_failed
+            for dep_id, spec in specs.items():
+                resolved[(platform, str(dep_id))] = spec
+                for req in spec.get("requires", []):
+                    key = (platform, str(req))
+                    if key not in seen and str(req) not in installed.get(platform, set()):
+                        nxt.add(key)
+        frontier = nxt
+        depth += 1
+
+    # 3) attach each candidate's flattened closure: enrich direct deps in place,
+    #    append transitive ones (deduped by (platform, id), sorted for determinism)
+    for c in results:
+        direct = {(d.platform, str(d.id)) for d in c.added_dependencies if d.id}
+        for d in c.added_dependencies:
+            if not d.id:
                 continue
-            if d.name is None:      # keep an already-resolved name; refresh the rest each scan
-                d.name = spec.get("name")
-            d.slug = spec.get("slug", "")
-            d.side = spec.get("side", "BOTH")
-            d.version = spec.get("version", "")
-            d.download_url = spec.get("download_url", "")
-            d.size = spec.get("size")
-            d.addable = spec.get("addable", False)
+            spec = resolved.get((d.platform, str(d.id)))
+            if spec:
+                _apply_spec(d, spec)
+        for key in sorted(_closure_ids(c, resolved, installed) - direct):
+            platform, dep_id = key
+            c.added_dependencies.append(_new_dependency(platform, dep_id, resolved.get(key)))
+
+    if failed:
+        return Notice("warn", "deps_unresolved",
+                      "Dependency resolution failed — some new required dependencies were not "
+                      "auto-queued. Check the changelog banners and add them manually.")
     return None
