@@ -151,7 +151,7 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
 def resolve_dependencies(dep_ids, mc_version, loader, api_key=""):
     """Resolve new-dependency project ids into queueable add-specs.
 
-    Returns {dep_id: {name, slug, side, version, download_url, size, addable}}.
+    Returns {dep_id: {name, slug, side, version, download_url, size, addable, requires}}.
     Best-effort: any dep we can't fully resolve comes back addable=False (with
     whatever fields did resolve), so the UI still shows the warning but doesn't
     auto-queue it.
@@ -183,9 +183,13 @@ def resolve_dependencies(dep_ids, mc_version, loader, api_key=""):
             if not versions:
                 return pid, None
             versions.sort(key=lambda v: v.get("date_published") or "", reverse=True)
-            pf = _primary_file(versions[0])
-            return pid, {"version": versions[0].get("version_number", "?"),
-                         "download_url": pf.get("url", ""), "size": pf.get("size")}
+            top = versions[0]
+            pf = _primary_file(top)
+            requires = [d["project_id"] for d in top.get("dependencies", [])
+                        if d.get("dependency_type") == "required" and d.get("project_id")]
+            return pid, {"version": top.get("version_number", "?"),
+                         "download_url": pf.get("url", ""), "size": pf.get("size"),
+                         "requires": requires}
         except Exception:
             return pid, None
 
@@ -201,7 +205,8 @@ def resolve_dependencies(dep_ids, mc_version, loader, api_key=""):
         out[pid] = {"name": m.get("name"), "slug": m.get("slug", ""),
                     "side": m.get("side", "BOTH"), "version": v.get("version", ""),
                     "download_url": download_url, "size": v.get("size"),
-                    "addable": bool(m.get("slug")) and bool(download_url)}
+                    "addable": bool(m.get("slug")) and bool(download_url),
+                    "requires": v.get("requires", [])}
     return out
 
 

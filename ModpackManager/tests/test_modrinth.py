@@ -188,6 +188,7 @@ def test_resolve_dependencies_isolates_one_bad_dep():
     assert out["DEP_OK"]["download_url"] == "https://cdn/ok.jar"
     assert out["DEP_BAD"]["addable"] is False         # bad dep degrades gracefully
     assert out["DEP_BAD"]["name"] == "Bad Mod"        # meta still filled
+    assert out["DEP_BAD"]["requires"] == []           # failed version fetch -> empty requires
 
 
 @responses.activate
@@ -335,3 +336,21 @@ def test_project_changelog_non_200_is_empty():
 def test_project_changelog_transport_error_is_empty():
     responses.add(responses.GET, f"{API}/version/BOOM", body=ConnectionError("boom"))
     assert modrinth.project_changelog("BOOM") == {"version": "", "date": "", "body_html": ""}
+
+
+@responses.activate
+def test_resolve_dependencies_surfaces_required_requires():
+    responses.add(responses.GET, f"{API}/projects", json=[
+        {"id": "DEP0001", "slug": "cloth-config", "title": "Cloth Config API",
+         "client_side": "required", "server_side": "required"}], status=200)
+    responses.add(responses.GET, f"{API}/project/DEP0001/version", json=[
+        {"id": "CCV2", "version_number": "15.0.140", "date_published": "2026-07-10T00:00:00Z",
+         "dependencies": [
+             {"project_id": "ARCH99", "dependency_type": "required"},   # kept
+             {"project_id": "OPT88", "dependency_type": "optional"},     # dropped
+             {"project_id": None, "dependency_type": "required"}],       # no id -> dropped
+         "files": [{"primary": True, "url": "https://cdn.modrinth.com/cc.jar", "size": 4242}]},
+    ], status=200)
+    out = modrinth.resolve_dependencies(["DEP0001"], "1.21.1", "neoforge")
+    assert out["DEP0001"]["requires"] == ["ARCH99"]
+    assert out["DEP0001"]["addable"] is True     # unchanged behaviour otherwise
