@@ -41,7 +41,7 @@
 - Modify: `ModpackManager/modpack_manager/sources/base.py` (the `AddedDependency` dataclass)
 - Test: `ModpackManager/tests/test_sources_base.py`
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Append to `ModpackManager/tests/test_sources_base.py`:
 
@@ -58,12 +58,12 @@ def test_added_dependency_platform_defaults_and_roundtrips():
     assert c.to_dict()["added_dependencies"][0]["platform"] == "curseforge"
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `.venv/Scripts/python -m pytest tests/test_sources_base.py::test_added_dependency_platform_defaults_and_roundtrips -v`
 Expected: FAIL with `TypeError: __init__() got an unexpected keyword argument 'platform'`.
 
-- [ ] **Step 3: Add the field**
+- [x] **Step 3: Add the field**
 
 In `ModpackManager/modpack_manager/sources/base.py`, add the `platform` field as the last field of `AddedDependency`:
 
@@ -83,12 +83,12 @@ class AddedDependency:
     platform: str = "modrinth"  # "modrinth" | "curseforge" — makes CF deps explicit
 ```
 
-- [ ] **Step 4: Run tests to verify they pass**
+- [x] **Step 4: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest tests/test_sources_base.py -v`
 Expected: PASS (new test + the two existing base tests).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/sources/base.py ModpackManager/tests/test_sources_base.py
@@ -105,7 +105,7 @@ The Modrinth resolver already fetches each dep's latest version but ignores that
 - Modify: `ModpackManager/modpack_manager/sources/modrinth.py` (`resolve_dependencies`, inner `_latest` + the combine step)
 - Test: `ModpackManager/tests/test_modrinth.py`
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Append to `ModpackManager/tests/test_modrinth.py`:
 
@@ -128,12 +128,12 @@ def test_resolve_dependencies_surfaces_required_requires():
     assert out["DEP0001"]["addable"] is True     # unchanged behaviour otherwise
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `.venv/Scripts/python -m pytest tests/test_modrinth.py::test_resolve_dependencies_surfaces_required_requires -v`
 Expected: FAIL with `KeyError: 'requires'`.
 
-- [ ] **Step 3: Read the version's dependencies in `_latest`**
+- [x] **Step 3: Read the version's dependencies in `_latest`**
 
 In `modrinth.resolve_dependencies`, replace the inner `_latest` function:
 
@@ -156,7 +156,7 @@ In `modrinth.resolve_dependencies`, replace the inner `_latest` function:
             return pid, None
 ```
 
-- [ ] **Step 4: Include `requires` in the combined output**
+- [x] **Step 4: Include `requires` in the combined output**
 
 In the same function, replace the combine block (the `# 3) combine ...` loop) so each spec carries `requires` (default `[]` when the version fetch failed):
 
@@ -175,12 +175,12 @@ In the same function, replace the combine block (the `# 3) combine ...` loop) so
     return out
 ```
 
-- [ ] **Step 5: Run tests to verify they pass**
+- [x] **Step 5: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest tests/test_modrinth.py -v`
 Expected: PASS (new test + all existing `resolve_dependencies` tests — they assert individual keys, so the added `requires` key doesn't break them).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/sources/modrinth.py ModpackManager/tests/test_modrinth.py
@@ -197,7 +197,7 @@ Mirror of the Modrinth resolver using CF's bulk endpoints: two bulk calls (`POST
 - Modify: `ModpackManager/modpack_manager/sources/curseforge.py` (new `_bulk_files` + new `resolve_dependencies`; add `AddedDependency` is **not** needed here — that's Task 4)
 - Test: `ModpackManager/tests/test_curseforge.py`
 
-- [ ] **Step 1: Write the failing tests**
+- [x] **Step 1: Write the failing tests**
 
 Append to `ModpackManager/tests/test_curseforge.py`:
 
@@ -253,12 +253,12 @@ def test_resolve_dependencies_no_key_returns_empty():
     assert curseforge.resolve_dependencies([306612], "1.21.1", "neoforge", api_key="") == {}
 ```
 
-- [ ] **Step 2: Run tests to verify they fail**
+- [x] **Step 2: Run tests to verify they fail**
 
 Run: `.venv/Scripts/python -m pytest tests/test_curseforge.py -k resolve_dependencies -v`
 Expected: FAIL with `AttributeError: module 'modpack_manager.sources.curseforge' has no attribute 'resolve_dependencies'`.
 
-- [ ] **Step 3: Add the `_bulk_files` helper**
+- [x] **Step 3: Add the `_bulk_files` helper**
 
 In `ModpackManager/modpack_manager/sources/curseforge.py`, add directly after `_bulk_mods` (so the bulk helpers sit together):
 
@@ -275,7 +275,7 @@ def _bulk_files(session, file_ids):
     return out
 ```
 
-- [ ] **Step 4: Add `resolve_dependencies`**
+- [x] **Step 4: Add `resolve_dependencies`**
 
 In the same file, add after `_bulk_files` (or after `find_updated_mod_ids` — anywhere in the bulk section):
 
@@ -338,12 +338,12 @@ def resolve_dependencies(dep_mod_ids, mc_version, loader, api_key=""):
     return out
 ```
 
-- [ ] **Step 5: Run tests to verify they pass**
+- [x] **Step 5: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest tests/test_curseforge.py -v`
 Expected: PASS (three new tests + all existing CF tests untouched).
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/sources/curseforge.py ModpackManager/tests/test_curseforge.py
@@ -360,7 +360,7 @@ Replace the literal `added_dependencies=[]` with detection that mirrors Modrinth
 - Modify: `ModpackManager/modpack_manager/sources/curseforge.py` (`build_candidate` signature param + the `added_dependencies` construction; add `AddedDependency` to the `.base` import)
 - Test: `ModpackManager/tests/test_curseforge.py`
 
-- [ ] **Step 1: Write the failing test**
+- [x] **Step 1: Write the failing test**
 
 Append to `ModpackManager/tests/test_curseforge.py`:
 
@@ -396,12 +396,12 @@ def test_build_candidate_detects_new_required_cf_dep():
     assert deps[0].satisfied is False
 ```
 
-- [ ] **Step 2: Run test to verify it fails**
+- [x] **Step 2: Run test to verify it fails**
 
 Run: `.venv/Scripts/python -m pytest tests/test_curseforge.py::test_build_candidate_detects_new_required_cf_dep -v`
 Expected: FAIL — `assert [] == ["306612"]` (build_candidate still hardcodes `added_dependencies=[]`).
 
-- [ ] **Step 3: Import `AddedDependency`**
+- [x] **Step 3: Import `AddedDependency`**
 
 In `ModpackManager/modpack_manager/sources/curseforge.py`, extend the base import:
 
@@ -409,7 +409,7 @@ In `ModpackManager/modpack_manager/sources/curseforge.py`, extend the base impor
 from .base import Candidate, ChangelogEntry, AddedDependency, SearchHit
 ```
 
-- [ ] **Step 4: Rename the 4th param and detect deps**
+- [x] **Step 4: Rename the 4th param and detect deps**
 
 Change the `build_candidate` signature (rename `current_project_ids` -> `installed_cf_mod_ids`):
 
@@ -455,12 +455,12 @@ Replace it with (adds the detection loop; sets `added_dependencies=added`):
 
 (Leave the rest of the `Candidate(...)` call — `status=`, `note=`, `latest_size=`, `project_url=` — exactly as it is.)
 
-- [ ] **Step 5: Run tests to verify they pass**
+- [x] **Step 5: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest tests/test_curseforge.py tests/test_updates.py -v`
 Expected: PASS. Existing CF `build_candidate` tests pass `set()` as the 4th arg and use latest files with no `dependencies` key, so they still produce `added_dependencies=[]`. `test_updates.py` monkeypatches CF `build_candidate` with `lambda m, *a, **k:` so the rename is transparent.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/sources/curseforge.py ModpackManager/tests/test_curseforge.py
@@ -478,7 +478,7 @@ The CF bulk prefilter already resolves every installed CF file to its modId (`se
 - Modify: `ModpackManager/modpack_manager/updates.py` (`_curseforge_to_check`, `_check`, `scan`)
 - Test: `ModpackManager/tests/test_curseforge.py`, `ModpackManager/tests/test_updates.py`
 
-- [ ] **Step 1: Update the tests to expect the new arity (they will fail first)**
+- [x] **Step 1: Update the tests to expect the new arity (they will fail first)**
 
 In `ModpackManager/tests/test_curseforge.py`, update the three `find_updated_mod_ids` unpackings to a 4-tuple and assert the installed set:
 
@@ -521,12 +521,12 @@ In `ModpackManager/tests/test_updates.py`, update the CF monkeypatch in `test_sc
                         lambda mods_, *a, **k: ({m.mod_id for m in mods_}, [], {}, set()))
 ```
 
-- [ ] **Step 2: Run the tests to verify they fail**
+- [x] **Step 2: Run the tests to verify they fail**
 
 Run: `.venv/Scripts/python -m pytest tests/test_curseforge.py tests/test_updates.py -q`
 Expected: FAIL — `ValueError: not enough values to unpack (expected 4, got 3)` for the CF tests.
 
-- [ ] **Step 3: Return the installed set from `find_updated_mod_ids`**
+- [x] **Step 3: Return the installed set from `find_updated_mod_ids`**
 
 In `ModpackManager/modpack_manager/sources/curseforge.py`, update `find_updated_mod_ids` — the no-key early return, the mid-function computation, and the final return:
 
@@ -571,7 +571,7 @@ def find_updated_mod_ids(modules, mc_version, loader, api_key=""):
     return updated, unresolved, contexts, installed_cf_mod_ids
 ```
 
-- [ ] **Step 4: Thread it through `_curseforge_to_check`**
+- [x] **Step 4: Thread it through `_curseforge_to_check`**
 
 In `ModpackManager/modpack_manager/updates.py`, replace `_curseforge_to_check` entirely:
 
@@ -592,7 +592,7 @@ def _curseforge_to_check(cf_mods, config):
             "CurseForge bulk update-check was unavailable — fell back to per-mod checks (results are complete).")
 ```
 
-- [ ] **Step 5: Give `_check` the CF installed set**
+- [x] **Step 5: Give `_check` the CF installed set**
 
 In `ModpackManager/modpack_manager/updates.py`, replace `_check`'s signature and its two `build_candidate` calls so each builder gets its platform-appropriate installed set (Modrinth keeps `current_project_ids`; CF gets `installed_cf_mod_ids`):
 
@@ -615,7 +615,7 @@ def _check(module, config, current_project_ids, installed_cf_mod_ids, cf_ctx=Non
             status="error", note=str(e))
 ```
 
-- [ ] **Step 6: Capture + pass the set in `scan`**
+- [x] **Step 6: Capture + pass the set in `scan`**
 
 In `ModpackManager/modpack_manager/updates.py`, in `scan`, update the prefilter unpack and the `_check` submit (leave the `_resolve_dependencies(results, config)` call unchanged for now — Task 6 owns it):
 
@@ -644,12 +644,12 @@ In `ModpackManager/modpack_manager/updates.py`, in `scan`, update the prefilter 
     return ScanResult(results, warnings)
 ```
 
-- [ ] **Step 7: Run tests to verify they pass**
+- [x] **Step 7: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest -q`
 Expected: PASS (full suite). The CF installed set is now threaded to detection but `_resolve_dependencies` is still the old Modrinth-only single pass.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/sources/curseforge.py ModpackManager/modpack_manager/updates.py ModpackManager/tests/test_curseforge.py ModpackManager/tests/test_updates.py
@@ -666,7 +666,7 @@ Rewrite the single Modrinth-only pass into a bounded (depth `MAX_DEPTH`) fixpoin
 - Modify: `ModpackManager/modpack_manager/updates.py` (add `MAX_DEPTH` + 4 helpers; replace `_resolve_dependencies`; import `AddedDependency`; pass installed sets from `scan`)
 - Test: `ModpackManager/tests/test_updates.py`
 
-- [ ] **Step 1: Write the failing tests (transitivity, memo, cycle, depth cap)**
+- [x] **Step 1: Write the failing tests (transitivity, memo, cycle, depth cap)**
 
 Append to `ModpackManager/tests/test_updates.py`:
 
@@ -733,12 +733,12 @@ def test_resolve_dependencies_depth_cap_surfaces_overcap_dep(monkeypatch):
     assert "D5" not in deps                                            # never discovered
 ```
 
-- [ ] **Step 2: Run the tests to verify they fail**
+- [x] **Step 2: Run the tests to verify they fail**
 
 Run: `.venv/Scripts/python -m pytest tests/test_updates.py -k "transitive or cycle or depth_cap" -v`
 Expected: FAIL — the current single-pass resolver ignores `requires`, so B/D-chain deps are never attached (`assert {"A"} == {"A", "B"}`).
 
-- [ ] **Step 3: Import `AddedDependency` and add `MAX_DEPTH`**
+- [x] **Step 3: Import `AddedDependency` and add `MAX_DEPTH`**
 
 In `ModpackManager/modpack_manager/updates.py`, extend the base import:
 
@@ -753,7 +753,7 @@ MAX_DEPTH = 4  # direct + 3 hops; Minecraft dependency chains are shallow, and t
                # plus the `seen` set is belt-and-suspenders against cycles.
 ```
 
-- [ ] **Step 4: Add the fixpoint helpers**
+- [x] **Step 4: Add the fixpoint helpers**
 
 In `ModpackManager/modpack_manager/updates.py`, add these four helpers directly above `_resolve_dependencies`:
 
@@ -823,7 +823,7 @@ def _closure_ids(candidate, resolved, installed):
     return out
 ```
 
-- [ ] **Step 5: Replace `_resolve_dependencies` with the fixpoint**
+- [x] **Step 5: Replace `_resolve_dependencies` with the fixpoint**
 
 In `ModpackManager/modpack_manager/updates.py`, replace the entire existing `_resolve_dependencies` function with:
 
@@ -894,7 +894,7 @@ def _resolve_dependencies(results, config, current_project_ids=frozenset(),
     return None
 ```
 
-- [ ] **Step 6: Pass the installed sets from `scan`**
+- [x] **Step 6: Pass the installed sets from `scan`**
 
 In `ModpackManager/modpack_manager/updates.py`, update the `_resolve_dependencies` call in `scan` (the only remaining leftover from Task 5) to pass both installed sets:
 
@@ -902,17 +902,17 @@ In `ModpackManager/modpack_manager/updates.py`, update the `_resolve_dependencie
     dep_notice = _resolve_dependencies(results, config, current_project_ids, cf_installed_ids)
 ```
 
-- [ ] **Step 7: Run tests to verify they pass**
+- [x] **Step 7: Run tests to verify they pass**
 
 Run: `.venv/Scripts/python -m pytest tests/test_updates.py -v`
 Expected: PASS — the 3 new tests plus the 4 existing `_resolve_dependencies` tests. The existing tests call `_resolve_dependencies([c], Config())` (2 args → installed sets default empty) and monkeypatch `updates.modrinth.resolve_dependencies`; direct-dep enrichment is byte-for-byte the same behaviour they assert. `test_resolve_dependencies_returns_notice_on_failure` still gets its `deps_unresolved` notice via the per-platform `failed` flag.
 
-- [ ] **Step 8: Run the full suite**
+- [x] **Step 8: Run the full suite**
 
 Run: `.venv/Scripts/python -m pytest -q`
 Expected: PASS (entire backend suite).
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/updates.py ModpackManager/tests/test_updates.py
@@ -928,7 +928,7 @@ Three surgical `app.js` edits so CF and transitive deps render and generate corr
 **Files:**
 - Modify: `ModpackManager/modpack_manager/web/app.js` (`computeAutoDeps`, `renderQueue`, `generate`)
 
-- [ ] **Step 1: Make `computeAutoDeps` platform-aware**
+- [x] **Step 1: Make `computeAutoDeps` platform-aware**
 
 In `ModpackManager/modpack_manager/web/app.js`, replace the current `computeAutoDeps` function body (dedup by `d.slug`) with a `${platform}:${slug}` key and a platform-aware manual-skip. Replace this:
 
@@ -971,7 +971,7 @@ function computeAutoDeps() {
 }
 ```
 
-- [ ] **Step 2: Give auto-dep rows a real CF/MR pill**
+- [x] **Step 2: Give auto-dep rows a real CF/MR pill**
 
 In `renderQueue`, replace the auto-dep row block. Replace this:
 
@@ -1002,7 +1002,7 @@ with:
   }
 ```
 
-- [ ] **Step 3: Emit the dep's real platform in `generate`**
+- [x] **Step 3: Emit the dep's real platform in `generate`**
 
 In `generate`, replace the `autoAdds` mapping. Replace this:
 
@@ -1020,7 +1020,7 @@ with:
     url: dep.download_url, side: dep.side, required: true }));
 ```
 
-- [ ] **Step 4: Verify in the running app (synthetic state — no live API)**
+- [x] **Step 4: Verify in the running app (synthetic state — no live API)**
 
 Follow the `ModpackManager:verify` skill. Launch the app in the background:
 
@@ -1056,7 +1056,7 @@ captured.adds.find((a) => a.module_id === "cloth-config").platform;   // => "cur
 
 Confirm both expectations (`"CF"` and `"curseforge"`). Then kill the background server (it holds port 5178).
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/web/app.js
@@ -1072,7 +1072,7 @@ The design's headline hazard (§2.1/§9): dependency arrays never cross platform
 **Files:**
 - Modify: `ModpackManager/modpack_manager/web/app.js` (`computeAutoDeps`)
 
-- [ ] **Step 1: Add the name guard to `computeAutoDeps`**
+- [x] **Step 1: Add the name guard to `computeAutoDeps`**
 
 In `computeAutoDeps` (as rewritten in Task 7), add the guard immediately after the `const platform = ...` line and before the manual-skip. The loop body becomes:
 
@@ -1096,7 +1096,7 @@ In `computeAutoDeps` (as rewritten in Task 7), add the guard immediately after t
     }
 ```
 
-- [ ] **Step 2: Verify in the running app (synthetic state)**
+- [x] **Step 2: Verify in the running app (synthetic state)**
 
 Launch the app (`ModpackManager:verify` skill), open the browser pane, and via `javascript_tool`:
 
@@ -1119,7 +1119,7 @@ computeAutoDeps().length;   // => 1
 
 Confirm `0` then `1`. Kill the background server.
 
-- [ ] **Step 3: Commit**
+- [x] **Step 3: Commit**
 
 ```bash
 git add ModpackManager/modpack_manager/web/app.js
@@ -1134,7 +1134,7 @@ Backend correctness is proven by the unit suite; the frontend edits are proven b
 
 **Files:** none (verification only).
 
-- [ ] **Step 1: Launch and scan**
+- [x] **Step 1: Launch and scan**
 
 Use the `ModpackManager:verify` skill. Launch in the background:
 
@@ -1148,31 +1148,72 @@ Fetch the scan JSON (first call runs a ~30s live scan, then caches):
 curl -s "http://127.0.0.1:5178/api/updates" > scan.json
 ```
 
-- [ ] **Step 2: Confirm the backend now populates CF + transitive deps**
+- [x] **Step 2: Confirm the backend now populates CF + transitive deps**
 
 Inspect `scan.json` (e.g. with `python -c` or `jq`): find at least one `platform:"curseforge"` candidate whose `added_dependencies` is non-empty, and confirm entries carry `platform`, `addable`, `slug`, `download_url`, `version`. Confirm a Modrinth candidate whose closure includes a dep-of-a-dep (an `added_dependencies` entry not present in that mod's first-hop `dependencies`). Confirm any distribution-blocked CF dep shows `addable:false` with a resolved `name`.
 
 Expected: CF candidates carry dependency entries (previously always `[]`); Modrinth closures can be >1 hop deep.
 
-- [ ] **Step 3: Confirm the frontend surfaces them**
+- [x] **Step 3: Confirm the frontend surfaces them**
 
 Open the app in the browser pane. In the Updates tab, pick the CF update from Step 2 and confirm its changelog reader shows the `⚠ New required dependency: …` banner. In the Add tab's "Queued to add", confirm the auto-dep row shows the correct **CF**/**MR** pill and a `dep of <RootUpdate>` chip. Deselect the root update → its whole subtree drops from the queue; re-select → it returns with **no** network call (watch the network panel). A distribution-blocked CF dep shows the "add it manually" banner and is **not** queued.
 
-- [ ] **Step 4: Confirm generate would write the deps (without actually generating)**
+- [x] **Step 4: Confirm generate would write the deps (without actually generating)**
 
 Per the skill's destructive-`/api/generate` caveat, do **not** click Generate. Stub `window.fetch` to capture the `/api/generate` body (as in Task 7 Step 4) and confirm the queued CF/transitive deps appear in `payload.adds` with their real `platform` and a valid `url`. Restore `fetch`.
 
-- [ ] **Step 5: Clean up**
+- [x] **Step 5: Clean up**
 
 Kill the background server (frees port 5178). Delete the scratch `scan.json`.
 
-- [ ] **Step 6 (optional): Full suite one more time**
+- [x] **Step 6 (optional): Full suite one more time**
 
 ```bash
 .venv/Scripts/python -m pytest -q
 ```
 
 Expected: PASS.
+
+---
+
+## Task 9 outcome (2026-08-22)
+
+Ran against the live app on the real 307-mod pack (150 candidates, CF key present,
+fresh `?refresh=1` scan). Everything the plan asked for held:
+
+- CF candidates now carry deps — AmbientSounds -> CreativeCore, FTB
+  Library/Quests/Teams -> Architectury API. Previously always `[]`.
+- No candidate in this pack showed a >1-hop closure (every second-hop dep was
+  already installed), so transitivity was proven by probing the real fixpoint
+  against live APIs instead: Modrinth Azimuth -> Create (hop 2), and CurseForge
+  FTB Teams -> FTB Library -> Architectury (3 deep) with the shared Architectury
+  subtree resolved once across two candidates.
+- Distribution-blocked CF dep (Builders' Jetpack, 933053) resolves
+  `addable:false` with name/slug/url intact and an empty `download_url`.
+- Frontend: CF/MR pills, `dep of <root>` chips, subtree drop/restore on
+  deselect/re-select with zero refetch, and a stubbed generate payload carrying
+  the right platforms and valid URLs.
+
+**Task 8 proved load-bearing on this pack:** Architectury API and CreativeCore are
+installed as *Modrinth* entries but are flagged as new *CurseForge* deps, because
+the CF installed-id set can't see across registries. Without the name guard,
+generate would have queued duplicate copies of two library mods.
+
+**Defect found and fixed (`b7ef1c4`).** The changelog banner re-derived "is this dep
+queued?" from `d.addable` alone while `computeAutoDeps` applied four further
+filters, so any dep suppressed by the Task 8 name guard still claimed "added to the
+Add queue" — four updates on this pack. Fixed by extracting
+`depQueueState(candidate, dep)` as the single predicate both callers read
+(`queued | pending | already-queued | in-pack | manual`). Also fixed the
+unselected-root case, where the banner claimed a dep was queued while reading the
+changelog of a mod that was never ticked.
+
+**Follow-up, not in this plan:** Better Biome Reblend surfaces a phantom Fabric API
+requirement on a NeoForge pack. Modrinth returns two 1.5.2 files — a multi-loader
+one that declares Fabric API required, and a NeoForge-only one that declares no
+required deps — and the resolver takes the first. Pre-existing version-selection
+behaviour that this branch newly made visible. (Via Romana's Fabric API entry is
+*not* this bug: its NeoForge build genuinely declares Fabric API required upstream.)
 
 ---
 
