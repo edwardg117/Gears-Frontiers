@@ -41,6 +41,7 @@ body { margin:0; font-family:system-ui,sans-serif; background:var(--bg); color:v
 .reader .cl-body :is(h1,h2,h3){ font-size:.9rem; }
 .dep { margin-top:.8rem; padding:.5rem .6rem; border:1px solid rgba(255,159,10,.3); background:rgba(255,159,10,.1); color:var(--minor); border-radius:7px; font-size:.8rem; }
 .dep a { color:inherit; font-weight:700; text-decoration:underline; }
+.dep.ok { border-color:rgba(52,199,89,.3); background:rgba(52,199,89,.1); color:var(--patch); }
 .muted { color:var(--muted); }
 .status { position:fixed; bottom:0; left:0; right:0; padding:.7rem 1rem; background:var(--panel); border-top:1px solid var(--border); font-size:.82rem; }
 .status.error { color:var(--major); }

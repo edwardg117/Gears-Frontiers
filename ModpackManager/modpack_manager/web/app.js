@@ -118,10 +118,10 @@ function renderReader() {
   for (const e of c.changelogs) { h += `<div class="cl-ver">${esc(e.version)}<span class="cl-date">${esc(e.date)}</span></div><div class="cl-body">${e.body_html || '<span class="muted">No changelog provided.</span>'}</div>`; }
   for (const d of c.added_dependencies) {
     const label = esc(d.name || d.slug || d.id);
-    const tail = d.addable
-      ? ` <span class="muted">(${esc(d.version)})</span> — added to the Add queue`
-      : " — not in your pack; add it manually";
-    h += `<div class="dep">⚠ New required dependency: <b>${label}</b>${tail}</div>`;
+    const note = DEP_NOTE[depQueueState(c, d)];
+    const ver = note.version && d.version ? ` <span class="muted">(${esc(d.version)})</span>` : "";
+    const lead = note.warn ? "⚠ New required dependency" : "✓ Required dependency";
+    h += `<div class="dep${note.warn ? "" : " ok"}">${lead}: <b>${label}</b>${ver} — ${note.tail}</div>`;
   }
   r.innerHTML = h;
 }
@@ -277,30 +277,42 @@ function queueAdd(hit, opt, side) {
     version: opt.name, url: opt.url, side: side || "BOTH", required: true, page_url: hit.page_url });
   renderQueue(); updateBatch();
 }
+// Why a dep is (or isn't) in the Add queue. computeAutoDeps and the changelog banner
+// both read this, so the queue and the text it shows can never disagree — only "queued"
+// actually enqueues. Upstream excludes deps whose platform id is already installed, but
+// that filter is per-platform — a dep installed from the OTHER platform (e.g. Architectury
+// from CF, required as a Modrinth project) can't be reconciled by id, so we also guard by
+// display name here. Order matters: the pack check runs first so a satisfied dep reads as
+// "already in your pack" rather than "add it manually" when it also failed to resolve.
+function depQueueState(candidate, dep) {
+  // state.pack is loaded eagerly; if it hasn't arrived yet the guard is a
+  // self-correcting no-op (the row re-renders once the pack lands).
+  const depName = (dep.name || dep.slug || "").toLowerCase();
+  if (depName && state.pack.some((m) => m.name.toLowerCase() === depName)) return "in-pack";
+  if (!dep.addable || !dep.slug) return "manual";
+  const platform = dep.platform || "modrinth";
+  // a dep already queued manually (same platform + slug) wins
+  if (state.adds.some((a) => a.platform === platform && a.module_id === dep.slug)) return "already-queued";
+  if (!state.selected.has(candidate.mod_id)) return "pending";
+  return "queued";
+}
+// Banner copy per state. `version` controls whether the resolved version is worth
+// showing — it isn't for a dep we never resolved, or one the pack already satisfies.
+const DEP_NOTE = {
+  "queued":         { warn: true,  tail: "added to the Add queue",                    version: true },
+  "pending":        { warn: true,  tail: "will be added when you select this update", version: true },
+  "already-queued": { warn: true,  tail: "already in your Add queue",                 version: true },
+  "in-pack":        { warn: false, tail: "already in your pack",                      version: false },
+  "manual":         { warn: true,  tail: "not in your pack; add it manually",         version: false },
+};
 // Derived: new deps of currently-selected updates, deduped by platform+slug, one
-// entry per dep with the names of every selected mod that introduced it. Skips deps
-// that aren't addable, already queued manually, or already in the pack under the same
-// display name. Upstream excludes deps whose platform id is already installed, but that
-// filter is per-platform — a dep installed from the OTHER platform (e.g. Architectury
-// from CF, required as a Modrinth project) can't be reconciled by id, so we also guard
-// by name here.
+// entry per dep with the names of every selected mod that introduced it.
 function computeAutoDeps() {
   const byKey = new Map();
   for (const c of state.candidates) {
-    if (!state.selected.has(c.mod_id)) continue;
     for (const d of (c.added_dependencies || [])) {
-      if (!d.addable || !d.slug) continue;
-      const platform = d.platform || "modrinth";
-      // cross-platform "already in pack" guard: the dep arrays never cross platforms,
-      // but pack membership does (e.g. Architectury installed from CF, required as a
-      // Modrinth project). We can't reconcile by id across registries, so skip a dep
-      // whose display name already matches a pack entry (case-insensitive). state.pack
-      // is loaded eagerly; if it hasn't arrived yet the guard is a self-correcting no-op.
-      const depName = (d.name || d.slug || "").toLowerCase();
-      if (depName && state.pack.some((m) => m.name.toLowerCase() === depName)) continue;
-      // a dep already queued manually (same platform + slug) wins — skip it
-      if (state.adds.some((a) => a.platform === platform && a.module_id === d.slug)) continue;
-      const key = `${platform}:${d.slug}`;
+      if (depQueueState(c, d) !== "queued") continue;
+      const key = `${d.platform || "modrinth"}:${d.slug}`;
       const e = byKey.get(key) || { dep: d, requiredBy: [] };
       if (!e.requiredBy.includes(c.name)) e.requiredBy.push(c.name);
       byKey.set(key, e);
