@@ -268,3 +268,54 @@ def test_resolve_dependencies_cf_transitive_chain(monkeypatch):
     assert deps["200"].platform == "curseforge"
     assert deps["200"].slug == "lib200" and deps["200"].addable is True
     assert deps["200"].url == "https://cf/200"         # CF resolver url flows through _new_dependency
+
+
+# --- add_dependencies (Add path) ----------------------------------------------
+
+def _spec(name, slug, requires=()):
+    return {"name": name, "slug": slug, "side": "BOTH", "version": "1.0",
+            "download_url": f"https://cdn/{slug}.jar", "size": 10,
+            "addable": True, "requires": list(requires)}
+
+
+def test_add_dependencies_returns_transitive_closure_minus_installed(monkeypatch):
+    from modpack_manager.config import Config
+    monkeypatch.setattr(updates.modrinth, "version_dependencies",
+                        lambda ref, key: ["SABLE", "CREATE"])
+
+    def fake_resolve(ids, mc, loader, key):
+        table = {"SABLE": _spec("Sable", "sable", requires=["DEEP"]),
+                 "DEEP": _spec("Deep", "deep")}
+        return {i: table[i] for i in ids if i in table}
+
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies", fake_resolve)
+    deps, failed = updates.add_dependencies(
+        "modrinth", "PROJ", "VER1", Config(),
+        installed={"modrinth": {"CREATE"}, "curseforge": set()})
+    # CREATE is already in the pack -> never seeded; SABLE pulls DEEP in transitively
+    assert [d.slug for d in deps] == ["deep", "sable"]
+    assert all(d.addable and d.platform == "modrinth" for d in deps)
+    assert failed is False
+
+
+def test_add_dependencies_empty_when_all_deps_installed(monkeypatch):
+    from modpack_manager.config import Config
+    monkeypatch.setattr(updates.modrinth, "version_dependencies", lambda ref, key: ["CREATE"])
+    called = []
+    monkeypatch.setattr(updates.modrinth, "resolve_dependencies",
+                        lambda *a, **k: called.append(1) or {})
+    deps, failed = updates.add_dependencies(
+        "modrinth", "PROJ", "VER1", Config(), installed={"modrinth": {"CREATE"}})
+    assert deps == [] and failed is False
+    assert not called  # fully-satisfied deps cost no network round-trip
+
+
+def test_add_dependencies_uses_curseforge_file_edges(monkeypatch):
+    from modpack_manager.config import Config
+    monkeypatch.setattr(updates.curseforge, "file_dependencies",
+                        lambda mod_id, file_id, key: ["111"])
+    monkeypatch.setattr(updates.curseforge, "resolve_dependencies",
+                        lambda ids, mc, loader, key: {"111": _spec("Lib", "lib")})
+    deps, failed = updates.add_dependencies("curseforge", "77", "900", Config())
+    assert [(d.platform, d.slug) for d in deps] == [("curseforge", "lib")]
+    assert failed is False

@@ -151,14 +151,11 @@ def _new_dependency(platform, dep_id, spec):
         addable=spec.get("addable", False))
 
 
-def _closure_ids(candidate, resolved, installed):
-    """Every (platform, id) reachable from a candidate's direct deps via resolved
-    `requires` edges, skipping installed ids and cycles. Naturally bounded: only
-    resolved specs carry edges, so the walk stops at the fixpoint's frontier."""
-    out, stack = set(), []
-    for d in candidate.added_dependencies:
-        if d.id:
-            stack.append((d.platform, str(d.id)))
+def _closure_from(seeds, resolved, installed):
+    """Every (platform, id) reachable from `seeds` via resolved `requires` edges,
+    skipping installed ids and cycles. Naturally bounded: only resolved specs
+    carry edges, so the walk stops at the fixpoint's frontier."""
+    out, stack = set(), list(seeds)
     while stack:
         key = stack.pop()
         platform, dep_id = key
@@ -172,28 +169,22 @@ def _closure_ids(candidate, resolved, installed):
     return out
 
 
-def _resolve_dependencies(results, config, current_project_ids=frozenset(),
-                          installed_cf_mod_ids=frozenset()):
-    """Enrich every new required dependency — direct and transitive, both platforms —
-    with a queueable add-spec, and flatten each candidate's full transitive closure
-    onto its `added_dependencies`. Runs a bounded fixpoint (MAX_DEPTH hops) over a
-    shared memo so a subtree shared by two updates is fetched once. Best-effort: a
-    platform whose resolver raises leaves its deps addable=False and yields a
-    `deps_unresolved` warning; the reactive frontend behaviour is inherited."""
-    installed = {"modrinth": {str(x) for x in current_project_ids},
-                 "curseforge": {str(x) for x in installed_cf_mod_ids}}
+def _closure_ids(candidate, resolved, installed):
+    """`_closure_from` seeded with one candidate's direct deps."""
+    return _closure_from([(d.platform, str(d.id)) for d in candidate.added_dependencies if d.id],
+                         resolved, installed)
 
-    # 1) seed the frontier from every candidate's direct deps, minus installed
-    frontier = set()
-    for c in results:
-        for d in c.added_dependencies:
-            if d.id and str(d.id) not in installed.get(d.platform, set()):
-                frontier.add((d.platform, str(d.id)))
-    if not frontier:
-        return None
 
-    # 2) fixpoint: resolve the frontier, fold newly-required ids into the next
+def _resolve_closure(seeds, config, installed):
+    """Bounded fixpoint (MAX_DEPTH hops) over dependency `requires` edges.
+
+    `seeds` are (platform, id) pairs already filtered against `installed`. Shared
+    by both entry points — the Updates scan seeds it from candidates, the Add tab
+    from a single picked version — so a dep resolves identically either way.
+    Returns (resolved: {(platform, id): spec}, failed: bool).
+    """
     resolved, seen, failed, depth = {}, set(), False, 0
+    frontier = set(seeds)
     while frontier and depth < MAX_DEPTH:
         pending = {}
         for (platform, dep_id) in frontier:
@@ -218,6 +209,65 @@ def _resolve_dependencies(results, config, current_project_ids=frozenset(),
                         nxt.add(key)
         frontier = nxt
         depth += 1
+    return resolved, failed
+
+
+def add_dependencies(platform, project_id, version_ref, config, installed=None):
+    """New required deps — direct and transitive — for ONE version being added.
+
+    The Updates path detects deps as a side effect of scanning for newer files;
+    a manual add has no scan, so nothing resolved its deps at all. This seeds the
+    same fixpoint from the exact version picked in the Add tab, so an added mod
+    pulls in its missing libraries the way an updated one does.
+
+    `installed` is {platform: {ids}}; ids absent from it are treated as missing.
+    Returns (deps: list[AddedDependency], failed: bool).
+    """
+    installed = installed or {}
+    installed = {"modrinth": {str(x) for x in installed.get("modrinth", ())},
+                 "curseforge": {str(x) for x in installed.get("curseforge", ())}}
+    try:
+        if platform == "curseforge":
+            direct = curseforge.file_dependencies(project_id, version_ref,
+                                                  config.curseforge_api_key)
+        else:
+            direct = modrinth.version_dependencies(version_ref, config.modrinth_api_key)
+    except Exception:  # noqa: BLE001 - a dead lookup must not break the Add preview
+        return [], True
+
+    seeds = {(platform, str(d)) for d in direct
+             if str(d) not in installed.get(platform, set())}
+    if not seeds:
+        return [], False
+    resolved, failed = _resolve_closure(seeds, config, installed)
+    deps = [_new_dependency(p, i, resolved.get((p, i)))
+            for (p, i) in _closure_from(seeds, resolved, installed)]
+    deps.sort(key=lambda d: (d.name or d.slug or d.id or "").lower())
+    return deps, failed
+
+
+def _resolve_dependencies(results, config, current_project_ids=frozenset(),
+                          installed_cf_mod_ids=frozenset()):
+    """Enrich every new required dependency — direct and transitive, both platforms —
+    with a queueable add-spec, and flatten each candidate's full transitive closure
+    onto its `added_dependencies`. Runs a bounded fixpoint (MAX_DEPTH hops) over a
+    shared memo so a subtree shared by two updates is fetched once. Best-effort: a
+    platform whose resolver raises leaves its deps addable=False and yields a
+    `deps_unresolved` warning; the reactive frontend behaviour is inherited."""
+    installed = {"modrinth": {str(x) for x in current_project_ids},
+                 "curseforge": {str(x) for x in installed_cf_mod_ids}}
+
+    # 1) seed the frontier from every candidate's direct deps, minus installed
+    frontier = set()
+    for c in results:
+        for d in c.added_dependencies:
+            if d.id and str(d.id) not in installed.get(d.platform, set()):
+                frontier.add((d.platform, str(d.id)))
+    if not frontier:
+        return None
+
+    # 2) fixpoint (shared with the Add tab's add_dependencies)
+    resolved, failed = _resolve_closure(frontier, config, installed)
 
     # 3) attach each candidate's flattened closure: enrich direct deps in place,
     #    append transitive ones (deduped by (platform, id), sorted for determinism)

@@ -381,6 +381,24 @@ def project_versions(mod_id, mc_version, loader, api_key=""):
     return {"side": "BOTH", "versions": opts}
 
 
+def file_dependencies(mod_id, file_id, api_key=""):
+    """Required (relationType 3) modIds declared by one specific file, as strings.
+
+    Mirrors modrinth.version_dependencies for the Add path: the user picks an
+    exact file, so its edges come from that file. Best-effort -> [] on failure.
+    """
+    try:
+        session = _session(api_key)
+        r = session.get(f"{API}/mods/{int(mod_id)}/files/{int(file_id)}", timeout=30)
+        if r.status_code != 200:
+            return []
+        data = r.json().get("data") or {}
+        return [str(d["modId"]) for d in data.get("dependencies", [])
+                if d.get("relationType") == 3 and d.get("modId")]
+    except Exception:  # noqa: BLE001
+        return []
+
+
 def project_changelog(mod_id, file_id, api_key=""):
     """One file's changelog for the Add preview. `mod_id` = the CF project id
     (hit.id); `file_id` = the `ref` from project_versions (the CF file id).

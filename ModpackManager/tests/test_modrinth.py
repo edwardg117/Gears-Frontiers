@@ -354,3 +354,25 @@ def test_resolve_dependencies_surfaces_required_requires():
     out = modrinth.resolve_dependencies(["DEP0001"], "1.21.1", "neoforge")
     assert out["DEP0001"]["requires"] == ["ARCH99"]
     assert out["DEP0001"]["addable"] is True     # unchanged behaviour otherwise
+
+
+# --- version_dependencies (Add path) ------------------------------------------
+
+@responses.activate
+def test_version_dependencies_returns_only_required_project_ids():
+    responses.add(responses.GET, f"{API}/version/VER1", json={
+        "id": "VER1",
+        "dependencies": [
+            {"project_id": "REQ1", "dependency_type": "required"},
+            {"project_id": "OPT1", "dependency_type": "optional"},
+            {"project_id": "REQ2", "dependency_type": "required"},
+            {"project_id": None, "dependency_type": "required"},
+        ],
+    }, status=200)
+    assert modrinth.version_dependencies("VER1") == ["REQ1", "REQ2"]
+
+
+@responses.activate
+def test_version_dependencies_is_best_effort_on_failure():
+    responses.add(responses.GET, f"{API}/version/GONE", json={}, status=404)
+    assert modrinth.version_dependencies("GONE") == []

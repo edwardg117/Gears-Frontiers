@@ -272,6 +272,24 @@ def project_versions(project_id, mc_version, loader, api_key=""):
     return {"side": side, "versions": opts}
 
 
+def version_dependencies(version_id, api_key=""):
+    """Required project ids declared by one specific version.
+
+    The Add path picks an exact version, so its dependency edges come from that
+    version rather than from the project's latest. Best-effort: any failure
+    returns [] so the Add preview degrades instead of 500-ing.
+    """
+    try:
+        session = _session(api_key)
+        r = session.get(f"{API}/version/{version_id}", timeout=30)
+        if r.status_code != 200:
+            return []
+        return [d["project_id"] for d in r.json().get("dependencies", [])
+                if d.get("dependency_type") == "required" and d.get("project_id")]
+    except Exception:  # noqa: BLE001
+        return []
+
+
 def project_changelog(version_id, api_key=""):
     """One version's changelog for the Add preview. `version_id` is the `ref`
     from project_versions (the Modrinth version id). Best-effort: any failure

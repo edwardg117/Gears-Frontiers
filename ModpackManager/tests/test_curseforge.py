@@ -341,3 +341,24 @@ def test_build_candidate_detects_new_required_cf_dep():
     assert [d.id for d in deps] == ["306612"]
     assert deps[0].platform == "curseforge"
     assert deps[0].satisfied is False
+
+
+# --- file_dependencies (Add path) ---------------------------------------------
+
+@responses.activate
+def test_file_dependencies_returns_only_required_mod_ids():
+    responses.add(responses.GET, f"{API}/mods/77/files/900", json={"data": {
+        "id": 900,
+        "dependencies": [
+            {"modId": 111, "relationType": 3},
+            {"modId": 222, "relationType": 2},
+            {"modId": 333, "relationType": 3},
+        ],
+    }}, status=200)
+    assert curseforge.file_dependencies(77, 900, api_key="k") == ["111", "333"]
+
+
+@responses.activate
+def test_file_dependencies_is_best_effort_on_failure():
+    responses.add(responses.GET, f"{API}/mods/77/files/901", json={}, status=500)
+    assert curseforge.file_dependencies(77, 901, api_key="k") == []

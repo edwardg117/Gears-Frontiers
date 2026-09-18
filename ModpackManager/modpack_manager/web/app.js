@@ -271,11 +271,27 @@ function populateVersions(sel, versions) {
   sel.innerHTML = (shown.length ? shown : versions)
     .map((v) => `<option value="${esc(v.ref)}">${esc(v.name)} (${esc(v.type)})</option>`).join("");
 }
+async function fetchAddDependencies(platform, id, ref) {
+  try {
+    const res = await fetch(`/api/add-dependencies?platform=${encodeURIComponent(platform)}&id=${encodeURIComponent(id)}&ref=${encodeURIComponent(ref)}`);
+    if (!res.ok) return [];
+    return (await res.json()).dependencies || [];
+  } catch { return []; }          // a dead lookup must not block the add itself
+}
 function queueAdd(hit, opt, side) {
   if (state.adds.some((a) => a.module_id === hit.slug)) return;
-  state.adds.push({ platform: hit.platform, module_id: hit.slug, name: hit.name,
-    version: opt.name, url: opt.url, side: side || "BOTH", required: true, page_url: hit.page_url });
+  const entry = { platform: hit.platform, module_id: hit.slug, name: hit.name,
+    version: opt.name, url: opt.url, side: side || "BOTH", required: true,
+    page_url: hit.page_url, added_dependencies: [] };
+  state.adds.push(entry);
   renderQueue(); updateBatch();
+  // Deps land asynchronously so the queue row appears immediately; the second
+  // render folds them in. Bail if the row was removed while the fetch was open.
+  fetchAddDependencies(hit.platform, hit.id, opt.ref).then((deps) => {
+    if (!state.adds.includes(entry)) return;
+    entry.added_dependencies = deps;
+    renderQueue(); updateBatch();
+  });
 }
 // Why a dep is (or isn't) in the Add queue. computeAutoDeps and the changelog banner
 // both read this, so the queue and the text it shows can never disagree — only "queued"
@@ -284,7 +300,7 @@ function queueAdd(hit, opt, side) {
 // from CF, required as a Modrinth project) can't be reconciled by id, so we also guard by
 // display name here. Order matters: the pack check runs first so a satisfied dep reads as
 // "already in your pack" rather than "add it manually" when it also failed to resolve.
-function depQueueState(candidate, dep) {
+function depQueueState(source, dep) {
   // state.pack is loaded eagerly; if it hasn't arrived yet the guard is a
   // self-correcting no-op (the row re-renders once the pack lands).
   const depName = (dep.name || dep.slug || "").toLowerCase();
@@ -293,7 +309,10 @@ function depQueueState(candidate, dep) {
   const platform = dep.platform || "modrinth";
   // a dep already queued manually (same platform + slug) wins
   if (state.adds.some((a) => a.platform === platform && a.module_id === dep.slug)) return "already-queued";
-  if (!state.selected.has(candidate.mod_id)) return "pending";
+  // Sources are update candidates (mod_id, gated by its checkbox) or Add-queue
+  // entries (module_id) — queueing the mod IS the opt-in, so there is no pending.
+  if (source.mod_id === undefined) return "queued";
+  if (!state.selected.has(source.mod_id)) return "pending";
   return "queued";
 }
 // Banner copy per state. `version` controls whether the resolved version is worth
@@ -309,15 +328,17 @@ const DEP_NOTE = {
 // entry per dep with the names of every selected mod that introduced it.
 function computeAutoDeps() {
   const byKey = new Map();
-  for (const c of state.candidates) {
-    for (const d of (c.added_dependencies || [])) {
-      if (depQueueState(c, d) !== "queued") continue;
+  const fold = (source) => {
+    for (const d of (source.added_dependencies || [])) {
+      if (depQueueState(source, d) !== "queued") continue;
       const key = `${d.platform || "modrinth"}:${d.slug}`;
       const e = byKey.get(key) || { dep: d, requiredBy: [] };
-      if (!e.requiredBy.includes(c.name)) e.requiredBy.push(c.name);
+      if (!e.requiredBy.includes(source.name)) e.requiredBy.push(source.name);
       byKey.set(key, e);
     }
-  }
+  };
+  state.candidates.forEach(fold);
+  state.adds.forEach(fold);       // a manual add pulls its own missing deps too
   return [...byKey.values()];
 }
 function renderQueue() {
@@ -418,7 +439,7 @@ async function generate() {
     platform: dep.platform || "modrinth", module_id: dep.slug, name: dep.name, version: dep.version,
     url: dep.download_url, side: dep.side, required: true }));
   const payload = { updates: [...state.selected],
-    adds: [...state.adds.map(({ page_url, ...a }) => a), ...autoAdds],
+    adds: [...state.adds.map(({ page_url, added_dependencies, ...a }) => a), ...autoAdds],
     removals: [...state.removals] };
   if (!payload.updates.length && !payload.adds.length && !payload.removals.length) { setStatus("Nothing queued.", true); return; }
   $("#review").hidden = true;

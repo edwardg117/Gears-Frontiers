@@ -10,6 +10,8 @@ from .config import load_config
 from .hashing import HashCache, compute
 from .paths import pack_paths
 from .sources import modrinth, curseforge
+from dataclasses import asdict
+
 from .sources.base import Notice
 from .xml_model import NS, parse_packs
 
@@ -86,6 +88,25 @@ def real_resolve(ref):
         if hit:
             return hit
     return modrinth.resolve(ref, config.modrinth_api_key)
+
+
+def real_add_dependencies(platform, project_id, version_ref):
+    """New required deps (direct + transitive) for a version picked in the Add tab.
+
+    Installed-set caveat: MCUpdater XML carries a Modrinth project id but only a
+    *file* id for CurseForge, so CF projects can't be reconciled here without the
+    bulk prefilter the scan does. CF ids are therefore left empty and those deps
+    fall back to the frontend's display-name guard, exactly as cross-platform
+    deps already do.
+    """
+    paths = pack_paths()
+    config = load_config(paths.config_ini)
+    modules = parse_packs(_pack_layer_paths(paths))
+    installed = {"modrinth": {m.project_id for m in modules.values()
+                              if m.project_id and m.mod_type != "Removal"},
+                 "curseforge": set()}
+    deps, failed = upd.add_dependencies(platform, project_id, version_ref, config, installed)
+    return {"dependencies": [asdict(d) for d in deps], "failed": failed}
 
 
 def real_project_versions(platform, project_id):

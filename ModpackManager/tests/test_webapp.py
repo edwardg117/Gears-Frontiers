@@ -171,3 +171,37 @@ def test_project_changelog_route():
     assert data["body_html"] == "<p>cl</p>"
     assert data["version"] == "1.0"
     assert calls["changelog"] == ("modrinth", "AAB", "V1")   # route threads platform/id/ref in order
+
+
+def test_add_dependencies_route_passes_through_args_and_result():
+    seen = {}
+
+    def _deps(platform, project_id, ref):
+        seen["args"] = (platform, project_id, ref)
+        return {"dependencies": [{"id": "T9PomCSv", "slug": "sable", "name": "Sable",
+                                  "platform": "modrinth", "addable": True}],
+                "failed": False}
+
+    app = webapp.create_app(
+        scan_fn=lambda: ScanResult([], []), generate_fn=lambda p, c=None: iter([]),
+        pack_fn=lambda: [], search_fn=lambda q, pl: ([], []), resolve_fn=lambda r: None,
+        versions_fn=lambda pl, i: {}, changelog_fn=lambda p, i, r: {},
+        commit_fn=lambda t, m: {"ok": True}, discard_fn=lambda t: {"ok": True},
+        deps_fn=_deps)
+    app.config["TESTING"] = True
+    data = app.test_client().get(
+        "/api/add-dependencies?platform=modrinth&id=oWaK0Q19&ref=VER1").get_json()
+    assert seen["args"] == ("modrinth", "oWaK0Q19", "VER1")
+    assert data["dependencies"][0]["slug"] == "sable"
+    assert data["failed"] is False
+
+
+def test_add_dependencies_route_is_inert_when_unwired():
+    app = webapp.create_app(
+        scan_fn=lambda: ScanResult([], []), generate_fn=lambda p, c=None: iter([]),
+        pack_fn=lambda: [], search_fn=lambda q, pl: ([], []), resolve_fn=lambda r: None,
+        versions_fn=lambda pl, i: {}, changelog_fn=lambda p, i, r: {},
+        commit_fn=lambda t, m: {"ok": True}, discard_fn=lambda t: {"ok": True})
+    app.config["TESTING"] = True
+    assert app.test_client().get("/api/add-dependencies").get_json() == {
+        "dependencies": [], "failed": False}
