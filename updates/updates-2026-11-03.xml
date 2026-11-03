@@ -1332,13 +1332,13 @@
 			</Meta>
 		</Module>
 		<Module name="More Culling" id="more_culling" depends="" side="CLIENT">
-			<URL priority="1">https://cdn.modrinth.com/data/51shyZVL/versions/ucyxnpWe/moreculling-neoforge-1.21.1-1.0.11.jar</URL>
-			<Size>337255</Size>
+			<URL priority="1">https://cdn.modrinth.com/data/51shyZVL/versions/5M4T2FfG/moreculling-neoforge-1.21.1-1.0.10.jar</URL>
+			<Size>335699</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>ae6bafe0e77b26824fd1ceefc261866c</MD5>
+			<MD5>72baa3f87a5395a58441491ead5aaac9</MD5>
 			<Meta>
-				<version>1.0.11</version>
+				<version>1.0.10</version>
 			</Meta>
 		</Module>
 		<Module name="Pam&apos;s HarvestCraft 2 - Crops" id="harvestcraft_2_crops" depends="harvestcraft_2_food_core" side="BOTH">
