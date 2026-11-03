@@ -1,0 +1,1901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
+	<Server id="update-2026-11-03" abstract="false" name="Update 2026-11-03" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+		<Module name="Accessories" id="accessories" depends="owo_lib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/jtmvUHXj/versions/dy9BbDEy/accessories-neoforge-1.1.0-beta.54%2B1.21.1.jar</URL>
+			<Size>1086553</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>25da18d7add5afc67ce120c2e7850414</MD5>
+			<Meta>
+				<version>1.1.0-beta.54+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="BaguetteLib" id="baguettelib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/OfKzpbRU/versions/5RiJQA1Z/baguettelib-1.21.1-NeoForge-2.0.7.jar</URL>
+			<Size>85738</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>38912b6b60d4908053d04211536adb08</MD5>
+			<Meta>
+				<version>2.0.7</version>
+			</Meta>
+		</Module>
+		<Module name="Building Gadgets" id="building_gadgets" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9310/471/buildinggadgets2-21.1.1.jar</URL>
+			<Size>3861286</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2563f046c4a6e8b6cc11c16a334a378e</MD5>
+			<Meta>
+				<version>21.1.1</version>
+			</Meta>
+		</Module>
+		<Module name="Butcher" id="butcher" depends="geckolib patchouli" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6YfOmC9t/versions/ln41xz3j/butchery-5.3.1-neoforge-1.21.1.jar</URL>
+			<Size>14090695</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9a0c038d60c46e7f2a14d4a3e0ac28ad</MD5>
+			<Meta>
+				<version>5.3.1</version>
+			</Meta>
+		</Module>
+		<Module name="Chunk Sending" id="chunk_sending" depends="" side="SERVER">
+			<URL priority="1">https://edge.forgecdn.net/files/9051/336/chunksending-1.21-4.1.jar</URL>
+			<Size>27213</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8e72f87d62cd0c3c303d216639d9aed7</MD5>
+			<Meta>
+				<version>4.1</version>
+			</Meta>
+		</Module>
+		<Module name="Corpse x Curios API Compat" id="corpsexcuriossapicompat" depends="corpse curiosapi" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/pJGcKPh1/versions/u0YFpbaS/corpsecurioscompat-1.21.1-NeoForge-4.2.0.jar</URL>
+			<Size>23703</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>183f9e12db0080612327e7a9b8ad939b</MD5>
+			<Meta>
+				<version>4.2.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Bits &apos;n&apos; Bobs" id="create_bits_n_bobs" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/T8bvmqVZ/versions/g9Lmjjc5/bits_n_bobs-2.3.5.jar</URL>
+			<Size>2433531</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>95d18ce1642079cf05ebfd2ad8883cff</MD5>
+			<Meta>
+				<version>2.3.5</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Teleporters" id="create_teleporters" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9mtJ8MHP/versions/TuG81a9A/createteleporters-3.0.2-1.21.1.jar</URL>
+			<Size>2954081</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9dab8aa7d43befb134bd604e25ba3f15</MD5>
+			<Meta>
+				<version>3.0.2</version>
+			</Meta>
+		</Module>
+		<Module name="Cupboard" id="cupboard" depends="" side="SERVER">
+			<URL priority="1">https://edge.forgecdn.net/files/8889/50/cupboard-1.21.1-4.2.jar</URL>
+			<Size>30517</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>157cec3eeae81606df0183c9f6bdf341</MD5>
+			<Meta>
+				<version>4.2</version>
+			</Meta>
+		</Module>
+		<Module name="ExtraLib" id="extralib" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9340/488/ExtraLib-3.3.1-1.21.1-NeoForge.jar</URL>
+			<Size>8041802</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bc560377aae3dbe5dded83bb2bf65c1d</MD5>
+			<Meta>
+				<version>3.3.1</version>
+			</Meta>
+		</Module>
+		<Module name="ExtraQuests [FTB Quests]" id="extraquests" depends="extralib ftb_quests" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9372/356/ExtraQuests-2.0.0-1.21.1-NeoForge.jar</URL>
+			<Size>134656</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1572e72e7176caa3a645c75d43c4570b</MD5>
+			<Meta>
+				<version>2.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Fragmentum" id="fragmentum" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/49C5QgTK/versions/kCXNhuIV/fragmentum-5.4.0%2B1.21.1-neoforge.jar</URL>
+			<Size>7815344</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>44e80aeb24883f8e833bda0adda6ef97</MD5>
+			<Meta>
+				<version>5.4.0</version>
+			</Meta>
+		</Module>
+		<Module name="KubeJS" id="kubejs" depends="rhino" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/umyGl7zF/versions/GDXCpKlp/kubejs-neoforge-2101.7.2-build.381.jar</URL>
+			<Size>2295092</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>191f3285fca14479cf46909a9bc94369</MD5>
+			<Meta>
+				<version>2101.7.2-build.381</version>
+			</Meta>
+		</Module>
+		<Module name="Lionfish-API" id="lionfish_api" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/FoVacERa/versions/fTRMVgyZ/lionfishapi-3.1.jar</URL>
+			<Size>91596</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6103fe4848d0f8289431a0b307efc444</MD5>
+			<Meta>
+				<version>3.1</version>
+			</Meta>
+		</Module>
+		<Module name="Moonlight Lib" id="moonlight_lib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/twkfQtEc/versions/fAIfWX6M/moonlight-1.21.1-3.7.2-neoforge.jar</URL>
+			<Size>2299162</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>949d8d0a250830c5da1470892953618d</MD5>
+			<Meta>
+				<version>1.21.1-3.7.2</version>
+			</Meta>
+		</Module>
+		<Module name="Quick Right-Click" id="quickrightclick" depends="collective" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/e8mI328p/versions/A8ZfhRKp/quickrightclick-1.21.1-3.0.jar</URL>
+			<Size>114271</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3d17b278474a952972c1be9dc7e58a95</MD5>
+			<Meta>
+				<version>1.21.1-3.0-fabric+forge+neo</version>
+			</Meta>
+		</Module>
+		<Module name="Reese&apos;s Sodium Options" id="reeses_sodium_options" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/Bh37bMuy/versions/XjF2IkL8/reeses-sodium-options-neoforge-2.2.4%2Bmc1.21.1.jar</URL>
+			<Size>258894</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>577e9ff1c3a0b480f29aec457d87fdc4</MD5>
+			<Meta>
+				<version>mc1.21.1-2.2.4+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Rhino" id="rhino" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/sk9knFPE/versions/SqkDvOLG/rhino-2101.2.8-build.91.jar</URL>
+			<Size>980936</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c8227681747c8fad25d1fc4e06542717</MD5>
+			<Meta>
+				<version>2101.2.8-build.91+Rhino-1.21</version>
+			</Meta>
+		</Module>
+		<Module name="Structure Essentials[Forge/Fabric]" id="structure_essentials" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9278/578/structureessentials-1.21.1-5.1.jar</URL>
+			<Size>60923</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>de2e09945ca2809302344da17013d230</MD5>
+			<Meta>
+				<version>5.1</version>
+			</Meta>
+		</Module>
+		<Module name="Tidal Towns" id="mr_tidal_towns" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/EEIwvQVo/versions/ahvrY85Y/tidal-towns-2.0.jar</URL>
+			<Size>586133</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>93ae5931a615e89656929dc34e681b45</MD5>
+			<Meta>
+				<version>2.0+mod</version>
+			</Meta>
+		</Module>
+		<Module name="3d-Skin-Layers" id="skinlayers3d" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/zV5r3pPn/versions/GJTnQGfe/skinlayers3d-neoforge-1.11.4-mc1.21.1.jar</URL>
+			<Size>1905514</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>76f99ddc2ea92e8c67f6338ee922d6a0</MD5>
+			<Meta>
+				<version>1.11.4</version>
+			</Meta>
+		</Module>
+		<Module name="Animal Armor Trims" id="animal_armor_trims" depends="monolib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/YmFaSpcI/versions/6xMuW50v/animal_armor_trims-neoforge-1.21.1-2.3.1.jar</URL>
+			<Size>262996</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>56346b4d0b0dc80a9e047614bfa82326</MD5>
+			<Meta>
+				<version>2.3.1</version>
+			</Meta>
+		</Module>
+		<Module name="Animal Pens" id="animal_pens" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/K5CAV4wi/versions/JAemvg6W/animal_pen-neoforge-1.21-2.5.2.jar</URL>
+			<Size>722201</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1d6409652ae8555b1fd94080c9281ade</MD5>
+			<Meta>
+				<version>2.5.2-1.21+NeoForge</version>
+			</Meta>
+		</Module>
+		<Module name="Applied Energistics 2 Wireless Terminals" id="applied_energistics_2_wireless_terminals" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/pNabrMMw/versions/CxSEpEnO/ae2wtlib-19.5.1.jar</URL>
+			<Size>252091</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f1111868ef2315fcbcc1053f3ea397de</MD5>
+			<Meta>
+				<version>19.5.1</version>
+			</Meta>
+		</Module>
+		<Module name="Better Fps - Render Distance[Forge]" id="better_fps-render_distance" depends="" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/8319/712/betterfpsdist-1.21.1-6.1.jar</URL>
+			<Size>23505</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>fd656f3c8ebbaffe87a5a42c7331c425</MD5>
+			<Meta>
+				<version>6.1</version>
+			</Meta>
+		</Module>
+		<Module name="Builder&apos;s Jetpack" id="buildersjetpack" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8610/345/buildersjetpackmod-3.2b-1.21.1.jar</URL>
+			<Size>261579</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>561d9ce066b387c50ce7642894c1f4b2</MD5>
+			<Meta>
+				<version>3.2</version>
+			</Meta>
+		</Module>
+		<Module name="Clean Swing Through Grass" id="clean_swing" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8746/293/cleanswing-1.10-1.21.jar</URL>
+			<Size>9477</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>109c9451c24ddb9b8c31ae961e8b2afa</MD5>
+			<Meta>
+				<version>1.10</version>
+			</Meta>
+		</Module>
+		<Module name="Collective" id="collective" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/e0M1UDsY/versions/JsrQpNp7/collective-1.21.1-8.75.jar</URL>
+			<Size>1343536</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4241c5c2960bcb75c5717f74034cab88</MD5>
+			<Meta>
+				<version>1.21.1-8.75-fabric+forge+neo</version>
+			</Meta>
+		</Module>
+		<Module name="ColossalChests" id="colossalchests" depends="cyclopscore" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/V8HM9qmm/versions/v8I5T3hr/colossalchests-1.21.1-neoforge-1.9.1.jar</URL>
+			<Size>279212</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7b158ff1452c58fc97f093fa42d075a7</MD5>
+			<Meta>
+				<version>1.21.1-1.9.1</version>
+			</Meta>
+		</Module>
+		<Module name="Compatibility addon for MineColonies" id="compatibility_addon_for_minecolonies" depends="minecolonies" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9255/68/MineColonies_Compatibility-1.21.1-3.60.jar</URL>
+			<Size>1511130</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>29d27eb1789910fb3fb734f2f8e15d4a</MD5>
+			<Meta>
+				<version>3.60</version>
+			</Meta>
+		</Module>
+		<Module name="Concurrent Chunk Management Engine" id="c2me" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/COlSi5iR/versions/VACgDPOc/c2me-neoforge-mc1.21.1-0.4.0-alpha.0.124.jar</URL>
+			<Size>3717706</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>24e75b153860182fb2f152c538f6da80</MD5>
+			<Meta>
+				<version>0.4.0-alpha.0.124+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Connectivity" id="connectivity" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9008/904/connectivity-1.21.1-7.7.jar</URL>
+			<Size>115891</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fa487bdc207e7867189247519d101892</MD5>
+			<Meta>
+				<version>7.7</version>
+			</Meta>
+		</Module>
+		<Module name="Construction Sticks" id="construction _sticks" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ooyjDLZt/versions/5dwDOCYP/ConstructionSticks-1.21.1-1.5.0.jar</URL>
+			<Size>264739</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b0485d380f6db23ba8c77c9b51865edd</MD5>
+			<Meta>
+				<version>1.5.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create Cobblestone" id="create_cobblestone" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ihpnEd80/versions/yJiZnWZD/createcobblestone-1.5.1%2Bneoforge-1.21.1-160.jar</URL>
+			<Size>573579</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>cf8495ab684c4ca0a784e2a9e66e6bf7</MD5>
+			<Meta>
+				<version>1.5.1+neoforge-1.21.1-160</version>
+			</Meta>
+		</Module>
+		<Module name="Create Encased" id="create_encased" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/hSSqdyU1/versions/pld6Eng9/Create%20Encased-1.21.1-1.10.0-fix1.jar</URL>
+			<Size>3383308</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7bef781d697f1adb5246bf2282126ff3</MD5>
+			<Meta>
+				<version>1.21.1-1.10.0-fix1</version>
+			</Meta>
+		</Module>
+		<Module name="Create Jetpack" id="create_jetpack" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/UbFnAd4l/versions/sCwiqLqq/create_jetpack-forge-5.2.1.jar</URL>
+			<Size>495109</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e3df3fd2cdc465cafd7a48abd60f5fd7</MD5>
+			<Meta>
+				<version>5.2.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create More: Package Couriers" id="create_more_package_couriers" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/GRqrodjM/versions/aG9jHA8l/cmpackagecouriers-neoforge-2.3.1.jar</URL>
+			<Size>328843</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bda7334c9a09ecf52235adcc8c13bbc3</MD5>
+			<Meta>
+				<version>2.3.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create Railways Navigator" id="create_railways_navigator" depends="create dragonlib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Dq3STxps/versions/rlsRwxq3/createrailwaysnavigator-neoforge-1.21.1-beta-0.10.0-C6.jar</URL>
+			<Size>4680276</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b4edef96bb952c9c882e81ecdc15f01e</MD5>
+			<Meta>
+				<version>1.21.1-beta-0.10.0-C6</version>
+			</Meta>
+		</Module>
+		<Module name="Create Slice &amp; Dice" id="create_slice_and_dice" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/GmjmRQ0A/versions/D6mQaFRW/sliceanddice-4.3.4-neoforge.jar</URL>
+			<Size>1356389</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6bec2b5c7f6629da1d0cc78298e7501c</MD5>
+			<Meta>
+				<version>4.3.4</version>
+			</Meta>
+		</Module>
+		<Module name="Create Stock Bridge" id="create_stock_bridge" depends="create applied_energistics_2" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/V7mbOBO4/versions/fLyIEPoj/createstockbridge-1.21.1-0.2.0.jar</URL>
+			<Size>180413</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bf72f898430bb9d163e040e58ffff074</MD5>
+			<Meta>
+				<version>1.21.1-0.2.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create Train Parts" id="create_train_parts" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/h0bu4oDk/versions/wSuDZsee/create_train_parts-0.5.2-1.21.1-6.0.10-281.jar</URL>
+			<Size>3699282</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e832bd56d0eefe9fa9b0d01c56fb6a91</MD5>
+			<Meta>
+				<version>0.5.2</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Applied Kinetics" id="create_applied_kinetics" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/mYGTCuZY/versions/qeGh796M/createappliedkinetics-1.5.5-1.21.1.jar</URL>
+			<Size>70495</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ade998f124c0c29156a44031312ea718</MD5>
+			<Meta>
+				<version>1.5.5-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Central Kitchen" id="create_central_kitchen" depends="create create_dragonsplus" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/btq68HMO/versions/qZxkZR8W/create-central-kitchen-2.6.2b.jar</URL>
+			<Size>511818</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>af5bfae7466818d91e7c6644d03dfd4d</MD5>
+			<Meta>
+				<version>2.6.2b</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Configurable Crushing Wheel" id="create_configurable_crushing_wheel" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/pd8eLyMu/versions/ycFZHTiY/createcmo-1.3.0-create-6.0.x-neoforge-1.21.1.jar</URL>
+			<Size>77833</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8d6c7b84790a42df7e116f14b4c67fbc</MD5>
+			<Meta>
+				<version>1.3.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Dragons Plus" id="create_dragonsplus" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/dzb1a5WV/versions/b0u9vk8C/CreateDragonsPlus-1.11.9.jar</URL>
+			<Size>1085674</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bdb66a5991de6c6ee792e14bdaeda02a</MD5>
+			<Meta>
+				<version>1.11.9</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Enchantment Industry" id="create_enchantment_industry" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/JWGBpFUP/versions/L6VSDdC4/create-enchantment-industry-2.5.4b.jar</URL>
+			<Size>1607432</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6f5831728d9748b4d9f8991ead8de57e</MD5>
+			<Meta>
+				<version>2.5.4b</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Extra Gauges" id="create_extra_gauges" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6YJgomwt/versions/xtIBXji9/extra_gauges-2.1.3.jar</URL>
+			<Size>1064396</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4dc7919469343e03cbfe49d558df4375</MD5>
+			<Meta>
+				<version>2.1.3</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Hypertubes" id="create_hypertubes" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ATDdrG1y/versions/qYjOyvgW/create_hypertube-0.6.0-NEOFORGE.jar</URL>
+			<Size>546142</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4a0e33080646f2e80097d85cf40f7bbf</MD5>
+			<Meta>
+				<version>0.6.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: New Age" id="create_new_age" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/FTeXqI9v/versions/IwtuwMZy/create-new-age-1.2.0%2Bneoforge-mc1.21.1.jar</URL>
+			<Size>1644485</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5bcea3a1df072447c0d71d3e40e3ff11</MD5>
+			<Meta>
+				<version>1.2.0+mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Northstar - Redux" id="create_northstar_redux" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/UZiq3QVW/versions/2xMVbJcV/Northstar-0.6.6%2B1.21.1.jar</URL>
+			<Size>11558948</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>84a9adb612923e4c7209a49b7f105a69</MD5>
+			<Meta>
+				<version>0.6.6+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Cristel Lib" id="cristellib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/cl223EMc/versions/Sduz0AWP/cristellib-neoforge-1.21.1-3.1.7.jar</URL>
+			<Size>583525</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6433ae895a143e145165e97beea07077</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-3.1.7</version>
+			</Meta>
+		</Module>
+		<Module name="Cyclops Core" id="cyclopscore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Z9DM0LJ4/versions/axSK9vET/cyclopscore-1.21.1-neoforge-1.30.1.jar</URL>
+			<Size>1163235</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e259bd088f28d5ae907a3cc3b05c2cfa</MD5>
+			<Meta>
+				<version>1.21.1-1.30.1</version>
+			</Meta>
+		</Module>
+		<Module name="Deeper and Darker" id="deeper_and_darker" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8201/775/deeperdarker-neoforge-1.21.1-1.4.1.jar</URL>
+			<Size>3906057</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3d2e41335836a5b6b7152340680c3fd6</MD5>
+			<Meta>
+				<version>1.4.1</version>
+			</Meta>
+		</Module>
+		<Module name="End Remastered" id="endremastered" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ZJTGwAND/versions/Xzg42PX9/endrem-neoforge-1.21.1-6.3.0.jar</URL>
+			<Size>934349</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c337d807cd9c6e808396fcb292306b62</MD5>
+			<Meta>
+				<version>6.3.0</version>
+			</Meta>
+		</Module>
+		<Module name="EntityCulling" id="entityculling" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/NNAgCjsB/versions/eieYbWYb/entityculling-neoforge-1.11.3-mc1.21.1.jar</URL>
+			<Size>1510075</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9958dc06f71e0e059c377bce5f369de6</MD5>
+			<Meta>
+				<version>1.11.3</version>
+			</Meta>
+		</Module>
+		<Module name="Farmer&apos;s Delight" id="farmersdelight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/R2OftAxM/versions/XTVZDOol/FarmersDelight-1.21.1-1.3.4.jar</URL>
+			<Size>3160490</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>588f140d2c343e9029dc30f10b73fdd4</MD5>
+			<Meta>
+				<version>1.21.1-1.3.4</version>
+			</Meta>
+		</Module>
+		<Module name="FramedBlocks" id="framedblocks" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/wbgfS34j/versions/5g0Yxvfb/FramedBlocks-10.6.3.jar</URL>
+			<Size>4306766</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3a9938524e1a3f38ed34171354fcb2a5</MD5>
+			<Meta>
+				<version>10.6.3</version>
+			</Meta>
+		</Module>
+		<Module name="Geckolib" id="geckolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/8BmcQJ2H/versions/Grwn5rUB/geckolib-neoforge-1.21.1-4.9.3.jar</URL>
+			<Size>634531</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ddb8a5ef680c3a1df09ef98dc8b7c116</MD5>
+			<Meta>
+				<version>4.9.3</version>
+			</Meta>
+		</Module>
+		<Module name="Immersive Aircraft" id="immersiveaircraft" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/x3HZvrj6/versions/xO17G766/immersive_aircraft-neoforge-1.7.0%2B1.21.1.jar</URL>
+			<Size>2543237</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>362611edaadda8bb5b7126588d470954</MD5>
+			<Meta>
+				<version>1.7.0+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Ixeris" id="ixeris" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/p8RJPJIC/versions/SMNtHcH8/Ixeris-4.6.11%2B1.21.1-neoforge.jar</URL>
+			<Size>698847</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4431192b26392d86855e98fac240a3ea</MD5>
+			<Meta>
+				<version>4.6.11+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Just Enough Items" id="jei" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/u6dRKJwZ/versions/1vC6z8wV/jei-1.21.1-neoforge-19.70.0.469.jar</URL>
+			<Size>4784333</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>999517e82a97c8ef2c2249da49eece64</MD5>
+			<Meta>
+				<version>19.70.0.469</version>
+			</Meta>
+		</Module>
+		<Module name="Kotlin for Forge" id="kotlinforforge" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ordsPcFz/versions/uhJhCT7X/kotlinforforge-5.12.0-all.jar</URL>
+			<Size>7279264</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>93ec434c7112952f0501211a992538b9</MD5>
+			<Meta>
+				<version>5.12.0</version>
+			</Meta>
+		</Module>
+		<Module name="L_Ender&apos;s Cataclysm" id="l_enders_cataclysm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/46KJle7n/versions/PsPYpoCC/L_Ender%27s%20Cataclysm%201.21.1-3.33.jar</URL>
+			<Size>73375667</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b1ae1220c6e80c5d64d08857e9817939</MD5>
+			<Meta>
+				<version>3.33</version>
+			</Meta>
+		</Module>
+		<Module name="Macaw&apos;s Paintings" id="macaws_paintings" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/okE6QVAY/versions/W9QHKmDh/mcw-paintings-1.1.0-mc1.21.1neoforge.jar</URL>
+			<Size>179058</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9d413b9ca9da2cee7a11bee6f1c9b8e2</MD5>
+			<Meta>
+				<version>1.1.0</version>
+			</Meta>
+		</Module>
+		<Module name="MidnightLib" id="midnightlib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/codAaoxh/versions/vcVnfiCM/midnightlib-neoforge-1.10.0%2B1.21.1.jar</URL>
+			<Size>64794</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>89d0e5ca2b98db4bca70ed3ebdffb3af</MD5>
+			<Meta>
+				<version>1.10.0+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="MmmMmmMmmMmm" id="MmmMmmMmmMmm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Adega8YN/versions/DldwQTMc/dummmmmmy-1.21-2.1.2-neoforge.jar</URL>
+			<Size>215883</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>048ed61a907a4dd6ab2255e8fadb4c91</MD5>
+			<Meta>
+				<version>1.21-2.1.2</version>
+			</Meta>
+		</Module>
+		<Module name="ModernFix" id="modernfix" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nmDcB62a/versions/ZDZENbHH/modernfix-neoforge-5.27.27%2Bmc1.21.1.jar</URL>
+			<Size>614138</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>cab1e1285f6766edbbd8c8724c320249</MD5>
+			<Meta>
+				<version>5.27.27+mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Modonomicon" id="modonomicon" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/692GClaE/versions/OKyLanIn/modonomicon-1.21.1-neoforge-1.123.0.jar</URL>
+			<Size>2430324</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f242949868e43ba13ec52e19962cb6a0</MD5>
+			<Meta>
+				<version>1.21.1-1.123.0</version>
+			</Meta>
+		</Module>
+		<Module name="MoogsEndStructures" id="mes" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/r4PuRGfV/versions/S7bUhX4n/MoogsEndStructures-universal-1.21-2.1.1.jar</URL>
+			<Size>2285901</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0026e3c88693b6265cbef74fd4ec3ae1</MD5>
+			<Meta>
+				<version>2.1.1</version>
+			</Meta>
+		</Module>
+		<Module name="NotEnoughAnimations" id="notenoughanimations" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/MPCX6s5C/versions/f9RkhlA0/notenoughanimations-neoforge-1.12.7-mc1.21.1.jar</URL>
+			<Size>1868196</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>3c069d484f9315fef55be1bd09904cea</MD5>
+			<Meta>
+				<version>1.12.7</version>
+			</Meta>
+		</Module>
+		<Module name="Platform" id="platform" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/i6fiqm5y/versions/rh4p4ixM/Platform-neoforge-1.21.1-1.4.2.jar</URL>
+			<Size>550771</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>66f6ef33122e559a261a8f3d6eb4ce6c</MD5>
+			<Meta>
+				<version>1.4.2</version>
+			</Meta>
+		</Module>
+		<Module name="Polymorph" id="polymorph" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/tagwiZkJ/versions/9yWvrF5o/polymorph-neoforge-1.2.0%2B1.21.1.jar</URL>
+			<Size>172671</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c63ed3a97639cf45f2df4498483a939d</MD5>
+			<Meta>
+				<version>1.2.0+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Recipe Essentials[Forge/Fabric]" id="recipe_essentials" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8463/998/recipeessentials-1.21.1-4.7.jar</URL>
+			<Size>43983</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4903471f5b2e51e8d414a2295030d2de</MD5>
+			<Meta>
+				<version>4.7</version>
+			</Meta>
+		</Module>
+		<Module name="Reflex AntiLag" id="reflex_antiLag" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/WTVzusYD/versions/3Y1tCw2U/reflex-neoforge-1.1.3%2B1.21.1.jar</URL>
+			<Size>35415</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>83af1bc4828babbd7724db98a6b8752e</MD5>
+			<Meta>
+				<version>1.1.3+neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="ScalableLux" id="scalablelux" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Ps1zyz6x/versions/9KuFoPhC/ScalableLux-neoforge-0.3.0-alpha.0.8-all.jar</URL>
+			<Size>197423</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9bd3b2a016a271f77ba92110b9de77ff</MD5>
+			<Meta>
+				<version>0.3.0-alpha.0.8+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Server Performance - Smooth Chunk Save[Forge/Fabric]" id="smooth_chunk_save" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9255/92/smoothchunk-1.21-4.4.jar</URL>
+			<Size>15747</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>241918edc20ad94f530aa9668557d299</MD5>
+			<Meta>
+				<version>4.4</version>
+			</Meta>
+		</Module>
+		<Module name="Small Ships" id="smallships" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rGWEHQrP/versions/2iLK0Wz6/smallships-neoforge-1.21.1-2.0.2.jar</URL>
+			<Size>2815793</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>85a202433b2a75399b0ddcdbd404f4ff</MD5>
+			<Meta>
+				<version>2.0.2-neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Sodium" id="sodium" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/AANobbMI/versions/uMOpc5uV/sodium-neoforge-0.8.13%2Bmc1.21.1.jar</URL>
+			<Size>1292934</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c2bc7287841c29e25ce553baae1700a0</MD5>
+			<Meta>
+				<version>mc1.21.1-0.8.13-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Sodium Extra" id="sodiumextra" depends="sodium" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/PtjYWJkn/versions/T819dLGI/sodium-extra-neoforge-0.9.5%2Bmc1.21.1.jar</URL>
+			<Size>483373</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>234f34e7c863e4e95ef802910ae0d055</MD5>
+			<Meta>
+				<version>mc1.21.1-0.9.5+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Sophisticated Backpacks" id="sophisticated_backpacks" depends="sophisticated_core" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/TyCTlI4b/versions/4JH1U61x/sophisticatedbackpacks-1.21.1-3.26.19.2243.jar</URL>
+			<Size>1260033</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ec0461f9c2620e4d852b1535853cb5ce</MD5>
+			<Meta>
+				<version>1.21.1-3.26.19.2243</version>
+			</Meta>
+		</Module>
+		<Module name="Sophisticated Backpacks Create Integration" id="sophisticated_backpacks_create_integration" depends="sophisticated_core sophisticated_backpacks create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/s85zLEDe/versions/PWwbiDmx/sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar</URL>
+			<Size>94059</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5f5549b1d47b4f18f93d5d6135761d6a</MD5>
+			<Meta>
+				<version>1.21.1-0.2.3.194</version>
+			</Meta>
+		</Module>
+		<Module name="Sophisticated Core" id="sophisticated_core" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nmoqTijg/versions/nMrwTiyz/sophisticatedcore-1.21.1-1.5.25.2451.jar</URL>
+			<Size>1830529</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>67e084c6fe8a0bb947ce50295405537d</MD5>
+			<Meta>
+				<version>1.21.1-1.5.25.2451</version>
+			</Meta>
+		</Module>
+		<Module name="Sophisticated Storage" id="sophisticated_storage" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/hMlaZH8f/versions/VPx7N2qA/sophisticatedstorage-1.21.1-1.6.15.2219.jar</URL>
+			<Size>1933670</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d0562b5e97a2b5c88a806287f72c6f73</MD5>
+			<Meta>
+				<version>1.21.1-1.6.15.2219</version>
+			</Meta>
+		</Module>
+		<Module name="Stellarity" id="stellarity" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/bZgeDzN8/versions/YDz5uYNs/Stellarity-3.1.0.jar</URL>
+			<Size>12889388</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2e92baa49c2521030b9c4de475b90c43</MD5>
+			<Meta>
+				<version>3.1.0+mod</version>
+			</Meta>
+		</Module>
+		<Module name="TCT Core" id="tct_core" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MlsBPB9a/versions/NluYcYa2/tctcore-2.3-neoforge-1.21.1.jar</URL>
+			<Size>8118709</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ead10c05b724c3dc57a48083986a917c</MD5>
+			<Meta>
+				<version>2.2</version>
+			</Meta>
+		</Module>
+		<Module name="Trash Cans" id="trash_cans" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/4QrnfueM/versions/TbzPls06/trashcans-1.1.2-neoforge-mc1.21.jar</URL>
+			<Size>169363</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>45d7f9d728713c52f49550f72a7ece8e</MD5>
+			<Meta>
+				<version>1.1.2-neoforge-mc1.21</version>
+			</Meta>
+		</Module>
+		<Module name="Tweaks addon for MineColonies" id="tweaks_addon_for_minecolonies" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8600/87/MineColonies_Tweaks-1.21.1-3.33.jar</URL>
+			<Size>793271</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>739e514406af45ecd87c8ae56bf85da8</MD5>
+			<Meta>
+				<version>3.33</version>
+			</Meta>
+		</Module>
+		<Module name="Vanilla Backport" id="vanilla_backport" depends="platform" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6xwxDTgf/versions/mGS7BxD4/VanillaBackport-neoforge-1.21.1-1.2.2.jar</URL>
+			<Size>63870495</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>05695ed2d8c7f4a479df88288b32a352</MD5>
+			<Meta>
+				<version>1.2.2</version>
+			</Meta>
+		</Module>
+		<Module name="William Wythers&apos; Expanded Ecosphere" id="expanded_ecosphere" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/O1XGs7ps/versions/IWfNhdRG/expanded_ecosphere-neoforge-3.4.7.jar</URL>
+			<Size>1814203</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d827077ee38a701b395a64113def9afd</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-3.4.7</version>
+			</Meta>
+		</Module>
+		<Module name="William Wythers&apos; Overhauled Overworld" id="wwoo" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/II7t6llZ/versions/sU7oaRZv/wwoo-neoforge-2.6.7.jar</URL>
+			<Size>5764879</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2e5d28d158fe4dd24325230eeeae364b</MD5>
+			<Meta>
+				<version>2.6.7</version>
+			</Meta>
+		</Module>
+		<Module name="AlcoCraft+" id="alcocraft_pluss" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/6t2MdNbo/versions/n4gLo4WI/alcocraftplus-1.21.1-2.1.2-neoforge.jar</URL>
+			<Size>288935</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9f67f906aa0a9216b9cf2f7db17c596f</MD5>
+			<Meta>
+				<version>2.1.2+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="AllTheLeaks (Memory Leak Fix)" id="alltheleaks" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9360/134/alltheleaks-1.1.14-1.21.1-neoforge.jar</URL>
+			<Size>565897</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2be801e026ec4bfa1a14b47ab645c1e1</MD5>
+			<Meta>
+				<version>1.1.14</version>
+			</Meta>
+		</Module>
+		<Module name="AmbientSounds" id="ambientsounds" depends="creativecore" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/9254/776/AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar</URL>
+			<Size>84815086</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>558ef1c73b4a597bc237857253d0effb</MD5>
+			<Meta>
+				<version>6.3.11</version>
+			</Meta>
+		</Module>
+		<Module name="Applied Energistics 2" id="applied_energistics_2" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/XxWD5pD3/versions/KDnFUmMm/appliedenergistics2-19.2.18.jar</URL>
+			<Size>8236552</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>71acd23d8321b84bf14264ab142dda1e</MD5>
+			<Meta>
+				<version>19.2.18</version>
+			</Meta>
+		</Module>
+		<Module name="Architectury API" id="architecturyapi" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/lhGA9TYQ/versions/1IiqEQGl/architectury-13.0.11-neoforge.jar</URL>
+			<Size>584734</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>aefbea361809755c331126bcff6e6d3e</MD5>
+			<Meta>
+				<version>13.0.11+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Armor Poser" id="armorposer" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/PFwYNrHb/versions/KlLmtvb1/ArmorPoser-neoforge-1.21.1-6.2.4.jar</URL>
+			<Size>126563</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>55e6d7ad5ea397c6bbf5e7339e7c434e</MD5>
+			<Meta>
+				<version>6.2.4</version>
+			</Meta>
+		</Module>
+		<Module name="AstikorCarts Redux" id="astikorcarts_redux" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/mnLFouB0/versions/JtPCk233/astikorcartsredux-1.2.4.jar</URL>
+			<Size>576717</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0319a7b9c548ab1d8a320c13a2eb9a31</MD5>
+			<Meta>
+				<version>1.2.4</version>
+			</Meta>
+		</Module>
+		<Module name="Athena" id="athena" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/b1ZV3DIJ/versions/dJgL278E/athena-neoforge-1.21.1-4.0.6.jar</URL>
+			<Size>99944</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0c22a1ec59e5ce22eef1b614fda59b42</MD5>
+			<Meta>
+				<version>4.0.6</version>
+			</Meta>
+		</Module>
+		<Module name="Balm" id="balm" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MBAkmtvl/versions/gMedgtzL/balm-neoforge-1.21.1-21.0.67.jar</URL>
+			<Size>786010</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>c882348c7c45a2a4ebd14cf475a44db6</MD5>
+			<Meta>
+				<version>21.0.67+neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="BlockUI" id="blockui" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9137/5/blockui-1.0.212-1.21.1-snapshot.jar</URL>
+			<Size>468141</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>93b878f08fee242f8985aafb15875b3b</MD5>
+			<Meta>
+				<version>1.0.212</version>
+			</Meta>
+		</Module>
+		<Module name="Camera Mod" id="cameramod" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8657/78/camera-neoforge-1.21.1-1.0.22.jar</URL>
+			<Size>307439</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5e26f40ec4bf34a6587fb83d6ca9f2b3</MD5>
+			<Meta>
+				<version>1.0.22</version>
+			</Meta>
+		</Module>
+		<Module name="Carry On" id="carryon" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8512/888/carryon-neoforge-1.21.1-2.2.6.13.jar</URL>
+			<Size>361486</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2cf051fdf9bd99b6311138d55b595e75</MD5>
+			<Meta>
+				<version>2.2.6.13</version>
+			</Meta>
+		</Module>
+		<Module name="Copper Age Backport" id="copper_age_backport" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/a1llHwl4/versions/ZyjDScTQ/copperagebackport-neoforge-1.21.1-0.1.5.1-pre.jar</URL>
+			<Size>2543829</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9d1bfff3002f05c108abfc57a860b136</MD5>
+			<Meta>
+				<version>1.21.1-0.1.5.1-pre</version>
+			</Meta>
+		</Module>
+		<Module name="Crafting Tweaks" id="craftingtweaks" depends="balm" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/DMu0oBKf/versions/IhkQpEve/craftingtweaks-neoforge-1.21.1-21.1.11.jar</URL>
+			<Size>256086</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>35ac6f92498c274935a97498ab221947</MD5>
+			<Meta>
+				<version>21.1.11+neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Aquatic Ambitions" id="create_aquatic_ambitions" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9SyaPzp7/versions/DoI3PpXj/create_aquatic_ambitions-1.21.1-2.0.4.jar</URL>
+			<Size>1074131</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>5f856654fb7616e78cd5602bc0c81348</MD5>
+			<Meta>
+				<version>1.21.1-6.0.10-2.0.4</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Copycats+" id="create_copycats_plus" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/UT2M39wf/versions/bPYeUWZx/copycats-3.0.9%2Bmc.1.21.1-neoforge.jar</URL>
+			<Size>1799381</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e817b77c897d6f3ce7dd8ef4fd38a289</MD5>
+			<Meta>
+				<version>3.0.9+mc.1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Meta Logistics" id="create_meta_logistics" depends="kotlinforforge create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/2ACRRn3U/versions/Oc3rW1dr/createmetalogistics-1.21.1-0.4.7a.jar</URL>
+			<Size>848454</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b9c569a19e0eda060c2f1154b8f81e15</MD5>
+			<Meta>
+				<version>0.4.7a</version>
+			</Meta>
+		</Module>
+		<Module name="CreateBetterFps" id="createbetterfps" depends="sodium iris" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/lMYIHZNH/versions/dxmPYimo/createbetterfps-1.21.1-1.1.5.jar</URL>
+			<Size>26542</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a5d06a3f86fb87ce6965abdd38837787</MD5>
+			<Meta>
+				<version>1.1.5</version>
+			</Meta>
+		</Module>
+		<Module name="CreativeCore" id="creativecore" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/OsZiaDHq/versions/JS0K93bG/CreativeCore_NEOFORGE_v2.13.52_mc1.21.1.jar</URL>
+			<Size>1236541</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ccb2da3b9c17b1afe2ba7fcf80440fe2</MD5>
+			<Meta>
+				<version>2.13.52</version>
+			</Meta>
+		</Module>
+		<Module name="Data Anchor" id="data_anchor" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/z2XEADmE/versions/WwTx4TaQ/Data_Anchor-neoforge-1.21.1-2.0.0.18.jar</URL>
+			<Size>119264</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4eb48cc70857455bbf053460355ba154</MD5>
+			<Meta>
+				<version>2.0.0.18-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Domum Ornamentum" id="domum_ornamentum" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9394/376/domum-ornamentum-1.0.237-snapshot-main.jar</URL>
+			<Size>1151617</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>447e4252d4dc8ea715d48aa381b1f29d</MD5>
+			<Meta>
+				<version>1.0.237</version>
+			</Meta>
+		</Module>
+		<Module name="Enchantment Descriptions" id="enchantment_descriptions" depends="prickle bookshelf" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/UVtY3ZAC/versions/IktklYWh/enchdesc-neoforge-1.21.1-21.1.11.jar</URL>
+			<Size>82648</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0314f02f2f7ec9af0b589b66388d0d91</MD5>
+			<Meta>
+				<version>21.1.11</version>
+			</Meta>
+		</Module>
+		<Module name="Explorify" id="explorify" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/HSfsxuTo/versions/CuBdAr31/Explorify%20v1.6.5.mod.jar</URL>
+			<Size>767884</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>55bb6ffd4c69edb45a0d4e75a0b071ca</MD5>
+			<Meta>
+				<version>v1.6.5</version>
+			</Meta>
+		</Module>
+		<Module name="FTB Library (Forge)" id="ftb_library" depends="architecturyapi" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9350/706/ftb-library-neoforge-2101.1.39.jar</URL>
+			<Size>1477833</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8e2c107c470a2c0e15a0880d767d3ca3</MD5>
+			<Meta>
+				<version>2101.1.39</version>
+			</Meta>
+		</Module>
+		<Module name="FTB Quests" id="ftb_quests" depends="architecturyapi ftb_library ftb_teams" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9405/148/ftb-quests-neoforge-2101.1.38.jar</URL>
+			<Size>1635517</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>1aed80e155746577a5a9ba5fccec9484</MD5>
+			<Meta>
+				<version>2101.1.38</version>
+			</Meta>
+		</Module>
+		<Module name="FTB Teams (NeoForge)" id="ftb_teams" depends="architecturyapi ftb_library" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8724/782/ftb-teams-neoforge-2101.1.11.jar</URL>
+			<Size>308236</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ee780bb9fe724f6d1af97547bdab8bff</MD5>
+			<Meta>
+				<version>2101.1.11</version>
+			</Meta>
+		</Module>
+		<Module name="FTB XMod Compat" id="ftb xmod_compat" depends="architecturyapi ftb_library" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9344/504/ftb-xmod-compat-neoforge-21.1.14.jar</URL>
+			<Size>149952</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3b2e3d852cc241bc02a1edb6c9ae9089</MD5>
+			<Meta>
+				<version>21.1.14</version>
+			</Meta>
+		</Module>
+		<Module name="Fzzy Config" id="fzzy_config" depends="kotlinforforge" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/hYykXjDp/versions/jRuOkBAG/fzzy_config-0.7.7%2Bfix1%2B1.21%2Bneoforge.jar</URL>
+			<Size>2392720</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f453f946e3fbf1b46809141dba1aaeaf</MD5>
+			<Meta>
+				<version>0.7.7+fix1+1.21+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Gnetum" id="gnetum" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/7MoE34WK/versions/zJLIzmi7/gnetum-3.3.6.jar</URL>
+			<Size>120726</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f3fe889013922d12e209a0f4fd82694f</MD5>
+			<Meta>
+				<version>3.3.6</version>
+			</Meta>
+		</Module>
+		<Module name="GuideME" id="guideme" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Ck4E7v7R/versions/QeYKsstN/guideme-21.1.22.jar</URL>
+			<Size>9332340</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>872e302cebaae78f675c7b4f34ce431a</MD5>
+			<Meta>
+				<version>21.1.22</version>
+			</Meta>
+		</Module>
+		<Module name="Hardcore Revival" id="hardcore_revival" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/HqKoXaXz/versions/uz0zlIe3/hardcorerevival-neoforge-1.21.1-21.1.22.jar</URL>
+			<Size>250676</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>868478e79bf245129344302ba5b23366</MD5>
+			<Meta>
+				<version>21.1.22+neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Horseman" id="horseman" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/qIv5FhAA/versions/jJ93aLVn/horseman-neoforge-1.21.1-1.5.13.jar</URL>
+			<Size>453902</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2b93c515ee63c1a556212c9c62c8197c</MD5>
+			<Meta>
+				<version>1.5.13</version>
+			</Meta>
+		</Module>
+		<Module name="Immersive Machinery" id="immersive_machinery" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kGP3J2TW/versions/rk48nzIz/immersive_machinery-0.2.3%2B1.21.1-neoforge.jar</URL>
+			<Size>903410</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>80eb6d299d901ed936c3d2751317995d</MD5>
+			<Meta>
+				<version>0.2.3+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Jade" id="jade" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/nvQzSEkH/versions/eYz2YBGT/Jade-1.21.1-NeoForge-15.10.6.jar</URL>
+			<Size>726853</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>67b89f182472859d1e478477716c9462</MD5>
+			<Meta>
+				<version>15.10.6+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Jade Addons" id="jade_addons" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/xuDOzCLy/versions/O3F6Dkle/JadeAddons-1.21.1-NeoForge-6.1.2.jar</URL>
+			<Size>82315</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>653b8b57d8bc4a6d826eb33157f29971</MD5>
+			<Meta>
+				<version>6.1.2+neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Just Enough Effect Descriptions (JEED)" id="just_enough_effect_descriptions" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/EO27GKs1/versions/3dTukOBl/jeed-1.21-2.3.5-neoforge.jar</URL>
+			<Size>166779</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b66a295d267335a1884c52313dd2e218</MD5>
+			<Meta>
+				<version>1.21-2.3.5</version>
+			</Meta>
+		</Module>
+		<Module name="Just Enough Professions (JEP)" id="just_enough_professions" depends="jei" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kB56GtWA/versions/Avs9oGLn/JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar</URL>
+			<Size>24879</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>6568ad5dd11be068458cd6ff9ec33bde</MD5>
+			<Meta>
+				<version>4.0.5</version>
+			</Meta>
+		</Module>
+		<Module name="Just Enough Resources" id="jeresources" depends="jei" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/uEfK2CXF/versions/T9VecgxP/JustEnoughResources-NeoForge-1.21.1-1.6.0.60.jar</URL>
+			<Size>292430</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>847357f83b106086835c58096d9259d2</MD5>
+			<Meta>
+				<version>1.6.0.60</version>
+			</Meta>
+		</Module>
+		<Module name="Lithium" id="lithium" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/gvQqBUqZ/versions/DDUrRVCA/lithium-neoforge-0.15.4%2Bmc1.21.1.jar</URL>
+			<Size>774220</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>969860e6a6ebe4dc2e2154b56f05483e</MD5>
+			<Meta>
+				<version>mc1.21.1-0.15.4-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Lootr" id="lootr" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/EltpO5cN/versions/SPOrIzX8/lootr-neoforge-1.21.1-1.11.38.127.jar</URL>
+			<Size>1075929</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f0e399d4c09c54f7feaa2d2c781a37b9</MD5>
+			<Meta>
+				<version>1.21.1-1.11.38.127</version>
+			</Meta>
+		</Module>
+		<Module name="Man of Many Planes" id="manofmanyplanes" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9qdTHi0q/versions/cQxBmeEC/man_of_many_planes-0.2.3%2B1.21.1-neoforge.jar</URL>
+			<Size>514998</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>a399b4b258a3937686c2dbb75e065787</MD5>
+			<Meta>
+				<version>0.2.3+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="MineColonies" id="minecolonies" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9401/752/minecolonies-1.1.1411-1.21.1-snapshot.jar</URL>
+			<Size>78351943</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>93d1d5d86bee9f58f460f8f32b656749</MD5>
+			<Meta>
+				<version>1.1.1411</version>
+			</Meta>
+		</Module>
+		<Module name="Moog&apos;s Structure Lib (moogs_structures)" id="moogs_structure_lib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/1oUDhxuy/versions/wcg4mE4e/MoogsStructureLib-neoforge-1.21.1-3.4.2.jar</URL>
+			<Size>1094979</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>29df9e331f44b5c3c04a7ea00dd13d9a</MD5>
+			<Meta>
+				<version>3.4.2-neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="More Culling" id="more_culling" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/51shyZVL/versions/ucyxnpWe/moreculling-neoforge-1.21.1-1.0.11.jar</URL>
+			<Size>337255</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>ae6bafe0e77b26824fd1ceefc261866c</MD5>
+			<Meta>
+				<version>1.0.11</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2 - Crops" id="harvestcraft_2_crops" depends="harvestcraft_2_food_core" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/8064/883/pamhc2crops-NEOFORGE-1.21.1-1.0.9.jar</URL>
+			<Size>1536646</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>32ccefcb038218e921381a2d03895356</MD5>
+			<Meta>
+				<version>1.0.9</version>
+			</Meta>
+		</Module>
+		<Module name="Pam&apos;s HarvestCraft 2 - Trees" id="harvestcraft_2_trees" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/7847/533/pamhc2trees-NEOFORGE-1.21.1-1.0.9.jar</URL>
+			<Size>1399642</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b3aca94e929ce765a52b6cc33f57c643</MD5>
+			<Meta>
+				<version>1.0.9</version>
+			</Meta>
+		</Module>
+		<Module name="pipe connector" id="pipe_connector" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/XrnRgQJw/versions/MNsyvqXD/pipe_connector-neoforge-0.5.28.jar</URL>
+			<Size>221260</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>eb2583a7bfdcb629b8df02e246fa2c14</MD5>
+			<Meta>
+				<version>0.5.28</version>
+			</Meta>
+		</Module>
+		<Module name="Placebo" id="placebo" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9153/39/Placebo-1.21.1-9.9.4.jar</URL>
+			<Size>326063</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>aa28b32050534747dab7fa167e443c1a</MD5>
+			<Meta>
+				<version>9.9.4</version>
+			</Meta>
+		</Module>
+		<Module name="Puzzles Lib" id="puzzleslib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/QAGBst4M/versions/kmN5PWk9/puzzleslib-v21.1.66-mc1.21.1%2Bneoforge.jar</URL>
+			<Size>1451120</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0285f0a5f92265c50e41d08207166c77</MD5>
+			<Meta>
+				<version>21.1.66</version>
+			</Meta>
+		</Module>
+		<Module name="Resourcify" id="resourcify" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/RLzHAoZe/versions/5KyUPNjh/Resourcify%20%281.21.1-neoforge%29-1.8.7.jar</URL>
+			<Size>2946897</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>24d2459d749f56aa4e4221f21f9d447a</MD5>
+			<Meta>
+				<version>1.8.7</version>
+			</Meta>
+		</Module>
+		<Module name="ShatterLib | OctoLib" id="octolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/RH2KUdKJ/versions/yVCCi6TK/OctoLib-NEOFORGE-0.6.2%2B1.21.jar</URL>
+			<Size>544378</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f730e04600b6cd66ddac685362a9c9f3</MD5>
+			<Meta>
+				<version>0.6.2</version>
+			</Meta>
+		</Module>
+		<Module name="Sooty Chimneys" id="sooty_chimneys" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/b3w1XM9H/versions/prx2oU0O/sootychimneys-neoforge-1.3.5.jar</URL>
+			<Size>175697</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>93e3607e043ec68b9f946f532ec050cf</MD5>
+			<Meta>
+				<version>1.3.5</version>
+			</Meta>
+		</Module>
+		<Module name="Sophisticated Storage Create Integration" id="sophisticated_storage_create_integration" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/MJ0hdevs/versions/xePmjcI1/sophisticatedstoragecreateintegration-1.21.1-0.1.23.246.jar</URL>
+			<Size>148042</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>076481c3cc1bfe368b544983b258fa56</MD5>
+			<Meta>
+				<version>1.21.1-0.1.23.246</version>
+			</Meta>
+		</Module>
+		<Module name="Structurize" id="structurize" depends="" side="BOTH">
+			<URL priority="1">https://edge.forgecdn.net/files/9333/948/structurize-1.0.837-1.21.1-snapshot.jar</URL>
+			<Size>1063621</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>48120c0929803af2d8a5b9bb6fbd6768</MD5>
+			<Meta>
+				<version>1.0.837</version>
+			</Meta>
+		</Module>
+		<Module name="Towns and Towers" id="t_and_t" depends="cristellib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/DjLobEOy/versions/DZxwgj6V/t_and_t-fabric-neoforge-1.13.11.jar</URL>
+			<Size>3553006</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>85c641d5f8b58f7ab27c7c42e58489a7</MD5>
+			<Meta>
+				<version>1.13.11</version>
+			</Meta>
+		</Module>
+		<Module name="Utility Belt" id="utility_belt" depends="accessories jamlib architecturyapi" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9ewe2JHJ/versions/TEDIWQah/utility-belt-neoforge-3.0.2%2B1.21.1.jar</URL>
+			<Size>272865</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fce43899ff1b0013e908225327fb88b3</MD5>
+			<Meta>
+				<version>3.0.2+1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Visual Workbench" id="visual_workbench" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kfqD1JRw/versions/3646RfLS/VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar</URL>
+			<Size>76670</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>d92af902a6878dab64fa35f5723bf461</MD5>
+			<Meta>
+				<version>21.1.2</version>
+			</Meta>
+		</Module>
+		<Module name="Zume" id="zume" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/o6qsdrrQ/versions/Rh2ImJ86/zume-1.2.2.jar</URL>
+			<Size>99445</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>099147ab88e57c5d5ecc9a080c25652d</MD5>
+			<Meta>
+				<version>1.2.2</version>
+			</Meta>
+		</Module>
+		<Module name="Better Biome Reblend" id="better_biome_reblend" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/Xh8hkQmD/versions/HZlLCOct/betterbiomeblend-1.5.2.jar</URL>
+			<Size>275755</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>47409f0da30ef3ba7c571afeb3f9b1cd</MD5>
+			<Meta>
+				<version>1.5.2</version>
+			</Meta>
+		</Module>
+		<Module name="Chloride" id="chloride" depends="sodium" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/yD9qW65f/versions/IgWRdE2d/chloride-NEOFORGE-mc1.21.1-v1.8.1.jar</URL>
+			<Size>527889</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>ed1cc4210fc6d0b992ec92aab2f309a2</MD5>
+			<Meta>
+				<version>1.8.1-NEO-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Chunk Loaders" id="chunkloaders" depends="supermartijn642corelib supermartijn642configlib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/t1VgucWo/versions/lVVhQRyh/chunkloaders-1.2.9-neoforge-mc1.21.jar</URL>
+			<Size>146058</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>bbcf86deeeaf92a37463251051caa6d0</MD5>
+			<Meta>
+				<version>1.2.9-neoforge-mc1.21</version>
+			</Meta>
+		</Module>
+		<Module name="Corpse" id="corpse" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/WrpuIfhw/versions/SElnDbg1/corpse-neoforge-1.21.1-1.1.22.jar</URL>
+			<Size>256780</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3bbfb7c417b71dd43b78a2cde458c00f</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.1.22</version>
+			</Meta>
+		</Module>
+		<Module name="Create Crafts &amp; Additions" id="create_crafts_and_additions" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/kU1G12Nn/versions/hsjVajlP/createaddition-1.7.2.jar</URL>
+			<Size>1772844</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>be51442949442ba01134601c080eb4eb</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.7.2</version>
+			</Meta>
+		</Module>
+		<Module name="Create Nuclear" id="create_nuclear" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/z611fdf7/versions/TANOhO2C/createnuclear-2.0.0-neoforge.jar</URL>
+			<Size>8833166</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f0d11b6b497ed9feabb7e5b7c687b0d1</MD5>
+			<Meta>
+				<version>2.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Blocks &amp; Bogies" id="create_blocks_and_bogies" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/j4ARnQwY/versions/nC19ZMKK/create_bb-1.0.8-1.21.1.jar</URL>
+			<Size>2618795</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>198d93478e6816e64e0b5624b83633ef</MD5>
+			<Meta>
+				<version>1.0.8-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Connected" id="create_connected" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Vg5TIO6d/versions/Xe7EqzfQ/create_connected-1.3.3-mc1.21.1.jar</URL>
+			<Size>6786783</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f5c98c88436c6560bc54f58932d8696a</MD5>
+			<Meta>
+				<version>1.3.3-mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Power Loader" id="create_power_loader" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/wPQ6GgFE/versions/3Y4r0ItR/create_power_loader-2.0.5-mc1.21.1.jar</URL>
+			<Size>442369</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>db072c13031f5144d140335206fdad89</MD5>
+			<Meta>
+				<version>2.0.5-mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Decorative Core" id="decorative_core" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/g0YZhKZF/versions/oc18Qb65/decorative_core-2.0705-neoforge-1.21.1.jar</URL>
+			<Size>30249</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>3f13571d6b5276bdedf3b4d32a088e48</MD5>
+			<Meta>
+				<version>2.0705-neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Decorative Storage" id="decorative_storage" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/DLpaTTzJ/versions/k1BvY5Fe/deco_storage-4.0909-neoforge-1.21.1.jar</URL>
+			<Size>728547</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fb43a7f8038035f774c1abe789ec9766</MD5>
+			<Meta>
+				<version>4.0909-neoforge-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Distant Horizons" id="distanthorizons" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/uCdwusMi/versions/9w34y8ai/DistantHorizons-3.3.3-1.21.1-fabric-neoforge.jar</URL>
+			<Size>28289212</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>578523767ee8cef71a9933a79126f67b</MD5>
+			<Meta>
+				<version>3.3.3-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="DragonLib" id="dragonlib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/sbIsGaOV/versions/y30Bx41r/dragonlib-3.0.29%2Bmc1.21.1-neoforge.jar</URL>
+			<Size>2117194</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>34b68e2bc3afb01bc53d037712a64bfd</MD5>
+			<Meta>
+				<version>3.0.29+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Flerovium" id="flerovium" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/4Rh1Mobu/versions/PHD5rYo3/flerovium-neoforge-1.21.1-1.2.0-all.jar</URL>
+			<Size>194016</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4eb644418af0a0e1ac2d23e5c3eb8908</MD5>
+			<Meta>
+				<version>1.2.0</version>
+			</Meta>
+		</Module>
+		<Module name="Iris Shaders" id="iris" depends="sodium" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/YL57xq9U/versions/KduFYu4t/iris-neoforge-1.8.14-beta.1%2Bmc1.21.1.jar</URL>
+			<Size>2540723</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>6b68276a6718656ec476cfac69dfe013</MD5>
+			<Meta>
+				<version>1.8.14-beta.1+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="L_Ender &apos;s Cataclysm Delight" id="l_ender s_cataclysm_delight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/a48R8AGk/versions/cl5zVy2S/lendersdelight-1.21.1-1.0.10b.jar</URL>
+			<Size>194532</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b916bfc770b595d4b2c095413a87160b</MD5>
+			<Meta>
+				<version>1.21.1-1.0.10b</version>
+			</Meta>
+		</Module>
+		<Module name="MonoLib" id="monolib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9leXt4A5/versions/YIL3k0PZ/monolib-neoforge-1.21.1-4.1.2.jar</URL>
+			<Size>190083</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9a27a2434ca94ac78429b0049f5123f0</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-4.1.2</version>
+			</Meta>
+		</Module>
+		<Module name="Nature&apos;s Spirit" id="natures_spirit" depends="terrablender" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/WBvnqHfV/versions/EQReaqUo/natures_spirit-2.3.2-1.21.1.jar</URL>
+			<Size>18677548</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>b7e64bf6ba9c59fff57289be1ed28571</MD5>
+			<Meta>
+				<version>2.3.2-1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="No Chat Restrictions" id="no_chat_restrictions" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/z440MEwJ/versions/9HEx9IMw/NoChatRestrictions-NeoForge-MC1.21.11-v1.0.3.jar</URL>
+			<Size>9377</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>fcc6cb120e5531e46916b83ca3a4760b</MD5>
+			<Meta>
+				<version>NeoForge-MC1.21.11-v1.0.3</version>
+			</Meta>
+		</Module>
+		<Module name="o?o (owo-lib)" id="owo_lib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/ccKDOlHs/versions/wbdHEItB/owo-lib-neoforge-0.12.15.6-beta.1%2B1.21.jar</URL>
+			<Size>1223197</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>7f32dc03afe6f49fe8e08c99c3050d9d</MD5>
+			<Meta>
+				<version>0.12.15.6-beta.1+1.21</version>
+			</Meta>
+		</Module>
+		<Module name="ReForgedPlay Mod" id="reforgedplaymod" depends="" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/6942/967/reforgedplaymod-1.21.1-0.3.jar</URL>
+			<Size>17406874</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>1b433ec3fd96136836127dc69c7eb54a</MD5>
+			<Meta>
+				<version>0.3</version>
+			</Meta>
+		</Module>
+		<Module name="Simple Voice Chat" id="simplevoicechat" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/9eGKb6K1/versions/iR08ksVF/voicechat-neoforge-1.21.1-2.6.27.jar</URL>
+			<Size>4936802</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>371c17cd4f2fd13edf2df50f26a18f0f</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-2.6.27</version>
+			</Meta>
+		</Module>
+		<Module name="Sound Physics Remastered" id="sound_physics_remastered" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/qyVF9oeo/versions/85fA7L1W/sound-physics-remastered-neoforge-1.21.1-1.5.2.jar</URL>
+			<Size>204230</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>af2936b9dfe712ac7152011b709f9d99</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.5.2</version>
+			</Meta>
+		</Module>
+		<Module name="Steam &apos;n&apos; Rails Neoforge" id="steam_n_rails_neoforge" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/L3Jv0QZI/versions/czVeSmZo/railways-0.3.0-beta.2%2Bneoforge-mc1.21.1.jar</URL>
+			<Size>18728584</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>9efd8e746e62acfcb80301cdcdfaa6e7</MD5>
+			<Meta>
+				<version>0.3.0-beta.2+neoforge-mc1.21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Storage Delight" id="storage_delight" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/LTTvOp5L/versions/7I2UUB9l/storagedelight-26.09.17-1.21-neoforge.jar</URL>
+			<Size>837755</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>e0e655a88d69cfe62372b8a2ae26a96d</MD5>
+			<Meta>
+				<version>26.09.17-1.21-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="SuperMartijn642&apos;s Core Lib" id="supermartijn642corelib" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/rOUBggPv/versions/HGyYs7Z4/supermartijn642corelib-1.1.26-neoforge-mc1.21.jar</URL>
+			<Size>591925</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4323cdf19d8f6e2bd2a9720763a5ab95</MD5>
+			<Meta>
+				<version>1.1.26-neoforge-mc1.21</version>
+			</Meta>
+		</Module>
+		<Module name="Via Romana: Infrastructure-Driven Fast Travel" id="via_romana" depends="midnightlib data_anchor moonlight_lib" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/FVToiKwr/versions/I7nIGnGB/via_romana-2.2.3%2B1.21.1-neoforge.jar</URL>
+			<Size>1252710</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>23d8bbba6226802ae032baecd8fc71dc</MD5>
+			<Meta>
+				<version>2.2.3+1.21.1-neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Xaero&apos;s Minimap" id="xaerosminimap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/1bokaNcj/versions/irjR7dHk/xaerominimap-neoforge-1.21.1-26.6.0.jar</URL>
+			<Size>2186351</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>df7a17ba8e9140f9db5a9225a4de2ae6</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-26.6.0</version>
+			</Meta>
+		</Module>
+		<Module name="Xaero&apos;s World Map" id="xaerosworldmap" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/NcUtCpym/versions/SnQ4SoDe/xaeroworldmap-neoforge-1.21.1-1.47.0.jar</URL>
+			<Size>1427078</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>2a41efd48f6503926b089a00e624f1d0</MD5>
+			<Meta>
+				<version>neoforge-1.21.1-1.47.0</version>
+			</Meta>
+		</Module>
+		<Module name="Create: Nowheel" id="create-nowheel" depends="" side="CLIENT">
+			<URL priority="1">https://cdn.modrinth.com/data/c47YxuuI/versions/3NKOvEei/nowheel-2.1.1%2B1.21.1neoforge.jar</URL>
+			<Size>86568</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>8b85107165fab1e343ee6caa4fceab14</MD5>
+			<Meta>
+				<version>2.1.1+1.21.1neoforge</version>
+			</Meta>
+		</Module>
+		<Module name="Strut Your Stuff (Struts)" id="strut-your-stuff" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/sHO3MhQx/versions/BOTN7zzN/struts-1.3.1.jar</URL>
+			<Size>216678</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>f1522fdbf5c2c1078fe6bd45345c40c7</MD5>
+			<Meta>
+				<version>1.3.1</version>
+			</Meta>
+		</Module>
+		<Module name="Azimuth API" id="azimuth-api" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/RpH8tmT1/versions/dxtZVosY/azimuth-1.4.10.jar</URL>
+			<Size>143818</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>09a98ae178cb1dd76eb405e24cd8f438</MD5>
+			<Meta>
+				<version>1.4.10</version>
+			</Meta>
+		</Module>
+		<Module name="Better Advanced Tooltips" id="better-advanced-tooltips" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/iHLDc0eo/versions/uPFbnD32/better-advanced-tooltips-2101.1.0-build.5.jar</URL>
+			<Size>37653</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>edf97f2f11f57fffb4ed6d71c7b4508a</MD5>
+			<Meta>
+				<version>2101.1.0-build.5</version>
+			</Meta>
+		</Module>
+		<Module name="MezzConfig" id="mezzconfig" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/7tEfOcA7/versions/sL7Ghaz1/mezz_config-1.21.1-neoforge-0.6.10-standalone.jar</URL>
+			<Size>346260</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0f89ecd76702754d46a7c59e7d1339fa</MD5>
+			<Meta>
+				<version>0.6.10</version>
+			</Meta>
+		</Module>
+		<Module name="Lithostitched" id="lithostitched" depends="" side="SERVER">
+			<URL priority="1">https://cdn.modrinth.com/data/XaDC71GB/versions/cZu4cHY3/lithostitched-1.8.1-neoforge-21.1.jar</URL>
+			<Size>1023751</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>0571ab03ec6ceae36d44fc7e2fba2261</MD5>
+			<Meta>
+				<version>1.8.1-neoforge-21.1</version>
+			</Meta>
+		</Module>
+		<Module name="Renderable" id="renderable" depends="" side="CLIENT">
+			<URL priority="1">https://github.com/edwardg117/Renderable/releases/download/v0.6.0/renderable-0.6.0.jar</URL>
+			<Size>309669</Size>
+			<Required>false</Required>
+			<ModType>Regular</ModType>
+			<MD5>e39c2fab7f61add73feb75e6070095df</MD5>
+			<Meta>
+				<license>MIT</license>
+				<description>Client render profiler: shows which block entities, entities and effects cost frame time and what caused each hitch.</description>
+				<version>0.6.0</version>
+				<authors>edwardg117</authors>
+			</Meta>
+		</Module>
+		<Module name="Signpost" id="signpost" depends="" side="BOTH">
+			<URL priority="1">https://github.com/edwardg117/Signpost-mod/releases/download/v2.03.0-1.21.1-decorative/signpost-neoforge-1.21.1-2.03.0-1.21.1.jar</URL>
+			<Size>505046</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>86f8bf9eb56f4f755d4d817d4eeab0ca</MD5>
+			<Meta>
+				<license>GNU GENERAL PUBLIC LICENSE</license>
+				<description>Decorative sign posts for Minecraft 1.21.1.
+A NeoForge-only fork of Gollorum&apos;s Signpost mod with the waystone/teleport system removed, intended for use alongside Via Romana for path-network mechanics.
+Built for a specific modpack - not a general-purpose replacement for a properly ported version of the original.</description>
+				<version>2.03.0-1.21.1</version>
+				<authors>Gollorum, edwardg</authors>
+			</Meta>
+		</Module>
+		<Module name="Deployer" id="deployer" depends="create" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/OZhUIuou/versions/ltYnbVvP/deployer-0.1.3.jar</URL>
+			<Size>2022337</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>91da50574ecf6f9cd6d9520528c53f11</MD5>
+			<Meta>
+				<license>MIT</license>
+				<description>A library mod to simplify create addon creation on several aspects</description>
+				<version>0.1.3</version>
+				<authors>Liukrast, SWZO</authors>
+			</Meta>
+		</Module>
+		<Module name="Flerovium" id="fleroviumt" depends="" side="CLIENT">
+			<Size>182098</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+		<Module name="Sodium Dynamic Lights" id="sodiumdynamiclights" depends="" side="CLIENT">
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+		<Module name="Sodium Options API" id="sodiumoptionsapi" depends="" side="CLIENT">
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+		<Module name="Sodium Options Mod Compat" id="sodiumoptionsmodcompat" depends="" side="CLIENT">
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+		<Module name="Create Factory Logistics" id="create_factory_logistics" depends="" side="BOTH">
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+	</Server>
+</ServerPack>
