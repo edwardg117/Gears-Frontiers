@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ServerPack version="4.1" xmlns="http://www.mcupdater.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mcupdater.com http://files.mcupdater.com/ServerPackv2.xsd">
 	<Server id="update-2026-11-03" abstract="false" name="Update 2026-11-03" newsUrl="about:blank" version="1.21.1" generateList="true" autoConnect="false" revision="" mainClass="cpw.mods.bootstraplauncher.BootstrapLauncher" launcherType="Vanilla">
+		<Module name="Accelerated Rendering" id="accelerated_rendering" depends="" side="CLIENT">
+			<URL priority="1">https://edge.forgecdn.net/files/8448/200/acceleratedrendering-1.0.14-1.21.1-alpha.jar</URL>
+			<Size>684365</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>05b4b669cdbca2a371214cb163b0caa3</MD5>
+			<Meta>
+				<version>1.0.14-1.21.1-alpha</version>
+			</Meta>
+		</Module>
 		<Module name="Accessories" id="accessories" depends="owo_lib" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/jtmvUHXj/versions/dy9BbDEy/accessories-neoforge-1.1.0-beta.54%2B1.21.1.jar</URL>
 			<Size>1086553</Size>
@@ -109,6 +119,16 @@
 			<MD5>1572e72e7176caa3a645c75d43c4570b</MD5>
 			<Meta>
 				<version>2.0.0</version>
+			</Meta>
+		</Module>
+		<Module name="Forgified Fabric API" id="forgified_fabric_api" depends="" side="BOTH">
+			<URL priority="1">https://cdn.modrinth.com/data/Aqlf1Shp/versions/C4eskNuR/forgified-fabric-api-0.116.15%2B2.3.6%2B1.21.1.jar</URL>
+			<Size>5612888</Size>
+			<Required>true</Required>
+			<ModType>Regular</ModType>
+			<MD5>4b698a05cf4058f877faf6ccf6665705</MD5>
+			<Meta>
+				<version>0.116.15+2.3.6+1.21.1</version>
 			</Meta>
 		</Module>
 		<Module name="Fragmentum" id="fragmentum" depends="" side="BOTH">
@@ -1022,14 +1042,9 @@
 			</Meta>
 		</Module>
 		<Module name="Copper Age Backport" id="copper_age_backport" depends="" side="BOTH">
-			<URL priority="1">https://cdn.modrinth.com/data/a1llHwl4/versions/ZyjDScTQ/copperagebackport-neoforge-1.21.1-0.1.5.1-pre.jar</URL>
-			<Size>2543829</Size>
-			<Required>true</Required>
-			<ModType>Regular</ModType>
-			<MD5>9d1bfff3002f05c108abfc57a860b136</MD5>
-			<Meta>
-				<version>1.21.1-0.1.5.1-pre</version>
-			</Meta>
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
 		</Module>
 		<Module name="Crafting Tweaks" id="craftingtweaks" depends="balm" side="BOTH">
 			<URL priority="1">https://cdn.modrinth.com/data/DMu0oBKf/versions/IhkQpEve/craftingtweaks-neoforge-1.21.1-21.1.11.jar</URL>
@@ -1132,23 +1147,23 @@
 			</Meta>
 		</Module>
 		<Module name="FTB Library (Forge)" id="ftb_library" depends="architecturyapi" side="BOTH">
-			<URL priority="1">https://edge.forgecdn.net/files/9350/706/ftb-library-neoforge-2101.1.39.jar</URL>
-			<Size>1477833</Size>
+			<URL priority="1">https://edge.forgecdn.net/files/9008/89/ftb-library-neoforge-2101.1.37.jar</URL>
+			<Size>1439881</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>8e2c107c470a2c0e15a0880d767d3ca3</MD5>
+			<MD5>26aebcb05d237c98fae141794f5ea2f9</MD5>
 			<Meta>
-				<version>2101.1.39</version>
+				<version>2101.1.37</version>
 			</Meta>
 		</Module>
 		<Module name="FTB Quests" id="ftb_quests" depends="architecturyapi ftb_library ftb_teams" side="BOTH">
-			<URL priority="1">https://edge.forgecdn.net/files/9405/148/ftb-quests-neoforge-2101.1.38.jar</URL>
-			<Size>1635517</Size>
+			<URL priority="1">https://edge.forgecdn.net/files/9298/629/ftb-quests-neoforge-2101.1.37.jar</URL>
+			<Size>1635351</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>1aed80e155746577a5a9ba5fccec9484</MD5>
+			<MD5>e421344bc7654f25138aed961b9dbead</MD5>
 			<Meta>
-				<version>2101.1.38</version>
+				<version>2101.1.37</version>
 			</Meta>
 		</Module>
 		<Module name="FTB Teams (NeoForge)" id="ftb_teams" depends="architecturyapi ftb_library" side="BOTH">
@@ -1162,13 +1177,13 @@
 			</Meta>
 		</Module>
 		<Module name="FTB XMod Compat" id="ftb xmod_compat" depends="architecturyapi ftb_library" side="BOTH">
-			<URL priority="1">https://edge.forgecdn.net/files/9344/504/ftb-xmod-compat-neoforge-21.1.14.jar</URL>
-			<Size>149952</Size>
+			<URL priority="1">https://edge.forgecdn.net/files/9267/870/ftb-xmod-compat-neoforge-21.1.13.jar</URL>
+			<Size>148504</Size>
 			<Required>true</Required>
 			<ModType>Regular</ModType>
-			<MD5>3b2e3d852cc241bc02a1edb6c9ae9089</MD5>
+			<MD5>482268eacd2cd7557c75192411540823</MD5>
 			<Meta>
-				<version>21.1.14</version>
+				<version>21.1.13</version>
 			</Meta>
 		</Module>
 		<Module name="Fzzy Config" id="fzzy_config" depends="kotlinforforge" side="BOTH">
@@ -1888,6 +1903,11 @@ Built for a specific modpack - not a general-purpose replacement for a properly 
 			<ModType>Removal</ModType>
 		</Module>
 		<Module name="Sodium Options Mod Compat" id="sodiumoptionsmodcompat" depends="" side="CLIENT">
+			<Size>100000</Size>
+			<Required>false</Required>
+			<ModType>Removal</ModType>
+		</Module>
+		<Module name="Sodium Leaf Culling" id="sodiumleafculling" depends="" side="CLIENT">
 			<Size>100000</Size>
 			<Required>false</Required>
 			<ModType>Removal</ModType>
